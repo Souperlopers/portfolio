@@ -6,17 +6,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Member extends Model
 {
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array<int, string>
-     */
-    protected $fillable = [
-        'name',
-        'thumbnail',
-        'username',
-        'email',
-        'phone',
-        'description',
-    ];
+    public function projects()
+    {
+        return $this->hasMany(Project::class);
+    }
+
+    public function tags()
+    {
+        return $this->morphMany(Tag::class, "tagable");
+    }
 }
