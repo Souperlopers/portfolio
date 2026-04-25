@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use App\Models\Tag;
 
 return new class extends Migration
 {
@@ -13,7 +14,7 @@ return new class extends Migration
     {
         Schema::create('tags', function (Blueprint $table) {
             $table->id();
-            $table->enum("type", ["os", "lang", "framework", "lib", "webserver", "db", "tool"]);
+            $table->enum("type", Tag::VALUES)->index();
             $table->string("name", 50);
             $table->string("version", 50)->nullable();
             $table->morphs("tagable");
