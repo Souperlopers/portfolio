@@ -6,6 +6,17 @@ use Illuminate\Database\Eloquent\Model;
 
 class Member extends Model
 {
+    protected $fillable = [
+        'username',
+        'name',
+        'description',
+        'position',
+        'email',
+        'phone',
+        'linkedin_url',
+        'github_url',
+    ];
+
     public function projects()
     {
         return $this->hasMany(Project::class);
