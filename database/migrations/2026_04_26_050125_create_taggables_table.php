@@ -3,7 +3,6 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
-use App\Models\Tag;
 
 return new class extends Migration
 {
@@ -12,11 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('tags', function (Blueprint $table) {
+        Schema::create('taggables', function (Blueprint $table) {
             $table->id();
-            $table->enum("type", Tag::VALUES)->index();
-            $table->string("name", 50);
-            $table->string("version", 50)->nullable();
+            $table->bigInteger("tag_id")->unsigned();
+            $table->morphs("taggable");
+
+            $table->foreign("tag_id")->references("id")->on("tags");
         });
     }
 
@@ -25,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('tags');
+        Schema::dropIfExists('taggables');
     }
 };
