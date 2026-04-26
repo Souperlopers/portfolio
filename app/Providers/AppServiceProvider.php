@@ -23,7 +23,7 @@ class AppServiceProvider extends ServiceProvider
         // replacing type syntax with shorted names in morph relations
         Relation::enforceMorphMap([
             'member' => 'App\Models\Member',
-            'project' => 'App\Models\Projects',
+            'project' => 'App\Models\Project',
         ]);
     }
 }
