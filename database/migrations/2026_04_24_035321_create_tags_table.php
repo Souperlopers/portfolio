@@ -14,8 +14,8 @@ return new class extends Migration
     {
         Schema::create('tags', function (Blueprint $table) {
             $table->id();
-            $table->enum("type", Tag::VALUES)->index();
-            $table->string("name", 50);
+            $table->enum("type", Tag::TYPES)->index();
+            $table->string("name", 50)->index();
             $table->string("version", 50)->nullable();
         });
     }
