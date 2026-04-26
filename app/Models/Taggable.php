@@ -4,17 +4,13 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Tag extends Model
+class Taggable extends Model
 {
     protected $fillable = [
-        'type',
-        'name',
-        'version',
+        'tag_id',
         'taggable_type',
         'taggable_id',
     ];
-
-    public const TYPES = ["os", "lang", "framework", "lib", "webserver", "db", "tool"];
 
     public function members()
     {

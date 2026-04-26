@@ -19,6 +19,6 @@ class Project extends Model
 
     public function tags()
     {
-        return $this->morphMany(Tag::class, "tagable");
+        return $this->morphToMany(Tag::class, 'taggable');
     }
 }
