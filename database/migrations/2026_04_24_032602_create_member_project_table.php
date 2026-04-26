@@ -15,8 +15,8 @@ return new class extends Migration
             $table->bigInteger("member_id")->unsigned();
             $table->bigInteger("project_id")->unsigned();
 
-            $table->foreign("member_id")->references("id")->on("members");
-            $table->foreign("project_id")->references("id")->on("projects");
+            $table->foreign("member_id")->references("id")->on("members")->cascadeOnDelete();
+            $table->foreign("project_id")->references("id")->on("projects")->cascadeOnDelete();
         });
     }
 

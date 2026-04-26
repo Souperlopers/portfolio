@@ -16,7 +16,7 @@ return new class extends Migration
             $table->bigInteger("tag_id")->unsigned();
             $table->morphs("taggable");
 
-            $table->foreign("tag_id")->references("id")->on("tags");
+            $table->foreign("tag_id")->references("id")->on("tags")->cascadeOnDelete();
         });
     }
 
