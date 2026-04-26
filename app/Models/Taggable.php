@@ -8,4 +8,12 @@ trait Taggable
     {
         return $this->morphToMany(Tag::class, 'taggable');
     }
+
+    protected static function booted()
+    {
+        static::deleting(function ($model) {
+            // detach polymorphic tags
+            $model->tags()->detach();
+        });
+    }
 }

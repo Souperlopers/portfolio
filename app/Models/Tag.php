@@ -30,4 +30,13 @@ class Tag extends Model
     {
         return $this->morphedByMany(Project::class, 'taggable');
     }
+
+    // casacade on delete
+    protected static function booted()
+    {
+        static::deleting(function ($tag) {
+            $tag->morphedByMany(Member::class, 'taggable')->detach();
+            $tag->morphedByMany(Project::class, 'taggable')->detach();
+        });
+    }
 }
