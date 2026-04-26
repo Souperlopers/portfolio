@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Member extends Model
 {
+    use Taggable;
+
     protected $fillable = [
         'username',
         'name',
@@ -20,10 +22,5 @@ class Member extends Model
     public function projects()
     {
         return $this->belongsToMany(Project::class);
-    }
-
-    public function tags()
-    {
-        return $this->morphToMany(Tag::class, 'taggable');
     }
 }

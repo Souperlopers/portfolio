@@ -2,23 +2,10 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
-
-class Taggable extends Model
+trait Taggable
 {
-    protected $fillable = [
-        'tag_id',
-        'taggable_type',
-        'taggable_id',
-    ];
-
-    public function members()
+    public function tags()
     {
-        return $this->morphedByMany(Member::class, 'taggable');
-    }
-
-    public function projects()
-    {
-        return $this->morphedByMany(Project::class, 'taggable');
+        return $this->morphToMany(Tag::class, 'taggable');
     }
 }
