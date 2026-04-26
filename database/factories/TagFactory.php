@@ -27,7 +27,6 @@ class TagFactory extends Factory
         $related = $taggable::inRandomOrder()->first();
 
         return [
-            'id' => fake()->unique()->numberBetween(),
             'name' => fake()->word(),
             'type' => fake()->randomElement(Tag::TYPES),
             'version' => fake()->optional()->word(),

@@ -17,11 +17,10 @@ class MemberFactory extends Factory
     public function definition(): array
     {
         return [
-            'id' => fake()->unique()->numberBetween(),
             'username' => fake()->userName(),
 
             'name' => fake()->name(),
-            'description' => fake()->paragraphs(1),
+            'description' => fake()->paragraph(),
             'position' => fake()->word(2),
 
             'email' => fake()->unique()->safeEmail(),
