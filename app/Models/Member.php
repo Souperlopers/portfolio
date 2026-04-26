@@ -7,7 +7,9 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Member extends Model
 {
-    use Taggable;
+    use HasFactory, Taggable;
+
+    public $timestamps = false;
 
     protected $fillable = [
         'username',

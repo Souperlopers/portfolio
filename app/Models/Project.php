@@ -9,6 +9,8 @@ class Project extends Model
 {
     use HasFactory, Taggable;
 
+    public $timestamps = false;
+
     protected $fillable = [
         'name',
         'url',
