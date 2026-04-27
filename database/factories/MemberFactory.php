@@ -21,7 +21,7 @@ class MemberFactory extends Factory
 
             'name' => fake()->name(),
             'description' => fake()->paragraph(),
-            'position' => fake()->word(2),
+            'position' => fake()->jobTitle(),
 
             'email' => fake()->unique()->safeEmail(),
             'phone' => fake()->unique()->phoneNumber(),
