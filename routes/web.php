@@ -16,7 +16,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', "HomeController")->name('home');
 
 Route::get('/projects', "ProjectController@index")->name('projects');
-Route::get('/project/{projectSlug}', "ProjectController@show")->name('project');
+Route::get('/projects/{projectSlug}', "ProjectController@show")->name('project');
 
 Route::get('/members', "MemberController@index")->name('members');
 Route::get('/{userSlug}', "MemberController@show")->name('member');
+
+Route::fallback(function () {
+    return view('pages.404');
+});
