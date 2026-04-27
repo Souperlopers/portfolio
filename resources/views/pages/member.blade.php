@@ -8,7 +8,7 @@
 	<div class="position">position: {{ $member->position }}</div>
 	<div class="description">description: {{ $member->description }}</div>
 
-	@include('components.tags', ['tagGroups' => $tagGroups])
+	Skills: @include('components.tags', ['tagGroups' => $tagGroups])
 
 	@include('components.projects', ['projects' => $member->projects])
 

@@ -13,7 +13,8 @@ class MemberController extends Controller
     {
         $members = Member::all();
 
-        return view("pages.members")->with("members", $members);
+        return view("pages.members")
+            ->with("members", $members);
     }
 
     /**

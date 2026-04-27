@@ -1,4 +1,3 @@
-skills:
 <ul class="skills">
 	@foreach ($tagGroups as $type => $tags)
 		<li>
