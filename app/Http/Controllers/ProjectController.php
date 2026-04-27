@@ -9,14 +9,14 @@ class ProjectController extends Controller
      */
     public function index()
     {
-        //
+        return view("pages.projects");
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(string $slug)
+    public function show(string $projectSlug)
     {
-        //
+        return view("pages.project")->with("slug", $projectSlug);
     }
 }

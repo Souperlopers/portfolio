@@ -6,6 +6,6 @@ class HomeController extends Controller
 {
     public function __invoke()
     {
-        return 123;
+        return view("pages.home");
     }
 }
