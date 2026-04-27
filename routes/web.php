@@ -1,9 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\HomeController;
-use App\Http\Controllers\MemberController;
-use App\Http\Controllers\ProjectController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,10 +13,10 @@ use App\Http\Controllers\ProjectController;
 |
 */
 
-Route::get('/', HomeController::class)->name('home');
+Route::get('/', "HomeController")->name('home');
 
-Route::get('/{username}', [MemberController::class, "show"])->name('member');
-Route::get('/members', [MemberController::class, "index"])->name('members');
+Route::get('/projects', "ProjectController@index")->name('projects');
+Route::get('/project/{projectSlug}', "ProjectController@show")->name('project');
 
-Route::get('/projects', [ProjectController::class, "index"])->name('projects');
-Route::get('/project/{slug}', [ProjectController::class, "show"])->name('project');
+Route::get('/members', "MemberController@index")->name('members');
+Route::get('/{userSlug}', "MemberController@show")->name('member');
