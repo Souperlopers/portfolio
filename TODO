@@ -1,0 +1,27 @@
+goal: create a portfolio webapp in 2 weeks
+requirements:
+	backend
+		parts
+			developer
+			project
+			tag
+		steps
+			models
+			migrations
+			factories
+			seeders
+			TODO: 
+			views
+			routes
+			controllers
+		consider
+			separate tag and tagable
+			move tagable methods and properties to its own 
+	frontend
+		home
+			banner (image, short description)
+			projects
+			developers
+			contact
+		developer
+		project
