@@ -10,9 +10,9 @@ requirements:
 			migrations
 			factories
 			seeders
-			TODO: 
-			views
 			routes
+			views
+			TODO: 
 			controllers
 		consider
 			separate tag and tagable
