@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Member;
+
 class MemberController extends Controller
 {
     /**
@@ -9,7 +11,9 @@ class MemberController extends Controller
      */
     public function index()
     {
-        return view("pages.members");
+        $members = Member::all();
+
+        return view("pages.members")->with("members", $members);
     }
 
     /**
@@ -17,6 +21,19 @@ class MemberController extends Controller
      */
     public function show(string $memberSlug)
     {
-        return view("pages.member")->with("slug", $memberSlug);
+        $member = Member::firstWhere('slug', $memberSlug);
+
+        if (!$member) {
+            return view('pages.404');
+        }
+
+        $tagGroups = [];
+        foreach ($member->tags as $tag) {
+            $tagGroups[$tag['type']][] = $tag;
+        }
+
+        return view("pages.member")
+            ->with("member", $member)
+            ->with("tagGroups", $tagGroups);
     }
 }
