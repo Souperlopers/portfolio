@@ -3,9 +3,10 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Str;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\User>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Member>
  */
 class MemberFactory extends Factory
 {
@@ -16,12 +17,14 @@ class MemberFactory extends Factory
      */
     public function definition(): array
     {
-        return [
-            'username' => fake()->userName(),
+        $name = fake()->unique()->name();
 
-            'name' => fake()->name(),
+        return [
+            'name' => $name,
             'description' => fake()->paragraph(),
             'position' => fake()->jobTitle(),
+
+            'slug' => Str::slug($name),
 
             'email' => fake()->unique()->safeEmail(),
             'phone' => fake()->unique()->phoneNumber(),
