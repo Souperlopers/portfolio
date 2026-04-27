@@ -4,8 +4,8 @@
 
 @section('body')
 	<h1>Banner</h1>
-	<h1>Projects</h1>
-	<h1>Members</h1>
+	<h1><a href="/projects">Projects</a></h1>
+	<h1><a href="/members">Members</a></h1>
 	<h1>Reviews</h1>
 	<h1>Contact</h1>
 @endsection
