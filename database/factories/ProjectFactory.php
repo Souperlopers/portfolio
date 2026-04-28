@@ -21,6 +21,7 @@ class ProjectFactory extends Factory
 
         return [
             'name' => $name,
+            'priority' => fake()->numberBetween(-128, 127),
             'slug' => Str::slug($name),
             'url' => fake()->unique()->url(),
             'description' => fake()->paragraph(),
