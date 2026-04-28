@@ -11,7 +11,7 @@ class MemberController extends Controller
      */
     public function index()
     {
-        $members = Member::all();
+        $members = Member::orderBy('priority', 'desc');
 
         return view("pages.members")
             ->with("members", $members);
