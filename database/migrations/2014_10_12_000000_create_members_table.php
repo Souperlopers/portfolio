@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('members', function (Blueprint $table) {
             $table->id();
             $table->string('slug', 50)->unique()->index();
+            $table->tinyInteger('priority')->default(0)->index();
 
             $table->string('name', 50)->unique()->index();
             $table->text('description')->nullable();
