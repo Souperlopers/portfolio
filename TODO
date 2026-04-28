@@ -1,8 +1,7 @@
 goal: create a portfolio webapp in 1 week and 5 days
 requirements:
 	backend
-		member and project limitation (on home)
-		member and project pagination (on their own url)
+		add custom priority
 		thumbnail for user and projects
 		image gallery for projects
 		project time ranges
