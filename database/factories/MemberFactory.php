@@ -24,6 +24,7 @@ class MemberFactory extends Factory
             'description' => fake()->paragraph(),
             'position' => fake()->jobTitle(),
 
+            'priority' => fake()->numberBetween(-128, 127),
             'slug' => Str::slug($name),
 
             'email' => fake()->unique()->safeEmail(),
