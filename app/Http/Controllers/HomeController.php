@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Member;
 use App\Models\Project;
+use Inertia\Inertia;
 
 class HomeController extends Controller
 {
@@ -12,8 +13,9 @@ class HomeController extends Controller
         $topMembers = Member::orderBy('priority', 'desc')->limit(3)->get();
         $topProjects = Project::orderBy('priority', 'desc')->limit(3)->get();
 
-        return view("pages.home")
-            ->with('members', $topMembers)
-            ->with('projects', $topProjects);
+        return Inertia::render('Home', [
+            'members' => $topMembers,
+            'projects' => $topProjects,
+        ]);
     }
 }
