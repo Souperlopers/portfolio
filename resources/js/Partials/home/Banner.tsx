@@ -1,4 +1,4 @@
-import banner from "../../../../../public/assets/banner.jpg";
+import banner from "../../../../public/assets/banner.jpg";
 const Banner = () => {
     return (
         <div className="h-full w-full relative rounded bg-[#1a222c]">
