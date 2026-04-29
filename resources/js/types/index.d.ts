@@ -1,5 +1,12 @@
 // you can define your types here
 
+export interface Project{
+    id: number | string;
+    name: string;
+    tags: string[];
+    createdAt: string;
+    description: string;
+}
 
 // export interface User {
 //     id: number;
