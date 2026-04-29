@@ -11,7 +11,6 @@ export default function Home({
     projects: Project[];
     members: User[];
 }) {
-    console.log(members);
     return (
         <div>
             <Head title="SouperLopers" />
