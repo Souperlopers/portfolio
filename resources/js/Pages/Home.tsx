@@ -13,9 +13,9 @@ export default function Home({
         <div>
             <Head title="SouperLopers" />
             <div className="flex flex-col gap-5">
-                <div className="rounded bg-yellow-200">Banner</div>
-                <div className="bg-yellow-400 rounded">Projects</div>
-                <div className="rounded bg-orange-400">Members</div>
+                <div className="rounded bg-yellow-200 h-52">Banner</div>
+                <div className="bg-yellow-400 rounded h-64">Projects</div>
+                <div className="rounded bg-orange-400 h-48">Members</div>
             </div>
         </div>
     );
