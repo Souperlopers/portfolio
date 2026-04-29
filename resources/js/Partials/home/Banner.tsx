@@ -5,11 +5,11 @@ const Banner = () => {
             <div className="flex justify-end w-full h-full">
                 <img src={banner} alt="banner" className="object-center rounded" />
             </div>
-            <div className="absolute bottom-0 -left-1 mx-11 py-2 w-[32.9%] flex justify-between text-white font-bold bg-[#1a222c]">
-                <button className="bg-gray-200 px-5 py-3 rounded font-semibold text-lg text-[#1a222c] cursor-pointer">
+            <div className="absolute lg:bottom-0 bottom-1 lg:-left-1 -left-11 mx-11 lg:py-2 lg:w-[32.9%] flex justify-between gap-5 text-white font-bold bg-[#1a222c]">
+                <button className="bg-gray-200 px-5 py-3 rounded font-semibold lg:text-lg text-xs text-[#1a222c] cursor-pointer">
                     دریافت رزومه
                 </button>
-                <button className="bg-cyan-600 px-10 py-3 rounded font-semibold text-lg text-white cursor-pointer">
+                <button className="bg-cyan-600 lg:px-10 lg:py-3 px-2 py-1 rounded font-semibold lg:text-lg text-xs text-white cursor-pointer">
                     تماس با ما
                 </button>
             </div>
