@@ -3,11 +3,11 @@ import { User } from "@/types";
 
 const Members = ({ members }: { members: User[] }) => {
     return (
-        <div className="px-10 py-5 flex flex-col gap-5 rounded bg-orange-400">
+        <div className="lg:px-10 lg:py-5 px-2 py-3 flex flex-col gap-5 rounded bg-orange-400">
             دولوپرها
-            <div className="flex gap-5">
+            <div className="grid lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-1 gap-5">
                 {members.map((member) => (
-                    <div className="w-1/2">
+                    <div className="">
                         <MemberCard data={member} />
                     </div>
                 ))}
