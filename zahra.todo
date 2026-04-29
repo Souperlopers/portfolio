@@ -1,0 +1,5 @@
+goal: create a portfolio webapp in 1 week and 3 days
+
+TODO zahra: install todo-tree extension
+TODO zahra: move @Pages/{pageName}/components/* to @Partials/{pageName}/*
+TODO zahra: limiting components text
