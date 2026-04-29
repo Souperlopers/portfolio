@@ -10,20 +10,14 @@ export default function Home({
     members: object;
 }) {
     return (
-        <>
-            <Head title="Home" />
-            hallo
-            <br />
-            <br />
-            <Link href={route("projects")}>Projects:</Link>
-            <br />
-            {JSON.stringify(projects)}
-            <br />
-            <br />
-            <Link href={route("members")}>Members:</Link>
-            <br />
-            {JSON.stringify(members)}
-        </>
+        <div>
+            <Head title="SouperLopers" />
+            <div className="flex flex-col gap-5">
+                <div className="rounded bg-yellow-200">Banner</div>
+                <div className="bg-yellow-400 rounded">Projects</div>
+                <div className="rounded bg-orange-400">Members</div>
+            </div>
+        </div>
     );
 }
 
