@@ -2,9 +2,10 @@
 
 export interface Project{
     id: number | string;
+    priority: number | string;
     name: string;
-    tags: string[];
-    createdAt: string;
+    slug: string;
+    url: string;
     description: string;
 }
 
