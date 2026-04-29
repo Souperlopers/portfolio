@@ -3,12 +3,12 @@ import EmptyProjects from "./EmptyProjects";
 import { ProjectsData } from "./ProjectsData";
 import { Project } from "@/types";
 
-const Projects = () => {
-    const projectsCount = ProjectsData.length;
-    const topThreeProjects: Project[] = ProjectsData.slice(0, 3);
+const Projects = ({projects}:{projects:Project[]}) => {
+    const projectsCount = projects.length;
+    const topThreeProjects: Project[] = projects.slice(0, 3);
 
     return (
-        <div className="px-10 py-5 flex flex-col gap-6">
+        <div className="px-10 bg-yellow-500 rounded py-5 flex flex-col gap-6">
             <h1> پروژه ها</h1>
             {projectsCount === 0 && <EmptyProjects />}
             {topThreeProjects.map((project) => (
