@@ -9,12 +9,18 @@ export interface Project{
     description: string;
 }
 
-// export interface User {
-//     id: number;
-//     name: string;
-//     email: string;
-//     email_verified_at: string;
-// }
+export interface User {
+    id: number;
+    name: string;
+    email: string;
+    description: string;
+    github_url: string;
+    linkedin_url: string;
+    phone:string;
+    position: string;
+    slug: string;
+    priority: number | string;
+}
 
 // export type PageProps<
 //     T extends Record<string, unknown> = Record<string, unknown>,

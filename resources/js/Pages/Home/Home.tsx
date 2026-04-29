@@ -1,24 +1,24 @@
 import { ReactNode } from "react";
-import { Link, Head } from "@inertiajs/react";
+import { Head } from "@inertiajs/react";
 import MainLayout from "@/Layouts/MainLayout";
-import { Banner, Projects } from "../index";
-import { Project } from "@/types";
+import { Banner, Projects, Members } from "../index";
+import { Project, User } from "@/types";
 
 export default function Home({
     projects,
     members,
 }: {
     projects: Project[];
-    members: object;
+    members: User[];
 }) {
-    console.log(projects);
+    console.log(members);
     return (
         <div>
             <Head title="SouperLopers" />
             <div className="flex flex-col gap-5">
                 <Banner />
                 <Projects projects={projects} />
-                <div className="rounded bg-orange-400 h-48">Members</div>
+                <Members members={members} />
             </div>
         </div>
     );
