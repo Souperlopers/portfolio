@@ -19,10 +19,7 @@ use Inertia\Inertia;
 
 Route::get('/', HomeController::class)->name('home');
 
-Route::get('/projects', [ProjectController::class, 'index'])->name('projects');
 Route::get('/projects/{projectSlug}', [ProjectController::class, 'show'])->name('project');
-
-Route::get('/members', [MemberController::class, 'index'])->name('members');
 Route::get('/{userSlug}', [MemberController::class, 'show'])->name('member');
 
 Route::fallback(function () {
