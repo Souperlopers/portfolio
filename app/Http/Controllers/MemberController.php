@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Member;
+use Inertia\Inertia;
 
 class MemberController extends Controller
 {
@@ -14,8 +15,9 @@ class MemberController extends Controller
         $members = Member::orderBy('priority', 'desc')
             ->paginate(10);
 
-        return view("pages.members")
-            ->with("members", $members);
+        return Inertia::render('Members', [
+            'members' => $members,
+        ]);
     }
 
     /**
@@ -25,8 +27,8 @@ class MemberController extends Controller
     {
         $member = Member::firstWhere('slug', $memberSlug);
 
-        if (!$member) {
-            return view('pages.404');
+        if (! $member) {
+            return Inertia::render('NotFound');
         }
 
         $tagGroups = [];
@@ -34,8 +36,9 @@ class MemberController extends Controller
             $tagGroups[$tag['type']][] = $tag;
         }
 
-        return view("pages.member")
-            ->with("member", $member)
-            ->with("tagGroups", $tagGroups);
+        return Inertia::render('Member', [
+            'member' => $member,
+            'tagGroups' => $tagGroups,
+        ]);
     }
 }

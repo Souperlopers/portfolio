@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Project;
+use Inertia\Inertia;
 
 class ProjectController extends Controller
 {
@@ -14,8 +15,9 @@ class ProjectController extends Controller
         $projects = Project::orderBy('priority', 'desc')
             ->paginate(10);
 
-        return view("pages.projects")
-            ->with("projects", $projects);
+        return Inertia::render('Projects', [
+            'projects' => $projects,
+        ]);
     }
 
     /**
@@ -25,8 +27,8 @@ class ProjectController extends Controller
     {
         $project = Project::firstWhere('slug', $projectSlug);
 
-        if (!$project) {
-            return view('pages.404');
+        if (! $project) {
+            return Inertia::render('NotFound');
         }
 
         $tagGroups = [];
@@ -34,8 +36,9 @@ class ProjectController extends Controller
             $tagGroups[$tag['type']][] = $tag;
         }
 
-        return view("pages.project")
-            ->with("project", $project)
-            ->with("tagGroups", $tagGroups);
+        return Inertia::render('Project', [
+            'project' => $project,
+            'tagGroups' => $tagGroups,
+        ]);
     }
 }
