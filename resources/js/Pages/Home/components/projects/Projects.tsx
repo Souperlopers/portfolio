@@ -1,6 +1,5 @@
 import ProjectItem from "./ProjectItem";
 import EmptyProjects from "./EmptyProjects";
-import { ProjectsData } from "./ProjectsData";
 import { Project } from "@/types";
 
 const Projects = ({projects}:{projects:Project[]}) => {
