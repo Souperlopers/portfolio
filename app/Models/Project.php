@@ -19,6 +19,8 @@ class Project extends Model
 
     public function members()
     {
-        return $this->belongsToMany(Member::class);
+        return $this->belongsToMany(Member::class)
+            ->using(MemberProject::class)
+            ->withPivot('member_priority_in_project');
     }
 }

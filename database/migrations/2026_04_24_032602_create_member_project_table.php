@@ -12,11 +12,14 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('member_project', function (Blueprint $table) {
-            $table->bigInteger("member_id")->unsigned();
-            $table->bigInteger("project_id")->unsigned();
+            $table->bigInteger('member_id')->unsigned();
+            $table->bigInteger('project_id')->unsigned();
 
-            $table->foreign("member_id")->references("id")->on("members")->cascadeOnDelete();
-            $table->foreign("project_id")->references("id")->on("projects")->cascadeOnDelete();
+            $table->tinyInteger('member_priority_in_project')->required()->index();
+            $table->tinyInteger('project_priority_for_member')->required()->index();
+
+            $table->foreign('member_id')->references('id')->on('members')->cascadeOnDelete();
+            $table->foreign('project_id')->references('id')->on('projects')->cascadeOnDelete();
         });
     }
 

@@ -2,43 +2,51 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\Project\ProjectResource;
+use App\Http\Resources\Project\ProjectCollection;
+use App\Models\Member;
 use App\Models\Project;
-use Inertia\Inertia;
 
 class ProjectController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(?Member $member = null)
     {
-        $projects = Project::orderBy('priority', 'desc')
-            ->paginate(10);
-
-        return Inertia::render('Projects', [
-            'projects' => $projects,
-        ]);
+        return new ProjectCollection(
+            $member
+                ? (
+                    $member->projects()
+                    ->orderByDesc('project_priority_for_member')
+                    ->orderBy('name')
+                    ->paginate(10)
+                )
+                : (
+                    Project
+                    ::orderByDesc('priority')
+                    ->orderBy('name')
+                    ->paginate(10, pageName: "projectPage")
+                )
+        );
     }
+
+
 
     /**
      * Display the specified resource.
      */
-    public function show(string $projectSlug)
+    public function show(Project $project)
     {
-        $project = Project::firstWhere('slug', $projectSlug);
-
-        if (! $project) {
-            return Inertia::render('NotFound');
-        }
-
-        $tagGroups = [];
-        foreach ($project->tags as $tag) {
-            $tagGroups[$tag['type']][] = $tag;
-        }
-
-        return Inertia::render('Project', [
-            'project' => $project,
-            'tagGroups' => $tagGroups,
-        ]);
+        return new ProjectResource(
+            $project->load([
+                'members' => fn($query) => $query
+                    ->orderByPivot('member_priority_in_project', 'desc')
+                    ->limit(4),
+                'tags' => fn($query) => $query
+                    ->orderByPivot('priority_for_taggable', 'desc')
+                    ->limit(4)
+            ])
+        );
     }
 }

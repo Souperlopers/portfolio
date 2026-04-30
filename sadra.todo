@@ -1,8 +1,10 @@
 goal: create a portfolio webapp in 1 week and 3 days
 
-TODO sadra: add resource
+TODO sadra: customized 404 status code
+TODO sadra: optimize seeders
 TODO sadra: thumbnail for user and projects
 TODO sadra: image gallery for projects
 TODO sadra: project time ranges
 TODO sadra: add reviews
+TODO sadra: server side rendering
 TODO sadra: en/fa locale switching

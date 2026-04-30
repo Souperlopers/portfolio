@@ -2,43 +2,51 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\Member\MemberCollection;
+use App\Http\Resources\Member\MemberResource;
 use App\Models\Member;
-use Inertia\Inertia;
+use App\Models\Project;
 
 class MemberController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Display a listing of members
      */
-    public function index()
+    public function index(?Project $project = null)
     {
-        $members = Member::orderBy('priority', 'desc')
-            ->paginate(10);
-
-        return Inertia::render('Members', [
-            'members' => $members,
-        ]);
+        return new MemberCollection(
+            $project
+                ? (
+                    $project->members()
+                    ->orderByDesc('member_priority_in_project')
+                    ->orderBy('name')
+                    ->paginate(10)
+                )
+                : (
+                    Member
+                    ::orderByDesc('priority')
+                    ->orderBy('name')
+                    ->paginate(10, pageName: "memberPage")
+                )
+        );
     }
 
+
+
     /**
-     * Display the specified resource.
+     * Display the member.
      */
-    public function show(string $memberSlug)
+    public function show(Member $member)
     {
-        $member = Member::firstWhere('slug', $memberSlug);
-
-        if (! $member) {
-            return Inertia::render('NotFound');
-        }
-
-        $tagGroups = [];
-        foreach ($member->tags as $tag) {
-            $tagGroups[$tag['type']][] = $tag;
-        }
-
-        return Inertia::render('Member', [
-            'member' => $member,
-            'tagGroups' => $tagGroups,
-        ]);
+        return new MemberResource(
+            $member->load([
+                'projects' => fn($query) => $query
+                    ->orderByPivot('project_priority_for_member', 'desc')
+                    ->limit(4),
+                'tags' => fn($query) => $query
+                    ->orderByPivot('priority_for_taggable', 'desc')
+                    ->limit(4)
+            ])
+        );
     }
 }
