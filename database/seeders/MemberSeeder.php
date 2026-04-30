@@ -12,7 +12,7 @@ class MemberSeeder extends Seeder
     /**
      * Run the database seeds.
      */
-    public function run(int $membersQuantity, Tag $tags)
+    public function run(int $membersQuantity, $tags)
     {
         return Member::factory($membersQuantity)->create()
             ->each(function ($member) use ($tags) {
