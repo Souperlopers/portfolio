@@ -19,7 +19,7 @@ class Tag extends Model
         'taggable_id',
     ];
 
-    public const TYPES = ["os", "lang", "framework", "lib", "webserver", "db", "tool"];
+    public const TYPES = ['os', 'lang', 'framework', 'lib', 'webserver', 'db', 'tool'];
 
     public function members()
     {
