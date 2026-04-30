@@ -1,10 +1,7 @@
 <?php
 
-use App\Http\Controllers\HomeController;
-use App\Http\Controllers\MemberController;
-use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\WebController;
 use Illuminate\Support\Facades\Route;
-use Inertia\Inertia;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,11 +14,11 @@ use Inertia\Inertia;
 |
 */
 
-Route::get('/', HomeController::class)->name('home');
+Route::controller(WebController::class)->name('web.')->group(function () {
 
-Route::get('/projects/{projectSlug}', [ProjectController::class, 'show'])->name('project');
-Route::get('/{userSlug}', [MemberController::class, 'show'])->name('member');
+    Route::get('/', 'home')->name('home');
 
-Route::fallback(function () {
-    return Inertia::render('NotFound');
+    Route::get('/projects/{project:slug}', 'project')->name('project');
+
+    Route::get('/{member:slug}', 'member')->name('member');
 });
