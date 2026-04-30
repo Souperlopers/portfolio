@@ -11,7 +11,7 @@ class TagSeeder extends Seeder
     /**
      * Run the database seeds.
      */
-    public function run(int $tagsQuantity): Tag
+    public function run(int $tagsQuantity)
     {
         // create tags
         return Tag::factory($tagsQuantity)->create();
