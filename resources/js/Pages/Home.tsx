@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 import { Head } from "@inertiajs/react";
 import MainLayout from "@/Layouts/MainLayout";
-import { Banner, Projects, Members } from "../index";
+import { Banner, Projects, Members } from "@/Pages/index";
 import { Project, User } from "@/types";
 
 export default function Home({
