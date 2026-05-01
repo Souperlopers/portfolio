@@ -11,14 +11,6 @@ class Tag extends Model
 
     public $timestamps = false;
 
-    protected $fillable = [
-        'type',
-        'name',
-        'version',
-        'taggable_type',
-        'taggable_id',
-    ];
-
     public const TYPES = ['os', 'lang', 'framework', 'lib', 'webserver', 'db', 'tool'];
 
     public function getSorted()

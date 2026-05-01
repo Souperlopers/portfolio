@@ -11,12 +11,6 @@ class Project extends Model
 
     public $timestamps = false;
 
-    protected $fillable = [
-        'name',
-        'url',
-        'description',
-    ];
-
     public function getSorted()
     {
         return $this
