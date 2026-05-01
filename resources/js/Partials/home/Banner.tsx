@@ -1,7 +1,7 @@
 import banner from "../../../../public/assets/banner.jpg";
 const Banner = () => {
     return (
-        <div className="h-full w-full relative rounded bg-[#1a222c]">
+        <div className="h-96 w-full relative rounded bg-[#1a222c]">
             <div className="flex justify-end w-full h-full">
                 <img src={banner} alt="banner" className="object-center rounded" />
             </div>
