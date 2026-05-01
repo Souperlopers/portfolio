@@ -3,23 +3,29 @@
 export interface Project{
     id: number | string;
     priority: number | string;
-    name: string;
-    slug: string;
+    title: string;
     url: string;
-    description: string;
+}
+
+export interface ProjectsObject {
+    data: Project[]
 }
 
 export interface User {
     id: number;
     name: string;
-    email: string;
-    description: string;
-    github_url: string;
-    linkedin_url: string;
-    phone:string;
-    position: string;
-    slug: string;
     priority: number | string;
+    position: string;
+    // email: string;
+    // description: string;
+    // github_url: string;
+    // linkedin_url: string;
+    // phone:string;
+    // slug: string;
+}
+
+export interface UsersObject {
+    data: User[];
 }
 
 // export type PageProps<
