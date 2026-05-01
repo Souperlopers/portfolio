@@ -20,6 +20,12 @@ class Project extends Model
         ;
     }
 
+    public function projectimages()
+    {
+        return $this->hasMany(Projectimage::class)
+            ->orderByDesc('created_at');
+    }
+
     public function members()
     {
         return $this->belongsToMany(Member::class)
