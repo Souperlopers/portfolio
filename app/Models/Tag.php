@@ -21,6 +21,11 @@ class Tag extends Model
 
     public const TYPES = ['os', 'lang', 'framework', 'lib', 'webserver', 'db', 'tool'];
 
+    public function getSorted()
+    {
+        return $this::orderByDesc('priority');
+    }
+
     public function members()
     {
         return $this->morphedByMany(Member::class, 'taggable');

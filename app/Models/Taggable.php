@@ -7,7 +7,9 @@ trait Taggable
     public function tags()
     {
         return $this->morphToMany(Tag::class, 'taggable')
-            ->withPivot('priority_for_taggable');
+            ->withPivot('priority_for_taggable')
+            ->orderByPivot('priority_for_taggable', 'desc')
+        ;
     }
 
     protected static function booted()

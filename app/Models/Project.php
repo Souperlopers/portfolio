@@ -17,10 +17,21 @@ class Project extends Model
         'description',
     ];
 
+    public function getSorted()
+    {
+        return $this
+            ::orderByDesc('priority')
+            // ->('projectimages')
+            ->orderBy('name')
+        ;
+    }
+
     public function members()
     {
         return $this->belongsToMany(Member::class)
-            ->using(MemberProject::class)
-            ->withPivot('member_priority_in_project');
+            ->withPivot('member_priority_in_project')
+            ->orderByDesc('member_priority_in_project')
+            ->orderBy('name')
+        ;
     }
 }
