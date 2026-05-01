@@ -1,14 +1,9 @@
 goal: create a portfolio webapp in 1 week
 
 step1
-TODO: member page first structure
-TODO: project page first structure
+TODO_Z: member page first structure
+TODO_Z: project page first structure
 
 step2
-TODO: home page scroll bar
-TODO: home page banner section
-
-TODO: teach your coworker appropriate way of writing commit messages
-TODO zahra: install todo-tree extension
-TODO zahra: move @Pages/{pageName}/components/* to @Partials/{pageName}/*
-TODO zahra: limiting components text
+TODO_Z: home page scroll bar
+TODO_Z: home page banner section
