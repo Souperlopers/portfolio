@@ -3,24 +3,20 @@
 namespace Database\Seeders;
 
 use App\Models\Member;
-use App\Models\Tag;
 use Illuminate\Database\Seeder;
-use Ramsey\Collection\Collection;
 
 class MemberSeeder extends Seeder
 {
     /**
      * Run the database seeds.
      */
-    public function run(int $membersQuantity, $tags)
+    public function run(int $membersQuantity, $tags, $tagsQuantity)
     {
         return Member::factory($membersQuantity)->create()
-            ->each(function ($member) use ($tags) {
-                // Ensure each member has 3 to 5 tags
-                $numberOfTags = rand(3, 5);
-
+            ->each(function ($member) use ($tags, $tagsQuantity) {
+                
                 // Randomly select tags for the member
-                $memberTags = $tags->random($numberOfTags);
+                $memberTags = $tags->random(rand(1, $tagsQuantity));
 
                 $attachmentData = [];
                 foreach ($memberTags as $memberTag) {
