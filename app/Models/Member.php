@@ -15,6 +15,7 @@ class Member extends Model
         'username',
         'name',
         'description',
+        'thumbnail',
         'position',
         'email',
         'phone',
