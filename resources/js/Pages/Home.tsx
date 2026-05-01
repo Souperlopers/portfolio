@@ -13,6 +13,7 @@ export default function Home({
 }) {
     const projectsList = projects.data || [];
     const membersList = members.data || [];
+console.log(members);
 
     return (
         <div>
