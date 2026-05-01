@@ -3,6 +3,7 @@
 namespace App\Http\Resources\Project;
 
 use App\Http\Resources\Member\MemberCollection;
+use App\Http\Resources\Project\Image\ProjectImageCollection;
 use App\Http\Resources\Tag\TagCollection;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
@@ -19,9 +20,11 @@ class ProjectResource extends JsonResource
         return [
             'title' => $this->name,
             'description' => $this->description,
+            'thumbnail' => request()->schemeAndHttpHost() .  $this->thumbnail,
             'preview_url' => $this->url,
             'contributors' => new MemberCollection($this->whenLoaded('members')),
             'technologies' => new TagCollection($this->whenLoaded('tags')),
+            'images' => new ProjectImageCollection($this->whenLoaded('projectimages')),
         ];
     }
 }
