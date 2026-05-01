@@ -1,5 +1,6 @@
-goal: create a portfolio webapp in 1 week and 1 days
+goal: create a portfolio webapp in 1 week and 0 days
 
+TODO add 3 tags to home
 TODO optimize seeders
 TODO project time ranges
 TODO customized 404 status code
@@ -8,7 +9,6 @@ TODO server side rendering
 TODO redis
 TODO en/fa locale switching
 TODO panel
-
 
 finalize project:
  TODO add assets .gitignore
