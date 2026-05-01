@@ -13,13 +13,8 @@ class TagController extends Controller
     {
         return new TagCollection(
             isset($project) || isset($member)
-                ? (($project ?? $member)
-                    ->tags()
-                    ->orderByPivot('priority_for_taggable', 'desc')
-                    ->paginate(10))
-                : (Tag
-                    ::orderByDesc('priority')
-                    ->paginate(10))
+                ? ($project ?? $member)->tags()->paginate(10)
+                : (new Tag())->getSorted()->paginate(10)
         );
     }
 }

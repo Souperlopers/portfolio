@@ -23,6 +23,7 @@ class ProjectFactory extends Factory
             'name' => $name,
             'priority' => fake()->randomElement([fake()->numberBetween(-128, 127), 0]),
             'slug' => Str::slug($name),
+            'thumbnail' => '/assets/images/p/' . fake()->randomElement(range(1, 6)) . '.png',
             'url' => fake()->unique()->url(),
             'description' => fake()->paragraph(),
         ];

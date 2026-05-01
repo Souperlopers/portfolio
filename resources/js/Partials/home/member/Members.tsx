@@ -1,4 +1,4 @@
-import MemberCard from "./MemberCard";
+import MemberCard from "@/Components/MemberCard";
 import { User } from "@/types";
 
 const Members = ({ members }: { members: User[] }) => {

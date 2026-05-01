@@ -11,15 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('projects', function (Blueprint $table) {
+        Schema::create('projectimages', function (Blueprint $table) {
             $table->id();
-            $table->string("slug", 50)->unique()->index();
+            $table->bigInteger('project_id')->unsigned();
             $table->tinyInteger('priority')->default(0)->index();
-            $table->string('thumbnail')/*->unique()*/;
+            $table->string('path')/*->unique()*/;
 
-            $table->string("name", 50)->unique()->index();
-            $table->string("url", 150)->nullable();
-            $table->string('description', 1000)->nullable();
+            $table->foreign('project_id')->references('id')->on('projects')->cascadeOnDelete();
         });
     }
 
@@ -28,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('projects');
+        Schema::dropIfExists('projectimages');
     }
 };

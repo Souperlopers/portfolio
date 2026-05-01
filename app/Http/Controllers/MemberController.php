@@ -16,22 +16,10 @@ class MemberController extends Controller
     {
         return new MemberCollection(
             $project
-                ? (
-                    $project->members()
-                    ->orderByDesc('member_priority_in_project')
-                    ->orderBy('name')
-                    ->paginate(10)
-                )
-                : (
-                    Member
-                    ::orderByDesc('priority')
-                    ->orderBy('name')
-                    ->paginate(10, pageName: "memberPage")
-                )
+                ? $project->members()->paginate(10)
+                : (new Member())->getSorted()->paginate(10, pageName: "memberPage")
         );
     }
-
-
 
     /**
      * Display the member.
@@ -40,12 +28,8 @@ class MemberController extends Controller
     {
         return new MemberResource(
             $member->load([
-                'projects' => fn($query) => $query
-                    ->orderByPivot('project_priority_for_member', 'desc')
-                    ->limit(4),
-                'tags' => fn($query) => $query
-                    ->orderByPivot('priority_for_taggable', 'desc')
-                    ->limit(4)
+                'projects' => fn($query) => $query->limit(4),
+                'tags' => fn($query) => $query->limit(4)
             ])
         );
     }

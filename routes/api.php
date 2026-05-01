@@ -19,6 +19,7 @@ use App\Http\Controllers\TagController;
 Route::prefix('/projects')->name('project')->group(function () {
     Route::get('/', [ProjectController::class, 'index'])->name('s');
     Route::get('/{project:slug}', [ProjectController::class, 'show']);
+    Route::get('/{project:slug}/images', [ProjectController::class, 'images'])->name('.images');
     Route::get('/{project:slug}/members', [MemberController::class, 'index'])->name('.members');
     Route::get('/{project:slug}/tags', TagController::class)->name('.tags');
 });

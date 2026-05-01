@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\Project\Image\ProjectImageCollection;
 use App\Http\Resources\Project\ProjectResource;
 use App\Http\Resources\Project\ProjectCollection;
 use App\Models\Member;
@@ -16,18 +17,8 @@ class ProjectController extends Controller
     {
         return new ProjectCollection(
             $member
-                ? (
-                    $member->projects()
-                    ->orderByDesc('project_priority_for_member')
-                    ->orderBy('name')
-                    ->paginate(10)
-                )
-                : (
-                    Project
-                    ::orderByDesc('priority')
-                    ->orderBy('name')
-                    ->paginate(10, pageName: "projectPage")
-                )
+                ? $member->projects()->paginate(10)
+                : (new Project())->getSorted()->paginate(10, pageName: "projectPage")
         );
     }
 
@@ -40,13 +31,22 @@ class ProjectController extends Controller
     {
         return new ProjectResource(
             $project->load([
-                'members' => fn($query) => $query
-                    ->orderByPivot('member_priority_in_project', 'desc')
-                    ->limit(4),
-                'tags' => fn($query) => $query
-                    ->orderByPivot('priority_for_taggable', 'desc')
-                    ->limit(4)
+                'members' => fn($query) => $query->limit(4),
+                'tags' => fn($query) => $query->limit(4),
+                'projectimages' => fn($query) => $query->limit(1),
             ])
+        );
+    }
+
+
+
+    /**
+     * Display the specified resource.
+     */
+    public function images(Project $project)
+    {
+        return new ProjectImageCollection(
+            $project->projectimages()->paginate(10)
         );
     }
 }

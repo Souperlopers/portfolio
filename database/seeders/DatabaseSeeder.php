@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\Member;
 use App\Models\Project;
+use App\Models\Projectimage;
 use App\Models\Tag;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
@@ -23,6 +24,7 @@ class DatabaseSeeder extends Seeder
         DB::table('member_project')->truncate();
         Member::truncate();
         Project::truncate();
+        Projectimage::truncate();
         Tag::truncate();
 
         // define the amount each table should have value
@@ -34,7 +36,7 @@ class DatabaseSeeder extends Seeder
         $tags = (new TagSeeder)->run($tagsQuantity);
 
         // Create members and assign tags
-        $members = (new MemberSeeder)->run($membersQuantity, $tags);
+        $members = (new MemberSeeder)->run($membersQuantity, $tags, $tagsQuantity);
 
         // Create projects and associate members
         (new ProjectSeeder)->run($projectsQuantity, $members, $membersQuantity);

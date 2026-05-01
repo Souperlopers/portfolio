@@ -2,8 +2,8 @@
 
 namespace Database\Seeders;
 
-use App\Models\Member;
 use App\Models\Project;
+use App\Models\Projectimage;
 use Illuminate\Database\Seeder;
 
 class ProjectSeeder extends Seeder
@@ -13,7 +13,7 @@ class ProjectSeeder extends Seeder
      */
     public function run(int $projectsQuantity, $members, int $membersQuantity)
     {
-        Project::factory($projectsQuantity)
+        return Project::factory($projectsQuantity)
             ->create()
             ->each(function ($project) use ($members, $membersQuantity) {
                 // Get random members to attach to the project
@@ -56,6 +56,11 @@ class ProjectSeeder extends Seeder
 
                 // Make the tag IDs unique and attach them to the project
                 $project->tags()->attach($attachmentData);
+
+                // attach projectimages to the project
+                $project->projectimages = Projectimage::factory(
+                    fake()->numberBetween(0, 10)
+                )->for($project)->create();
             });
     }
 }
