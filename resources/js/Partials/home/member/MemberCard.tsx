@@ -14,9 +14,16 @@ const MemberCard = ({ data }: { data: User }) => {
                 </div>
                 <div className="flex lg:justify-start justify-center">
                     <div className="flex flex-col pt-5 gap-3 lg:text-right text-center">
-                        <span className="truncate lg:max-w-32 max-w-10">{name}</span>
-                        <span className="truncate lg:max-w-32 max-w-10">{position}</span>
-                        <Link href={route("member", { userSlug: userId })} className="text-cyan-500 font-semibold">
+                        <span className="truncate lg:max-w-32 max-w-10">
+                            {name}
+                        </span>
+                        <span className="truncate lg:max-w-32 max-w-10">
+                            {position}
+                        </span>
+                        <Link
+                            href={route("member", { slug: userId })}
+                            className="text-cyan-500 font-semibold"
+                        >
                             مشاهده پروفایل
                         </Link>
                     </div>
