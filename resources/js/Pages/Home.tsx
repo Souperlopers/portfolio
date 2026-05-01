@@ -13,13 +13,13 @@ export default function Home({
 }) {
     const projectsList = projects.data || [];
     const membersList = members.data || [];
-console.log(members);
+    console.log(members);
 
     return (
         <div>
             <Head title="SouperLopers" />
             <div className="flex flex-col gap-5 font-vazir">
-                <Banner />
+                <Banner fileName="banner.jpg" />
                 <Projects projects={projectsList} />
                 <Members members={membersList} />
             </div>
