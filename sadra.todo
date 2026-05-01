@@ -1,8 +1,8 @@
 goal: create a portfolio webapp in 1 week and 1 days
 
+TODO project cover image field
 TODO image gallery for projects
-TODO remove image migration required comment
-TODO ulid
+
 TODO optimize seeders
 TODO project time ranges
 TODO customized 404 status code
@@ -11,3 +11,12 @@ TODO server side rendering
 TODO redis
 TODO en/fa locale switching
 TODO panel
+
+
+finalize project:
+ TODO add assets .gitignore
+ TODO ulid
+ TODO add storage name hider
+ TODO add storage image project/member based folders
+ TODO add unique method to asset parameters in migrations
+ TODO remove priority from resources
