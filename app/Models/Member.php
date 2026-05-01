@@ -11,18 +11,6 @@ class Member extends Model
 
     public $timestamps = false;
 
-    protected $fillable = [
-        'username',
-        'name',
-        'description',
-        'thumbnail',
-        'position',
-        'email',
-        'phone',
-        'linkedin_url',
-        'github_url',
-    ];
-
     public function getSorted()
     {
         return $this

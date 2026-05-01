@@ -11,12 +11,6 @@ class Project extends Model
 
     public $timestamps = false;
 
-    protected $fillable = [
-        'name',
-        'url',
-        'description',
-    ];
-
     public function getSorted()
     {
         return $this
@@ -24,6 +18,12 @@ class Project extends Model
             // ->('projectimages')
             ->orderBy('name')
         ;
+    }
+
+    public function projectimages()
+    {
+        return $this->hasMany(Projectimage::class)
+            ->orderByDesc('created_at');
     }
 
     public function members()
