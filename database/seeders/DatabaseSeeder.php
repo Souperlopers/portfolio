@@ -26,9 +26,9 @@ class DatabaseSeeder extends Seeder
         Tag::truncate();
 
         // define the amount each table should have value
-        $tagsQuantity = 50;
-        $membersQuantity = 50;
-        $projectsQuantity = 100;
+        $tagsQuantity = 15;
+        $membersQuantity = 5;
+        $projectsQuantity = 30;
 
         // create tags
         $tags = (new TagSeeder)->run($tagsQuantity);
