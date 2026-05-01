@@ -17,14 +17,13 @@ const ProjectItem = ({ projectData }: { projectData: ProjectBrief }) => {
                 <div>descriptions</div>
                 <div>tags</div>
             </div>
-            <Link
-                className="flex justify-end items-end w-1/12"
-                href={projectData.url}
-            >
-                <button className="cursor-pointer bg-green-400 px-5 py-3 rounded">
-                    Details
-                </button>
-            </Link>
+            <div className="flex justify-end items-end w-1/12">
+                <Link href={projectData.url}>
+                    <button className="cursor-pointer bg-green-400 px-5 py-3 rounded">
+                        Details
+                    </button>
+                </Link>
+            </div>
         </div>
     );
 };
