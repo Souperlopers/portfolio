@@ -17,7 +17,7 @@ export default function Home({
     return (
         <div>
             <Head title="SouperLopers" />
-            <div className="flex flex-col gap-5">
+            <div className="flex flex-col gap-5 font-vazir">
                 <Banner />
                 <Projects projects={projectsList} />
                 <Members members={membersList} />
