@@ -2,6 +2,7 @@
 
 namespace App\Http\Resources\Member;
 
+use App\Http\Resources\Tag\TagCollection;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
@@ -20,6 +21,7 @@ class MemberBriefResource extends JsonResource
             'position' => $this->position,
             'thumbnail' => request()->schemeAndHttpHost() .  $this->thumbnail,
             'url' => request()->schemeAndHttpHost() . '/' . $this->slug,
+            'skills' => new TagCollection($this->whenLoaded('tags')),
             'priority' => (int) isset($this->pivot->member_priority_in_project)
                 ? $this->pivot->member_priority_in_project
                 : $this->priority,

@@ -10,13 +10,13 @@ class MemberSeeder extends Seeder
     /**
      * Run the database seeds.
      */
-    public function run(int $membersQuantity, $tags, $tagsQuantity)
+    public function run(int $membersQuantity, $tags)
     {
         return Member::factory($membersQuantity)->create()
-            ->each(function ($member) use ($tags, $tagsQuantity) {
-                
+            ->each(function ($member) use ($tags) {
+
                 // Randomly select tags for the member
-                $memberTags = $tags->random(rand(1, $tagsQuantity));
+                $memberTags = $tags->random(rand(1, $tags->count()));
 
                 $attachmentData = [];
                 foreach ($memberTags as $memberTag) {

@@ -16,9 +16,11 @@ class ProjectController extends Controller
     public function index(?Member $member = null)
     {
         return new ProjectCollection(
-            $member
-                ? $member->projects()->paginate(10)
-                : (new Project())->getSorted()->paginate(10, pageName: "projectPage")
+            ($member
+                ? $member->projects()
+                : (new Project())->getSorted()
+            )
+                ->paginate(10, pageName: $member ? "projectPage" : 'page')
         );
     }
 
