@@ -5,17 +5,14 @@ import { Head } from "@inertiajs/react";
 import { Profile, Projects } from "@/Pages/index";
 
 export default function Member({ member }: MemberPageProps) {
-    const projects = member.contributions;
-    console.log(projects);
+    const info = member.data || {};
+    const projects = member.data.contributions || [];
+
     return (
-        <div>
+        <div className="flex flex-col gap-5">
             <Head title="SouperLopers" />
-            <div className="bg-red-300 h-48">
-                <Profile />
-            </div>
-            <div className="bg-red-900 h-64">
-                {/* <Projects projects={}/> */}
-            </div>
+            <Profile info={info} />
+            <Projects projects={projects} />
         </div>
     );
 }
