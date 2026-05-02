@@ -19,7 +19,7 @@ class MemberBriefResource extends JsonResource
             'name' => $this->name,
             'position' => $this->position,
             'thumbnail' => request()->schemeAndHttpHost() .  $this->thumbnail,
-            'url' => request()->schemeAndHttpHost() . '/api/members/' . $this->slug,
+            'url' => request()->schemeAndHttpHost() . '/' . $this->slug,
             'priority' => (int) isset($this->pivot->member_priority_in_project)
                 ? $this->pivot->member_priority_in_project
                 : $this->priority,

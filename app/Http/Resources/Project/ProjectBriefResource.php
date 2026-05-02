@@ -18,7 +18,7 @@ class ProjectBriefResource extends JsonResource
             'id' => (int) $this->id,
             'title' => $this->name,
             'thumbnail' => request()->schemeAndHttpHost() .  $this->thumbnail,
-            'url' => request()->schemeAndHttpHost() . '/api/projects/' . $this->slug,
+            'url' => request()->schemeAndHttpHost() . '/projects/' . $this->slug,
             'priority' => (int) isset($this->pivot->project_priority_for_member)
                 ? $this->pivot->project_priority_for_member
                 : $this->priority,

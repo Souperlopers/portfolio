@@ -26,7 +26,7 @@ class MemberFactory extends Factory
 
             'priority' => fake()->randomElement([fake()->numberBetween(-128, 127), 0]),
             'slug' => Str::slug($name),
-            'thumbnail' => '/assets/images/m/' . fake()->randomElement(range(1, 3)) . '.png',
+            'thumbnail' => '/assets/images/m/' . fake()->randomElement(range(1, 3)) . '.jpg',
 
             'email' => fake()->unique()->safeEmail(),
             'phone' => fake()->unique()->phoneNumber(),

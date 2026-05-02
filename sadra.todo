@@ -1,8 +1,5 @@
 goal: create a portfolio webapp in 1 week and 1 days
 
-TODO project cover image field
-TODO image gallery for projects
-
 TODO optimize seeders
 TODO project time ranges
 TODO customized 404 status code

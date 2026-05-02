@@ -1,16 +1,21 @@
 import { Link } from "@inertiajs/react";
-import { User } from "@/types";
+import { MemberBrief } from "@/types/member";
 
-const MemberCard = ({ data }: { data: User }) => {
-    const userId = data.id;
-    const name = data.name || "بدون نام";
-    const position = data.position || "بدون سمت";
+const MemberCard = ({ memberData }: { memberData: MemberBrief }) => {
+    const userId = memberData.id;
+    const name = memberData.name || "بدون نام";
+    const position = memberData.position || "بدون سمت";
 
     return (
         <div className="bg-white p-5 rounded w-full">
             <div className="flex flex-col gap-5 w-full">
                 <div className="flex justify-center">
-                    <div className="bg-pink-300 w-32 h-32 rounded-full"></div>
+                    <div className="bg-pink-300 w-32 h-32 rounded-full">
+                        <img
+                            src={memberData.thumbnail}
+                            alt={`${name} thumbnail`}
+                        />
+                    </div>
                 </div>
                 <div className="flex justify-center">
                     <div className="flex flex-col pt-5 gap-3 text-center">
@@ -21,7 +26,7 @@ const MemberCard = ({ data }: { data: User }) => {
                             {position}
                         </span>
                         <Link
-                            href={route("member", { slug: userId })}
+                            href={memberData.url}
                             className="text-cyan-500 font-semibold"
                         >
                             مشاهده پروفایل

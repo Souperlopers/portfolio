@@ -2,18 +2,11 @@ import { ReactNode } from "react";
 import { Head } from "@inertiajs/react";
 import MainLayout from "@/Layouts/MainLayout";
 import { Banner, Projects, Members } from "@/Pages/index";
-import { ProjectsObject, UsersObject } from "@/types";
+import { HomePageProps } from "@/types";
 
-export default function Home({
-    projects,
-    members,
-}: {
-    projects: ProjectsObject;
-    members: UsersObject;
-}) {
-    const projectsList = projects.data || [];
-    const membersList = members.data || [];
-    console.log(members);
+export default function Home({ projects, members }: HomePageProps) {
+    const projectsList = projects.data;
+    const membersList = members.data;
 
     return (
         <div>

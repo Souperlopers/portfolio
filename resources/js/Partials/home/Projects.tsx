@@ -1,10 +1,10 @@
-import ProjectItem from "./ProjectItem";
-import EmptyProjects from "./EmptyProjects";
-import { Project } from "@/types";
+import ProjectItem from "@/Components/ProjectItem";
+import EmptyProjects from "@/Components/EmptyProjects";
+import { ProjectBrief } from "@/types/project";
 
-const Projects = ({ projects }: { projects: Project[] }) => {
+const Projects = ({ projects }: { projects: ProjectBrief[] }) => {
     const projectsCount = projects.length;
-    const topThreeProjects: Project[] = projects.slice(0, 3);
+    const topThreeProjects = projects.slice(0, 3);
 
     return (
         <div className="lg:px-10 lg:py-5 px-2 py-3 bg-yellow-500 rounded flex flex-col gap-6">
@@ -16,7 +16,7 @@ const Projects = ({ projects }: { projects: Project[] }) => {
             </div>
             {projectsCount === 0 && <EmptyProjects />}
             {topThreeProjects.map((project) => (
-                <ProjectItem data={project} />
+                <ProjectItem projectData={project} />
             ))}
             {projectsCount > 3 && (
                 <div className="flex justify-end">

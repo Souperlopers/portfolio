@@ -1,13 +1,8 @@
 import { ReactNode } from "react";
 import MainLayout from "@/Layouts/MainLayout";
+import { ProjectPageProps } from "@/types";
 
-export default function Project({
-    projects,
-    tagGroups,
-}: {
-    projects: object;
-    tagGroups: Object;
-}) {
+export default function Project({ project }: ProjectPageProps) {
     return <></>;
 }
 
