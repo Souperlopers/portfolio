@@ -15,8 +15,8 @@ class Project extends Model
     {
         return $this
             ::orderByDesc('priority')
-            // ->('projectimages')
             ->orderBy('name')
+            ->with(['tags' => fn($q) => $q->where('priority_for_taggable', '>', 64)])
         ;
     }
 
@@ -32,6 +32,7 @@ class Project extends Model
             ->withPivot('member_priority_in_project')
             ->orderByDesc('member_priority_in_project')
             ->orderBy('name')
+            ->with(['tags' => fn($q) => $q->where('priority_for_taggable', '>', 64)])
         ;
     }
 }
