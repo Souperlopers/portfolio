@@ -11,8 +11,10 @@ export type HomePageProps = {
 };
 
 export type MemberPageProps = {
-    member: Member;
-};
+     member: {
+        data: Member;
+    };
+}
 
 export type ProjectPageProps = {
     project: Project;

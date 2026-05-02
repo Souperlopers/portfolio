@@ -11,8 +11,6 @@ export type MemberBrief = {
     // TODO_S add top tags
 };
 
-// TODO_S define PaginatedData<Data> 
-
 export type Member = {
     name: string;
     position: string;
