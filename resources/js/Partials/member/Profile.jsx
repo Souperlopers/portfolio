@@ -1,5 +1,3 @@
-import React from 'react';
-
 const Profile = ({ info }) => {
     console.log(info);
 
@@ -8,7 +6,7 @@ const Profile = ({ info }) => {
             <div className='w-1/6'>
                 <img src={info.thumbnail} alt={`${info.name} cover`} className='rounded bg-cover' />
             </div>
-            <div className='flex flex-col gap-5 w-5/6 py-3 bg-pink-500'>
+            <div className='flex flex-col gap-5 w-5/6 py-3 bg-pink-200'>
                 <span>
                     {info.name}
                 </span>
