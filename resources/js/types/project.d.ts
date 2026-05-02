@@ -12,6 +12,7 @@ export type ProjectBrief = {
     thumbnail: string;
     url: string;
     priority: number;
+    technologies: Tag[];
 };
 
 export type Project = {

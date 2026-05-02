@@ -8,7 +8,7 @@ export type MemberBrief = {
     thumbnail: string;
     url: string;
     priority: number;
-    // TODO_S add top tags
+    skills: Tag[];
 };
 
 export type Member = {
