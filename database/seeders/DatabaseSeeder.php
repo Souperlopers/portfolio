@@ -36,9 +36,9 @@ class DatabaseSeeder extends Seeder
         $tags = (new TagSeeder)->run($tagsQuantity);
 
         // Create members and assign tags
-        $members = (new MemberSeeder)->run($membersQuantity, $tags, $tagsQuantity);
+        $members = (new MemberSeeder)->run($membersQuantity, $tags);
 
         // Create projects and associate members
-        (new ProjectSeeder)->run($projectsQuantity, $members, $membersQuantity);
+        (new ProjectSeeder)->run($projectsQuantity, $members);
     }
 }
