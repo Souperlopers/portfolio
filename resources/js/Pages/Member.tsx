@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 import MainLayout from "@/Layouts/MainLayout";
 import { MemberPageProps } from "@/types";
 import { Head } from "@inertiajs/react";
-import { Profile, Projects } from "@/Pages/index";
+import { Profile, MemberProjects } from "@/Pages/index";
 
 export default function Member({ member }: MemberPageProps) {
     const info = member.data || {};
@@ -12,7 +12,7 @@ export default function Member({ member }: MemberPageProps) {
         <div className="flex flex-col gap-5">
             <Head title="SouperLopers" />
             <Profile info={info} />
-            <Projects projects={projects} />
+            <MemberProjects projects={projects} />
         </div>
     );
 }
