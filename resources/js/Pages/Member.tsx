@@ -9,7 +9,7 @@ export default function Member({ member }: MemberPageProps) {
     const projects = member.data.contributions || [];
 
     return (
-        <div className="flex flex-col gap-5">
+        <div className="flex flex-col gap-5 w-full">
             <Head title="SouperLopers" />
             <Profile info={info} />
             <MemberProjects projects={projects} />

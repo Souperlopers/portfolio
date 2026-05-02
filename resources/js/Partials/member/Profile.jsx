@@ -1,13 +1,20 @@
 import React from 'react';
 
-const Profile = ({info}) => {
+const Profile = ({ info }) => {
+    console.log(info);
+
     return (
-        <div className='flex justify-between h-48 w-full rounded bg-black'>
-            <div className='w-48 h-48 bg-pink-800 rounded-full'>
-                Image
+        <div className='flex justify-between gap-3 w-full rounded'>
+            <div className='w-1/6'>
+                <img src={info.thumbnail} alt={`${info.name} cover`} className='rounded bg-cover' />
             </div>
-            <div className='w-2/3 bg-red-100'>
-                Info
+            <div className='flex flex-col gap-5 w-5/6 py-3 bg-pink-500'>
+                <span>
+                    {info.name}
+                </span>
+                <span>
+                    {info.position}
+                </span>
             </div>
         </div>
     );
