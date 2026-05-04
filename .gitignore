@@ -3,6 +3,7 @@
 /public/hot
 # /public/assets
 /storage/*.key
+/charts/*.drawio*
 
 /node_modules
 /vendor
