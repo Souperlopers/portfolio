@@ -26,12 +26,3 @@ export type ProjectImagesProps = {
     id: number;
     url: string;
 }
-
-export type ProjectContributorsProps = {
-    id: number;
-    name: string;
-    position: string;
-    priority: number;
-    thumbnail: string;
-    url: string;
-}
