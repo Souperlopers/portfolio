@@ -24,6 +24,7 @@ class Tag extends Model
         static::deleting(function ($tag) {
             $tag->morphedByMany(Member::class, 'taggable')->detach();
             $tag->morphedByMany(Project::class, 'taggable')->detach();
+            $tag->morphedByMany(MemberProject::class, 'taggable')->detach();
         });
     }
 }
