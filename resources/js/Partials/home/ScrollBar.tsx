@@ -72,7 +72,7 @@ const ScrollBar = () => {
                                 ${item.rounded}
                                 ${
                                     isActive
-                                        ? "bg-white/20 text-cyan-300 shadow-inner"
+                                        ? "bg-white/20 text-sky-400 shadow-inner"
                                         : "text-white/75 hover:text-white hover:bg-white/10"
                                 }
                             `}
@@ -104,7 +104,7 @@ const ScrollBar = () => {
                             </span>
 
                             {isActive && (
-                                <span className="absolute left-1 top-1/2 -translate-y-1/2 w-1 h-8 rounded-full bg-cyan-400 shadow-[0_0_12px_rgba(34,211,238,0.8)]" />
+                                <span className="absolute left-1 top-1/2 -translate-y-1/2 w-1 h-8 rounded-full bg-sky-500 shadow-[0_0_12px_rgba(34,211,238,0.8)]" />
                             )}
 
                             {index === 0 && (
