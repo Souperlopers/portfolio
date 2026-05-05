@@ -24,3 +24,9 @@ export type Project = {
     technologies: Tag[];
     images: ProjectImage[];
 };
+
+export type ProjectDetailsButton = {
+    name: string;
+    url: string;
+    color: string;
+}

@@ -7,5 +7,6 @@ export { default as Profile } from "@/Partials/member/Profile";
 export { default as MemberProjects } from "@/Partials/member/MemberProjects";
 
 export { default as Info } from "@/Partials/project/ProjectInfo";
+export { default as DetailButtons } from "@/Partials/project/DetailButtons";
 export { default as Images } from "@/Partials/project/ProjectImages";
 export { default as Contributors } from "@/Partials/project/ProjectMembers";
