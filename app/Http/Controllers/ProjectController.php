@@ -48,7 +48,7 @@ class ProjectController extends Controller
     public function images(Project $project)
     {
         return new ProjectImageCollection(
-            $project->projectimages()->paginate(10)
+            $project->images()->paginate(10)
         );
     }
 }

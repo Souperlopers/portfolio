@@ -5,6 +5,7 @@
 /storage/*.key
 /charts/*.drawio*
 
+/.vscode
 /node_modules
 /vendor
 

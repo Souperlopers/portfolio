@@ -20,7 +20,7 @@ class Project extends Model
         ;
     }
 
-    public function projectimages()
+    public function images()
     {
         return $this->hasMany(Projectimage::class)
             ->orderByDesc('created_at');

@@ -3,11 +3,14 @@
 namespace Database\Seeders;
 
 use App\Models\Member;
+use App\Models\MemberProject;
 use App\Models\Project;
 use App\Models\Projectimage;
 use App\Models\Tag;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Collection;
 
 class DatabaseSeeder extends Seeder
 {
@@ -16,29 +19,49 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // disable foreign key checking temporarily
-        DB::statement('PRAGMA foreign_keys = OFF;');
-
         // clear out tables previous data
         DB::table('taggables')->truncate();
-        DB::table('member_project')->truncate();
-        Member::truncate();
-        Project::truncate();
-        Projectimage::truncate();
         Tag::truncate();
+        MemberProject::truncate();
+        Member::truncate();
+        Projectimage::truncate();
+        Project::truncate();
 
         // define the amount each table should have value
         $tagsQuantity = 15;
         $membersQuantity = 5;
         $projectsQuantity = 30;
 
-        // create tags
         $tags = (new TagSeeder)->run($tagsQuantity);
-
-        // Create members and assign tags
         $members = (new MemberSeeder)->run($membersQuantity, $tags);
+        $projects = (new ProjectSeeder)->run($projectsQuantity, $members);
+    }
 
-        // Create projects and associate members
-        (new ProjectSeeder)->run($projectsQuantity, $members);
+
+    public static function fakePriority(Model $priorable)
+    {
+        return fake()->randomElement([
+            fake()->numberBetween(-128, 127),
+            $priorable->priority
+        ]);
+    }
+
+    public static function random(Collection $collection)
+    {
+        $num = $collection->count();
+        return $collection->random(rand(1, $num));
+    }
+
+    public static function appendableTag(Collection $tags)
+    {
+        $attachmentData = [];
+
+        foreach ($tags as $tag) {
+            $attachmentData[$tag->id] = [
+                'priority_for_taggable' => DatabaseSeeder::fakePriority($tag)
+            ];
+        }
+
+        return $attachmentData;
     }
 }

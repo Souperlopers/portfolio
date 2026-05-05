@@ -17,6 +17,7 @@ class ProjectimageFactory extends Factory
     public function definition(): array
     {
         return [
+            'priority' => fake()->randomElement([fake()->numberBetween(-128, 127), 0]),
             'path' => '/assets/images/p/gallery/' . fake()->randomElement(range(1, 7)) . '.png',
         ];
     }

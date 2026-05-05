@@ -2,8 +2,6 @@ goal: create a portfolio webapp in 0 week and 7 days
 
 TODO_Z: member page first structure
 TODO_Z: project page first structure
-TODO_S tags on relations
-TODO_S optimize seeders
 TODO_Z: home page scroll bar
 TODO_Z: home page banner section
 TODO_S project time ranges
@@ -15,7 +13,7 @@ TODO_S redis
 TODO_S en/fa locale switching
 TODO_S panel
 TODO_S add assets .gitignore
-TODO_S ulid
+TODO_S replace ids with slug or ulid
 TODO_S add storage name hider
 TODO_S add storage image project/member based folders
 TODO_S add unique method to asset parameters in migrations
