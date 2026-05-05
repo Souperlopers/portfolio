@@ -14,8 +14,12 @@ export default function Home({ projects, members }: HomePageProps) {
             <div className="flex flex-col gap-5 font-vazir">
                 <ScrollBar />
                 <Banner fileName="banner.jpg" />
-                <Projects projects={projectsList} />
-                <Members members={membersList} />
+                <section id="projects">
+                    <Projects projects={projectsList} />
+                </section>
+                <section id="members">
+                    <Members members={membersList} />
+                </section>
             </div>
         </div>
     );
