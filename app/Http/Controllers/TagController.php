@@ -9,12 +9,13 @@ use App\Models\Tag;
 
 class TagController extends Controller
 {
-    public function __invoke(?Project $project = null, ?Member $member = null)
+    public function __invoke(Member|Project $taggable = null)
     {
         return new TagCollection(
-            isset($project) || isset($member)
-                ? ($project ?? $member)->tags()->paginate(10)
-                : (new Tag())->getSorted()->paginate(10)
+            (isset($taggable)
+                ? $taggable->tags()
+                : (new Tag())->getSorted()
+            )->paginate(10)
         );
     }
 }
