@@ -17,5 +17,12 @@ export type MemberPageProps = {
 }
 
 export type ProjectPageProps = {
-    project: Project;
+    project:{
+        data: Project;
+    };
 };
+
+export type ProjectImagesProps = {
+    id: number;
+    url: string;
+}
