@@ -1,6 +1,5 @@
 goal: create a portfolio webapp in 0 week and 4 days
 
-TODO_Z turn preview/github/linkedin into component and use a loop to show them
 TODO_Z preview/github/linkedin buttons functionality on project
 TODO_Z next/previous buttons functionality on project gallery
 TODO_Z fix project thumbnail size (on project card) 
