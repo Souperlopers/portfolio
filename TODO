@@ -1,10 +1,16 @@
-goal: create a portfolio webapp in 0 week and 7 days
+goal: create a portfolio webapp in 0 week and 4 days
 
-TODO_Z: home page scroll bar
-TODO_Z: home page banner section
-TODO_Z: lazy loading images
+TODO_S pagination function on frontend
+TODO_Z design each person contribution on project (on both member and project cards)
+TODO_Z home page scroll bar
+TODO_Z home page banner section
+TODO_Z lazy loading images
+
+TODO_S manage redundant branches
+
 TODO_S project time ranges
 TODO_S add reviews
+
 TODO_S server side rendering
 TODO_S input (oauth)
 TODO_S member panel
@@ -13,9 +19,9 @@ TODO_S en/fa locale switching
 TODO_S panel
 TODO_S add assets .gitignore
 TODO_S replace ids with slug or ulid
+TODO_S remove priority from resources
 TODO_S add storage name hider
 TODO_S add storage image project/member based folders
 TODO_S add unique method to asset parameters in migrations
-TODO_S remove priority from resources
 
 TODO_S (INTERNET)[https://inertiajs.com/docs/v2/advanced/error-handling]: customized 404 status code

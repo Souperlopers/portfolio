@@ -18,8 +18,7 @@ class MemberController extends Controller
             ($project
                 ? $project->members()
                 : (new Member())->getSorted()
-            )
-                ->paginate(10, pageName: $project ? "memberPage" : 'page')
+            )->paginate(10, pageName: $project ? "memberPage" : 'page')
         );
     }
 

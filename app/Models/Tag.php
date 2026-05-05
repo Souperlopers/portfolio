@@ -18,16 +18,6 @@ class Tag extends Model
         return $this::orderByDesc('priority');
     }
 
-    public function members()
-    {
-        return $this->morphedByMany(Member::class, 'taggable');
-    }
-
-    public function projects()
-    {
-        return $this->morphedByMany(Project::class, 'taggable');
-    }
-
     // casacade on delete
     protected static function booted()
     {
