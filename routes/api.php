@@ -21,13 +21,14 @@ Route::prefix('/projects')->name('project')->group(function () {
     Route::get('/{project:slug}', [ProjectController::class, 'show']);
     Route::get('/{project:slug}/images', [ProjectController::class, 'images'])->name('.images');
     Route::get('/{project:slug}/members', [MemberController::class, 'index'])->name('.members');
+    Route::get('/{project:slug}/members/{member:slug}/tags', [TagController::class, 'ProjectMember'])->name('.member.tags');
     Route::get('/{project:slug}/tags', TagController::class)->name('.tags');
 });
 
 Route::prefix('/members')->name('member')->group(function () {
     Route::get('/', [MemberController::class, 'index'])->name('s');
     Route::get('/{member:slug}', [MemberController::class, 'show']);
-    Route::get('/{member:slug}/projects', [ProjectController::class, 'index'])->name('.projects');
+    Route::get('/{member:slug}/projects/{project:slug}/tags', [TagController::class, 'MemberProject'])->name('.project.tags');
     Route::get('/{member:slug}/tags', TagController::class)->name('.tags');
 });
 
