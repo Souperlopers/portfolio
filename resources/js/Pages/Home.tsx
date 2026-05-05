@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 import { Head } from "@inertiajs/react";
 import MainLayout from "@/Layouts/MainLayout";
-import { Banner, Projects, Members } from "@/Pages/index";
+import { Banner, Projects, Members, ScrollBar } from "@/Pages/index";
 import { HomePageProps } from "@/types";
 
 export default function Home({ projects, members }: HomePageProps) {
@@ -12,9 +12,14 @@ export default function Home({ projects, members }: HomePageProps) {
         <div>
             <Head title="SouperLopers" />
             <div className="flex flex-col gap-5 font-vazir">
+                <ScrollBar />
                 <Banner fileName="banner.jpg" />
-                <Projects projects={projectsList} />
-                <Members members={membersList} />
+                <section id="projects">
+                    <Projects projects={projectsList} />
+                </section>
+                <section id="members">
+                    <Members members={membersList} />
+                </section>
             </div>
         </div>
     );
