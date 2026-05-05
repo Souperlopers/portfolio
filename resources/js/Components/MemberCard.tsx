@@ -4,43 +4,68 @@ import { MemberBrief } from "@/types/member";
 
 const MemberCard = ({ memberData }: { memberData: MemberBrief }) => {
     const [imgLoaded, setImgLoaded] = useState(false);
-    const name = memberData.name || "بدون نام";
-    const position = memberData.position || "بدون سمت";
+    const { name = "بدون نام", position = "بدون سمت", thumbnail, url } = memberData;
 
     return (
-        <div className="bg-white p-5 rounded w-full">
-            <div className="flex flex-col gap-5 w-full">
-                <div className="flex justify-center">
-                    <div className="bg-pink-300 w-32 h-32 rounded-full">
-                        {!imgLoaded && (
-                            <div className="lg:w-32 lg:h-32 md:w-full md:h-42 sm:w-24 sm:h-32 w-20 h-28 bg-neutral-500" />
-                        )}
-                        <img
-                            src={memberData.thumbnail}
-                            alt={`${name} thumbnail`}
-                            className="w-32 h-32 rounded-full"
-                            onLoad={() => setImgLoaded(true)}
-                            style={{ display: imgLoaded ? "block" : "none" }}
-                        />
-                    </div>
-                </div>
-                <div className="flex justify-center">
-                    <div className="flex flex-col pt-5 gap-3 text-center">
-                        <span className="truncate lg:max-w-32 max-w-10">
-                            {name}
-                        </span>
-                        <span className="truncate lg:max-w-32 max-w-10">
-                            {position}
-                        </span>
-                        <Link
-                            href={memberData.url}
-                            className="text-cyan-500 font-semibold"
-                        >
-                            مشاهده پروفایل
-                        </Link>
-                    </div>
+        <div
+            className="
+                group relative overflow-hidden
+                bg-white/10 backdrop-blur-lg border border-white/20
+                rounded-2xl shadow-[0_10px_40px_rgba(0,0,0,0.08)]
+                hover:shadow-[0_10px_40px_rgba(0,0,0,0.25)]
+                transition-all duration-500 ease-out
+                flex flex-col items-center justify-between
+                p-6 min-h-[320px]
+                hover:-translate-y-2 cursor-pointer
+            "
+        >
+            <div className="relative flex items-center justify-center">
+                <div className="
+                    absolute inset-0 bg-gradient-to-br from-cyan-400 via-sky-500 to-blue-600
+                    opacity-0 group-hover:opacity-20 blur-2xl rounded-full transition-all duration-500
+                " />
+                <div className="relative w-28 h-28 rounded-full overflow-hidden border-2 border-white/40 shadow-inner">
+                    {!imgLoaded && (
+                        <div className="absolute inset-0 bg-neutral-700 animate-pulse rounded-full" />
+                    )}
+                    <img
+                        src={thumbnail}
+                        alt={`${name} thumbnail`}
+                        onLoad={() => setImgLoaded(true)}
+                        style={{ display: imgLoaded ? "block" : "none" }}
+                        className="object-cover w-full h-full rounded-full"
+                    />
                 </div>
             </div>
+
+            <div className="mt-5 text-center space-y-2">
+                <h3
+                    className="
+                        text-white font-semibold text-lg truncate
+                        group-hover:text-cyan-400 transition-colors duration-300
+                    "
+                >
+                    {name}
+                </h3>
+                <p className="text-gray-300 text-sm">{position}</p>
+            </div>
+
+            <Link
+                href={url}
+                className="
+                    mt-5 inline-block px-4 py-1.5
+                    text-sm text-cyan-400 font-semibold border border-cyan-500/30 rounded-full
+                hover:bg-cyan-500 hover:text-white
+                    transition-all duration-300
+                "
+            >
+                مشاهده پروفایل
+            </Link>
+
+            <div className="
+                absolute inset-0 rounded-2xl border-2 border-transparent
+                group-hover:border-cyan-500/40 transition-all duration-300
+            " />
         </div>
     );
 };
