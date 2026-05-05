@@ -7,7 +7,7 @@ const Profile = ({ info }: { info: Member }) => {
         <div className="flex justify-between gap-3 w-full rounded">
             <div className="w-1/6">
                 {!imgLoaded && (
-                    <div className="lg:w-48 lg:h-48 md:w-full md:h-42 sm:w-24 sm:h-32 w-20 h-28 bg-neutral-500" />
+                    <div className="lg:w-48 lg:h-48 md:w-full md:h-42 sm:w-24 sm:h-32 w-20 h-28 bg-neutral-500 rounded-full" />
                 )}
                 <img
                     src={info.thumbnail}
