@@ -1,7 +1,13 @@
 goal: create a portfolio webapp in 0 week and 4 days
 
-TODO_S pagination function on frontend
+TODO_Z turn preview/github/linkedin into component and use a loop to show them
+TODO_Z preview/github/linkedin buttons functionality on project
+TODO_Z next/previous buttons functionality on project gallery
+TODO_Z fix project thumbnail size (on project card) 
+TODO_Z make member thumbnail circle 
 TODO_Z design each person contribution on project (on both member and project cards)
+TODO_S limited contribution problem on limited fetching
+TODO_S pagination function on frontend
 TODO_Z home page scroll bar
 TODO_Z home page banner section
 TODO_Z lazy loading images
