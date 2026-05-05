@@ -24,7 +24,7 @@ class ProjectResource extends JsonResource
             'preview_url' => $this->url,
             'contributors' => new MemberCollection($this->whenLoaded('members')),
             'technologies' => new TagCollection($this->whenLoaded('tags')),
-            'images' => new ProjectImageCollection($this->whenLoaded('projectimages')),
+            'images' => new ProjectImageCollection($this->whenLoaded('images')),
         ];
     }
 }
