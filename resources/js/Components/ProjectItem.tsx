@@ -1,14 +1,24 @@
+import { useState } from "react";
 import { Link } from "@inertiajs/react";
 import { ProjectBrief } from "@/types/project";
 
 const ProjectItem = ({ projectData }: { projectData: ProjectBrief }) => {
-    const projectId = projectData.id;
+    const [imgLoaded, setImgLoaded] = useState(false);
     const projectName = projectData.title || "بدون نام";
 
     return (
         <div className="w-full flex gap-5 bg-white p-1 rounded">
             <div className="bg-orange-300 w-1/5 h-48 rounded">
-                <img src={projectData.thumbnail} alt={`${projectName} cover`} className="w-full h-full rounded" />
+                {!imgLoaded && (
+                    <div className="lg:w-full lg:h-full md:w-full md:h-42 sm:w-24 sm:h-32 w-20 h-28 bg-neutral-500" />
+                )}
+                <img
+                    src={projectData.thumbnail}
+                    alt={`${projectName} cover`}
+                    className="w-full h-full rounded"
+                    onLoad={() => setImgLoaded(true)}
+                    style={{ display: imgLoaded ? "block" : "none" }}
+                />
             </div>
             <div className="flex flex-col gap-5 w-4/5 py-3">
                 <div className="truncate max-w-32 sm:max-w-xs lg:max-w-sm xl:max-w-md">
