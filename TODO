@@ -4,6 +4,9 @@ TODO_Z design each person contribution on project (on both member and project ca
 TODO_S limited contribution problem on limited fetching (project.tags and member.tags)
 TODO_S pagination function on frontend
 
+TODO_Z style member card
+TODO_Z style project card
+
 TODO_S manage redundant branches
 
 TODO_S project time ranges
