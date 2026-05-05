@@ -35,7 +35,7 @@ class ProjectController extends Controller
             $project->load([
                 'members' => fn($query) => $query->limit(4),
                 'tags' => fn($query) => $query->limit(4),
-                'projectimages' => fn($query) => $query->limit(1),
+                'images' => fn($query) => $query->limit(1),
             ])
         );
     }
