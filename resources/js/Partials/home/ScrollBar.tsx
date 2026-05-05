@@ -30,7 +30,7 @@ const ScrollBar = () => {
                 },
                 {
                     threshold: 0.5,
-                }
+                },
             );
 
             observer.observe(element);
@@ -56,8 +56,8 @@ const ScrollBar = () => {
     ];
 
     return (
-        <div className="fixed bottom-20 translate-y-1/2 right-4 z-50">
-            <div className="relative flex flex-col overflow-hidden rounded-full border border-white/15 bg-black/40 backdrop-blur-xl shadow-[0_10px_40px_rgba(0,0,0,0.18)]">
+        <div className="fixed bottom-20 translate-y-1/2 right-4 z-40">
+            <div className="flex flex-col rounded-full border border-white/15 bg-black/40 backdrop-blur-xl shadow-[0_10px_40px_rgba(0,0,0,0.18)]">
                 {items.map((item, index) => {
                     const isActive = activeSection === item.id;
 
@@ -79,7 +79,7 @@ const ScrollBar = () => {
                         >
                             <span
                                 className={`
-                                    relative z-10 transition-all duration-300
+                                     z-10 transition-all duration-300
                                     ${isActive ? "scale-110" : "group-hover:scale-110 group-hover:-translate-y-[1px]"}
                                 `}
                             >
