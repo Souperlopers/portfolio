@@ -8,8 +8,6 @@ TODO_Z make member thumbnail circle
 TODO_Z design each person contribution on project (on both member and project cards)
 TODO_S limited contribution problem on limited fetching (project.tags and member.tags)
 TODO_S pagination function on frontend
-TODO_Z home page scroll bar
-TODO_Z home page banner section
 TODO_Z lazy loading images
 
 TODO_S manage redundant branches
