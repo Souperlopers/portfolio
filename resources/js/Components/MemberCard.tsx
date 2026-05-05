@@ -14,6 +14,7 @@ const MemberCard = ({ memberData }: { memberData: MemberBrief }) => {
                         <img
                             src={memberData.thumbnail}
                             alt={`${name} thumbnail`}
+                            className="w-32 h-32 rounded-full"
                         />
                     </div>
                 </div>

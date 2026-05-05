@@ -7,7 +7,7 @@ const Profile = ({ info }: { info: Member }) => {
                 <img
                     src={info.thumbnail}
                     alt={`${info.name} cover`}
-                    className="rounded bg-cover"
+                    className="rounded-full w-48 h-48 bg-cover"
                 />
             </div>
             <div className="flex flex-col gap-5 w-5/6 py-3 bg-pink-200">
