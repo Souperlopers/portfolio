@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Resources\Tag\TagCollection;
 use App\Models\Member;
+use App\Models\MemberProject;
 use App\Models\Project;
 use App\Models\Tag;
 
@@ -17,5 +18,20 @@ class TagController extends Controller
                 : (new Tag())->getSorted()
             )->paginate(10)
         );
+    }
+
+    public function MemberProject(Member $member, Project $project)
+    {
+        return new TagCollection(
+            MemberProject
+                ::getRecord($member, $project)
+                ->tags()
+                ->paginate(10)
+        );
+    }
+
+    public function ProjectMember(Project $project, Member $member)
+    {
+        return $this->MemberProject($member, $project);
     }
 }
