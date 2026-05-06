@@ -15,13 +15,15 @@ class TagResource extends JsonResource
     public function toArray(Request $request): array
     {
         return [
-            'id' => (int) $this->id,
+            'id' => $this->slug,
             'title' => $this->name,
             'type' => $this->type,
             'version' => $this->version,
-            'priority' => (int) isset($this->pivot->priority_for_taggable)
-                ? $this->pivot->priority_for_taggable
-                : $this->priority,
+
+            // for debug
+            // 'priority' => (int) isset($this->pivot->priority_for_taggable)
+            //     ? $this->pivot->priority_for_taggable
+            //     : $this->priority,
         ];
     }
 }

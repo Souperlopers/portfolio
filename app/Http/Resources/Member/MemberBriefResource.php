@@ -16,15 +16,17 @@ class MemberBriefResource extends JsonResource
     public function toArray(Request $request): array
     {
         return [
-            'id' => (int) $this->id,
+            'id' => $this->slug,
             'name' => $this->name,
             'position' => $this->position,
             'thumbnail' => request()->schemeAndHttpHost() .  $this->thumbnail,
             'url' => request()->schemeAndHttpHost() . '/' . $this->slug,
             'skills' => new TagCollection($this->whenLoaded('tags')),
-            'priority' => (int) isset($this->pivot->member_priority_in_project)
-                ? $this->pivot->member_priority_in_project
-                : $this->priority,
+
+            // for debug
+            // 'priority' => (int) isset($this->pivot->member_priority_in_project)
+            //     ? $this->pivot->member_priority_in_project
+            //     : $this->priority,
         ];
     }
 }
