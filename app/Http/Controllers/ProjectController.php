@@ -31,13 +31,17 @@ class ProjectController extends Controller
      */
     public function show(Project $project)
     {
-        return new ProjectResource(
-            $project->load([
-                'members' => fn($query) => $query->limit(4),
-                'tags' => fn($query) => $query->limit(4),
-                'images' => fn($query) => $query->limit(1),
-            ])
-        );
+        $project = $project->load([
+            'tags' => fn($query) => $query->limit(4),
+            'members' => fn($query) => $query->limit(4),
+        ]);
+
+        $project->members->each(function ($mbr) {
+            $mbr = $mbr->load('tags');
+            $mbr->tags = $mbr->pivot->tags->where('pivot.priority_for_taggable', '>', 64);
+        });
+
+        return new ProjectResource($project);
     }
 
 
