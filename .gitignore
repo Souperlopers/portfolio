@@ -4,6 +4,7 @@
 # /public/assets
 /storage/*.key
 /charts/*.drawio*
+/bootstrap/ssr
 
 /.vscode
 /node_modules

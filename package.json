@@ -4,6 +4,7 @@
     "scripts": {
         "dev": "vite",
         "build": "tsc && vite build",
+        "build-ssr": "tsc && vite build && vite build --ssr",
         "serve": "concurrently -k \"php artisan serve\" \"npm run dev\""
     },
     "devDependencies": {
