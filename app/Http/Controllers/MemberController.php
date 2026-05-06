@@ -27,16 +27,11 @@ class MemberController extends Controller
      */
     public function show(Member $member)
     {
-        $member = $member->load([
-            'tags' => fn($q) => $q->limit(4),
-            'projects' => fn($q) => $q->limit(4)
-        ]);
-
-        $member->projects->each(function ($prj) {
-            $prj = $prj->load('tags');
-            $prj->tags = $prj->pivot->tags->where('pivot.priority_for_taggable', '>', 64);
-        });
-
-        return new MemberResource($member);
+        return new MemberResource(
+            $member->load([
+                'tags' => fn($q) => $q->limit(4),
+                'projects' => fn($q) => $q->limit(4)
+            ])->appendContribution()
+        );
     }
 }

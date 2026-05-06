@@ -1,7 +1,6 @@
 goal: create a portfolio webapp in 0 week and 4 days
 
-TODO_Z design each person contribution on project (on both member and project cards)
-TODO_S limited contribution problem on limited fetching (project.tags and member.tags)
+TODO_Z answer this what's the maximum amount of tag you can put on member and project cards 
 TODO_S pagination function on frontend
 
 TODO_Z style member card
