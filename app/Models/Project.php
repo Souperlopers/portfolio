@@ -29,10 +29,10 @@ class Project extends Model
     public function members()
     {
         return $this->belongsToMany(Member::class)
-            ->withPivot('member_priority_in_project')
+            ->using(MemberProject::class)
+            ->withPivot('id', 'member_priority_in_project')
             ->orderByDesc('member_priority_in_project')
             ->orderBy('name')
-            ->with(['tags' => fn($q) => $q->where('priority_for_taggable', '>', 64)])
         ;
     }
 }
