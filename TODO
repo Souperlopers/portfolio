@@ -1,25 +1,23 @@
 goal: create a portfolio webapp in 0 week and 4 days
 
-TODO_Z answer this what's the maximum amount of tag you can put on member and project cards 
+TODO_Z answer this: what's the maximum amount of tags you can put on member and project cards
+TODO_Z I have added a todo tag on your files (check todo tree extension)
 TODO_S pagination function on frontend
 
 TODO_Z style member card
 TODO_Z style project card
 
-TODO_S manage redundant branches
-
 TODO_S project time ranges
 TODO_S add reviews
 
 TODO_S server side rendering
-TODO_S input (oauth)
-TODO_S member panel
 TODO_S redis
 TODO_S en/fa locale switching
+
+TODO_S input (oauth)
 TODO_S panel
-TODO_S add assets .gitignore
-TODO_S replace ids with slug or ulid
-TODO_S remove priority from resources
+TODO_Z panel
+
 TODO_S add storage name hider
 TODO_S add storage image project/member based folders
 TODO_S add unique method to asset parameters in migrations

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { FolderKanban, Users } from "lucide-react";
+import { FolderKanban, Users } from "lucide-react"; // TODO_Z Failed to resolve import "lucide-react". send me its package with npm pack <packageName>
 
 const ScrollBar = () => {
     const [activeSection, setActiveSection] = useState("");
