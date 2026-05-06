@@ -12,6 +12,9 @@ class MemberProject extends Pivot
 
     public static function getRecord(Member $member, Project $project)
     {
-        return static::query()->where('member_id', $member->id)->where('project_id', $project->id)->firstOrFail();
+        return static::query()
+            ->where('member_id', $member->id)
+            ->where('project_id', $project->id)
+            ->firstOrFail();
     }
 }
