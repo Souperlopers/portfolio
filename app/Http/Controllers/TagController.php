@@ -20,6 +20,16 @@ class TagController extends Controller
         );
     }
 
+    public function memberTags(Member $member)
+    {
+        return $this($member);
+    }
+
+    public function projectTags(Project $project)
+    {
+        return $this($project);
+    }
+
     public function MemberProject(Member $member, Project $project)
     {
         return new TagCollection(
