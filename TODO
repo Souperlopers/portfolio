@@ -1,11 +1,15 @@
 goal: create a portfolio webapp in 0 week and 3 days
 
 TODO_Z answer this: what's the maximum amount of tags you can put on member and project cards
-TODO_Z I have added a todo tag on your files (check todo tree extension)
+TODO_Z move scroll bar group to the middle of the screen. and maybe making it little narrow? (example iamge: /image.png delete image after seeing it)
+TODO_Z decrease home page content width (example iamge: /image.png delete image after seeing it)
+TODO_Z fix: whole member card is acting as link and main link button doesn't work
+TODO_Z put scrollbar in layout maybe? (so it will be available on other pages too and we can disable it where we don't want it)
 TODO_S pagination function on frontend
 
 TODO_Z style member card
 TODO_Z style project card
+TODO_Z project page is empty
 
 TODO_S server side rendering
 TODO_S project time ranges
