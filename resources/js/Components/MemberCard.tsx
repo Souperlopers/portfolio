@@ -1,10 +1,17 @@
 import { useState } from "react";
 import { Link } from "@inertiajs/react";
 import { MemberBrief } from "@/types/member";
+import SkillsTag from "./SkillsTag";
 
 const MemberCard = ({ memberData }: { memberData: MemberBrief }) => {
     const [imgLoaded, setImgLoaded] = useState(false);
-    const { name = "بدون نام", position = "بدون سمت", thumbnail, url } = memberData;
+    const {
+        name = "بدون نام",
+        position = "بدون سمت",
+        thumbnail,
+        url,
+        skills,
+    } = memberData;
 
     return (
         <div
@@ -20,10 +27,12 @@ const MemberCard = ({ memberData }: { memberData: MemberBrief }) => {
             "
         >
             <div className="relative flex items-center justify-center">
-                <div className="
+                <div
+                    className="
                     absolute inset-0 bg-gradient-to-br from-sky-300 via-sky-500 to-blue-600
                     opacity-0 group-hover:opacity-20 blur-2xl rounded-full transition-all duration-500
-                " />
+                "
+                />
                 <div className="relative w-28 h-28 rounded-full overflow-hidden border-2 border-white/40 shadow-inner">
                     {!imgLoaded && (
                         <div className="absolute inset-0 bg-neutral-700 animate-pulse rounded-full" />
@@ -50,6 +59,9 @@ const MemberCard = ({ memberData }: { memberData: MemberBrief }) => {
                 <p className="text-gray-300 text-sm">{position}</p>
             </div>
 
+            <div className="flex flex-wrap gap-2">
+                <SkillsTag skills={skills} isDisplayVersion={true} />
+            </div>
             <Link
                 href={url}
                 className="
@@ -62,10 +74,12 @@ const MemberCard = ({ memberData }: { memberData: MemberBrief }) => {
                 مشاهده پروفایل
             </Link>
 
-            <div className="
+            <div
+                className="
                 absolute inset-0 rounded-2xl border-2 border-transparent
                 group-hover:border-cyan-500/40 transition-all duration-300
-            " />
+            "
+            />
         </div>
     );
 };
