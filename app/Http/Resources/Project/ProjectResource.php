@@ -21,10 +21,14 @@ class ProjectResource extends JsonResource
             'title' => $this->name,
             'description' => $this->description,
             'thumbnail' => request()->schemeAndHttpHost() .  $this->thumbnail,
-            'preview_url' => $this->url,
             'contributors' => new MemberCollection($this->whenLoaded('members')),
             'technologies' => new TagCollection($this->whenLoaded('tags')),
             'images' => new ProjectImageCollection($this->whenLoaded('images')),
+            'links' => [
+                'preview' => $this->url,
+                'github' => $this->github,
+                'figma' => $this->figma,
+            ],
         ];
     }
 }
