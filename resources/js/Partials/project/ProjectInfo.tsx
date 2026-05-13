@@ -1,5 +1,5 @@
 import { Project } from "@/types/project";
-import { DetailButtons } from "@/Pages/index";
+import { DetailButtons } from "@/index";
 
 const ProjectInfo = ({ info }: { info: Project }) => {
     const technologies = info.technologies;

@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 import MainLayout from "@/Layouts/MainLayout";
 import { ProjectPageProps } from "@/types";
 import { Head } from "@inertiajs/react";
-import {Info, Images, Contributors} from "@/Pages/index";
+import { Info, Images, Contributors } from "@/index";
 
 export default function Project({ project }: ProjectPageProps) {
     const projectData = project.data;

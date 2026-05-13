@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 import MainLayout from "@/Layouts/MainLayout";
 import { MemberPageProps } from "@/types";
 import { Head } from "@inertiajs/react";
-import { Profile, MemberProjects } from "@/Pages/index";
+import { Profile, MemberProjects } from "@/index";
 
 export default function Member({ member }: MemberPageProps) {
     const info = member.data || {};
