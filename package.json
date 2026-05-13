@@ -5,7 +5,8 @@
         "dev": "vite",
         "build": "tsc && vite build",
         "build-ssr": "tsc && vite build && vite build --ssr",
-        "serve": "concurrently -k \"php artisan serve\" \"npm run dev\""
+        "serve": "concurrently -k \"php artisan serve\" \"npm run dev\"",
+        "serve-ssr": "concurrently -k \"php artisan serve\" \"npm run dev\" \"php artisan inertia:start-ssr\""
     },
     "devDependencies": {
         "@headlessui/react": "^1.4.2",

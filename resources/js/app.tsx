@@ -15,8 +15,12 @@ createInertiaApp({
             import.meta.glob("./Pages/**/*.tsx"),
         ),
     setup({ el, App, props }) {
+        if (import.meta.env.SSR) {
+            hydrateRoot(el, <App {...props} />);
+            return;
+        }
+
         createRoot(el).render(<App {...props} />);
-        // hydrateRoot(el, <App {...props} />);
     },
     progress: {
         color: "#4B5563",
