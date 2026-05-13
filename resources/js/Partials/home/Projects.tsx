@@ -40,10 +40,7 @@ const Projects = ({ projects }: { projects: ProjectBrief[] }) => {
 
                     <div className="flex flex-col gap-5">
                         {topThreeProjects.map((project) => (
-                            <ProjectItem
-                                key={project.id}
-                                projectData={project}
-                            />
+                            <ProjectItem key={project.id} projectData={project} />
                         ))}
                     </div>
 

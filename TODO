@@ -1,8 +1,9 @@
-goal: create a portfolio webapp in 0 week and 3 days
+goal: create a portfolio webapp in -1 week and -6 days
 
-TODO_Z add key to list children (Warning: Each child in a list should have a unique "key" prop.)
-TODO_S server side rendering
-
+TODO_Z increase the gap between 'پروژه ها' and project item section
+TODO_Z increase the gap between member position and tags
+TODO_Z remove (or decrease) member avatar radius in member
+TODO_Z remove priority from cards and items
 TODO_Z move scroll bar group to the middle of the screen. and maybe making it little narrow? (example iamge: /image.png delete image after seeing it)
 TODO_Z decrease home page content width (example iamge: /image.png delete image after seeing it)
 TODO_Z fix: whole member card is acting as link and main link button doesn't work
@@ -16,6 +17,8 @@ TODO_Z tag component: is display version
 TODO_Z scrollbar horizental mode
 
 TODO_S ulid
+TODO_Z add key to list children (Warning: Each child in a list should have a unique "key" prop.)
+
 TODO_S project time ranges
 TODO_S add reviews
 TODO_S add storage name hider
