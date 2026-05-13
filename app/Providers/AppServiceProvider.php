@@ -20,10 +20,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        // replacing type syntax with shorted names in morph relations
-        Relation::enforceMorphMap([
-            'member' => 'App\Models\Member',
-            'project' => 'App\Models\Project',
-        ]);
+        //
     }
 }

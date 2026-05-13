@@ -1,5 +1,17 @@
-@import "tailwindcss";
-@source "../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php";
-@source "../../storage/framework/views/*.php";
-@source "../**/*.blade.php";
-@source "../**/*.js";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "vazir";
+    src: url("../../public/assets/fonts/Vazirmatn-Regular.woff2")
+        format("woff2");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+html {
+    font-family: "vazir";
+    margin: 0;
+}

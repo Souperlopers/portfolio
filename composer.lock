@@ -4,19 +4,14 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8ea8756091dbfe299db375730ebf51c8",
+    "content-hash": "9667783e7384772b1b2c9f2f6c549784",
     "packages": [
         {
             "name": "brick/math",
             "version": "0.12.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/brick/math.git",
-                "reference": "866551da34e9a618e64a819ee1e01c20d8a588ba"
-            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/brick/math/zipball/866551da34e9a618e64a819ee1e01c20d8a588ba",
+                "url": "https://mirror.abrha.net/repository/composer/brick/math/0.12.3/brick-math-0.12.3.zip",
                 "reference": "866551da34e9a618e64a819ee1e01c20d8a588ba",
                 "shasum": ""
             },
@@ -34,7 +29,6 @@
                     "Brick\\Math\\": "src/"
                 }
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "MIT"
             ],
@@ -69,14 +63,9 @@
         {
             "name": "carbonphp/carbon-doctrine-types",
             "version": "2.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/CarbonPHP/carbon-doctrine-types.git",
-                "reference": "99f76ffa36cce3b70a4a6abce41dba15ca2e84cb"
-            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/CarbonPHP/carbon-doctrine-types/zipball/99f76ffa36cce3b70a4a6abce41dba15ca2e84cb",
+                "url": "https://mirror.abrha.net/repository/composer/carbonphp/carbon-doctrine-types/2.1.0/carbonphp-carbon-doctrine-types-2.1.0.zip",
                 "reference": "99f76ffa36cce3b70a4a6abce41dba15ca2e84cb",
                 "shasum": ""
             },
@@ -97,7 +86,6 @@
                     "Carbon\\Doctrine\\": "src/Carbon/Doctrine/"
                 }
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "MIT"
             ],
@@ -136,83 +124,11 @@
             "time": "2023-12-11T17:09:12+00:00"
         },
         {
-            "name": "defuse/php-encryption",
-            "version": "v2.4.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/defuse/php-encryption.git",
-                "reference": "f53396c2d34225064647a05ca76c1da9d99e5828"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/defuse/php-encryption/zipball/f53396c2d34225064647a05ca76c1da9d99e5828",
-                "reference": "f53396c2d34225064647a05ca76c1da9d99e5828",
-                "shasum": ""
-            },
-            "require": {
-                "ext-openssl": "*",
-                "paragonie/random_compat": ">= 2",
-                "php": ">=5.6.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^5|^6|^7|^8|^9|^10",
-                "yoast/phpunit-polyfills": "^2.0.0"
-            },
-            "bin": [
-                "bin/generate-defuse-key"
-            ],
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Defuse\\Crypto\\": "src"
-                }
-            },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Taylor Hornby",
-                    "email": "taylor@defuse.ca",
-                    "homepage": "https://defuse.ca/"
-                },
-                {
-                    "name": "Scott Arciszewski",
-                    "email": "info@paragonie.com",
-                    "homepage": "https://paragonie.com"
-                }
-            ],
-            "description": "Secure PHP Encryption Library",
-            "keywords": [
-                "aes",
-                "authenticated encryption",
-                "cipher",
-                "crypto",
-                "cryptography",
-                "encrypt",
-                "encryption",
-                "openssl",
-                "security",
-                "symmetric key cryptography"
-            ],
-            "support": {
-                "issues": "https://github.com/defuse/php-encryption/issues",
-                "source": "https://github.com/defuse/php-encryption/tree/v2.4.0"
-            },
-            "time": "2023-06-19T06:10:36+00:00"
-        },
-        {
             "name": "dflydev/dot-access-data",
             "version": "v3.0.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/dflydev/dflydev-dot-access-data.git",
-                "reference": "a23a2bf4f31d3518f3ecb38660c95715dfead60f"
-            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/dflydev/dflydev-dot-access-data/zipball/a23a2bf4f31d3518f3ecb38660c95715dfead60f",
+                "url": "https://mirror.abrha.net/repository/composer/dflydev/dot-access-data/v3.0.3/dflydev-dot-access-data-v3.0.3.zip",
                 "reference": "a23a2bf4f31d3518f3ecb38660c95715dfead60f",
                 "shasum": ""
             },
@@ -237,7 +153,6 @@
                     "Dflydev\\DotAccessData\\": "src/"
                 }
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "MIT"
             ],
@@ -280,14 +195,9 @@
         {
             "name": "doctrine/inflector",
             "version": "2.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/doctrine/inflector.git",
-                "reference": "6d6c96277ea252fc1304627204c3d5e6e15faa3b"
-            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/doctrine/inflector/zipball/6d6c96277ea252fc1304627204c3d5e6e15faa3b",
+                "url": "https://mirror.abrha.net/repository/composer/doctrine/inflector/2.1.0/doctrine-inflector-2.1.0.zip",
                 "reference": "6d6c96277ea252fc1304627204c3d5e6e15faa3b",
                 "shasum": ""
             },
@@ -307,7 +217,6 @@
                     "Doctrine\\Inflector\\": "src"
                 }
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "MIT"
             ],
@@ -370,14 +279,9 @@
         {
             "name": "doctrine/lexer",
             "version": "3.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/doctrine/lexer.git",
-                "reference": "31ad66abc0fc9e1a1f2d9bc6a42668d2fbbcd6dd"
-            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/doctrine/lexer/zipball/31ad66abc0fc9e1a1f2d9bc6a42668d2fbbcd6dd",
+                "url": "https://mirror.abrha.net/repository/composer/doctrine/lexer/3.0.1/doctrine-lexer-3.0.1.zip",
                 "reference": "31ad66abc0fc9e1a1f2d9bc6a42668d2fbbcd6dd",
                 "shasum": ""
             },
@@ -397,7 +301,6 @@
                     "Doctrine\\Common\\Lexer\\": "src"
                 }
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "MIT"
             ],
@@ -446,20 +349,15 @@
         },
         {
             "name": "dragonmantank/cron-expression",
-            "version": "v3.5.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/dragonmantank/cron-expression.git",
-                "reference": "1b2de7f4a468165dca07b142240733a1973e766d"
-            },
+            "version": "v3.6.0",
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/dragonmantank/cron-expression/zipball/1b2de7f4a468165dca07b142240733a1973e766d",
-                "reference": "1b2de7f4a468165dca07b142240733a1973e766d",
+                "url": "https://mirror.abrha.net/repository/composer/dragonmantank/cron-expression/v3.6.0/dragonmantank-cron-expression-v3.6.0.zip",
+                "reference": "d61a8a9604ec1f8c3d150d09db6ce98b32675013",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.2|^8.0"
+                "php": "^8.2|^8.3|^8.4|^8.5"
             },
             "replace": {
                 "mtdowling/cron-expression": "^1.0"
@@ -480,7 +378,6 @@
                     "Cron\\": "src/Cron/"
                 }
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "MIT"
             ],
@@ -498,7 +395,7 @@
             ],
             "support": {
                 "issues": "https://github.com/dragonmantank/cron-expression/issues",
-                "source": "https://github.com/dragonmantank/cron-expression/tree/v3.5.0"
+                "source": "https://github.com/dragonmantank/cron-expression/tree/v3.6.0"
             },
             "funding": [
                 {
@@ -506,19 +403,14 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-10-31T18:36:32+00:00"
+            "time": "2025-10-31T18:51:33+00:00"
         },
         {
             "name": "egulias/email-validator",
             "version": "4.0.4",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/egulias/EmailValidator.git",
-                "reference": "d42c8731f0624ad6bdc8d3e5e9a4524f68801cfa"
-            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/egulias/EmailValidator/zipball/d42c8731f0624ad6bdc8d3e5e9a4524f68801cfa",
+                "url": "https://mirror.abrha.net/repository/composer/egulias/email-validator/4.0.4/egulias-email-validator-4.0.4.zip",
                 "reference": "d42c8731f0624ad6bdc8d3e5e9a4524f68801cfa",
                 "shasum": ""
             },
@@ -545,7 +437,6 @@
                     "Egulias\\EmailValidator\\": "src"
                 }
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "MIT"
             ],
@@ -576,80 +467,11 @@
             "time": "2025-03-06T22:45:56+00:00"
         },
         {
-            "name": "firebase/php-jwt",
-            "version": "v7.0.5",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/googleapis/php-jwt.git",
-                "reference": "47ad26bab5e7c70ae8a6f08ed25ff83631121380"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/googleapis/php-jwt/zipball/47ad26bab5e7c70ae8a6f08ed25ff83631121380",
-                "reference": "47ad26bab5e7c70ae8a6f08ed25ff83631121380",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^8.0"
-            },
-            "require-dev": {
-                "guzzlehttp/guzzle": "^7.4",
-                "phpfastcache/phpfastcache": "^9.2",
-                "phpspec/prophecy-phpunit": "^2.0",
-                "phpunit/phpunit": "^9.5",
-                "psr/cache": "^2.0||^3.0",
-                "psr/http-client": "^1.0",
-                "psr/http-factory": "^1.0"
-            },
-            "suggest": {
-                "ext-sodium": "Support EdDSA (Ed25519) signatures",
-                "paragonie/sodium_compat": "Support EdDSA (Ed25519) signatures when libsodium is not present"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Firebase\\JWT\\": "src"
-                }
-            },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Neuman Vong",
-                    "email": "neuman+pear@twilio.com",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Anant Narayanan",
-                    "email": "anant@php.net",
-                    "role": "Developer"
-                }
-            ],
-            "description": "A simple library to encode and decode JSON Web Tokens (JWT) in PHP. Should conform to the current spec.",
-            "homepage": "https://github.com/firebase/php-jwt",
-            "keywords": [
-                "jwt",
-                "php"
-            ],
-            "support": {
-                "issues": "https://github.com/googleapis/php-jwt/issues",
-                "source": "https://github.com/googleapis/php-jwt/tree/v7.0.5"
-            },
-            "time": "2026-04-01T20:38:03+00:00"
-        },
-        {
             "name": "fruitcake/php-cors",
             "version": "v1.4.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/fruitcake/php-cors.git",
-                "reference": "38aaa6c3fd4c157ffe2a4d10aa8b9b16ba8de379"
-            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/fruitcake/php-cors/zipball/38aaa6c3fd4c157ffe2a4d10aa8b9b16ba8de379",
+                "url": "https://mirror.abrha.net/repository/composer/fruitcake/php-cors/v1.4.0/fruitcake-php-cors-v1.4.0.zip",
                 "reference": "38aaa6c3fd4c157ffe2a4d10aa8b9b16ba8de379",
                 "shasum": ""
             },
@@ -673,7 +495,6 @@
                     "Fruitcake\\Cors\\": "src/"
                 }
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "MIT"
             ],
@@ -713,14 +534,9 @@
         {
             "name": "graham-campbell/result-type",
             "version": "v1.1.4",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/GrahamCampbell/Result-Type.git",
-                "reference": "e01f4a821471308ba86aa202fed6698b6b695e3b"
-            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/GrahamCampbell/Result-Type/zipball/e01f4a821471308ba86aa202fed6698b6b695e3b",
+                "url": "https://mirror.abrha.net/repository/composer/graham-campbell/result-type/v1.1.4/graham-campbell-result-type-v1.1.4.zip",
                 "reference": "e01f4a821471308ba86aa202fed6698b6b695e3b",
                 "shasum": ""
             },
@@ -737,7 +553,6 @@
                     "GrahamCampbell\\ResultType\\": "src/"
                 }
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "MIT"
             ],
@@ -775,14 +590,9 @@
         {
             "name": "guzzlehttp/guzzle",
             "version": "7.10.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "b51ac707cfa420b7bfd4e4d5e510ba8008e822b4"
-            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/guzzle/guzzle/zipball/b51ac707cfa420b7bfd4e4d5e510ba8008e822b4",
+                "url": "https://mirror.abrha.net/repository/composer/guzzlehttp/guzzle/7.10.0/guzzlehttp-guzzle-7.10.0.zip",
                 "reference": "b51ac707cfa420b7bfd4e4d5e510ba8008e822b4",
                 "shasum": ""
             },
@@ -825,7 +635,6 @@
                     "GuzzleHttp\\": "src/"
                 }
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "MIT"
             ],
@@ -901,14 +710,9 @@
         {
             "name": "guzzlehttp/promises",
             "version": "2.3.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/guzzle/promises.git",
-                "reference": "481557b130ef3790cf82b713667b43030dc9c957"
-            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/guzzle/promises/zipball/481557b130ef3790cf82b713667b43030dc9c957",
+                "url": "https://mirror.abrha.net/repository/composer/guzzlehttp/promises/2.3.0/guzzlehttp-promises-2.3.0.zip",
                 "reference": "481557b130ef3790cf82b713667b43030dc9c957",
                 "shasum": ""
             },
@@ -931,7 +735,6 @@
                     "GuzzleHttp\\Promise\\": "src/"
                 }
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "MIT"
             ],
@@ -984,14 +787,9 @@
         {
             "name": "guzzlehttp/psr7",
             "version": "2.9.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/guzzle/psr7.git",
-                "reference": "7d0ed42f28e42d61352a7a79de682e5e67fec884"
-            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/guzzle/psr7/zipball/7d0ed42f28e42d61352a7a79de682e5e67fec884",
+                "url": "https://mirror.abrha.net/repository/composer/guzzlehttp/psr7/2.9.0/guzzlehttp-psr7-2.9.0.zip",
                 "reference": "7d0ed42f28e42d61352a7a79de682e5e67fec884",
                 "shasum": ""
             },
@@ -1026,7 +824,6 @@
                     "GuzzleHttp\\Psr7\\": "src/"
                 }
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "MIT"
             ],
@@ -1101,14 +898,9 @@
         {
             "name": "guzzlehttp/uri-template",
             "version": "v1.0.5",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/guzzle/uri-template.git",
-                "reference": "4f4bbd4e7172148801e76e3decc1e559bdee34e1"
-            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/guzzle/uri-template/zipball/4f4bbd4e7172148801e76e3decc1e559bdee34e1",
+                "url": "https://mirror.abrha.net/repository/composer/guzzlehttp/uri-template/v1.0.5/guzzlehttp-uri-template-v1.0.5.zip",
                 "reference": "4f4bbd4e7172148801e76e3decc1e559bdee34e1",
                 "shasum": ""
             },
@@ -1133,7 +925,6 @@
                     "GuzzleHttp\\UriTemplate\\": "src"
                 }
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "MIT"
             ],
@@ -1185,16 +976,77 @@
             "time": "2025-08-22T14:27:06+00:00"
         },
         {
-            "name": "laravel/framework",
-            "version": "10.50.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/laravel/framework.git",
-                "reference": "3ff39b7a9b83e633383ec9b019827ed54b6d38bc"
-            },
+            "name": "inertiajs/inertia-laravel",
+            "version": "v0.6.11",
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/laravel/framework/zipball/3ff39b7a9b83e633383ec9b019827ed54b6d38bc",
+                "url": "https://mirror.abrha.net/repository/composer/inertiajs/inertia-laravel/v0.6.11/inertiajs-inertia-laravel-v0.6.11.zip",
+                "reference": "2a1e19048f95c0e4adb2b2733f9119e49c4fc09f",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "laravel/framework": "^6.0|^7.0|^8.74|^9.0|^10.0",
+                "php": "^7.2|~8.0.0|~8.1.0|~8.2.0|~8.3.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.3.3",
+                "orchestra/testbench": "^4.0|^5.0|^6.4|^7.0|^8.0",
+                "phpunit/phpunit": "^8.0|^9.5.8",
+                "roave/security-advisories": "dev-master"
+            },
+            "suggest": {
+                "ext-pcntl": "Recommended when running the Inertia SSR server via the `inertia:start-ssr` artisan command."
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Inertia\\ServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "files": [
+                    "./helpers.php"
+                ],
+                "psr-4": {
+                    "Inertia\\": "src"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jonathan Reinink",
+                    "email": "jonathan@reinink.ca",
+                    "homepage": "https://reinink.ca"
+                }
+            ],
+            "description": "The Laravel adapter for Inertia.js.",
+            "keywords": [
+                "inertia",
+                "laravel"
+            ],
+            "support": {
+                "issues": "https://github.com/inertiajs/inertia-laravel/issues",
+                "source": "https://github.com/inertiajs/inertia-laravel/tree/v0.6.11"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/reinink",
+                    "type": "github"
+                }
+            ],
+            "time": "2023-10-27T10:59:02+00:00"
+        },
+        {
+            "name": "laravel/framework",
+            "version": "10.50.2",
+            "dist": {
+                "type": "zip",
+                "url": "https://mirror.abrha.net/repository/composer/laravel/framework/10.50.2/laravel-framework-10.50.2.zip",
                 "reference": "3ff39b7a9b83e633383ec9b019827ed54b6d38bc",
                 "shasum": ""
             },
@@ -1370,7 +1222,6 @@
                     ]
                 }
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "MIT"
             ],
@@ -1393,92 +1244,11 @@
             "time": "2026-02-15T14:12:07+00:00"
         },
         {
-            "name": "laravel/passport",
-            "version": "v12.4.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/laravel/passport.git",
-                "reference": "1d2e0170a52f150d5c35c9a6fc1f7ccebcde7626"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/laravel/passport/zipball/1d2e0170a52f150d5c35c9a6fc1f7ccebcde7626",
-                "reference": "1d2e0170a52f150d5c35c9a6fc1f7ccebcde7626",
-                "shasum": ""
-            },
-            "require": {
-                "ext-json": "*",
-                "firebase/php-jwt": "^6.4|^7.0",
-                "illuminate/auth": "^9.21|^10.0|^11.0|^12.0",
-                "illuminate/console": "^9.21|^10.0|^11.0|^12.0",
-                "illuminate/container": "^9.21|^10.0|^11.0|^12.0",
-                "illuminate/contracts": "^9.21|^10.0|^11.0|^12.0",
-                "illuminate/cookie": "^9.21|^10.0|^11.0|^12.0",
-                "illuminate/database": "^9.21|^10.0|^11.0|^12.0",
-                "illuminate/encryption": "^9.21|^10.0|^11.0|^12.0",
-                "illuminate/http": "^9.21|^10.0|^11.0|^12.0",
-                "illuminate/support": "^9.21|^10.0|^11.0|^12.0",
-                "lcobucci/jwt": "^4.3|^5.0",
-                "league/oauth2-server": "^8.5.3",
-                "nyholm/psr7": "^1.5",
-                "php": "^8.0",
-                "phpseclib/phpseclib": "^2.0|^3.0",
-                "symfony/console": "^6.0|^7.0",
-                "symfony/psr-http-message-bridge": "^2.1|^6.0|^7.0"
-            },
-            "require-dev": {
-                "mockery/mockery": "^1.0",
-                "orchestra/testbench": "^7.35|^8.14|^9.0|^10.0",
-                "phpstan/phpstan": "^1.10",
-                "phpunit/phpunit": "^9.3|^10.5|^11.5"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Laravel\\Passport\\PassportServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Laravel\\Passport\\": "src/",
-                    "Laravel\\Passport\\Database\\Factories\\": "database/factories/"
-                }
-            },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Taylor Otwell",
-                    "email": "taylor@laravel.com"
-                }
-            ],
-            "description": "Laravel Passport provides OAuth2 server support to Laravel.",
-            "keywords": [
-                "laravel",
-                "oauth",
-                "passport"
-            ],
-            "support": {
-                "issues": "https://github.com/laravel/passport/issues",
-                "source": "https://github.com/laravel/passport"
-            },
-            "time": "2026-02-19T14:14:05+00:00"
-        },
-        {
             "name": "laravel/prompts",
             "version": "v0.1.25",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/laravel/prompts.git",
-                "reference": "7b4029a84c37cb2725fc7f011586e2997040bc95"
-            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/laravel/prompts/zipball/7b4029a84c37cb2725fc7f011586e2997040bc95",
+                "url": "https://mirror.abrha.net/repository/composer/laravel/prompts/v0.1.25/laravel-prompts-v0.1.25.zip",
                 "reference": "7b4029a84c37cb2725fc7f011586e2997040bc95",
                 "shasum": ""
             },
@@ -1515,7 +1285,6 @@
                     "Laravel\\Prompts\\": "src/"
                 }
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "MIT"
             ],
@@ -1529,14 +1298,9 @@
         {
             "name": "laravel/sanctum",
             "version": "v3.3.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/laravel/sanctum.git",
-                "reference": "8c104366459739f3ada0e994bcd3e6fd681ce3d5"
-            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/laravel/sanctum/zipball/8c104366459739f3ada0e994bcd3e6fd681ce3d5",
+                "url": "https://mirror.abrha.net/repository/composer/laravel/sanctum/v3.3.3/laravel-sanctum-v3.3.3.zip",
                 "reference": "8c104366459739f3ada0e994bcd3e6fd681ce3d5",
                 "shasum": ""
             },
@@ -1570,7 +1334,6 @@
                     "Laravel\\Sanctum\\": "src/"
                 }
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "MIT"
             ],
@@ -1595,14 +1358,9 @@
         {
             "name": "laravel/serializable-closure",
             "version": "v1.3.7",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/laravel/serializable-closure.git",
-                "reference": "4f48ade902b94323ca3be7646db16209ec76be3d"
-            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/laravel/serializable-closure/zipball/4f48ade902b94323ca3be7646db16209ec76be3d",
+                "url": "https://mirror.abrha.net/repository/composer/laravel/serializable-closure/v1.3.7/laravel-serializable-closure-v1.3.7.zip",
                 "reference": "4f48ade902b94323ca3be7646db16209ec76be3d",
                 "shasum": ""
             },
@@ -1627,7 +1385,6 @@
                     "Laravel\\SerializableClosure\\": "src/"
                 }
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "MIT"
             ],
@@ -1656,14 +1413,9 @@
         {
             "name": "laravel/tinker",
             "version": "v2.11.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/laravel/tinker.git",
-                "reference": "c9f80cc835649b5c1842898fb043f8cc098dd741"
-            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/laravel/tinker/zipball/c9f80cc835649b5c1842898fb043f8cc098dd741",
+                "url": "https://mirror.abrha.net/repository/composer/laravel/tinker/v2.11.1/laravel-tinker-v2.11.1.zip",
                 "reference": "c9f80cc835649b5c1842898fb043f8cc098dd741",
                 "shasum": ""
             },
@@ -1696,7 +1448,6 @@
                     "Laravel\\Tinker\\": "src/"
                 }
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "MIT"
             ],
@@ -1777,153 +1528,11 @@
             "time": "2026-03-17T13:41:52+00:00"
         },
         {
-            "name": "lcobucci/clock",
-            "version": "3.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/lcobucci/clock.git",
-                "reference": "039ef98c6b57b101d10bd11d8fdfda12cbd996dc"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/lcobucci/clock/zipball/039ef98c6b57b101d10bd11d8fdfda12cbd996dc",
-                "reference": "039ef98c6b57b101d10bd11d8fdfda12cbd996dc",
-                "shasum": ""
-            },
-            "require": {
-                "php": "~8.1.0 || ~8.2.0",
-                "psr/clock": "^1.0"
-            },
-            "provide": {
-                "psr/clock-implementation": "1.0"
-            },
-            "require-dev": {
-                "infection/infection": "^0.26",
-                "lcobucci/coding-standard": "^9.0",
-                "phpstan/extension-installer": "^1.2",
-                "phpstan/phpstan": "^1.9.4",
-                "phpstan/phpstan-deprecation-rules": "^1.1.1",
-                "phpstan/phpstan-phpunit": "^1.3.2",
-                "phpstan/phpstan-strict-rules": "^1.4.4",
-                "phpunit/phpunit": "^9.5.27"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Lcobucci\\Clock\\": "src"
-                }
-            },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Luís Cobucci",
-                    "email": "lcobucci@gmail.com"
-                }
-            ],
-            "description": "Yet another clock abstraction",
-            "support": {
-                "issues": "https://github.com/lcobucci/clock/issues",
-                "source": "https://github.com/lcobucci/clock/tree/3.0.0"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/lcobucci",
-                    "type": "github"
-                },
-                {
-                    "url": "https://www.patreon.com/lcobucci",
-                    "type": "patreon"
-                }
-            ],
-            "time": "2022-12-19T15:00:24+00:00"
-        },
-        {
-            "name": "lcobucci/jwt",
-            "version": "5.3.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/lcobucci/jwt.git",
-                "reference": "08071d8d2c7f4b00222cc4b1fb6aa46990a80f83"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/lcobucci/jwt/zipball/08071d8d2c7f4b00222cc4b1fb6aa46990a80f83",
-                "reference": "08071d8d2c7f4b00222cc4b1fb6aa46990a80f83",
-                "shasum": ""
-            },
-            "require": {
-                "ext-openssl": "*",
-                "ext-sodium": "*",
-                "php": "~8.1.0 || ~8.2.0 || ~8.3.0",
-                "psr/clock": "^1.0"
-            },
-            "require-dev": {
-                "infection/infection": "^0.27.0",
-                "lcobucci/clock": "^3.0",
-                "lcobucci/coding-standard": "^11.0",
-                "phpbench/phpbench": "^1.2.9",
-                "phpstan/extension-installer": "^1.2",
-                "phpstan/phpstan": "^1.10.7",
-                "phpstan/phpstan-deprecation-rules": "^1.1.3",
-                "phpstan/phpstan-phpunit": "^1.3.10",
-                "phpstan/phpstan-strict-rules": "^1.5.0",
-                "phpunit/phpunit": "^10.2.6"
-            },
-            "suggest": {
-                "lcobucci/clock": ">= 3.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Lcobucci\\JWT\\": "src"
-                }
-            },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Luís Cobucci",
-                    "email": "lcobucci@gmail.com",
-                    "role": "Developer"
-                }
-            ],
-            "description": "A simple library to work with JSON Web Token and JSON Web Signature",
-            "keywords": [
-                "JWS",
-                "jwt"
-            ],
-            "support": {
-                "issues": "https://github.com/lcobucci/jwt/issues",
-                "source": "https://github.com/lcobucci/jwt/tree/5.3.0"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/lcobucci",
-                    "type": "github"
-                },
-                {
-                    "url": "https://www.patreon.com/lcobucci",
-                    "type": "patreon"
-                }
-            ],
-            "time": "2024-04-11T23:07:54+00:00"
-        },
-        {
             "name": "league/commonmark",
             "version": "2.8.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/thephpleague/commonmark.git",
-                "reference": "59fb075d2101740c337c7216e3f32b36c204218b"
-            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/thephpleague/commonmark/zipball/59fb075d2101740c337c7216e3f32b36c204218b",
+                "url": "https://mirror.abrha.net/repository/composer/league/commonmark/2.8.2/league-commonmark-2.8.2.zip",
                 "reference": "59fb075d2101740c337c7216e3f32b36c204218b",
                 "shasum": ""
             },
@@ -1969,7 +1578,6 @@
                     "League\\CommonMark\\": "src"
                 }
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "BSD-3-Clause"
             ],
@@ -2023,14 +1631,9 @@
         {
             "name": "league/config",
             "version": "v1.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/thephpleague/config.git",
-                "reference": "754b3604fb2984c71f4af4a9cbe7b57f346ec1f3"
-            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/thephpleague/config/zipball/754b3604fb2984c71f4af4a9cbe7b57f346ec1f3",
+                "url": "https://mirror.abrha.net/repository/composer/league/config/v1.2.0/league-config-v1.2.0.zip",
                 "reference": "754b3604fb2984c71f4af4a9cbe7b57f346ec1f3",
                 "shasum": ""
             },
@@ -2057,7 +1660,6 @@
                     "League\\Config\\": "src"
                 }
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "BSD-3-Clause"
             ],
@@ -2103,70 +1705,11 @@
             "time": "2022-12-11T20:36:23+00:00"
         },
         {
-            "name": "league/event",
-            "version": "2.3.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/thephpleague/event.git",
-                "reference": "062ebb450efbe9a09bc2478e89b7c933875b0935"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/thephpleague/event/zipball/062ebb450efbe9a09bc2478e89b7c933875b0935",
-                "reference": "062ebb450efbe9a09bc2478e89b7c933875b0935",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.1.0"
-            },
-            "require-dev": {
-                "henrikbjorn/phpspec-code-coverage": "~1.0.1",
-                "phpspec/phpspec": "^2.2"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.2-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "League\\Event\\": "src/"
-                }
-            },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Frank de Jonge",
-                    "email": "info@frenky.net"
-                }
-            ],
-            "description": "Event package",
-            "keywords": [
-                "emitter",
-                "event",
-                "listener"
-            ],
-            "support": {
-                "issues": "https://github.com/thephpleague/event/issues",
-                "source": "https://github.com/thephpleague/event/tree/2.3.0"
-            },
-            "time": "2025-03-14T19:51:10+00:00"
-        },
-        {
             "name": "league/flysystem",
             "version": "3.32.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/thephpleague/flysystem.git",
-                "reference": "254b1595b16b22dbddaaef9ed6ca9fdac4956725"
-            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/thephpleague/flysystem/zipball/254b1595b16b22dbddaaef9ed6ca9fdac4956725",
+                "url": "https://mirror.abrha.net/repository/composer/league/flysystem/3.32.0/league-flysystem-3.32.0.zip",
                 "reference": "254b1595b16b22dbddaaef9ed6ca9fdac4956725",
                 "shasum": ""
             },
@@ -2209,7 +1752,6 @@
                     "League\\Flysystem\\": "src"
                 }
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "MIT"
             ],
@@ -2242,14 +1784,9 @@
         {
             "name": "league/flysystem-local",
             "version": "3.31.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/thephpleague/flysystem-local.git",
-                "reference": "2f669db18a4c20c755c2bb7d3a7b0b2340488079"
-            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/thephpleague/flysystem-local/zipball/2f669db18a4c20c755c2bb7d3a7b0b2340488079",
+                "url": "https://mirror.abrha.net/repository/composer/league/flysystem-local/3.31.0/league-flysystem-local-3.31.0.zip",
                 "reference": "2f669db18a4c20c755c2bb7d3a7b0b2340488079",
                 "shasum": ""
             },
@@ -2265,7 +1802,6 @@
                     "League\\Flysystem\\Local\\": ""
                 }
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "MIT"
             ],
@@ -2291,14 +1827,9 @@
         {
             "name": "league/mime-type-detection",
             "version": "1.16.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/thephpleague/mime-type-detection.git",
-                "reference": "2d6702ff215bf922936ccc1ad31007edc76451b9"
-            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/thephpleague/mime-type-detection/zipball/2d6702ff215bf922936ccc1ad31007edc76451b9",
+                "url": "https://mirror.abrha.net/repository/composer/league/mime-type-detection/1.16.0/league-mime-type-detection-1.16.0.zip",
                 "reference": "2d6702ff215bf922936ccc1ad31007edc76451b9",
                 "shasum": ""
             },
@@ -2317,7 +1848,6 @@
                     "League\\MimeTypeDetection\\": "src"
                 }
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "MIT"
             ],
@@ -2345,286 +1875,11 @@
             "time": "2024-09-21T08:32:55+00:00"
         },
         {
-            "name": "league/oauth2-server",
-            "version": "8.5.5",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/thephpleague/oauth2-server.git",
-                "reference": "cc8778350f905667e796b3c2364a9d3bd7a73518"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/thephpleague/oauth2-server/zipball/cc8778350f905667e796b3c2364a9d3bd7a73518",
-                "reference": "cc8778350f905667e796b3c2364a9d3bd7a73518",
-                "shasum": ""
-            },
-            "require": {
-                "defuse/php-encryption": "^2.3",
-                "ext-openssl": "*",
-                "lcobucci/clock": "^2.2 || ^3.0",
-                "lcobucci/jwt": "^4.3 || ^5.0",
-                "league/event": "^2.2",
-                "league/uri": "^6.7 || ^7.0",
-                "php": "^8.0",
-                "psr/http-message": "^1.0.1 || ^2.0"
-            },
-            "replace": {
-                "league/oauth2server": "*",
-                "lncd/oauth2": "*"
-            },
-            "require-dev": {
-                "laminas/laminas-diactoros": "^3.0.0",
-                "phpstan/phpstan": "^0.12.57",
-                "phpstan/phpstan-phpunit": "^0.12.16",
-                "phpunit/phpunit": "^9.6.6",
-                "roave/security-advisories": "dev-master"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "League\\OAuth2\\Server\\": "src/"
-                }
-            },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Alex Bilbie",
-                    "email": "hello@alexbilbie.com",
-                    "homepage": "http://www.alexbilbie.com",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Andy Millington",
-                    "email": "andrew@noexceptions.io",
-                    "homepage": "https://www.noexceptions.io",
-                    "role": "Developer"
-                }
-            ],
-            "description": "A lightweight and powerful OAuth 2.0 authorization and resource server library with support for all the core specification grants. This library will allow you to secure your API with OAuth and allow your applications users to approve apps that want to access their data from your API.",
-            "homepage": "https://oauth2.thephpleague.com/",
-            "keywords": [
-                "Authentication",
-                "api",
-                "auth",
-                "authorisation",
-                "authorization",
-                "oauth",
-                "oauth 2",
-                "oauth 2.0",
-                "oauth2",
-                "protect",
-                "resource",
-                "secure",
-                "server"
-            ],
-            "support": {
-                "issues": "https://github.com/thephpleague/oauth2-server/issues",
-                "source": "https://github.com/thephpleague/oauth2-server/tree/8.5.5"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/sephster",
-                    "type": "github"
-                }
-            ],
-            "time": "2024-12-20T23:06:10+00:00"
-        },
-        {
-            "name": "league/uri",
-            "version": "7.8.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/thephpleague/uri.git",
-                "reference": "08cf38e3924d4f56238125547b5720496fac8fd4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/thephpleague/uri/zipball/08cf38e3924d4f56238125547b5720496fac8fd4",
-                "reference": "08cf38e3924d4f56238125547b5720496fac8fd4",
-                "shasum": ""
-            },
-            "require": {
-                "league/uri-interfaces": "^7.8.1",
-                "php": "^8.1",
-                "psr/http-factory": "^1"
-            },
-            "conflict": {
-                "league/uri-schemes": "^1.0"
-            },
-            "suggest": {
-                "ext-bcmath": "to improve IPV4 host parsing",
-                "ext-dom": "to convert the URI into an HTML anchor tag",
-                "ext-fileinfo": "to create Data URI from file contennts",
-                "ext-gmp": "to improve IPV4 host parsing",
-                "ext-intl": "to handle IDN host with the best performance",
-                "ext-uri": "to use the PHP native URI class",
-                "jeremykendall/php-domain-parser": "to further parse the URI host and resolve its Public Suffix and Top Level Domain",
-                "league/uri-components": "to provide additional tools to manipulate URI objects components",
-                "league/uri-polyfill": "to backport the PHP URI extension for older versions of PHP",
-                "php-64bit": "to improve IPV4 host parsing",
-                "rowbot/url": "to handle URLs using the WHATWG URL Living Standard specification",
-                "symfony/polyfill-intl-idn": "to handle IDN host via the Symfony polyfill if ext-intl is not present"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "7.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "League\\Uri\\": ""
-                }
-            },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Ignace Nyamagana Butera",
-                    "email": "nyamsprod@gmail.com",
-                    "homepage": "https://nyamsprod.com"
-                }
-            ],
-            "description": "URI manipulation library",
-            "homepage": "https://uri.thephpleague.com",
-            "keywords": [
-                "URN",
-                "data-uri",
-                "file-uri",
-                "ftp",
-                "hostname",
-                "http",
-                "https",
-                "middleware",
-                "parse_str",
-                "parse_url",
-                "psr-7",
-                "query-string",
-                "querystring",
-                "rfc2141",
-                "rfc3986",
-                "rfc3987",
-                "rfc6570",
-                "rfc8141",
-                "uri",
-                "uri-template",
-                "url",
-                "ws"
-            ],
-            "support": {
-                "docs": "https://uri.thephpleague.com",
-                "forum": "https://thephpleague.slack.com",
-                "issues": "https://github.com/thephpleague/uri-src/issues",
-                "source": "https://github.com/thephpleague/uri/tree/7.8.1"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/sponsors/nyamsprod",
-                    "type": "github"
-                }
-            ],
-            "time": "2026-03-15T20:22:25+00:00"
-        },
-        {
-            "name": "league/uri-interfaces",
-            "version": "7.8.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/thephpleague/uri-interfaces.git",
-                "reference": "85d5c77c5d6d3af6c54db4a78246364908f3c928"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/thephpleague/uri-interfaces/zipball/85d5c77c5d6d3af6c54db4a78246364908f3c928",
-                "reference": "85d5c77c5d6d3af6c54db4a78246364908f3c928",
-                "shasum": ""
-            },
-            "require": {
-                "ext-filter": "*",
-                "php": "^8.1",
-                "psr/http-message": "^1.1 || ^2.0"
-            },
-            "suggest": {
-                "ext-bcmath": "to improve IPV4 host parsing",
-                "ext-gmp": "to improve IPV4 host parsing",
-                "ext-intl": "to handle IDN host with the best performance",
-                "php-64bit": "to improve IPV4 host parsing",
-                "rowbot/url": "to handle URLs using the WHATWG URL Living Standard specification",
-                "symfony/polyfill-intl-idn": "to handle IDN host via the Symfony polyfill if ext-intl is not present"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "7.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "League\\Uri\\": ""
-                }
-            },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Ignace Nyamagana Butera",
-                    "email": "nyamsprod@gmail.com",
-                    "homepage": "https://nyamsprod.com"
-                }
-            ],
-            "description": "Common tools for parsing and resolving RFC3987/RFC3986 URI",
-            "homepage": "https://uri.thephpleague.com",
-            "keywords": [
-                "data-uri",
-                "file-uri",
-                "ftp",
-                "hostname",
-                "http",
-                "https",
-                "parse_str",
-                "parse_url",
-                "psr-7",
-                "query-string",
-                "querystring",
-                "rfc3986",
-                "rfc3987",
-                "rfc6570",
-                "uri",
-                "url",
-                "ws"
-            ],
-            "support": {
-                "docs": "https://uri.thephpleague.com",
-                "forum": "https://thephpleague.slack.com",
-                "issues": "https://github.com/thephpleague/uri-src/issues",
-                "source": "https://github.com/thephpleague/uri-interfaces/tree/7.8.1"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/sponsors/nyamsprod",
-                    "type": "github"
-                }
-            ],
-            "time": "2026-03-08T20:05:35+00:00"
-        },
-        {
             "name": "monolog/monolog",
             "version": "3.10.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "b321dd6749f0bf7189444158a3ce785cc16d69b0"
-            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/Seldaek/monolog/zipball/b321dd6749f0bf7189444158a3ce785cc16d69b0",
+                "url": "https://mirror.abrha.net/repository/composer/monolog/monolog/3.10.0/monolog-monolog-3.10.0.zip",
                 "reference": "b321dd6749f0bf7189444158a3ce785cc16d69b0",
                 "shasum": ""
             },
@@ -2683,7 +1938,6 @@
                     "Monolog\\": "src/Monolog"
                 }
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "MIT"
             ],
@@ -2720,14 +1974,9 @@
         {
             "name": "nesbot/carbon",
             "version": "2.73.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/CarbonPHP/carbon.git",
-                "reference": "9228ce90e1035ff2f0db84b40ec2e023ed802075"
-            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/CarbonPHP/carbon/zipball/9228ce90e1035ff2f0db84b40ec2e023ed802075",
+                "url": "https://mirror.abrha.net/repository/composer/nesbot/carbon/2.73.0/nesbot-carbon-2.73.0.zip",
                 "reference": "9228ce90e1035ff2f0db84b40ec2e023ed802075",
                 "shasum": ""
             },
@@ -2781,7 +2030,6 @@
                     "Carbon\\": "src/Carbon/"
                 }
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "MIT"
             ],
@@ -2827,14 +2075,9 @@
         {
             "name": "nette/schema",
             "version": "v1.3.5",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/nette/schema.git",
-                "reference": "f0ab1a3cda782dbc5da270d28545236aa80c4002"
-            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/nette/schema/zipball/f0ab1a3cda782dbc5da270d28545236aa80c4002",
+                "url": "https://mirror.abrha.net/repository/composer/nette/schema/v1.3.5/nette-schema-v1.3.5.zip",
                 "reference": "f0ab1a3cda782dbc5da270d28545236aa80c4002",
                 "shasum": ""
             },
@@ -2863,7 +2106,6 @@
                     "src/"
                 ]
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "BSD-3-Clause",
                 "GPL-2.0-only",
@@ -2893,20 +2135,15 @@
         },
         {
             "name": "nette/utils",
-            "version": "v4.0.10",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/nette/utils.git",
-                "reference": "2778deb6aab136c8db4ed1f4d6e9f465ca2dbee3"
-            },
+            "version": "v4.1.3",
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/nette/utils/zipball/2778deb6aab136c8db4ed1f4d6e9f465ca2dbee3",
-                "reference": "2778deb6aab136c8db4ed1f4d6e9f465ca2dbee3",
+                "url": "https://mirror.abrha.net/repository/composer/nette/utils/v4.1.3/nette-utils-v4.1.3.zip",
+                "reference": "bb3ea637e3d131d72acc033cfc2746ee893349fe",
                 "shasum": ""
             },
             "require": {
-                "php": "8.0 - 8.5"
+                "php": "8.2 - 8.5"
             },
             "conflict": {
                 "nette/finder": "<3",
@@ -2914,8 +2151,10 @@
             },
             "require-dev": {
                 "jetbrains/phpstorm-attributes": "^1.2",
+                "nette/phpstan-rules": "^1.0",
                 "nette/tester": "^2.5",
-                "phpstan/phpstan-nette": "^2.0@stable",
+                "phpstan/extension-installer": "^1.4@stable",
+                "phpstan/phpstan": "^2.1@stable",
                 "tracy/tracy": "^2.9"
             },
             "suggest": {
@@ -2929,7 +2168,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.0-dev"
+                    "dev-master": "4.1-dev"
                 }
             },
             "autoload": {
@@ -2940,7 +2179,6 @@
                     "src/"
                 ]
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "BSD-3-Clause",
                 "GPL-2.0-only",
@@ -2976,21 +2214,16 @@
             ],
             "support": {
                 "issues": "https://github.com/nette/utils/issues",
-                "source": "https://github.com/nette/utils/tree/v4.0.10"
+                "source": "https://github.com/nette/utils/tree/v4.1.3"
             },
-            "time": "2025-12-01T17:30:42+00:00"
+            "time": "2026-02-13T03:05:33+00:00"
         },
         {
             "name": "nikic/php-parser",
             "version": "v5.7.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/nikic/PHP-Parser.git",
-                "reference": "dca41cd15c2ac9d055ad70dbfd011130757d1f82"
-            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/nikic/PHP-Parser/zipball/dca41cd15c2ac9d055ad70dbfd011130757d1f82",
+                "url": "https://mirror.abrha.net/repository/composer/nikic/php-parser/v5.7.0/nikic-php-parser-v5.7.0.zip",
                 "reference": "dca41cd15c2ac9d055ad70dbfd011130757d1f82",
                 "shasum": ""
             },
@@ -3018,7 +2251,6 @@
                     "PhpParser\\": "lib/PhpParser"
                 }
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "BSD-3-Clause"
             ],
@@ -3041,14 +2273,9 @@
         {
             "name": "nunomaduro/termwind",
             "version": "v1.17.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/nunomaduro/termwind.git",
-                "reference": "5369ef84d8142c1d87e4ec278711d4ece3cbf301"
-            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/nunomaduro/termwind/zipball/5369ef84d8142c1d87e4ec278711d4ece3cbf301",
+                "url": "https://mirror.abrha.net/repository/composer/nunomaduro/termwind/v1.17.0/nunomaduro-termwind-v1.17.0.zip",
                 "reference": "5369ef84d8142c1d87e4ec278711d4ece3cbf301",
                 "shasum": ""
             },
@@ -3084,7 +2311,6 @@
                     "Termwind\\": "src/"
                 }
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "MIT"
             ],
@@ -3124,213 +2350,11 @@
             "time": "2024-11-21T10:36:35+00:00"
         },
         {
-            "name": "nyholm/psr7",
-            "version": "1.8.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Nyholm/psr7.git",
-                "reference": "a71f2b11690f4b24d099d6b16690a90ae14fc6f3"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/Nyholm/psr7/zipball/a71f2b11690f4b24d099d6b16690a90ae14fc6f3",
-                "reference": "a71f2b11690f4b24d099d6b16690a90ae14fc6f3",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.2",
-                "psr/http-factory": "^1.0",
-                "psr/http-message": "^1.1 || ^2.0"
-            },
-            "provide": {
-                "php-http/message-factory-implementation": "1.0",
-                "psr/http-factory-implementation": "1.0",
-                "psr/http-message-implementation": "1.0"
-            },
-            "require-dev": {
-                "http-interop/http-factory-tests": "^0.9",
-                "php-http/message-factory": "^1.0",
-                "php-http/psr7-integration-tests": "^1.0",
-                "phpunit/phpunit": "^7.5 || ^8.5 || ^9.4",
-                "symfony/error-handler": "^4.4"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.8-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Nyholm\\Psr7\\": "src/"
-                }
-            },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Tobias Nyholm",
-                    "email": "tobias.nyholm@gmail.com"
-                },
-                {
-                    "name": "Martijn van der Ven",
-                    "email": "martijn@vanderven.se"
-                }
-            ],
-            "description": "A fast PHP7 implementation of PSR-7",
-            "homepage": "https://tnyholm.se",
-            "keywords": [
-                "psr-17",
-                "psr-7"
-            ],
-            "support": {
-                "issues": "https://github.com/Nyholm/psr7/issues",
-                "source": "https://github.com/Nyholm/psr7/tree/1.8.2"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/Zegnat",
-                    "type": "github"
-                },
-                {
-                    "url": "https://github.com/nyholm",
-                    "type": "github"
-                }
-            ],
-            "time": "2024-09-09T07:06:30+00:00"
-        },
-        {
-            "name": "paragonie/constant_time_encoding",
-            "version": "v3.1.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/paragonie/constant_time_encoding.git",
-                "reference": "d5b01a39b3415c2cd581d3bd3a3575c1ebbd8e77"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/paragonie/constant_time_encoding/zipball/d5b01a39b3415c2cd581d3bd3a3575c1ebbd8e77",
-                "reference": "d5b01a39b3415c2cd581d3bd3a3575c1ebbd8e77",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^8"
-            },
-            "require-dev": {
-                "infection/infection": "^0",
-                "nikic/php-fuzzer": "^0",
-                "phpunit/phpunit": "^9|^10|^11",
-                "vimeo/psalm": "^4|^5|^6"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "ParagonIE\\ConstantTime\\": "src/"
-                }
-            },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Paragon Initiative Enterprises",
-                    "email": "security@paragonie.com",
-                    "homepage": "https://paragonie.com",
-                    "role": "Maintainer"
-                },
-                {
-                    "name": "Steve 'Sc00bz' Thomas",
-                    "email": "steve@tobtu.com",
-                    "homepage": "https://www.tobtu.com",
-                    "role": "Original Developer"
-                }
-            ],
-            "description": "Constant-time Implementations of RFC 4648 Encoding (Base-64, Base-32, Base-16)",
-            "keywords": [
-                "base16",
-                "base32",
-                "base32_decode",
-                "base32_encode",
-                "base64",
-                "base64_decode",
-                "base64_encode",
-                "bin2hex",
-                "encoding",
-                "hex",
-                "hex2bin",
-                "rfc4648"
-            ],
-            "support": {
-                "email": "info@paragonie.com",
-                "issues": "https://github.com/paragonie/constant_time_encoding/issues",
-                "source": "https://github.com/paragonie/constant_time_encoding"
-            },
-            "time": "2025-09-24T15:06:41+00:00"
-        },
-        {
-            "name": "paragonie/random_compat",
-            "version": "v9.99.100",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/paragonie/random_compat.git",
-                "reference": "996434e5492cb4c3edcb9168db6fbb1359ef965a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/paragonie/random_compat/zipball/996434e5492cb4c3edcb9168db6fbb1359ef965a",
-                "reference": "996434e5492cb4c3edcb9168db6fbb1359ef965a",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">= 7"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "4.*|5.*",
-                "vimeo/psalm": "^1"
-            },
-            "suggest": {
-                "ext-libsodium": "Provides a modern crypto API that can be used to generate random bytes."
-            },
-            "type": "library",
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Paragon Initiative Enterprises",
-                    "email": "security@paragonie.com",
-                    "homepage": "https://paragonie.com"
-                }
-            ],
-            "description": "PHP 5.x polyfill for random_bytes() and random_int() from PHP 7",
-            "keywords": [
-                "csprng",
-                "polyfill",
-                "pseudorandom",
-                "random"
-            ],
-            "support": {
-                "email": "info@paragonie.com",
-                "issues": "https://github.com/paragonie/random_compat/issues",
-                "source": "https://github.com/paragonie/random_compat"
-            },
-            "time": "2020-10-15T08:29:30+00:00"
-        },
-        {
             "name": "phpoption/phpoption",
             "version": "1.9.5",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/schmittjoh/php-option.git",
-                "reference": "75365b91986c2405cf5e1e012c5595cd487a98be"
-            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/schmittjoh/php-option/zipball/75365b91986c2405cf5e1e012c5595cd487a98be",
+                "url": "https://mirror.abrha.net/repository/composer/phpoption/phpoption/1.9.5/phpoption-phpoption-1.9.5.zip",
                 "reference": "75365b91986c2405cf5e1e012c5595cd487a98be",
                 "shasum": ""
             },
@@ -3356,7 +2380,6 @@
                     "PhpOption\\": "src/PhpOption/"
                 }
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "Apache-2.0"
             ],
@@ -3396,126 +2419,11 @@
             "time": "2025-12-27T19:41:33+00:00"
         },
         {
-            "name": "phpseclib/phpseclib",
-            "version": "3.0.51",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/phpseclib/phpseclib.git",
-                "reference": "d59c94077f9c9915abb51ddb52ce85188ece1748"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/phpseclib/phpseclib/zipball/d59c94077f9c9915abb51ddb52ce85188ece1748",
-                "reference": "d59c94077f9c9915abb51ddb52ce85188ece1748",
-                "shasum": ""
-            },
-            "require": {
-                "paragonie/constant_time_encoding": "^1|^2|^3",
-                "paragonie/random_compat": "^1.4|^2.0|^9.99.99",
-                "php": ">=5.6.1"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "*"
-            },
-            "suggest": {
-                "ext-dom": "Install the DOM extension to load XML formatted public keys.",
-                "ext-gmp": "Install the GMP (GNU Multiple Precision) extension in order to speed up arbitrary precision integer arithmetic operations.",
-                "ext-libsodium": "SSH2/SFTP can make use of some algorithms provided by the libsodium-php extension.",
-                "ext-mcrypt": "Install the Mcrypt extension in order to speed up a few other cryptographic operations.",
-                "ext-openssl": "Install the OpenSSL extension in order to speed up a wide variety of cryptographic operations."
-            },
-            "type": "library",
-            "autoload": {
-                "files": [
-                    "phpseclib/bootstrap.php"
-                ],
-                "psr-4": {
-                    "phpseclib3\\": "phpseclib/"
-                }
-            },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Jim Wigginton",
-                    "email": "terrafrost@php.net",
-                    "role": "Lead Developer"
-                },
-                {
-                    "name": "Patrick Monnerat",
-                    "email": "pm@datasphere.ch",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Andreas Fischer",
-                    "email": "bantu@phpbb.com",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Hans-Jürgen Petrich",
-                    "email": "petrich@tronic-media.com",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Graham Campbell",
-                    "email": "graham@alt-three.com",
-                    "role": "Developer"
-                }
-            ],
-            "description": "PHP Secure Communications Library - Pure-PHP implementations of RSA, AES, SSH2, SFTP, X.509 etc.",
-            "homepage": "http://phpseclib.sourceforge.net",
-            "keywords": [
-                "BigInteger",
-                "aes",
-                "asn.1",
-                "asn1",
-                "blowfish",
-                "crypto",
-                "cryptography",
-                "encryption",
-                "rsa",
-                "security",
-                "sftp",
-                "signature",
-                "signing",
-                "ssh",
-                "twofish",
-                "x.509",
-                "x509"
-            ],
-            "support": {
-                "issues": "https://github.com/phpseclib/phpseclib/issues",
-                "source": "https://github.com/phpseclib/phpseclib/tree/3.0.51"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/terrafrost",
-                    "type": "github"
-                },
-                {
-                    "url": "https://www.patreon.com/phpseclib",
-                    "type": "patreon"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/phpseclib/phpseclib",
-                    "type": "tidelift"
-                }
-            ],
-            "time": "2026-04-10T01:33:53+00:00"
-        },
-        {
             "name": "psr/clock",
             "version": "1.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/php-fig/clock.git",
-                "reference": "e41a24703d4560fd0acb709162f73b8adfc3aa0d"
-            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/php-fig/clock/zipball/e41a24703d4560fd0acb709162f73b8adfc3aa0d",
+                "url": "https://mirror.abrha.net/repository/composer/psr/clock/1.0.0/psr-clock-1.0.0.zip",
                 "reference": "e41a24703d4560fd0acb709162f73b8adfc3aa0d",
                 "shasum": ""
             },
@@ -3528,7 +2436,6 @@
                     "Psr\\Clock\\": "src/"
                 }
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "MIT"
             ],
@@ -3556,14 +2463,9 @@
         {
             "name": "psr/container",
             "version": "2.0.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/php-fig/container.git",
-                "reference": "c71ecc56dfe541dbd90c5360474fbc405f8d5963"
-            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/php-fig/container/zipball/c71ecc56dfe541dbd90c5360474fbc405f8d5963",
+                "url": "https://mirror.abrha.net/repository/composer/psr/container/2.0.2/psr-container-2.0.2.zip",
                 "reference": "c71ecc56dfe541dbd90c5360474fbc405f8d5963",
                 "shasum": ""
             },
@@ -3581,7 +2483,6 @@
                     "Psr\\Container\\": "src/"
                 }
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "MIT"
             ],
@@ -3609,14 +2510,9 @@
         {
             "name": "psr/event-dispatcher",
             "version": "1.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/php-fig/event-dispatcher.git",
-                "reference": "dbefd12671e8a14ec7f180cab83036ed26714bb0"
-            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/php-fig/event-dispatcher/zipball/dbefd12671e8a14ec7f180cab83036ed26714bb0",
+                "url": "https://mirror.abrha.net/repository/composer/psr/event-dispatcher/1.0.0/psr-event-dispatcher-1.0.0.zip",
                 "reference": "dbefd12671e8a14ec7f180cab83036ed26714bb0",
                 "shasum": ""
             },
@@ -3634,7 +2530,6 @@
                     "Psr\\EventDispatcher\\": "src/"
                 }
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "MIT"
             ],
@@ -3659,14 +2554,9 @@
         {
             "name": "psr/http-client",
             "version": "1.0.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/php-fig/http-client.git",
-                "reference": "bb5906edc1c324c9a05aa0873d40117941e5fa90"
-            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/php-fig/http-client/zipball/bb5906edc1c324c9a05aa0873d40117941e5fa90",
+                "url": "https://mirror.abrha.net/repository/composer/psr/http-client/1.0.3/psr-http-client-1.0.3.zip",
                 "reference": "bb5906edc1c324c9a05aa0873d40117941e5fa90",
                 "shasum": ""
             },
@@ -3685,7 +2575,6 @@
                     "Psr\\Http\\Client\\": "src/"
                 }
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "MIT"
             ],
@@ -3711,14 +2600,9 @@
         {
             "name": "psr/http-factory",
             "version": "1.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/php-fig/http-factory.git",
-                "reference": "2b4765fddfe3b508ac62f829e852b1501d3f6e8a"
-            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/php-fig/http-factory/zipball/2b4765fddfe3b508ac62f829e852b1501d3f6e8a",
+                "url": "https://mirror.abrha.net/repository/composer/psr/http-factory/1.1.0/psr-http-factory-1.1.0.zip",
                 "reference": "2b4765fddfe3b508ac62f829e852b1501d3f6e8a",
                 "shasum": ""
             },
@@ -3737,7 +2621,6 @@
                     "Psr\\Http\\Message\\": "src/"
                 }
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "MIT"
             ],
@@ -3766,14 +2649,9 @@
         {
             "name": "psr/http-message",
             "version": "2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/php-fig/http-message.git",
-                "reference": "402d35bcb92c70c026d1a6a9883f06b2ead23d71"
-            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/php-fig/http-message/zipball/402d35bcb92c70c026d1a6a9883f06b2ead23d71",
+                "url": "https://mirror.abrha.net/repository/composer/psr/http-message/2.0/psr-http-message-2.0.zip",
                 "reference": "402d35bcb92c70c026d1a6a9883f06b2ead23d71",
                 "shasum": ""
             },
@@ -3791,7 +2669,6 @@
                     "Psr\\Http\\Message\\": "src/"
                 }
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "MIT"
             ],
@@ -3819,14 +2696,9 @@
         {
             "name": "psr/log",
             "version": "3.0.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/php-fig/log.git",
-                "reference": "f16e1d5863e37f8d8c2a01719f5b34baa2b714d3"
-            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/php-fig/log/zipball/f16e1d5863e37f8d8c2a01719f5b34baa2b714d3",
+                "url": "https://mirror.abrha.net/repository/composer/psr/log/3.0.2/psr-log-3.0.2.zip",
                 "reference": "f16e1d5863e37f8d8c2a01719f5b34baa2b714d3",
                 "shasum": ""
             },
@@ -3844,7 +2716,6 @@
                     "Psr\\Log\\": "src"
                 }
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "MIT"
             ],
@@ -3869,14 +2740,9 @@
         {
             "name": "psr/simple-cache",
             "version": "3.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/php-fig/simple-cache.git",
-                "reference": "764e0b3939f5ca87cb904f570ef9be2d78a07865"
-            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/php-fig/simple-cache/zipball/764e0b3939f5ca87cb904f570ef9be2d78a07865",
+                "url": "https://mirror.abrha.net/repository/composer/psr/simple-cache/3.0.0/psr-simple-cache-3.0.0.zip",
                 "reference": "764e0b3939f5ca87cb904f570ef9be2d78a07865",
                 "shasum": ""
             },
@@ -3894,7 +2760,6 @@
                     "Psr\\SimpleCache\\": "src/"
                 }
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "MIT"
             ],
@@ -3920,14 +2785,9 @@
         {
             "name": "psy/psysh",
             "version": "v0.12.22",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/bobthecow/psysh.git",
-                "reference": "3be75d5b9244936dd4ac62ade2bfb004d13acf0f"
-            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/bobthecow/psysh/zipball/3be75d5b9244936dd4ac62ade2bfb004d13acf0f",
+                "url": "https://mirror.abrha.net/repository/composer/psy/psysh/v0.12.22/psy-psysh-v0.12.22.zip",
                 "reference": "3be75d5b9244936dd4ac62ade2bfb004d13acf0f",
                 "shasum": ""
             },
@@ -3972,7 +2832,6 @@
                     "Psy\\": "src/"
                 }
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "MIT"
             ],
@@ -3999,14 +2858,9 @@
         {
             "name": "ralouphie/getallheaders",
             "version": "3.0.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/ralouphie/getallheaders.git",
-                "reference": "120b605dfeb996808c31b6477290a714d356e822"
-            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/ralouphie/getallheaders/zipball/120b605dfeb996808c31b6477290a714d356e822",
+                "url": "https://mirror.abrha.net/repository/composer/ralouphie/getallheaders/3.0.3/ralouphie-getallheaders-3.0.3.zip",
                 "reference": "120b605dfeb996808c31b6477290a714d356e822",
                 "shasum": ""
             },
@@ -4023,7 +2877,6 @@
                     "src/getallheaders.php"
                 ]
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "MIT"
             ],
@@ -4043,14 +2896,9 @@
         {
             "name": "ramsey/collection",
             "version": "2.1.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/ramsey/collection.git",
-                "reference": "344572933ad0181accbf4ba763e85a0306a8c5e2"
-            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/ramsey/collection/zipball/344572933ad0181accbf4ba763e85a0306a8c5e2",
+                "url": "https://mirror.abrha.net/repository/composer/ramsey/collection/2.1.1/ramsey-collection-2.1.1.zip",
                 "reference": "344572933ad0181accbf4ba763e85a0306a8c5e2",
                 "shasum": ""
             },
@@ -4090,7 +2938,6 @@
                     "Ramsey\\Collection\\": "src/"
                 }
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "MIT"
             ],
@@ -4119,14 +2966,9 @@
         {
             "name": "ramsey/uuid",
             "version": "4.9.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/ramsey/uuid.git",
-                "reference": "8429c78ca35a09f27565311b98101e2826affde0"
-            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/ramsey/uuid/zipball/8429c78ca35a09f27565311b98101e2826affde0",
+                "url": "https://mirror.abrha.net/repository/composer/ramsey/uuid/4.9.2/ramsey-uuid-4.9.2.zip",
                 "reference": "8429c78ca35a09f27565311b98101e2826affde0",
                 "shasum": ""
             },
@@ -4178,7 +3020,6 @@
                     "Ramsey\\Uuid\\": "src/"
                 }
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "MIT"
             ],
@@ -4197,14 +3038,9 @@
         {
             "name": "symfony/console",
             "version": "v6.4.35",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/console.git",
-                "reference": "49257c96304c508223815ee965c251e7c79e614e"
-            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/symfony/console/zipball/49257c96304c508223815ee965c251e7c79e614e",
+                "url": "https://mirror.abrha.net/repository/composer/symfony/console/v6.4.35/symfony-console-v6.4.35.zip",
                 "reference": "49257c96304c508223815ee965c251e7c79e614e",
                 "shasum": ""
             },
@@ -4247,7 +3083,6 @@
                     "/Tests/"
                 ]
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "MIT"
             ],
@@ -4294,20 +3129,15 @@
         },
         {
             "name": "symfony/css-selector",
-            "version": "v6.4.34",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/css-selector.git",
-                "reference": "b0314c186f1464de048cce58979ff1625ca88bbb"
-            },
+            "version": "v7.4.6",
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/symfony/css-selector/zipball/b0314c186f1464de048cce58979ff1625ca88bbb",
-                "reference": "b0314c186f1464de048cce58979ff1625ca88bbb",
+                "url": "https://mirror.abrha.net/repository/composer/symfony/css-selector/v7.4.6/symfony-css-selector-v7.4.6.zip",
+                "reference": "2e7c52c647b406e2107dd867db424a4dbac91864",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.1"
+                "php": ">=8.2"
             },
             "type": "library",
             "autoload": {
@@ -4318,7 +3148,6 @@
                     "/Tests/"
                 ]
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "MIT"
             ],
@@ -4339,7 +3168,7 @@
             "description": "Converts CSS selectors to XPath expressions",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/css-selector/tree/v6.4.34"
+                "source": "https://github.com/symfony/css-selector/tree/v7.4.6"
             },
             "funding": [
                 {
@@ -4359,19 +3188,14 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-02-16T08:37:21+00:00"
+            "time": "2026-02-17T07:53:42+00:00"
         },
         {
             "name": "symfony/deprecation-contracts",
             "version": "v3.6.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/deprecation-contracts.git",
-                "reference": "63afe740e99a13ba87ec199bb07bbdee937a5b62"
-            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/symfony/deprecation-contracts/zipball/63afe740e99a13ba87ec199bb07bbdee937a5b62",
+                "url": "https://mirror.abrha.net/repository/composer/symfony/deprecation-contracts/v3.6.0/symfony-deprecation-contracts-v3.6.0.zip",
                 "reference": "63afe740e99a13ba87ec199bb07bbdee937a5b62",
                 "shasum": ""
             },
@@ -4393,7 +3217,6 @@
                     "function.php"
                 ]
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "MIT"
             ],
@@ -4431,14 +3254,9 @@
         {
             "name": "symfony/error-handler",
             "version": "v6.4.32",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/error-handler.git",
-                "reference": "8c18400784fcb014dc73c8d5601a9576af7f8ad4"
-            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/symfony/error-handler/zipball/8c18400784fcb014dc73c8d5601a9576af7f8ad4",
+                "url": "https://mirror.abrha.net/repository/composer/symfony/error-handler/v6.4.32/symfony-error-handler-v6.4.32.zip",
                 "reference": "8c18400784fcb014dc73c8d5601a9576af7f8ad4",
                 "shasum": ""
             },
@@ -4468,7 +3286,6 @@
                     "/Tests/"
                 ]
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "MIT"
             ],
@@ -4509,24 +3326,19 @@
         },
         {
             "name": "symfony/event-dispatcher",
-            "version": "v6.4.32",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/event-dispatcher.git",
-                "reference": "99d7e101826e6610606b9433248f80c1997cd20b"
-            },
+            "version": "v7.4.4",
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/symfony/event-dispatcher/zipball/99d7e101826e6610606b9433248f80c1997cd20b",
-                "reference": "99d7e101826e6610606b9433248f80c1997cd20b",
+                "url": "https://mirror.abrha.net/repository/composer/symfony/event-dispatcher/v7.4.4/symfony-event-dispatcher-v7.4.4.zip",
+                "reference": "dc2c0eba1af673e736bb851d747d266108aea746",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.1",
+                "php": ">=8.2",
                 "symfony/event-dispatcher-contracts": "^2.5|^3"
             },
             "conflict": {
-                "symfony/dependency-injection": "<5.4",
+                "symfony/dependency-injection": "<6.4",
                 "symfony/service-contracts": "<2.5"
             },
             "provide": {
@@ -4535,13 +3347,14 @@
             },
             "require-dev": {
                 "psr/log": "^1|^2|^3",
-                "symfony/config": "^5.4|^6.0|^7.0",
-                "symfony/dependency-injection": "^5.4|^6.0|^7.0",
-                "symfony/error-handler": "^5.4|^6.0|^7.0",
-                "symfony/expression-language": "^5.4|^6.0|^7.0",
-                "symfony/http-foundation": "^5.4|^6.0|^7.0",
+                "symfony/config": "^6.4|^7.0|^8.0",
+                "symfony/dependency-injection": "^6.4|^7.0|^8.0",
+                "symfony/error-handler": "^6.4|^7.0|^8.0",
+                "symfony/expression-language": "^6.4|^7.0|^8.0",
+                "symfony/framework-bundle": "^6.4|^7.0|^8.0",
+                "symfony/http-foundation": "^6.4|^7.0|^8.0",
                 "symfony/service-contracts": "^2.5|^3",
-                "symfony/stopwatch": "^5.4|^6.0|^7.0"
+                "symfony/stopwatch": "^6.4|^7.0|^8.0"
             },
             "type": "library",
             "autoload": {
@@ -4552,7 +3365,6 @@
                     "/Tests/"
                 ]
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "MIT"
             ],
@@ -4569,7 +3381,7 @@
             "description": "Provides tools that allow your application components to communicate with each other by dispatching events and listening to them",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/event-dispatcher/tree/v6.4.32"
+                "source": "https://github.com/symfony/event-dispatcher/tree/v7.4.4"
             },
             "funding": [
                 {
@@ -4589,19 +3401,14 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-01-05T11:13:48+00:00"
+            "time": "2026-01-05T11:45:34+00:00"
         },
         {
             "name": "symfony/event-dispatcher-contracts",
             "version": "v3.6.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/event-dispatcher-contracts.git",
-                "reference": "59eb412e93815df44f05f342958efa9f46b1e586"
-            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/symfony/event-dispatcher-contracts/zipball/59eb412e93815df44f05f342958efa9f46b1e586",
+                "url": "https://mirror.abrha.net/repository/composer/symfony/event-dispatcher-contracts/v3.6.0/symfony-event-dispatcher-contracts-v3.6.0.zip",
                 "reference": "59eb412e93815df44f05f342958efa9f46b1e586",
                 "shasum": ""
             },
@@ -4624,7 +3431,6 @@
                     "Symfony\\Contracts\\EventDispatcher\\": ""
                 }
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "MIT"
             ],
@@ -4670,14 +3476,9 @@
         {
             "name": "symfony/finder",
             "version": "v6.4.34",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/finder.git",
-                "reference": "9590e86be1d1c57bfbb16d0dd040345378c20896"
-            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/symfony/finder/zipball/9590e86be1d1c57bfbb16d0dd040345378c20896",
+                "url": "https://mirror.abrha.net/repository/composer/symfony/finder/v6.4.34/symfony-finder-v6.4.34.zip",
                 "reference": "9590e86be1d1c57bfbb16d0dd040345378c20896",
                 "shasum": ""
             },
@@ -4696,7 +3497,6 @@
                     "/Tests/"
                 ]
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "MIT"
             ],
@@ -4738,14 +3538,9 @@
         {
             "name": "symfony/http-foundation",
             "version": "v6.4.35",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/http-foundation.git",
-                "reference": "cffffd0a2c037117b742b4f8b379a22a2a33f6d2"
-            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/symfony/http-foundation/zipball/cffffd0a2c037117b742b4f8b379a22a2a33f6d2",
+                "url": "https://mirror.abrha.net/repository/composer/symfony/http-foundation/v6.4.35/symfony-http-foundation-v6.4.35.zip",
                 "reference": "cffffd0a2c037117b742b4f8b379a22a2a33f6d2",
                 "shasum": ""
             },
@@ -4777,7 +3572,6 @@
                     "/Tests/"
                 ]
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "MIT"
             ],
@@ -4819,14 +3613,9 @@
         {
             "name": "symfony/http-kernel",
             "version": "v6.4.35",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/http-kernel.git",
-                "reference": "ece1a0da7745a5243683f178155c0412c92691eb"
-            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/symfony/http-kernel/zipball/ece1a0da7745a5243683f178155c0412c92691eb",
+                "url": "https://mirror.abrha.net/repository/composer/symfony/http-kernel/v6.4.35/symfony-http-kernel-v6.4.35.zip",
                 "reference": "ece1a0da7745a5243683f178155c0412c92691eb",
                 "shasum": ""
             },
@@ -4895,7 +3684,6 @@
                     "/Tests/"
                 ]
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "MIT"
             ],
@@ -4937,14 +3725,9 @@
         {
             "name": "symfony/mailer",
             "version": "v6.4.34",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/mailer.git",
-                "reference": "01b846f48e53ee4096692a383637a1fa4d577301"
-            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/symfony/mailer/zipball/01b846f48e53ee4096692a383637a1fa4d577301",
+                "url": "https://mirror.abrha.net/repository/composer/symfony/mailer/v6.4.34/symfony-mailer-v6.4.34.zip",
                 "reference": "01b846f48e53ee4096692a383637a1fa4d577301",
                 "shasum": ""
             },
@@ -4979,7 +3762,6 @@
                     "/Tests/"
                 ]
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "MIT"
             ],
@@ -5021,14 +3803,9 @@
         {
             "name": "symfony/mime",
             "version": "v6.4.35",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/mime.git",
-                "reference": "b5cce719de25bebd6345c7709774f9ac63ff5cdf"
-            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/symfony/mime/zipball/b5cce719de25bebd6345c7709774f9ac63ff5cdf",
+                "url": "https://mirror.abrha.net/repository/composer/symfony/mime/v6.4.35/symfony-mime-v6.4.35.zip",
                 "reference": "b5cce719de25bebd6345c7709774f9ac63ff5cdf",
                 "shasum": ""
             },
@@ -5064,7 +3841,6 @@
                     "/Tests/"
                 ]
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "MIT"
             ],
@@ -5110,14 +3886,9 @@
         {
             "name": "symfony/polyfill-ctype",
             "version": "v1.33.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/polyfill-ctype.git",
-                "reference": "a3cc8b044a6ea513310cbd48ef7333b384945638"
-            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/symfony/polyfill-ctype/zipball/a3cc8b044a6ea513310cbd48ef7333b384945638",
+                "url": "https://mirror.abrha.net/repository/composer/symfony/polyfill-ctype/v1.33.0/symfony-polyfill-ctype-v1.33.0.zip",
                 "reference": "a3cc8b044a6ea513310cbd48ef7333b384945638",
                 "shasum": ""
             },
@@ -5145,7 +3916,6 @@
                     "Symfony\\Polyfill\\Ctype\\": ""
                 }
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "MIT"
             ],
@@ -5193,14 +3963,9 @@
         {
             "name": "symfony/polyfill-intl-grapheme",
             "version": "v1.33.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/polyfill-intl-grapheme.git",
-                "reference": "380872130d3a5dd3ace2f4010d95125fde5d5c70"
-            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/symfony/polyfill-intl-grapheme/zipball/380872130d3a5dd3ace2f4010d95125fde5d5c70",
+                "url": "https://mirror.abrha.net/repository/composer/symfony/polyfill-intl-grapheme/v1.33.0/symfony-polyfill-intl-grapheme-v1.33.0.zip",
                 "reference": "380872130d3a5dd3ace2f4010d95125fde5d5c70",
                 "shasum": ""
             },
@@ -5225,7 +3990,6 @@
                     "Symfony\\Polyfill\\Intl\\Grapheme\\": ""
                 }
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "MIT"
             ],
@@ -5275,14 +4039,9 @@
         {
             "name": "symfony/polyfill-intl-idn",
             "version": "v1.33.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/polyfill-intl-idn.git",
-                "reference": "9614ac4d8061dc257ecc64cba1b140873dce8ad3"
-            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/symfony/polyfill-intl-idn/zipball/9614ac4d8061dc257ecc64cba1b140873dce8ad3",
+                "url": "https://mirror.abrha.net/repository/composer/symfony/polyfill-intl-idn/v1.33.0/symfony-polyfill-intl-idn-v1.33.0.zip",
                 "reference": "9614ac4d8061dc257ecc64cba1b140873dce8ad3",
                 "shasum": ""
             },
@@ -5308,7 +4067,6 @@
                     "Symfony\\Polyfill\\Intl\\Idn\\": ""
                 }
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "MIT"
             ],
@@ -5362,14 +4120,9 @@
         {
             "name": "symfony/polyfill-intl-normalizer",
             "version": "v1.33.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/polyfill-intl-normalizer.git",
-                "reference": "3833d7255cc303546435cb650316bff708a1c75c"
-            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/symfony/polyfill-intl-normalizer/zipball/3833d7255cc303546435cb650316bff708a1c75c",
+                "url": "https://mirror.abrha.net/repository/composer/symfony/polyfill-intl-normalizer/v1.33.0/symfony-polyfill-intl-normalizer-v1.33.0.zip",
                 "reference": "3833d7255cc303546435cb650316bff708a1c75c",
                 "shasum": ""
             },
@@ -5397,7 +4150,6 @@
                     "Resources/stubs"
                 ]
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "MIT"
             ],
@@ -5447,14 +4199,9 @@
         {
             "name": "symfony/polyfill-mbstring",
             "version": "v1.33.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "6d857f4d76bd4b343eac26d6b539585d2bc56493"
-            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/symfony/polyfill-mbstring/zipball/6d857f4d76bd4b343eac26d6b539585d2bc56493",
+                "url": "https://mirror.abrha.net/repository/composer/symfony/polyfill-mbstring/v1.33.0/symfony-polyfill-mbstring-v1.33.0.zip",
                 "reference": "6d857f4d76bd4b343eac26d6b539585d2bc56493",
                 "shasum": ""
             },
@@ -5483,7 +4230,6 @@
                     "Symfony\\Polyfill\\Mbstring\\": ""
                 }
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "MIT"
             ],
@@ -5532,14 +4278,9 @@
         {
             "name": "symfony/polyfill-php80",
             "version": "v1.33.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/polyfill-php80.git",
-                "reference": "0cc9dd0f17f61d8131e7df6b84bd344899fe2608"
-            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/symfony/polyfill-php80/zipball/0cc9dd0f17f61d8131e7df6b84bd344899fe2608",
+                "url": "https://mirror.abrha.net/repository/composer/symfony/polyfill-php80/v1.33.0/symfony-polyfill-php80-v1.33.0.zip",
                 "reference": "0cc9dd0f17f61d8131e7df6b84bd344899fe2608",
                 "shasum": ""
             },
@@ -5564,7 +4305,6 @@
                     "Resources/stubs"
                 ]
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "MIT"
             ],
@@ -5616,14 +4356,9 @@
         {
             "name": "symfony/polyfill-php83",
             "version": "v1.33.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/polyfill-php83.git",
-                "reference": "17f6f9a6b1735c0f163024d959f700cfbc5155e5"
-            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/symfony/polyfill-php83/zipball/17f6f9a6b1735c0f163024d959f700cfbc5155e5",
+                "url": "https://mirror.abrha.net/repository/composer/symfony/polyfill-php83/v1.33.0/symfony-polyfill-php83-v1.33.0.zip",
                 "reference": "17f6f9a6b1735c0f163024d959f700cfbc5155e5",
                 "shasum": ""
             },
@@ -5648,7 +4383,6 @@
                     "Resources/stubs"
                 ]
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "MIT"
             ],
@@ -5696,14 +4430,9 @@
         {
             "name": "symfony/polyfill-uuid",
             "version": "v1.33.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/polyfill-uuid.git",
-                "reference": "21533be36c24be3f4b1669c4725c7d1d2bab4ae2"
-            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/symfony/polyfill-uuid/zipball/21533be36c24be3f4b1669c4725c7d1d2bab4ae2",
+                "url": "https://mirror.abrha.net/repository/composer/symfony/polyfill-uuid/v1.33.0/symfony-polyfill-uuid-v1.33.0.zip",
                 "reference": "21533be36c24be3f4b1669c4725c7d1d2bab4ae2",
                 "shasum": ""
             },
@@ -5731,7 +4460,6 @@
                     "Symfony\\Polyfill\\Uuid\\": ""
                 }
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "MIT"
             ],
@@ -5779,14 +4507,9 @@
         {
             "name": "symfony/process",
             "version": "v6.4.33",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/process.git",
-                "reference": "c46e854e79b52d07666e43924a20cb6dc546644e"
-            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/symfony/process/zipball/c46e854e79b52d07666e43924a20cb6dc546644e",
+                "url": "https://mirror.abrha.net/repository/composer/symfony/process/v6.4.33/symfony-process-v6.4.33.zip",
                 "reference": "c46e854e79b52d07666e43924a20cb6dc546644e",
                 "shasum": ""
             },
@@ -5802,7 +4525,6 @@
                     "/Tests/"
                 ]
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "MIT"
             ],
@@ -5842,103 +4564,11 @@
             "time": "2026-01-23T16:02:12+00:00"
         },
         {
-            "name": "symfony/psr-http-message-bridge",
-            "version": "v6.4.32",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/psr-http-message-bridge.git",
-                "reference": "740017f61ce31b4aca485a18a25c0310ebd0190f"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/symfony/psr-http-message-bridge/zipball/740017f61ce31b4aca485a18a25c0310ebd0190f",
-                "reference": "740017f61ce31b4aca485a18a25c0310ebd0190f",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=8.1",
-                "psr/http-message": "^1.0|^2.0",
-                "symfony/http-foundation": "^5.4|^6.0|^7.0"
-            },
-            "conflict": {
-                "php-http/discovery": "<1.15",
-                "symfony/http-kernel": "<6.2"
-            },
-            "require-dev": {
-                "nyholm/psr7": "^1.1",
-                "php-http/discovery": "^1.15",
-                "psr/log": "^1.1.4|^2|^3",
-                "symfony/browser-kit": "^5.4|^6.0|^7.0",
-                "symfony/config": "^5.4|^6.0|^7.0",
-                "symfony/event-dispatcher": "^5.4|^6.0|^7.0",
-                "symfony/framework-bundle": "^6.2|^7.0",
-                "symfony/http-kernel": "^6.2|^7.0"
-            },
-            "type": "symfony-bridge",
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Bridge\\PsrHttpMessage\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "PSR HTTP message bridge",
-            "homepage": "https://symfony.com",
-            "keywords": [
-                "http",
-                "http-message",
-                "psr-17",
-                "psr-7"
-            ],
-            "support": {
-                "source": "https://github.com/symfony/psr-http-message-bridge/tree/v6.4.32"
-            },
-            "funding": [
-                {
-                    "url": "https://symfony.com/sponsor",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/fabpot",
-                    "type": "github"
-                },
-                {
-                    "url": "https://github.com/nicolas-grekas",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                    "type": "tidelift"
-                }
-            ],
-            "time": "2026-01-02T11:59:06+00:00"
-        },
-        {
             "name": "symfony/routing",
             "version": "v6.4.34",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/routing.git",
-                "reference": "5ab3a3e1a03535ec5ca6ce2d39e4369a1096ae47"
-            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/symfony/routing/zipball/5ab3a3e1a03535ec5ca6ce2d39e4369a1096ae47",
+                "url": "https://mirror.abrha.net/repository/composer/symfony/routing/v6.4.34/symfony-routing-v6.4.34.zip",
                 "reference": "5ab3a3e1a03535ec5ca6ce2d39e4369a1096ae47",
                 "shasum": ""
             },
@@ -5970,7 +4600,6 @@
                     "/Tests/"
                 ]
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "MIT"
             ],
@@ -6018,14 +4647,9 @@
         {
             "name": "symfony/service-contracts",
             "version": "v3.6.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/service-contracts.git",
-                "reference": "45112560a3ba2d715666a509a0bc9521d10b6c43"
-            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/symfony/service-contracts/zipball/45112560a3ba2d715666a509a0bc9521d10b6c43",
+                "url": "https://mirror.abrha.net/repository/composer/symfony/service-contracts/v3.6.1/symfony-service-contracts-v3.6.1.zip",
                 "reference": "45112560a3ba2d715666a509a0bc9521d10b6c43",
                 "shasum": ""
             },
@@ -6055,7 +4679,6 @@
                     "/Test/"
                 ]
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "MIT"
             ],
@@ -6104,22 +4727,18 @@
         },
         {
             "name": "symfony/string",
-            "version": "v6.4.34",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/string.git",
-                "reference": "2adaf4106f2ef4c67271971bde6d3fe0a6936432"
-            },
+            "version": "v7.4.6",
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/symfony/string/zipball/2adaf4106f2ef4c67271971bde6d3fe0a6936432",
-                "reference": "2adaf4106f2ef4c67271971bde6d3fe0a6936432",
+                "url": "https://mirror.abrha.net/repository/composer/symfony/string/v7.4.6/symfony-string-v7.4.6.zip",
+                "reference": "9f209231affa85aa930a5e46e6eb03381424b30b",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.1",
+                "php": ">=8.2",
+                "symfony/deprecation-contracts": "^2.5|^3.0",
                 "symfony/polyfill-ctype": "~1.8",
-                "symfony/polyfill-intl-grapheme": "~1.0",
+                "symfony/polyfill-intl-grapheme": "~1.33",
                 "symfony/polyfill-intl-normalizer": "~1.0",
                 "symfony/polyfill-mbstring": "~1.0"
             },
@@ -6127,10 +4746,11 @@
                 "symfony/translation-contracts": "<2.5"
             },
             "require-dev": {
-                "symfony/http-client": "^5.4|^6.0|^7.0",
-                "symfony/intl": "^6.2|^7.0",
+                "symfony/emoji": "^7.1|^8.0",
+                "symfony/http-client": "^6.4|^7.0|^8.0",
+                "symfony/intl": "^6.4|^7.0|^8.0",
                 "symfony/translation-contracts": "^2.5|^3.0",
-                "symfony/var-exporter": "^5.4|^6.0|^7.0"
+                "symfony/var-exporter": "^6.4|^7.0|^8.0"
             },
             "type": "library",
             "autoload": {
@@ -6144,7 +4764,6 @@
                     "/Tests/"
                 ]
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "MIT"
             ],
@@ -6169,7 +4788,7 @@
                 "utf8"
             ],
             "support": {
-                "source": "https://github.com/symfony/string/tree/v6.4.34"
+                "source": "https://github.com/symfony/string/tree/v7.4.6"
             },
             "funding": [
                 {
@@ -6189,19 +4808,14 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-02-08T20:44:54+00:00"
+            "time": "2026-02-09T09:33:46+00:00"
         },
         {
             "name": "symfony/translation",
             "version": "v6.4.34",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/translation.git",
-                "reference": "d07d117db41341511671b0a1a2be48f2772189ce"
-            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/symfony/translation/zipball/d07d117db41341511671b0a1a2be48f2772189ce",
+                "url": "https://mirror.abrha.net/repository/composer/symfony/translation/v6.4.34/symfony-translation-v6.4.34.zip",
                 "reference": "d07d117db41341511671b0a1a2be48f2772189ce",
                 "shasum": ""
             },
@@ -6251,7 +4865,6 @@
                     "/Tests/"
                 ]
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "MIT"
             ],
@@ -6293,14 +4906,9 @@
         {
             "name": "symfony/translation-contracts",
             "version": "v3.6.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/translation-contracts.git",
-                "reference": "65a8bc82080447fae78373aa10f8d13b38338977"
-            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/symfony/translation-contracts/zipball/65a8bc82080447fae78373aa10f8d13b38338977",
+                "url": "https://mirror.abrha.net/repository/composer/symfony/translation-contracts/v3.6.1/symfony-translation-contracts-v3.6.1.zip",
                 "reference": "65a8bc82080447fae78373aa10f8d13b38338977",
                 "shasum": ""
             },
@@ -6325,7 +4933,6 @@
                     "/Test/"
                 ]
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "MIT"
             ],
@@ -6375,14 +4982,9 @@
         {
             "name": "symfony/uid",
             "version": "v6.4.32",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/uid.git",
-                "reference": "6b973c385f00341b246f697d82dc01a09107acdd"
-            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/symfony/uid/zipball/6b973c385f00341b246f697d82dc01a09107acdd",
+                "url": "https://mirror.abrha.net/repository/composer/symfony/uid/v6.4.32/symfony-uid-v6.4.32.zip",
                 "reference": "6b973c385f00341b246f697d82dc01a09107acdd",
                 "shasum": ""
             },
@@ -6402,7 +5004,6 @@
                     "/Tests/"
                 ]
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "MIT"
             ],
@@ -6453,14 +5054,9 @@
         {
             "name": "symfony/var-dumper",
             "version": "v6.4.32",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/var-dumper.git",
-                "reference": "131fc9915e0343052af5ed5040401b481ca192aa"
-            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/symfony/var-dumper/zipball/131fc9915e0343052af5ed5040401b481ca192aa",
+                "url": "https://mirror.abrha.net/repository/composer/symfony/var-dumper/v6.4.32/symfony-var-dumper-v6.4.32.zip",
                 "reference": "131fc9915e0343052af5ed5040401b481ca192aa",
                 "shasum": ""
             },
@@ -6495,7 +5091,6 @@
                     "/Tests/"
                 ]
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "MIT"
             ],
@@ -6539,16 +5134,75 @@
             "time": "2026-01-01T13:34:06+00:00"
         },
         {
-            "name": "tijsverkoyen/css-to-inline-styles",
-            "version": "v2.4.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/tijsverkoyen/CssToInlineStyles.git",
-                "reference": "f0292ccf0ec75843d65027214426b6b163b48b41"
-            },
+            "name": "tightenco/ziggy",
+            "version": "v2.6.2",
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/tijsverkoyen/CssToInlineStyles/zipball/f0292ccf0ec75843d65027214426b6b163b48b41",
+                "url": "https://mirror.abrha.net/repository/composer/tightenco/ziggy/v2.6.2/tightenco-ziggy-v2.6.2.zip",
+                "reference": "8a0b645921623f77dceaf543d61ecd51a391d96e",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "laravel/framework": ">=9.0",
+                "php": ">=8.1"
+            },
+            "require-dev": {
+                "laravel/folio": "^1.1",
+                "orchestra/testbench": "^8.0 || ^9.0 || ^10.0",
+                "pestphp/pest": "^2.0 || ^3.0 || ^4.0",
+                "pestphp/pest-plugin-laravel": "^2.0 || ^3.0 || ^4.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Tighten\\Ziggy\\ZiggyServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Tighten\\Ziggy\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Daniel Coulbourne",
+                    "email": "daniel@tighten.co"
+                },
+                {
+                    "name": "Jake Bathman",
+                    "email": "jake@tighten.co"
+                },
+                {
+                    "name": "Jacob Baker-Kretzmar",
+                    "email": "jacob@tighten.co"
+                }
+            ],
+            "description": "Use your Laravel named routes in JavaScript.",
+            "homepage": "https://github.com/tighten/ziggy",
+            "keywords": [
+                "Ziggy",
+                "javascript",
+                "laravel",
+                "routes"
+            ],
+            "support": {
+                "issues": "https://github.com/tighten/ziggy/issues",
+                "source": "https://github.com/tighten/ziggy/tree/v2.6.2"
+            },
+            "time": "2026-03-05T14:41:19+00:00"
+        },
+        {
+            "name": "tijsverkoyen/css-to-inline-styles",
+            "version": "v2.4.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://mirror.abrha.net/repository/composer/tijsverkoyen/css-to-inline-styles/v2.4.0/tijsverkoyen-css-to-inline-styles-v2.4.0.zip",
                 "reference": "f0292ccf0ec75843d65027214426b6b163b48b41",
                 "shasum": ""
             },
@@ -6574,7 +5228,6 @@
                     "TijsVerkoyen\\CssToInlineStyles\\": "src"
                 }
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "BSD-3-Clause"
             ],
@@ -6596,14 +5249,9 @@
         {
             "name": "vlucas/phpdotenv",
             "version": "v5.6.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/vlucas/phpdotenv.git",
-                "reference": "955e7815d677a3eaa7075231212f2110983adecc"
-            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/vlucas/phpdotenv/zipball/955e7815d677a3eaa7075231212f2110983adecc",
+                "url": "https://mirror.abrha.net/repository/composer/vlucas/phpdotenv/v5.6.3/vlucas-phpdotenv-v5.6.3.zip",
                 "reference": "955e7815d677a3eaa7075231212f2110983adecc",
                 "shasum": ""
             },
@@ -6639,7 +5287,6 @@
                     "Dotenv\\": "src/"
                 }
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "BSD-3-Clause"
             ],
@@ -6680,14 +5327,9 @@
         {
             "name": "voku/portable-ascii",
             "version": "2.0.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/voku/portable-ascii.git",
-                "reference": "b1d923f88091c6bf09699efcd7c8a1b1bfd7351d"
-            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/voku/portable-ascii/zipball/b1d923f88091c6bf09699efcd7c8a1b1bfd7351d",
+                "url": "https://mirror.abrha.net/repository/composer/voku/portable-ascii/2.0.3/voku-portable-ascii-2.0.3.zip",
                 "reference": "b1d923f88091c6bf09699efcd7c8a1b1bfd7351d",
                 "shasum": ""
             },
@@ -6706,7 +5348,6 @@
                     "voku\\": "src/voku/"
                 }
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "MIT"
             ],
@@ -6756,14 +5397,9 @@
         {
             "name": "fakerphp/faker",
             "version": "v1.24.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/FakerPHP/Faker.git",
-                "reference": "e0ee18eb1e6dc3cda3ce9fd97e5a0689a88a64b5"
-            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/FakerPHP/Faker/zipball/e0ee18eb1e6dc3cda3ce9fd97e5a0689a88a64b5",
+                "url": "https://mirror.abrha.net/repository/composer/fakerphp/faker/v1.24.1/fakerphp-faker-v1.24.1.zip",
                 "reference": "e0ee18eb1e6dc3cda3ce9fd97e5a0689a88a64b5",
                 "shasum": ""
             },
@@ -6795,7 +5431,6 @@
                     "Faker\\": "src/Faker/"
                 }
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "MIT"
             ],
@@ -6819,14 +5454,9 @@
         {
             "name": "filp/whoops",
             "version": "2.18.4",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/filp/whoops.git",
-                "reference": "d2102955e48b9fd9ab24280a7ad12ed552752c4d"
-            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/filp/whoops/zipball/d2102955e48b9fd9ab24280a7ad12ed552752c4d",
+                "url": "https://mirror.abrha.net/repository/composer/filp/whoops/2.18.4/filp-whoops-2.18.4.zip",
                 "reference": "d2102955e48b9fd9ab24280a7ad12ed552752c4d",
                 "shasum": ""
             },
@@ -6854,7 +5484,6 @@
                     "Whoops\\": "src/Whoops/"
                 }
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "MIT"
             ],
@@ -6890,14 +5519,9 @@
         {
             "name": "hamcrest/hamcrest-php",
             "version": "v2.1.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/hamcrest/hamcrest-php.git",
-                "reference": "f8b1c0173b22fa6ec77a81fe63e5b01eba7e6487"
-            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/hamcrest/hamcrest-php/zipball/f8b1c0173b22fa6ec77a81fe63e5b01eba7e6487",
+                "url": "https://mirror.abrha.net/repository/composer/hamcrest/hamcrest-php/v2.1.1/hamcrest-hamcrest-php-v2.1.1.zip",
                 "reference": "f8b1c0173b22fa6ec77a81fe63e5b01eba7e6487",
                 "shasum": ""
             },
@@ -6924,7 +5548,6 @@
                     "hamcrest"
                 ]
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "BSD-3-Clause"
             ],
@@ -6939,17 +5562,68 @@
             "time": "2025-04-30T06:54:44+00:00"
         },
         {
-            "name": "laravel/pint",
-            "version": "v1.20.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/laravel/pint.git",
-                "reference": "53072e8ea22213a7ed168a8a15b96fbb8b82d44b"
-            },
+            "name": "laravel/breeze",
+            "version": "v1.29.1",
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/laravel/pint/zipball/53072e8ea22213a7ed168a8a15b96fbb8b82d44b",
-                "reference": "53072e8ea22213a7ed168a8a15b96fbb8b82d44b",
+                "url": "https://mirror.abrha.net/repository/composer/laravel/breeze/v1.29.1/laravel-breeze-v1.29.1.zip",
+                "reference": "22c53b84b7fff91b01a318d71a10dfc251e92849",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/console": "^10.17",
+                "illuminate/filesystem": "^10.17",
+                "illuminate/support": "^10.17",
+                "illuminate/validation": "^10.17",
+                "php": "^8.1.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^8.0",
+                "phpstan/phpstan": "^1.10"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Laravel\\Breeze\\BreezeServiceProvider"
+                    ]
+                },
+                "branch-alias": {
+                    "dev-master": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Laravel\\Breeze\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylor@laravel.com"
+                }
+            ],
+            "description": "Minimal Laravel authentication scaffolding with Blade and Tailwind.",
+            "keywords": [
+                "auth",
+                "laravel"
+            ],
+            "support": {
+                "issues": "https://github.com/laravel/breeze/issues",
+                "source": "https://github.com/laravel/breeze"
+            },
+            "time": "2024-03-04T14:35:21+00:00"
+        },
+        {
+            "name": "laravel/pint",
+            "version": "v1.29.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://mirror.abrha.net/repository/composer/laravel/pint/v1.29.0/laravel-pint-v1.29.0.zip",
+                "reference": "bdec963f53172c5e36330f3a400604c69bf02d39",
                 "shasum": ""
             },
             "require": {
@@ -6957,16 +5631,17 @@
                 "ext-mbstring": "*",
                 "ext-tokenizer": "*",
                 "ext-xml": "*",
-                "php": "^8.1.0"
+                "php": "^8.2.0"
             },
             "require-dev": {
-                "friendsofphp/php-cs-fixer": "^3.66.0",
-                "illuminate/view": "^10.48.25",
-                "larastan/larastan": "^2.9.12",
-                "laravel-zero/framework": "^10.48.25",
+                "friendsofphp/php-cs-fixer": "^3.94.2",
+                "illuminate/view": "^12.54.1",
+                "larastan/larastan": "^3.9.3",
+                "laravel-zero/framework": "^12.0.5",
                 "mockery/mockery": "^1.6.12",
-                "nunomaduro/termwind": "^1.17.0",
-                "pestphp/pest": "^2.36.0"
+                "nunomaduro/termwind": "^2.4.0",
+                "pestphp/pest": "^3.8.6",
+                "shipfastlabs/agent-detector": "^1.1.0"
             },
             "bin": [
                 "builds/pint"
@@ -6979,7 +5654,6 @@
                     "Database\\Factories\\": "database/factories/"
                 }
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "MIT"
             ],
@@ -6992,6 +5666,7 @@
             "description": "An opinionated code formatter for PHP.",
             "homepage": "https://laravel.com",
             "keywords": [
+                "dev",
                 "format",
                 "formatter",
                 "lint",
@@ -7002,19 +5677,14 @@
                 "issues": "https://github.com/laravel/pint/issues",
                 "source": "https://github.com/laravel/pint"
             },
-            "time": "2025-01-14T16:20:53+00:00"
+            "time": "2026-03-12T15:51:39+00:00"
         },
         {
             "name": "laravel/sail",
             "version": "v1.55.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/laravel/sail.git",
-                "reference": "67dc1b72da4e066a2fb54c1c7582fd2f140ea191"
-            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/laravel/sail/zipball/67dc1b72da4e066a2fb54c1c7582fd2f140ea191",
+                "url": "https://mirror.abrha.net/repository/composer/laravel/sail/v1.55.0/laravel-sail-v1.55.0.zip",
                 "reference": "67dc1b72da4e066a2fb54c1c7582fd2f140ea191",
                 "shasum": ""
             },
@@ -7046,7 +5716,6 @@
                     "Laravel\\Sail\\": "src/"
                 }
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "MIT"
             ],
@@ -7070,14 +5739,9 @@
         {
             "name": "mockery/mockery",
             "version": "1.6.12",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mockery/mockery.git",
-                "reference": "1f4efdd7d3beafe9807b08156dfcb176d18f1699"
-            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/mockery/mockery/zipball/1f4efdd7d3beafe9807b08156dfcb176d18f1699",
+                "url": "https://mirror.abrha.net/repository/composer/mockery/mockery/1.6.12/mockery-mockery-1.6.12.zip",
                 "reference": "1f4efdd7d3beafe9807b08156dfcb176d18f1699",
                 "shasum": ""
             },
@@ -7103,7 +5767,6 @@
                     "Mockery\\": "library/Mockery"
                 }
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "BSD-3-Clause"
             ],
@@ -7153,14 +5816,9 @@
         {
             "name": "myclabs/deep-copy",
             "version": "1.13.4",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/myclabs/DeepCopy.git",
-                "reference": "07d290f0c47959fd5eed98c95ee5602db07e0b6a"
-            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/myclabs/DeepCopy/zipball/07d290f0c47959fd5eed98c95ee5602db07e0b6a",
+                "url": "https://mirror.abrha.net/repository/composer/myclabs/deep-copy/1.13.4/myclabs-deep-copy-1.13.4.zip",
                 "reference": "07d290f0c47959fd5eed98c95ee5602db07e0b6a",
                 "shasum": ""
             },
@@ -7186,7 +5844,6 @@
                     "DeepCopy\\": "src/DeepCopy/"
                 }
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "MIT"
             ],
@@ -7213,14 +5870,9 @@
         {
             "name": "nunomaduro/collision",
             "version": "v7.12.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/nunomaduro/collision.git",
-                "reference": "995245421d3d7593a6960822063bdba4f5d7cf1a"
-            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/nunomaduro/collision/zipball/995245421d3d7593a6960822063bdba4f5d7cf1a",
+                "url": "https://mirror.abrha.net/repository/composer/nunomaduro/collision/v7.12.0/nunomaduro-collision-v7.12.0.zip",
                 "reference": "995245421d3d7593a6960822063bdba4f5d7cf1a",
                 "shasum": ""
             },
@@ -7263,7 +5915,6 @@
                     "NunoMaduro\\Collision\\": "src/"
                 }
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "MIT"
             ],
@@ -7309,14 +5960,9 @@
         {
             "name": "phar-io/manifest",
             "version": "2.0.4",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/phar-io/manifest.git",
-                "reference": "54750ef60c58e43759730615a392c31c80e23176"
-            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/phar-io/manifest/zipball/54750ef60c58e43759730615a392c31c80e23176",
+                "url": "https://mirror.abrha.net/repository/composer/phar-io/manifest/2.0.4/phar-io-manifest-2.0.4.zip",
                 "reference": "54750ef60c58e43759730615a392c31c80e23176",
                 "shasum": ""
             },
@@ -7339,7 +5985,6 @@
                     "src/"
                 ]
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "BSD-3-Clause"
             ],
@@ -7376,14 +6021,9 @@
         {
             "name": "phar-io/version",
             "version": "3.2.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/phar-io/version.git",
-                "reference": "4f7fd7836c6f332bb2933569e566a0d6c4cbed74"
-            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/phar-io/version/zipball/4f7fd7836c6f332bb2933569e566a0d6c4cbed74",
+                "url": "https://mirror.abrha.net/repository/composer/phar-io/version/3.2.1/phar-io-version-3.2.1.zip",
                 "reference": "4f7fd7836c6f332bb2933569e566a0d6c4cbed74",
                 "shasum": ""
             },
@@ -7396,7 +6036,6 @@
                     "src/"
                 ]
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "BSD-3-Clause"
             ],
@@ -7427,14 +6066,9 @@
         {
             "name": "phpunit/php-code-coverage",
             "version": "10.1.16",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/sebastianbergmann/php-code-coverage.git",
-                "reference": "7e308268858ed6baedc8704a304727d20bc07c77"
-            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/sebastianbergmann/php-code-coverage/zipball/7e308268858ed6baedc8704a304727d20bc07c77",
+                "url": "https://mirror.abrha.net/repository/composer/phpunit/php-code-coverage/10.1.16/phpunit-php-code-coverage-10.1.16.zip",
                 "reference": "7e308268858ed6baedc8704a304727d20bc07c77",
                 "shasum": ""
             },
@@ -7471,7 +6105,6 @@
                     "src/"
                 ]
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "BSD-3-Clause"
             ],
@@ -7505,14 +6138,9 @@
         {
             "name": "phpunit/php-file-iterator",
             "version": "4.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/sebastianbergmann/php-file-iterator.git",
-                "reference": "a95037b6d9e608ba092da1b23931e537cadc3c3c"
-            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/sebastianbergmann/php-file-iterator/zipball/a95037b6d9e608ba092da1b23931e537cadc3c3c",
+                "url": "https://mirror.abrha.net/repository/composer/phpunit/php-file-iterator/4.1.0/phpunit-php-file-iterator-4.1.0.zip",
                 "reference": "a95037b6d9e608ba092da1b23931e537cadc3c3c",
                 "shasum": ""
             },
@@ -7533,7 +6161,6 @@
                     "src/"
                 ]
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "BSD-3-Clause"
             ],
@@ -7566,14 +6193,9 @@
         {
             "name": "phpunit/php-invoker",
             "version": "4.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/sebastianbergmann/php-invoker.git",
-                "reference": "f5e568ba02fa5ba0ddd0f618391d5a9ea50b06d7"
-            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/sebastianbergmann/php-invoker/zipball/f5e568ba02fa5ba0ddd0f618391d5a9ea50b06d7",
+                "url": "https://mirror.abrha.net/repository/composer/phpunit/php-invoker/4.0.0/phpunit-php-invoker-4.0.0.zip",
                 "reference": "f5e568ba02fa5ba0ddd0f618391d5a9ea50b06d7",
                 "shasum": ""
             },
@@ -7598,7 +6220,6 @@
                     "src/"
                 ]
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "BSD-3-Clause"
             ],
@@ -7629,14 +6250,9 @@
         {
             "name": "phpunit/php-text-template",
             "version": "3.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/sebastianbergmann/php-text-template.git",
-                "reference": "0c7b06ff49e3d5072f057eb1fa59258bf287a748"
-            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/sebastianbergmann/php-text-template/zipball/0c7b06ff49e3d5072f057eb1fa59258bf287a748",
+                "url": "https://mirror.abrha.net/repository/composer/phpunit/php-text-template/3.0.1/phpunit-php-text-template-3.0.1.zip",
                 "reference": "0c7b06ff49e3d5072f057eb1fa59258bf287a748",
                 "shasum": ""
             },
@@ -7657,7 +6273,6 @@
                     "src/"
                 ]
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "BSD-3-Clause"
             ],
@@ -7689,14 +6304,9 @@
         {
             "name": "phpunit/php-timer",
             "version": "6.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/sebastianbergmann/php-timer.git",
-                "reference": "e2a2d67966e740530f4a3343fe2e030ffdc1161d"
-            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/sebastianbergmann/php-timer/zipball/e2a2d67966e740530f4a3343fe2e030ffdc1161d",
+                "url": "https://mirror.abrha.net/repository/composer/phpunit/php-timer/6.0.0/phpunit-php-timer-6.0.0.zip",
                 "reference": "e2a2d67966e740530f4a3343fe2e030ffdc1161d",
                 "shasum": ""
             },
@@ -7717,7 +6327,6 @@
                     "src/"
                 ]
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "BSD-3-Clause"
             ],
@@ -7748,14 +6357,9 @@
         {
             "name": "phpunit/phpunit",
             "version": "10.5.63",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "33198268dad71e926626b618f3ec3966661e4d90"
-            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/sebastianbergmann/phpunit/zipball/33198268dad71e926626b618f3ec3966661e4d90",
+                "url": "https://mirror.abrha.net/repository/composer/phpunit/phpunit/10.5.63/phpunit-phpunit-10.5.63.zip",
                 "reference": "33198268dad71e926626b618f3ec3966661e4d90",
                 "shasum": ""
             },
@@ -7807,7 +6411,6 @@
                     "src/"
                 ]
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "BSD-3-Clause"
             ],
@@ -7857,14 +6460,9 @@
         {
             "name": "sebastian/cli-parser",
             "version": "2.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/sebastianbergmann/cli-parser.git",
-                "reference": "c34583b87e7b7a8055bf6c450c2c77ce32a24084"
-            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/sebastianbergmann/cli-parser/zipball/c34583b87e7b7a8055bf6c450c2c77ce32a24084",
+                "url": "https://mirror.abrha.net/repository/composer/sebastian/cli-parser/2.0.1/sebastian-cli-parser-2.0.1.zip",
                 "reference": "c34583b87e7b7a8055bf6c450c2c77ce32a24084",
                 "shasum": ""
             },
@@ -7885,7 +6483,6 @@
                     "src/"
                 ]
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "BSD-3-Clause"
             ],
@@ -7914,14 +6511,9 @@
         {
             "name": "sebastian/code-unit",
             "version": "2.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/sebastianbergmann/code-unit.git",
-                "reference": "a81fee9eef0b7a76af11d121767abc44c104e503"
-            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/sebastianbergmann/code-unit/zipball/a81fee9eef0b7a76af11d121767abc44c104e503",
+                "url": "https://mirror.abrha.net/repository/composer/sebastian/code-unit/2.0.0/sebastian-code-unit-2.0.0.zip",
                 "reference": "a81fee9eef0b7a76af11d121767abc44c104e503",
                 "shasum": ""
             },
@@ -7942,7 +6534,6 @@
                     "src/"
                 ]
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "BSD-3-Clause"
             ],
@@ -7970,14 +6561,9 @@
         {
             "name": "sebastian/code-unit-reverse-lookup",
             "version": "3.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/sebastianbergmann/code-unit-reverse-lookup.git",
-                "reference": "5e3a687f7d8ae33fb362c5c0743794bbb2420a1d"
-            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/sebastianbergmann/code-unit-reverse-lookup/zipball/5e3a687f7d8ae33fb362c5c0743794bbb2420a1d",
+                "url": "https://mirror.abrha.net/repository/composer/sebastian/code-unit-reverse-lookup/3.0.0/sebastian-code-unit-reverse-lookup-3.0.0.zip",
                 "reference": "5e3a687f7d8ae33fb362c5c0743794bbb2420a1d",
                 "shasum": ""
             },
@@ -7998,7 +6584,6 @@
                     "src/"
                 ]
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "BSD-3-Clause"
             ],
@@ -8025,14 +6610,9 @@
         {
             "name": "sebastian/comparator",
             "version": "5.0.5",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/sebastianbergmann/comparator.git",
-                "reference": "55dfef806eb7dfeb6e7a6935601fef866f8ca48d"
-            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/sebastianbergmann/comparator/zipball/55dfef806eb7dfeb6e7a6935601fef866f8ca48d",
+                "url": "https://mirror.abrha.net/repository/composer/sebastian/comparator/5.0.5/sebastian-comparator-5.0.5.zip",
                 "reference": "55dfef806eb7dfeb6e7a6935601fef866f8ca48d",
                 "shasum": ""
             },
@@ -8057,7 +6637,6 @@
                     "src/"
                 ]
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "BSD-3-Clause"
             ],
@@ -8114,14 +6693,9 @@
         {
             "name": "sebastian/complexity",
             "version": "3.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/sebastianbergmann/complexity.git",
-                "reference": "68ff824baeae169ec9f2137158ee529584553799"
-            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/sebastianbergmann/complexity/zipball/68ff824baeae169ec9f2137158ee529584553799",
+                "url": "https://mirror.abrha.net/repository/composer/sebastian/complexity/3.2.0/sebastian-complexity-3.2.0.zip",
                 "reference": "68ff824baeae169ec9f2137158ee529584553799",
                 "shasum": ""
             },
@@ -8143,7 +6717,6 @@
                     "src/"
                 ]
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "BSD-3-Clause"
             ],
@@ -8172,14 +6745,9 @@
         {
             "name": "sebastian/diff",
             "version": "5.1.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/sebastianbergmann/diff.git",
-                "reference": "c41e007b4b62af48218231d6c2275e4c9b975b2e"
-            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/sebastianbergmann/diff/zipball/c41e007b4b62af48218231d6c2275e4c9b975b2e",
+                "url": "https://mirror.abrha.net/repository/composer/sebastian/diff/5.1.1/sebastian-diff-5.1.1.zip",
                 "reference": "c41e007b4b62af48218231d6c2275e4c9b975b2e",
                 "shasum": ""
             },
@@ -8201,7 +6769,6 @@
                     "src/"
                 ]
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "BSD-3-Clause"
             ],
@@ -8239,14 +6806,9 @@
         {
             "name": "sebastian/environment",
             "version": "6.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/sebastianbergmann/environment.git",
-                "reference": "8074dbcd93529b357029f5cc5058fd3e43666984"
-            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/sebastianbergmann/environment/zipball/8074dbcd93529b357029f5cc5058fd3e43666984",
+                "url": "https://mirror.abrha.net/repository/composer/sebastian/environment/6.1.0/sebastian-environment-6.1.0.zip",
                 "reference": "8074dbcd93529b357029f5cc5058fd3e43666984",
                 "shasum": ""
             },
@@ -8270,7 +6832,6 @@
                     "src/"
                 ]
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "BSD-3-Clause"
             ],
@@ -8303,14 +6864,9 @@
         {
             "name": "sebastian/exporter",
             "version": "5.1.4",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/sebastianbergmann/exporter.git",
-                "reference": "0735b90f4da94969541dac1da743446e276defa6"
-            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/sebastianbergmann/exporter/zipball/0735b90f4da94969541dac1da743446e276defa6",
+                "url": "https://mirror.abrha.net/repository/composer/sebastian/exporter/5.1.4/sebastian-exporter-5.1.4.zip",
                 "reference": "0735b90f4da94969541dac1da743446e276defa6",
                 "shasum": ""
             },
@@ -8333,7 +6889,6 @@
                     "src/"
                 ]
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "BSD-3-Clause"
             ],
@@ -8393,14 +6948,9 @@
         {
             "name": "sebastian/global-state",
             "version": "6.0.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/sebastianbergmann/global-state.git",
-                "reference": "987bafff24ecc4c9ac418cab1145b96dd6e9cbd9"
-            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/sebastianbergmann/global-state/zipball/987bafff24ecc4c9ac418cab1145b96dd6e9cbd9",
+                "url": "https://mirror.abrha.net/repository/composer/sebastian/global-state/6.0.2/sebastian-global-state-6.0.2.zip",
                 "reference": "987bafff24ecc4c9ac418cab1145b96dd6e9cbd9",
                 "shasum": ""
             },
@@ -8424,7 +6974,6 @@
                     "src/"
                 ]
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "BSD-3-Clause"
             ],
@@ -8455,14 +7004,9 @@
         {
             "name": "sebastian/lines-of-code",
             "version": "2.0.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/sebastianbergmann/lines-of-code.git",
-                "reference": "856e7f6a75a84e339195d48c556f23be2ebf75d0"
-            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/sebastianbergmann/lines-of-code/zipball/856e7f6a75a84e339195d48c556f23be2ebf75d0",
+                "url": "https://mirror.abrha.net/repository/composer/sebastian/lines-of-code/2.0.2/sebastian-lines-of-code-2.0.2.zip",
                 "reference": "856e7f6a75a84e339195d48c556f23be2ebf75d0",
                 "shasum": ""
             },
@@ -8484,7 +7028,6 @@
                     "src/"
                 ]
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "BSD-3-Clause"
             ],
@@ -8513,14 +7056,9 @@
         {
             "name": "sebastian/object-enumerator",
             "version": "5.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/sebastianbergmann/object-enumerator.git",
-                "reference": "202d0e344a580d7f7d04b3fafce6933e59dae906"
-            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/sebastianbergmann/object-enumerator/zipball/202d0e344a580d7f7d04b3fafce6933e59dae906",
+                "url": "https://mirror.abrha.net/repository/composer/sebastian/object-enumerator/5.0.0/sebastian-object-enumerator-5.0.0.zip",
                 "reference": "202d0e344a580d7f7d04b3fafce6933e59dae906",
                 "shasum": ""
             },
@@ -8543,7 +7081,6 @@
                     "src/"
                 ]
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "BSD-3-Clause"
             ],
@@ -8570,14 +7107,9 @@
         {
             "name": "sebastian/object-reflector",
             "version": "3.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/sebastianbergmann/object-reflector.git",
-                "reference": "24ed13d98130f0e7122df55d06c5c4942a577957"
-            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/sebastianbergmann/object-reflector/zipball/24ed13d98130f0e7122df55d06c5c4942a577957",
+                "url": "https://mirror.abrha.net/repository/composer/sebastian/object-reflector/3.0.0/sebastian-object-reflector-3.0.0.zip",
                 "reference": "24ed13d98130f0e7122df55d06c5c4942a577957",
                 "shasum": ""
             },
@@ -8598,7 +7130,6 @@
                     "src/"
                 ]
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "BSD-3-Clause"
             ],
@@ -8625,14 +7156,9 @@
         {
             "name": "sebastian/recursion-context",
             "version": "5.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/sebastianbergmann/recursion-context.git",
-                "reference": "47e34210757a2f37a97dcd207d032e1b01e64c7a"
-            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/sebastianbergmann/recursion-context/zipball/47e34210757a2f37a97dcd207d032e1b01e64c7a",
+                "url": "https://mirror.abrha.net/repository/composer/sebastian/recursion-context/5.0.1/sebastian-recursion-context-5.0.1.zip",
                 "reference": "47e34210757a2f37a97dcd207d032e1b01e64c7a",
                 "shasum": ""
             },
@@ -8653,7 +7179,6 @@
                     "src/"
                 ]
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "BSD-3-Clause"
             ],
@@ -8701,14 +7226,9 @@
         {
             "name": "sebastian/type",
             "version": "4.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/sebastianbergmann/type.git",
-                "reference": "462699a16464c3944eefc02ebdd77882bd3925bf"
-            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/sebastianbergmann/type/zipball/462699a16464c3944eefc02ebdd77882bd3925bf",
+                "url": "https://mirror.abrha.net/repository/composer/sebastian/type/4.0.0/sebastian-type-4.0.0.zip",
                 "reference": "462699a16464c3944eefc02ebdd77882bd3925bf",
                 "shasum": ""
             },
@@ -8729,7 +7249,6 @@
                     "src/"
                 ]
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "BSD-3-Clause"
             ],
@@ -8757,14 +7276,9 @@
         {
             "name": "sebastian/version",
             "version": "4.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/sebastianbergmann/version.git",
-                "reference": "c51fa83a5d8f43f1402e3f32a005e6262244ef17"
-            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/sebastianbergmann/version/zipball/c51fa83a5d8f43f1402e3f32a005e6262244ef17",
+                "url": "https://mirror.abrha.net/repository/composer/sebastian/version/4.0.1/sebastian-version-4.0.1.zip",
                 "reference": "c51fa83a5d8f43f1402e3f32a005e6262244ef17",
                 "shasum": ""
             },
@@ -8782,7 +7296,6 @@
                     "src/"
                 ]
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "BSD-3-Clause"
             ],
@@ -8810,14 +7323,9 @@
         {
             "name": "spatie/backtrace",
             "version": "1.8.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/spatie/backtrace.git",
-                "reference": "8ffe78be5ed355b5009e3dd989d183433e9a5adc"
-            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/spatie/backtrace/zipball/8ffe78be5ed355b5009e3dd989d183433e9a5adc",
+                "url": "https://mirror.abrha.net/repository/composer/spatie/backtrace/1.8.2/spatie-backtrace-1.8.2.zip",
                 "reference": "8ffe78be5ed355b5009e3dd989d183433e9a5adc",
                 "shasum": ""
             },
@@ -8837,7 +7345,6 @@
                     "Spatie\\Backtrace\\": "src"
                 }
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "MIT"
             ],
@@ -8874,14 +7381,9 @@
         {
             "name": "spatie/error-solutions",
             "version": "1.1.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/spatie/error-solutions.git",
-                "reference": "e495d7178ca524f2dd0fe6a1d99a1e608e1c9936"
-            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/spatie/error-solutions/zipball/e495d7178ca524f2dd0fe6a1d99a1e608e1c9936",
+                "url": "https://mirror.abrha.net/repository/composer/spatie/error-solutions/1.1.3/spatie-error-solutions-1.1.3.zip",
                 "reference": "e495d7178ca524f2dd0fe6a1d99a1e608e1c9936",
                 "shasum": ""
             },
@@ -8916,7 +7418,6 @@
                     "Spatie\\LaravelIgnition\\": "legacy/laravel-ignition"
                 }
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "MIT"
             ],
@@ -8948,14 +7449,9 @@
         {
             "name": "spatie/flare-client-php",
             "version": "1.11.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/spatie/flare-client-php.git",
-                "reference": "fb3ffb946675dba811fbde9122224db2f84daca9"
-            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/spatie/flare-client-php/zipball/fb3ffb946675dba811fbde9122224db2f84daca9",
+                "url": "https://mirror.abrha.net/repository/composer/spatie/flare-client-php/1.11.0/spatie-flare-client-php-1.11.0.zip",
                 "reference": "fb3ffb946675dba811fbde9122224db2f84daca9",
                 "shasum": ""
             },
@@ -8990,7 +7486,6 @@
                     "Spatie\\FlareClient\\": "src"
                 }
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "MIT"
             ],
@@ -9017,14 +7512,9 @@
         {
             "name": "spatie/ignition",
             "version": "1.16.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/spatie/ignition.git",
-                "reference": "b59385bb7aa24dae81bcc15850ebecfda7b40838"
-            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/spatie/ignition/zipball/b59385bb7aa24dae81bcc15850ebecfda7b40838",
+                "url": "https://mirror.abrha.net/repository/composer/spatie/ignition/1.16.0/spatie-ignition-1.16.0.zip",
                 "reference": "b59385bb7aa24dae81bcc15850ebecfda7b40838",
                 "shasum": ""
             },
@@ -9067,7 +7557,6 @@
                     "Spatie\\Ignition\\": "src"
                 }
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "MIT"
             ],
@@ -9103,14 +7592,9 @@
         {
             "name": "spatie/laravel-ignition",
             "version": "2.9.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/spatie/laravel-ignition.git",
-                "reference": "1baee07216d6748ebd3a65ba97381b051838707a"
-            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/spatie/laravel-ignition/zipball/1baee07216d6748ebd3a65ba97381b051838707a",
+                "url": "https://mirror.abrha.net/repository/composer/spatie/laravel-ignition/2.9.1/spatie-laravel-ignition-2.9.1.zip",
                 "reference": "1baee07216d6748ebd3a65ba97381b051838707a",
                 "shasum": ""
             },
@@ -9158,7 +7642,6 @@
                     "Spatie\\LaravelIgnition\\": "src"
                 }
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "MIT"
             ],
@@ -9193,28 +7676,23 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "v6.4.34",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/yaml.git",
-                "reference": "7bca30dabed7900a08c5ad4f1d6483f881a64d0f"
-            },
+            "version": "v7.4.6",
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/symfony/yaml/zipball/7bca30dabed7900a08c5ad4f1d6483f881a64d0f",
-                "reference": "7bca30dabed7900a08c5ad4f1d6483f881a64d0f",
+                "url": "https://mirror.abrha.net/repository/composer/symfony/yaml/v7.4.6/symfony-yaml-v7.4.6.zip",
+                "reference": "58751048de17bae71c5aa0d13cb19d79bca26391",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.1",
+                "php": ">=8.2",
                 "symfony/deprecation-contracts": "^2.5|^3",
                 "symfony/polyfill-ctype": "^1.8"
             },
             "conflict": {
-                "symfony/console": "<5.4"
+                "symfony/console": "<6.4"
             },
             "require-dev": {
-                "symfony/console": "^5.4|^6.0|^7.0"
+                "symfony/console": "^6.4|^7.0|^8.0"
             },
             "bin": [
                 "Resources/bin/yaml-lint"
@@ -9228,7 +7706,6 @@
                     "/Tests/"
                 ]
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "MIT"
             ],
@@ -9245,7 +7722,7 @@
             "description": "Loads and dumps YAML files",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/yaml/tree/v6.4.34"
+                "source": "https://github.com/symfony/yaml/tree/v7.4.6"
             },
             "funding": [
                 {
@@ -9265,19 +7742,14 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-02-06T18:32:11+00:00"
+            "time": "2026-02-09T09:33:46+00:00"
         },
         {
             "name": "theseer/tokenizer",
             "version": "1.3.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/theseer/tokenizer.git",
-                "reference": "b7489ce515e168639d17feec34b8847c326b0b3c"
-            },
             "dist": {
                 "type": "zip",
-                "url": "https://mirror-composer.runflare.com/repos/theseer/tokenizer/zipball/b7489ce515e168639d17feec34b8847c326b0b3c",
+                "url": "https://mirror.abrha.net/repository/composer/theseer/tokenizer/1.3.1/theseer-tokenizer-1.3.1.zip",
                 "reference": "b7489ce515e168639d17feec34b8847c326b0b3c",
                 "shasum": ""
             },
@@ -9293,7 +7765,6 @@
                     "src/"
                 ]
             },
-            "notification-url": "https://mirror-composer.runflare.com/downloads/",
             "license": [
                 "BSD-3-Clause"
             ],

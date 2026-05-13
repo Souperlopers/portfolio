@@ -24,8 +24,9 @@ class MemberFactory extends Factory
             'description' => fake()->paragraph(),
             'position' => fake()->jobTitle(),
 
-            'priority' => fake()->numberBetween(-128, 127),
+            'priority' => fake()->randomElement([fake()->numberBetween(-128, 127), 0]),
             'slug' => Str::slug($name),
+            'thumbnail' => '/assets/images/m/' . fake()->randomElement(range(1, 3)) . '.jpg',
 
             'email' => fake()->unique()->safeEmail(),
             'phone' => fake()->unique()->phoneNumber(),

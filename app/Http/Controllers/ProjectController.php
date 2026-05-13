@@ -2,6 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\Project\Image\ProjectImageCollection;
+use App\Http\Resources\Project\ProjectResource;
+use App\Http\Resources\Project\ProjectCollection;
+use App\Models\Member;
 use App\Models\Project;
 
 class ProjectController extends Controller
@@ -9,33 +13,42 @@ class ProjectController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(?Member $member = null)
     {
-        $projects = Project::orderBy('priority', 'desc')
-            ->paginate(10);
-
-        return view("pages.projects")
-            ->with("projects", $projects);
+        return new ProjectCollection(
+            ($member
+                ? $member->projects()
+                : (new Project())->getSorted()
+            )
+                ->paginate(10, pageName: $member ? "projectPage" : 'page')
+        );
     }
+
+
 
     /**
      * Display the specified resource.
      */
-    public function show(string $projectSlug)
+    public function show(Project $project)
     {
-        $project = Project::firstWhere('slug', $projectSlug);
+        return new ProjectResource(
+            $project->load([
+                'tags' => fn($query) => $query->limit(4),
+                'members' => fn($query) => $query->limit(4),
+                'images' => fn($query) => $query->limit(10),
+            ])->appendContribution()
+        );
+    }
 
-        if (!$project) {
-            return view('pages.404');
-        }
 
-        $tagGroups = [];
-        foreach ($project->tags as $tag) {
-            $tagGroups[$tag['type']][] = $tag;
-        }
 
-        return view("pages.project")
-            ->with("project", $project)
-            ->with("tagGroups", $tagGroups);
+    /**
+     * Display the specified resource.
+     */
+    public function images(Project $project)
+    {
+        return new ProjectImageCollection(
+            $project->images()->paginate(10)
+        );
     }
 }

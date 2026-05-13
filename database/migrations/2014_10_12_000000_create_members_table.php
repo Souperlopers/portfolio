@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('name', 50)->unique()->index();
             $table->text('description')->nullable();
             $table->string('position', 50);
+            $table->string('thumbnail')/*->unique()*/;
 
             $table->string('email', 100)->unique()->nullable();
             $table->string('phone', 11)->unique()->nullable();

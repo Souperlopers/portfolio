@@ -2,11 +2,15 @@
 
 namespace Database\Seeders;
 
+use App\Models\Member;
+use App\Models\MemberProject;
+use App\Models\Project;
+use App\Models\Projectimage;
+use App\Models\Tag;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
-use App\Models\Member;
-use App\Models\Project;
-use App\Models\Tag;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Collection;
 
 class DatabaseSeeder extends Seeder
 {
@@ -15,51 +19,49 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // disable foreign key checking temporarily
-        DB::statement('PRAGMA foreign_keys = OFF;');
-
         // clear out tables previous data
         DB::table('taggables')->truncate();
-        DB::table('member_project')->truncate();
-        Member::truncate();
-        Project::truncate();
         Tag::truncate();
+        MemberProject::truncate();
+        Member::truncate();
+        Projectimage::truncate();
+        Project::truncate();
 
         // define the amount each table should have value
-        $membersQuantity = 10;
-        $projectsQuantity = 30;
         $tagsQuantity = 15;
+        $membersQuantity = 5;
+        $projectsQuantity = 30;
 
-        // create tags
-        $tags = Tag::factory($tagsQuantity)->create();
+        $tags = (new TagSeeder)->run($tagsQuantity);
+        $members = (new MemberSeeder)->run($membersQuantity, $tags);
+        $projects = (new ProjectSeeder)->run($projectsQuantity, $members);
+    }
 
-        // Create members and assign tags
-        $members = Member::factory($membersQuantity)->create()
-            ->each(function ($member) use ($tags) {
-                // Ensure each member has 3 to 5 tags
-                $numberOfTags = rand(3, 5);
 
-                // Randomly select tag IDs for the member
-                $tagIds = $tags->pluck('id'); // Get IDs of all created tags
-                $memberTagIds = $tagIds->random($numberOfTags);
-                $member->tags()->attach($memberTagIds);
-            });
+    public static function fakePriority(Model $priorable)
+    {
+        return fake()->randomElement([
+            fake()->numberBetween(-128, 127),
+            $priorable->priority
+        ]);
+    }
 
-        // Create projects and associate members
-        Project::factory($projectsQuantity)->create()
-            ->each(function ($project) use ($members, $membersQuantity) {
-                // Attach members to the project
-                $randMemberIds = $members->random(rand(1, $membersQuantity))->pluck('id');
-                $project->members()->attach($randMemberIds);
+    public static function random(Collection $collection)
+    {
+        $num = $collection->count();
+        return $collection->random(rand(1, $num));
+    }
 
-                // Collect all unique tag IDs from the project's members
-                $projectTagIds = collect();
-                foreach ($project->members as $projectMember) {
-                    $projectTagIds = $projectTagIds->merge($projectMember->tags->pluck('id'));
-                }
+    public static function appendableTag(Collection $tags)
+    {
+        $attachmentData = [];
 
-                // Make the tag IDs unique and attach them to the project
-                $project->tags()->attach($projectTagIds->unique()->values());
-            });
+        foreach ($tags as $tag) {
+            $attachmentData[$tag->id] = [
+                'priority_for_taggable' => DatabaseSeeder::fakePriority($tag)
+            ];
+        }
+
+        return $attachmentData;
     }
 }

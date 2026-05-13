@@ -20,6 +20,7 @@ class TagFactory extends Factory
         return [
             'name' => fake()->word(),
             'type' => fake()->randomElement(Tag::TYPES),
+            'priority' => fake()->randomElement([fake()->numberBetween(-128, 127), 0]),
             'version' => fake()->optional()->semver(true, true),
         ];
     }

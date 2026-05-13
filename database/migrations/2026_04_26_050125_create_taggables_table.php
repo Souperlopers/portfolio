@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('taggables', function (Blueprint $table) {
             $table->id();
+            $table->tinyInteger('priority_for_taggable')->required()->index();
             $table->bigInteger("tag_id")->unsigned();
             $table->morphs("taggable");
 

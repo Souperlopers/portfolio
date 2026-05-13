@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string("slug", 50)->unique()->index();
             $table->tinyInteger('priority')->default(0)->index();
+            $table->string('thumbnail')/*->unique()*/;
 
             $table->string("name", 50)->unique()->index();
             $table->string("url", 150)->nullable();

@@ -11,19 +11,22 @@ class Member extends Model
 
     public $timestamps = false;
 
-    protected $fillable = [
-        'username',
-        'name',
-        'description',
-        'position',
-        'email',
-        'phone',
-        'linkedin_url',
-        'github_url',
-    ];
+    public function getSorted()
+    {
+        return $this
+            ::orderByDesc('priority')
+            ->orderBy('name')
+            ->with(['tags' => fn($q) => $q->where('priority_for_taggable', '>', 64)])
+        ;
+    }
 
     public function projects()
     {
-        return $this->belongsToMany(Project::class);
+        return $this->belongsToMany(Project::class)
+            ->using(MemberProject::class)
+            ->withPivot('id', 'project_priority_for_member')
+            ->orderByDesc('project_priority_for_member')
+            ->orderBy('name')
+        ;
     }
 }

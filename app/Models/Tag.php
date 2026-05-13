@@ -11,24 +11,11 @@ class Tag extends Model
 
     public $timestamps = false;
 
-    protected $fillable = [
-        'type',
-        'name',
-        'version',
-        'taggable_type',
-        'taggable_id',
-    ];
+    public const TYPES = ['os', 'lang', 'framework', 'lib', 'webserver', 'db', 'tool'];
 
-    public const TYPES = ["os", "lang", "framework", "lib", "webserver", "db", "tool"];
-
-    public function members()
+    public function getSorted()
     {
-        return $this->morphedByMany(Member::class, 'taggable');
-    }
-
-    public function projects()
-    {
-        return $this->morphedByMany(Project::class, 'taggable');
+        return $this::orderByDesc('priority');
     }
 
     // casacade on delete
@@ -37,6 +24,7 @@ class Tag extends Model
         static::deleting(function ($tag) {
             $tag->morphedByMany(Member::class, 'taggable')->detach();
             $tag->morphedByMany(Project::class, 'taggable')->detach();
+            $tag->morphedByMany(MemberProject::class, 'taggable')->detach();
         });
     }
 }

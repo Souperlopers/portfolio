@@ -2,40 +2,36 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\Member\MemberCollection;
+use App\Http\Resources\Member\MemberResource;
 use App\Models\Member;
+use App\Models\Project;
 
 class MemberController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Display a listing of members
      */
-    public function index()
+    public function index(?Project $project = null)
     {
-        $members = Member::orderBy('priority', 'desc')
-            ->paginate(10);
-
-        return view("pages.members")
-            ->with("members", $members);
+        return new MemberCollection(
+            ($project
+                ? $project->members()
+                : (new Member())->getSorted()
+            )->paginate(10, pageName: $project ? "memberPage" : 'page')
+        );
     }
 
     /**
-     * Display the specified resource.
+     * Display the member.
      */
-    public function show(string $memberSlug)
+    public function show(Member $member)
     {
-        $member = Member::firstWhere('slug', $memberSlug);
-
-        if (!$member) {
-            return view('pages.404');
-        }
-
-        $tagGroups = [];
-        foreach ($member->tags as $tag) {
-            $tagGroups[$tag['type']][] = $tag;
-        }
-
-        return view("pages.member")
-            ->with("member", $member)
-            ->with("tagGroups", $tagGroups);
+        return new MemberResource(
+            $member->load([
+                'tags' => fn($q) => $q->limit(4),
+                'projects' => fn($q) => $q->limit(4)
+            ])->appendContribution()
+        );
     }
 }

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\WebController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,14 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', "HomeController")->name('home');
+Route::controller(WebController::class)->name('web.')->group(function () {
 
-Route::get('/projects', "ProjectController@index")->name('projects');
-Route::get('/projects/{projectSlug}', "ProjectController@show")->name('project');
+    Route::get('/', 'home')->name('home');
 
-Route::get('/members', "MemberController@index")->name('members');
-Route::get('/{userSlug}', "MemberController@show")->name('member');
+    Route::get('/projects/{project:slug}', 'project')->name('project');
 
-Route::fallback(function () {
-    return view('pages.404');
+    Route::get('/{member:slug}', 'member')->name('member');
 });
