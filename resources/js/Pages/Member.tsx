@@ -10,7 +10,7 @@ export default function Member({ member }: MemberPageProps) {
 
     return (
         <div className="flex flex-col gap-5 w-full">
-            <Head title="SouperLopers" />
+            <Head title={`SouperLopers | ${info.name}`} />
             <Profile info={info} />
             <MemberProjects projects={projects} />
         </div>
