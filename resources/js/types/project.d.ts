@@ -1,5 +1,5 @@
 import { Tag } from "@/types/tag";
-import { MemberBrief } from '@/types/member';
+import { MemberBrief } from "@/types/member";
 
 export type ProjectImage = {
     id: number;
@@ -19,14 +19,14 @@ export type Project = {
     title: string;
     description: string;
     thumbnail: string;
-    preview_url: string;
     contributors: MemberBrief[];
     technologies: Tag[];
     images: ProjectImage[];
+    links: ProjectLinks;
 };
 
-export type ProjectDetailsButton = {
-    name: string;
-    url: string;
-    color: string;
-}
+export type ProjectLinks = {
+    preview: string;
+    github: string;
+    figma: string;
+};
