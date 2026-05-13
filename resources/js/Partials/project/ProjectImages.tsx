@@ -1,23 +1,23 @@
 import { useState } from "react";
-import { ProjectImagesProps } from "@/types";
+import { ProjectImage } from "@/types/project";
 
-const ProjectImages = ({ images }: { images: ProjectImagesProps[] }) => {
+const ProjectImages = ({ images }: { images: ProjectImage[] }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
-    const imagesLength = images.length;
+    const imagesCount = images.length;
 
     const handlePrevBtn = () => {
         setCurrentIndex((prevIndex) =>
-            prevIndex === 0 ? imagesLength - 1 : prevIndex - 1,
+            prevIndex === 0 ? imagesCount - 1 : prevIndex - 1,
         );
     };
 
     const handleNextBtn = () => {
         setCurrentIndex((prevIndex) =>
-            prevIndex === imagesLength - 1 ? 0 : prevIndex + 1,
+            prevIndex === imagesCount - 1 ? 0 : prevIndex + 1,
         );
     };
 
-    if (imagesLength === 0) return null;
+    if (imagesCount === 0) return null;
 
     return (
         <div className="w-1/2 h-72 border border-neutral-700 rounded relative overflow-hidden">
@@ -27,7 +27,7 @@ const ProjectImages = ({ images }: { images: ProjectImagesProps[] }) => {
                 className="w-full h-full object-cover rounded"
             />
 
-            {imagesLength > 1 && (
+            {imagesCount > 1 && (
                 <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-5">
                     <span
                         className="w-28 py-1.5 text-center bg-pink-300 hover:bg-pink-400 cursor-pointer rounded transition-colors"
