@@ -11,18 +11,13 @@ export type HomePageProps = {
 };
 
 export type MemberPageProps = {
-     member: {
+    member: {
         data: Member;
-    };
-}
-
-export type ProjectPageProps = {
-    project:{
-        data: Project;
     };
 };
 
-export type ProjectImagesProps = {
-    id: number;
-    url: string;
-}
+export type ProjectPageProps = {
+    project: {
+        data: Project;
+    };
+};
