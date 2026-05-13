@@ -23,7 +23,7 @@ const MemberCard = ({ memberData }: { memberData: MemberBrief }) => {
                 transition-all duration-500 ease-out
                 flex flex-col items-center justify-between
                 p-6 min-h-[320px]
-                hover:-translate-y-2 cursor-pointer
+                hover:-translate-y-1
             "
         >
             <div className="relative flex items-center justify-center">
@@ -62,6 +62,7 @@ const MemberCard = ({ memberData }: { memberData: MemberBrief }) => {
             <div className="flex flex-wrap gap-2">
                 <SkillsTag skills={skills} isDisplayVersion={true} />
             </div>
+
             <Link
                 href={url}
                 className="
@@ -73,13 +74,6 @@ const MemberCard = ({ memberData }: { memberData: MemberBrief }) => {
             >
                 مشاهده پروفایل
             </Link>
-
-            <div
-                className="
-                absolute inset-0 rounded-2xl border-2 border-transparent
-                group-hover:border-cyan-500/40 transition-all duration-300
-            "
-            />
         </div>
     );
 };
