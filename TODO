@@ -3,7 +3,6 @@ goal: create a portfolio webapp in -1 week and -6 days
 TODO_Z increase the gap between 'پروژه ها' and project item section
 TODO_Z increase the gap between member position and tags
 TODO_Z remove (or decrease) member avatar radius in member
-TODO_Z remove priority from cards and items
 TODO_Z move scroll bar group to the middle of the screen. and maybe making it little narrow? (example iamge: /image.png delete image after seeing it)
 TODO_Z decrease home page content width (example iamge: /image.png delete image after seeing it)
 TODO_Z fix: whole member card is acting as link and main link button doesn't work

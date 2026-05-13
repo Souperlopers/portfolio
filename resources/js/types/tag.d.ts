@@ -3,5 +3,4 @@ export type Tag = {
     title: string;
     type: string;
     version: string;
-    priority: number;
 };

@@ -11,7 +11,6 @@ export type ProjectBrief = {
     title: string;
     thumbnail: string;
     url: string;
-    priority: number;
     technologies: Tag[];
 };
 

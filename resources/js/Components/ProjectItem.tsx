@@ -62,10 +62,6 @@ const ProjectItem = ({ projectData }: { projectData: ProjectBrief }) => {
                         <SkillsTag skills={technologies} isDisplayVersion={false} />
                     </div>
                     <div className="mt-1 flex items-center justify-between gap-3">
-                        <div className="text-xs text-neutral-400">
-                            Priority: {projectData.priority ?? 0}
-                        </div>
-
                         <Link href={projectData.url}>
                             <span
                                 className="

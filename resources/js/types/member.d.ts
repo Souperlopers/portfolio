@@ -7,7 +7,6 @@ export type MemberBrief = {
     position: string;
     thumbnail: string;
     url: string;
-    priority: number;
     skills: Tag[];
 };
 
