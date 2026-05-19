@@ -16,7 +16,7 @@ class TagController extends Controller
             (isset($taggable)
                 ? $taggable->tags()
                 : (new Tag())->getSorted()
-            )->paginate(10)
+            )->get()
         );
     }
 
@@ -36,7 +36,7 @@ class TagController extends Controller
             MemberProject
                 ::getRecord($member, $project)
                 ->tags()
-                ->paginate(10)
+                ->get()
         );
     }
 
