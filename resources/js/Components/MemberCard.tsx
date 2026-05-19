@@ -47,7 +47,7 @@ const MemberCard = ({ memberData }: { memberData: MemberBrief }) => {
                 </div>
             </div>
 
-            <div className="mt-5 text-center space-y-2">
+            <div className="mt-5 text-center space-y-2 pb-2">
                 <h3
                     className="
                         text-white font-semibold text-lg truncate
@@ -59,7 +59,7 @@ const MemberCard = ({ memberData }: { memberData: MemberBrief }) => {
                 <p className="text-gray-300 text-sm">{position}</p>
             </div>
 
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-2 px-4">
                 <SkillsTag skills={skills} isDisplayVersion={true} />
             </div>
 

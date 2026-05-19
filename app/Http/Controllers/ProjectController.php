@@ -19,8 +19,7 @@ class ProjectController extends Controller
             ($member
                 ? $member->projects()
                 : (new Project())->getSorted()
-            )
-                ->paginate(10, pageName: $member ? "projectPage" : 'page')
+            )->get()
         );
     }
 
@@ -32,11 +31,9 @@ class ProjectController extends Controller
     public function show(Project $project)
     {
         return new ProjectResource(
-            $project->load([
-                'tags' => fn($query) => $query->limit(4),
-                'members' => fn($query) => $query->limit(4),
-                'images' => fn($query) => $query->limit(10),
-            ])->appendContribution()
+            $project
+                ->load(['tags', 'members', 'images'])
+                ->appendContribution()
         );
     }
 
@@ -48,7 +45,7 @@ class ProjectController extends Controller
     public function images(Project $project)
     {
         return new ProjectImageCollection(
-            $project->images()->paginate(10)
+            $project->images()->get()
         );
     }
 }

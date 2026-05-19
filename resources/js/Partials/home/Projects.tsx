@@ -7,14 +7,12 @@ const Projects = ({ projects }: { projects: ProjectBrief[] }) => {
     const topThreeProjects = projects.slice(0, 3);
 
     return (
-        <section className="px-3 py-10">
+        <section className="px-20 py-10">
             <div className="w-full mx-auto">
-                <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
-                    <div>
-                        <h2 className="text-2xl sm:text-3xl font-extrabold text-white">
-                            پروژه‌ها
-                        </h2>
-                    </div>
+                <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+                    <h2 className="text-2xl sm:text-3xl font-extrabold text-white">
+                        پروژه‌ها
+                    </h2>
 
                     <div className="flex gap-2 overflow-auto p-3">
                         {["همه پروژه‌ها", "فروشگاهی", "شخصی", "مدیریتی"].map(

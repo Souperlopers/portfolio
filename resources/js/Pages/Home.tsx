@@ -9,18 +9,16 @@ export default function Home({ projects, members }: HomePageProps) {
     const membersList = members.data;
 
     return (
-        <div>
+        <div className="flex flex-col gap-5 font-vazir">
             <Head title="SouperLopers" />
-            <div className="flex flex-col gap-5 font-vazir">
-                <ScrollBar />
-                <Banner fileName="banner.jpg" />
-                <section id="projects">
-                    <Projects projects={projectsList} />
-                </section>
-                <section id="members">
-                    <Members members={membersList} />
-                </section>
-            </div>
+            <ScrollBar />
+            <Banner fileName="banner.jpg" />
+            <section id="projects">
+                <Projects projects={projectsList} />
+            </section>
+            <section id="members">
+                <Members members={membersList} />
+            </section>
         </div>
     );
 }
