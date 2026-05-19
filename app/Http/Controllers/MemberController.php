@@ -18,7 +18,7 @@ class MemberController extends Controller
             ($project
                 ? $project->members()
                 : (new Member())->getSorted()
-            )->paginate(10, pageName: $project ? "memberPage" : 'page')
+            )->get()
         );
     }
 
@@ -28,10 +28,9 @@ class MemberController extends Controller
     public function show(Member $member)
     {
         return new MemberResource(
-            $member->load([
-                'tags' => fn($q) => $q->limit(4),
-                'projects' => fn($q) => $q->limit(4)
-            ])->appendContribution()
+            $member
+                ->load(['tags', 'projects'])
+                ->appendContribution()
         );
     }
 }

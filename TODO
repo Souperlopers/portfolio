@@ -1,16 +1,14 @@
 goal: create a portfolio webapp in -1 week and -6 days
 
-
-TODO_S pagination function on frontend
-TODO_Z error/1.png: member card width should stay fixed
+TODO_Z error/1.png: member card width should be fixed
 TODO_Z error/2.png: tags
 TODO_Z error/3.png: user avatar
 TODO_Z gallery: https://github.com/xiaolin/react-image-gallery
 TODO_Z tag version in project and member pages 
 TODO_Z scrollbar horizontal mode
 
+TODO_S pagination function on frontend
 TODO_S ulid
-
 TODO_S project time ranges
 TODO_S add reviews
 TODO_S add storage name hider
