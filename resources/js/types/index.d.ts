@@ -1,9 +1,11 @@
 import { Project, ProjectBrief } from "@/types/project";
 import { Member, MemberBrief } from "@/types/member";
 
-type PaginatedData<Data> = {
-    data: Data[];
+type ResponseData<Data> = {
+    data: Data;
 };
+
+type PaginatedData<Data> = ResponseData<Data[]>;
 
 export type HomePageProps = {
     projects: PaginatedData<ProjectBrief>;
@@ -11,13 +13,9 @@ export type HomePageProps = {
 };
 
 export type MemberPageProps = {
-    member: {
-        data: Member;
-    };
+    member: ResponseData<Member>;
 };
 
 export type ProjectPageProps = {
-    project: {
-        data: Project;
-    };
+    project: ResponseData<Project>;
 };

@@ -7,25 +7,26 @@ export type ProjectImage = {
 };
 
 export type ProjectBrief = {
-    id: number;
+    id: number|string;
     title: string;
-    thumbnail: string;
     url: string;
-    technologies: Tag[];
+    thumbnail?: string;
+    technologies?: Tag[];
 };
 
 export type Project = {
     title: string;
-    description: string;
-    thumbnail: string;
+    api: string;
+    description?: string;
+    thumbnail?: string;
+    technologies?: Tag[];
+    images?: ProjectImage[];
     contributors: MemberBrief[];
-    technologies: Tag[];
-    images: ProjectImage[];
-    links: ProjectLinks;
+    links?: ProjectLinks;
 };
 
 export type ProjectLinks = {
-    preview: string;
-    github: string;
-    figma: string;
+    preview?: string;
+    github?: string;
+    figma?: string;
 };

@@ -2,23 +2,25 @@ import { Tag } from "@/types/tag";
 import { ProjectBrief } from "@/types/project";
 
 export type MemberBrief = {
-    id: number;
+    id: number|string;
     name: string;
     position: string;
-    thumbnail: string;
     url: string;
-    skills: Tag[];
+    thumbnail?: string;
+    skills?: Tag[];
 };
 
 export type Member = {
     name: string;
     position: string;
-    description: string;
-    thumbnail: string;
-    phone: string;
-    email: string;
-    linkedin: string;
-    github: string;
-    contributions: ProjectBrief[];
-    skills: Tag[];
+    api: string;
+    description?: string;
+    phone?: string;
+    email?: string;
+    linkedin?: string;
+    github?: string;
+    preview?: string;
+    thumbnail?: string;
+    contributions?: ProjectBrief[];
+    skills?: Tag[];
 };
