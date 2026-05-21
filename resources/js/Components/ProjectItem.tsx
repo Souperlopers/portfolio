@@ -59,7 +59,7 @@ const ProjectItem = ({ projectData }: { projectData: ProjectBrief }) => {
                         </div>
                     </div>
                     <div className="flex flex-wrap gap-2">
-                        <SkillsTag skills={technologies} isDisplayVersion={false} />
+                        <SkillsTag skills={technologies} />
                     </div>
                     <div className="mt-1 flex items-center justify-between gap-3">
                         <Link href={projectData.url}>

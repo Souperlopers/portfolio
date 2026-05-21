@@ -2,7 +2,7 @@ import { Project } from "@/types/project";
 import { DetailButtons } from "@/index";
 
 const ProjectInfo = ({ info }: { info: Project }) => {
-    const technologies = info.technologies;
+    const technologies = info.technologies || [];
 
     return (
         <div className="w-[47%] flex flex-col gap-10">
@@ -16,7 +16,7 @@ const ProjectInfo = ({ info }: { info: Project }) => {
                 ))}
             </div>
             <div className="flex justify-center gap-10">
-                <DetailButtons links={info.links} />
+                <DetailButtons links={info.links || {}} />
             </div>
         </div>
     );

@@ -10,7 +10,7 @@ const MemberCard = ({ memberData }: { memberData: MemberBrief }) => {
         position = "بدون سمت",
         thumbnail,
         url,
-        skills,
+        skills = [],
     } = memberData;
 
     return (
@@ -60,7 +60,7 @@ const MemberCard = ({ memberData }: { memberData: MemberBrief }) => {
             </div>
 
             <div className="flex flex-wrap gap-2 px-4">
-                <SkillsTag skills={skills} isDisplayVersion={true} />
+                <SkillsTag skills={skills} />
             </div>
 
             <Link

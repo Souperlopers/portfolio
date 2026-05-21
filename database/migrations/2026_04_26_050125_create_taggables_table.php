@@ -16,6 +16,7 @@ return new class extends Migration
             $table->tinyInteger('priority_for_taggable')->required()->index();
             $table->bigInteger("tag_id")->unsigned();
             $table->morphs("taggable");
+            $table->smallInteger('count')->unsigned()->default(1);
 
             $table->foreign("tag_id")->references("id")->on("tags")->cascadeOnDelete();
         });

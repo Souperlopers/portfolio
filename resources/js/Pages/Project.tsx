@@ -6,8 +6,8 @@ import { Info, Images, Contributors } from "@/index";
 
 export default function Project({ project }: ProjectPageProps) {
     const projectData = project.data;
-    const images = projectData.images;
-    const contributors = projectData.contributors;
+    const images = projectData.images || [];
+    const contributors = projectData.contributors || [];
 
     return (
         <div className="flex flex-col gap-5">
