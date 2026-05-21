@@ -13,16 +13,16 @@ return new class extends Migration
     {
         Schema::create('members', function (Blueprint $table) {
             $table->id();
-            $table->string('slug', 50)->unique()->index();
+            $table->string('slug')->unique()->index();
             $table->tinyInteger('priority')->default(0)->index();
 
-            $table->string('name', 50)->unique()->index();
+            $table->string('name')->unique()->index();
             $table->text('description')->nullable();
-            $table->string('position', 50);
-            $table->string('thumbnail')/*->unique()*/;
+            $table->string('position');
+            $table->string('thumbnail')/*->unique()*/->nullable();
 
-            $table->string('email', 100)->unique()->nullable();
-            $table->string('phone', 11)->unique()->nullable();
+            $table->string('email')->unique()->nullable();
+            $table->string('phone')->unique()->nullable();
             $table->string('linkedin_url')->nullable();
             $table->string('github_url')->nullable();
         });
