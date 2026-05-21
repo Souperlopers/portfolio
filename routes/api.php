@@ -20,7 +20,7 @@ Route::prefix('/projects')->name('project')->group(function () {
     Route::get('/', [ProjectController::class, 'index'])->name('s');
     Route::get('/{project:slug}', [ProjectController::class, 'show']);
     Route::get('/{project:slug}/images', [ProjectController::class, 'images'])->name('.images');
-    Route::get('/{project:slug}/technologies', [TagController::class, 'projectTags']);
+    Route::get('/{project:slug}/technologies', [TagController::class, 'projectTags'])->name('.tags');
     Route::get('/{project:slug}/contributors', [MemberController::class, 'index'])->name('.members');
     Route::get('/{project:slug}/contributors/{member:slug}', [TagController::class, 'ProjectMember'])->name('.member.tags');
 });
