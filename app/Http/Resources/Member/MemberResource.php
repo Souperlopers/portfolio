@@ -16,17 +16,44 @@ class MemberResource extends JsonResource
      */
     public function toArray(Request $request): array
     {
-        return [
+        $base = [
             'name' => $this->name,
             'position' => $this->position,
-            'discription' => $this->discription,
-            'thumbnail' => request()->schemeAndHttpHost() . $this->thumbnail,
-            'phone' => $this->phone,
-            'email' => $this->email,
-            'linkedin' => $this->linkedin_url,
-            'github' => $this->github_url,
-            'contributions' => new ProjectCollection($this->whenLoaded('projects')),
-            'skills' => new TagCollection($this->whenLoaded('tags')),
+            'url' => request()->schemeAndHttpHost() . '/' . $this->slug,
         ];
+
+        foreach (
+            [
+                'description',
+                'phone',
+                'email',
+                'linkedin' => 'linkedin_url',
+                'github' => 'github_url',
+                'preview' => 'url',
+            ] as $key => $value
+        ) {
+            if($data = $this->{$value}){
+                $base[is_string($key) ? $key : $value] = $data;
+            }
+        };
+
+        // append thumbnail if there is any
+        if ($this->thumbnail) {
+            $base['thumbnail'] = request()->schemeAndHttpHost() . $this->thumbnail;
+        }
+
+        // append contributions if there are any
+        $contributions = new TagCollection($this->whenLoaded('projects'));
+        if ($contributions->count()) {
+            $base['contributions'] = $contributions;
+        }
+
+        // append skills if there are any
+        $skills = new TagCollection($this->whenLoaded('tags'));
+        if ($skills->count()) {
+            $base['skills'] = $skills;
+        }
+
+        return $base;
     }
 }

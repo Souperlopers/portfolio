@@ -15,17 +15,24 @@ class ProjectBriefResource extends JsonResource
      */
     public function toArray(Request $request): array
     {
-        return [
+        $base = [
             'id' => $this->slug,
             'title' => $this->name,
             'thumbnail' => request()->schemeAndHttpHost() .  $this->thumbnail,
-            'url' => request()->schemeAndHttpHost() . '/projects/' . $this->slug,
-            'technologies' => new TagCollection($this->whenLoaded('tags')),
+            'api' => request()->schemeAndHttpHost() . '/api/projects/' . $this->slug,
 
             // for debug
             // 'priority' => (int) isset($this->pivot->project_priority_for_member)
             //     ? $this->pivot->project_priority_for_member
             //     : $this->priority,
         ];
+
+        // append techs if there are any
+        $techs = new TagCollection($this->whenLoaded('tags'));
+        if ($techs->count()) {
+            $base['technologies'] = $techs;
+        }
+
+        return $base;
     }
 }

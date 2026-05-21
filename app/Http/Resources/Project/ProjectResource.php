@@ -17,18 +17,47 @@ class ProjectResource extends JsonResource
      */
     public function toArray(Request $request): array
     {
-        return [
+        $base = [
             'title' => $this->name,
-            'description' => $this->description,
-            'thumbnail' => request()->schemeAndHttpHost() .  $this->thumbnail,
-            'contributors' => new MemberCollection($this->whenLoaded('members')),
-            'technologies' => new TagCollection($this->whenLoaded('tags')),
-            'images' => new ProjectImageCollection($this->whenLoaded('images')),
-            'links' => [
-                'preview' => $this->url,
-                'github' => $this->github,
-                'figma' => $this->figma,
-            ],
+            'url' => request()->schemeAndHttpHost() . '/projects/' . $this->slug,
         ];
+
+        foreach (
+            [
+                'description',
+                'preview' => 'url',
+                'github',
+                'figma',
+            ] as $key => $value
+        ) {
+            if($data = $this->{$value}){
+                $base[is_string($key) ? $key : $value] = $data;
+            }
+        };
+
+        // append thumbnail if there is any
+        if ($this->thumbnail) {
+            $base['thumbnail'] = request()->schemeAndHttpHost() . $this->thumbnail;
+        }
+
+        // append techs if there are any
+        $techs = new TagCollection($this->whenLoaded('tags'));
+        if ($techs->count()) {
+            $base['technologies'] = $techs;
+        }
+
+        // append images if there are any
+        $images = new TagCollection($this->whenLoaded('images'));
+        if ($images->count()) {
+            $base['images'] = $images;
+        }
+
+        // append contribs if there are any
+        $contribs = new TagCollection($this->whenLoaded('members'));
+        if ($contribs->count()) {
+            $base['contributors'] = $contribs;
+        }
+
+        return $base;
     }
 }
