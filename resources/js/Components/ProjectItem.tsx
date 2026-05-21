@@ -53,9 +53,6 @@ const ProjectItem = ({ projectData }: { projectData: ProjectBrief }) => {
                             <h3 className="text-white font-bold text-lg sm:text-xl truncate">
                                 {title}
                             </h3>
-                            <p className="text-neutral-300 text-sm mt-1 line-clamp-2">
-                                descriptions
-                            </p>
                         </div>
                     </div>
                     <div className="flex flex-wrap gap-2">
