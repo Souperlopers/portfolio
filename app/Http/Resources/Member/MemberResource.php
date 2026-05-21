@@ -19,7 +19,7 @@ class MemberResource extends JsonResource
         $base = [
             'name' => $this->name,
             'position' => $this->position,
-            'url' => request()->schemeAndHttpHost() . '/' . $this->slug,
+            'api' => request()->schemeAndHttpHost() . '/api/members/' . $this->slug,
         ];
 
         foreach (
@@ -43,7 +43,7 @@ class MemberResource extends JsonResource
         }
 
         // append contributions if there are any
-        $contributions = new TagCollection($this->whenLoaded('projects'));
+        $contributions = new ProjectCollection($this->whenLoaded('projects'));
         if ($contributions->count()) {
             $base['contributions'] = $contributions;
         }

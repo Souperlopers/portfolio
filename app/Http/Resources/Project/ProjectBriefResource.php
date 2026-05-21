@@ -18,14 +18,18 @@ class ProjectBriefResource extends JsonResource
         $base = [
             'id' => $this->slug,
             'title' => $this->name,
-            'thumbnail' => request()->schemeAndHttpHost() .  $this->thumbnail,
-            'api' => request()->schemeAndHttpHost() . '/api/projects/' . $this->slug,
+            'url' => request()->schemeAndHttpHost() . '/projects/' . $this->slug,
 
             // for debug
             // 'priority' => (int) isset($this->pivot->project_priority_for_member)
             //     ? $this->pivot->project_priority_for_member
             //     : $this->priority,
         ];
+
+        // append thumbnail if there is any
+        if ($this->thumbnail) {
+            $base['thumbnail'] = request()->schemeAndHttpHost() . $this->thumbnail;
+        }
 
         // append techs if there are any
         $techs = new TagCollection($this->whenLoaded('tags'));

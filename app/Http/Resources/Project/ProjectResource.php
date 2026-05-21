@@ -19,21 +19,25 @@ class ProjectResource extends JsonResource
     {
         $base = [
             'title' => $this->name,
-            'url' => request()->schemeAndHttpHost() . '/projects/' . $this->slug,
+            'api' => request()->schemeAndHttpHost() . '/api/projects/' . $this->slug,
         ];
 
         foreach (
             [
-                'description',
                 'preview' => 'url',
                 'github',
                 'figma',
             ] as $key => $value
         ) {
             if($data = $this->{$value}){
-                $base[is_string($key) ? $key : $value] = $data;
+                $base['links'][is_string($key) ? $key : $value] = $data;
             }
         };
+
+        // append description if there is any
+        if ($this->description) {
+            $base['description'] = $this->description;
+        }
 
         // append thumbnail if there is any
         if ($this->thumbnail) {
@@ -47,13 +51,13 @@ class ProjectResource extends JsonResource
         }
 
         // append images if there are any
-        $images = new TagCollection($this->whenLoaded('images'));
+        $images = new ProjectImageCollection($this->whenLoaded('images'));
         if ($images->count()) {
             $base['images'] = $images;
         }
 
         // append contribs if there are any
-        $contribs = new TagCollection($this->whenLoaded('members'));
+        $contribs = new MemberCollection($this->whenLoaded('members'));
         if ($contribs->count()) {
             $base['contributors'] = $contribs;
         }
