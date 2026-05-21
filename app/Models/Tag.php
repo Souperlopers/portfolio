@@ -13,7 +13,7 @@ class Tag extends Model
 
     public const TYPES = ['os', 'lang', 'framework', 'lib', 'webserver', 'db', 'tool'];
 
-    public function getSorted()
+    public function sort()
     {
         return $this::orderByDesc('priority');
     }

@@ -11,7 +11,7 @@ class Project extends Model
 
     public $timestamps = false;
 
-    public function getSorted()
+    public function sort()
     {
         return $this
             ::orderByDesc('priority')
@@ -23,7 +23,8 @@ class Project extends Model
     public function images()
     {
         return $this->hasMany(Projectimage::class)
-            ->orderByDesc('created_at');
+            ->orderByDesc('created_at')
+        ;
     }
 
     public function members()

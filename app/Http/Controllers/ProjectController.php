@@ -18,7 +18,7 @@ class ProjectController extends Controller
         return new ProjectCollection(
             ($member
                 ? $member->projects()
-                : (new Project())->getSorted()
+                : (new Project())->sort()
             )->get()
         );
     }

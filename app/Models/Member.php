@@ -11,7 +11,7 @@ class Member extends Model
 
     public $timestamps = false;
 
-    public function getSorted()
+    public function sort()
     {
         return $this
             ::orderByDesc('priority')

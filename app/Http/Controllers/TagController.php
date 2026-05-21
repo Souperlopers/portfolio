@@ -15,7 +15,7 @@ class TagController extends Controller
         return new TagCollection(
             (isset($taggable)
                 ? $taggable->tags()
-                : (new Tag())->getSorted()
+                : (new Tag())->sort()
             )->get()
         );
     }

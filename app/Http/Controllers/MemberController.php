@@ -17,7 +17,7 @@ class MemberController extends Controller
         return new MemberCollection(
             ($project
                 ? $project->members()
-                : (new Member())->getSorted()
+                : (new Member())->sort()
             )->get()
         );
     }
