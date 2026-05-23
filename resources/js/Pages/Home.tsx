@@ -9,13 +9,13 @@ export default function Home({ projects, members }: HomePageProps) {
     const membersList = members.data;
 
     return (
-        <div className="flex flex-col gap-5 font-vazir">
+        <>
             <Head title="SouperLopers" />
             <ScrollBar />
             <Banner fileName="banner.jpg" />
-                <Projects projects={projectsList} />
-                <Members members={membersList} />
-        </div>
+            <Projects projects={projectsList} />
+            <Members members={membersList} />
+        </>
     );
 }
 
