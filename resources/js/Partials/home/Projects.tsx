@@ -14,7 +14,7 @@ const Projects = ({ projects }: { projects: ProjectBrief[] }) => {
                         پروژه‌ها
                     </h2>
 
-                    <div className="flex gap-2 overflow-auto p-3">
+                {/* <div className="flex gap-2 overflow-auto p-3">
                         {["همه پروژه‌ها", "فروشگاهی", "شخصی", "مدیریتی"].map(
                             (t, idx) => (
                                 <button
@@ -31,7 +31,7 @@ const Projects = ({ projects }: { projects: ProjectBrief[] }) => {
                                 </button>
                             ),
                         )}
-                    </div>
+                </div> */}
                 </div>
                 <div className="rounded-3xl bg-white/5 ring-1 ring-white/10 backdrop-blur-xl sm:p-6 p-0">
                     {projectsCount === 0 && <EmptyProjects />}
