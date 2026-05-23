@@ -5,16 +5,13 @@ import { Banner, Projects, Members, ScrollBar } from "@/index";
 import { HomePageProps } from "@/types";
 
 export default function Home({ projects, members }: HomePageProps) {
-    const projectsList = projects.data;
-    const membersList = members.data;
-
     return (
         <>
             <Head title="SouperLopers" />
             <ScrollBar />
             <Banner fileName="banner.jpg" />
-            <Projects projects={projectsList} />
-            <Members members={membersList} />
+            <Projects projects={projects.data} />
+            <Members members={members.data} />
         </>
     );
 }
