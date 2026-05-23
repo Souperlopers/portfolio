@@ -13,12 +13,8 @@ export default function Home({ projects, members }: HomePageProps) {
             <Head title="SouperLopers" />
             <ScrollBar />
             <Banner fileName="banner.jpg" />
-            <section id="projects">
                 <Projects projects={projectsList} />
-            </section>
-            <section id="members">
                 <Members members={membersList} />
-            </section>
         </div>
     );
 }
