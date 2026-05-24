@@ -7,13 +7,13 @@ const Projects = ({ projects }: { projects: ProjectBrief[] }) => {
     const topThreeProjects = projects.slice(0, 3);
 
     return (
-        <section id="projects" className="sm:px-10 py-14 w-full max-w-[1280px]">
+        <section id="projects" className="sm:px-10 py-14 w-full">
             <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between pb-5">
                 <h2 className="text-2xl sm:text-3xl font-extrabold text-white">
                     پروژه‌ها
                 </h2>
             </div>
-            <div className="rounded-3xl bg-white/5 ring-1 ring-white/10 backdrop-blur-xl sm:p-5 lg:p-0">
+            <div className="backdrop-blur-xl sm:p-5 lg:p-0">
                 {projectsCount === 0 && <EmptyProjects />}
 
                 <div className="flex flex-col gap-5">
@@ -31,9 +31,6 @@ const Projects = ({ projects }: { projects: ProjectBrief[] }) => {
                         hover:bg-white/15 transition"
                         >
                             <span>پروژه‌های بیشتر</span>
-                            <span className="transition group-hover:translate-x-[-2px]">
-                                ⬅️
-                            </span>
                         </button>
                     </div>
                 )}
