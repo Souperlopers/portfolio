@@ -1,7 +1,10 @@
 import { ProjectLinks } from "@/types/project";
 import { Link } from "@inertiajs/react";
+import { log } from "console";
 
 const DetailButtons = ({ links }: { links: ProjectLinks }) => {
+    console.log(links);
+    
     const linkLoop = Object.entries(links).filter(
         (link: string[]) => link[1] !== null,
     );

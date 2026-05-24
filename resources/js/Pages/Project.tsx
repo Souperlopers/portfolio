@@ -12,12 +12,12 @@ export default function Project({ project }: ProjectPageProps) {
     return (
         <div className="flex flex-col gap-5 lg:p-5 p-3">
             <Head title={`SouperLopers ${projectData.title}`} />
-            <div className="w-full flex flex-col gap-5">
-                <div className="flex lg:flex-row flex-col justify-between rounded bg-yellow-300">
+            <div className="w-full flex flex-col gap-10">
+                <div className="flex lg:flex-row flex-col justify-between items-end rounded gap-5">
                     <Info info={projectData} />
                     <Images images={images} />
                 </div>
-                <div className="bg-orange-400 p-5 rounded">
+                <div className="">
                     <Contributors contributors={contributors} />
                 </div>
             </div>

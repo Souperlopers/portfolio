@@ -5,17 +5,22 @@ const ProjectInfo = ({ info }: { info: Project }) => {
     const technologies = info.technologies || [];
 
     return (
-        <div className="w-[47%] flex flex-col gap-10">
-            <div className="text-2xl font-semibold">{info.title}</div>
-            <div className="text-xl">{info.description}</div>
-            <div className="flex gap-5">
+        <div className="md:w-[47%] w-full flex flex-col justify-between gap-10 text-neutral-50">
+            <div className="text-2xl font-semibold truncate max-w-80 md:max-w-96">
+                {info.title}
+            </div>
+            <div className="md:text-xl text-base">{info.description}</div>
+            <div className="flex flex-wrap gap-5">
                 {technologies.map((tech) => (
-                    <p key={tech.id} className="text-cyan-500 font-semibold text-lg">
+                    <p
+                        key={tech.id}
+                        className="text-cyan-500 font-semibold md:text-lg text-sm truncate max-w-20"
+                    >
                         {tech.title}
                     </p>
                 ))}
             </div>
-            <div className="flex justify-center gap-10">
+            <div className="flex gap-10">
                 <DetailButtons links={info.links || {}} />
             </div>
         </div>

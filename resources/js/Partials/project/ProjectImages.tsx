@@ -21,7 +21,7 @@ const ProjectImages = ({ images }: { images: ProjectImage[] }) => {
     if (imagesCount === 0) return null;
 
     return (
-        <div className="lg:w-1/2 h-72 border border-neutral-700 rounded relative overflow-hidden">
+        <div className="lg:w-1/2 h-72 border border-neutral-700 rounded-xl relative overflow-hidden">
             <img
                 src={images[currentIndex].url}
                 alt={`Project image ${currentIndex}`}
