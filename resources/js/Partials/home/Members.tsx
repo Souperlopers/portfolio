@@ -3,7 +3,7 @@ import { MemberBrief } from "@/types/member";
 
 const Members = ({ members }: { members: MemberBrief[] }) => {
     return (
-        <section id="members" className="px-20 w-full max-w-[1300px]">
+        <section id="members" className="lg:px-12 px-5 w-full max-w-[1300px]">
             <h2 className="text-2xl sm:text-3xl font-extrabold text-white pb-4">
                 توسعه‌دهندگان
             </h2>
@@ -11,7 +11,7 @@ const Members = ({ members }: { members: MemberBrief[] }) => {
                 className="
                     grid 
                     lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1
-                    gap-8
+                    lg:gap-5 gap-3
                 "
             >
                 {members.map((member) => (
