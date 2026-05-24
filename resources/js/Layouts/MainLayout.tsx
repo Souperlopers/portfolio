@@ -5,7 +5,7 @@ export default function MainLayout({ children }: { children: ReactNode }) {
         <div
         className="
         min-h-screen bg-neutral-800 font-vazir
-        flex flex-col justify-start items-center
+        flex flex-col justify-start items-center pb-10
         "
         dir="rtl"
         >
