@@ -13,7 +13,7 @@ const ProjectItem = ({ projectData }: { projectData: ProjectBrief }) => {
         group w-full rounded-2xl overflow-hidden
         bg-white/10 ring-1 ring-white/10 backdrop-blur-xl
         transition-all duration-500 ease-out
-        hover:bg-white/15 hover:ring-white/20 hover:-translate-y-[2px]
+        hover:bg-white/15 hover:ring-white/40 hover:-translate-y-[2px]
         flex flex-col sm:flex-row
         relative
       "
@@ -34,10 +34,10 @@ const ProjectItem = ({ projectData }: { projectData: ProjectBrief }) => {
                     src={projectData.thumbnail}
                     alt={`${title} cover`}
                     className="
-            absolute inset-0 w-full h-full object-cover
-            transition-transform duration-700
-            group-hover:scale-105
-            "
+                    absolute inset-0 w-full h-full object-cover
+                    group-hover:scale-105
+                    transition-all ease-in-out duration-300
+                    "
                     onLoad={() => setImgLoaded(true)}
                     style={{
                         opacity: imgLoaded ? 1 : 0,
@@ -61,7 +61,7 @@ const ProjectItem = ({ projectData }: { projectData: ProjectBrief }) => {
                     rounded-full px-5 py-2.5
                     bg-gradient-to-r from-cyan-400 to-blue-500
                     text-white font-semibold
-                    shadow-[0_12px_30px_rgba(34,211,238,0.25)]
+                    shadow-[0_12px_30px_rgba(34,211,238,0.15)]
                     transition-all duration-300
                     group-hover:shadow-[0_16px_40px_rgba(34,211,238,0.35)]
                 "
