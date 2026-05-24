@@ -1,7 +1,6 @@
 goal: create a portfolio webapp in -1 week and -6 days
 
 TODO_Z check this out: gallery: https://github.com/xiaolin/react-image-gallery
-TODO_Z scrollbar horizontal (mobile) mode
 
 TODO_S pagination function on frontend
 TODO_S ulid
