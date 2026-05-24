@@ -51,7 +51,7 @@ const MemberCard = ({ memberData }: { memberData: MemberBrief }) => {
                 <h3
                     className="
                         text-white font-semibold text-lg truncate
-                        group-hover:text-sky-400 transition-colors duration-300
+                        group-hover:text-sky-400 transition-colors duration-300 max-w-52 lg:max-w-48
                     "
                 >
                     {name}
@@ -66,7 +66,7 @@ const MemberCard = ({ memberData }: { memberData: MemberBrief }) => {
             <Link
                 href={url}
                 className="
-                    mt-5 inline-block px-4 py-1.5
+                    mt-5 inline-block px-4 py-1.5 w-32
                     text-sm text-sky-400 font-semibold border border-sky-500/30 rounded-full
                 hover:bg-sky-500 hover:text-white
                     transition-all duration-300
