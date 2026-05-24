@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { ProjectImage } from "@/types/project";
+import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
 
 const ProjectImages = ({ images }: { images: ProjectImage[] }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -28,18 +29,18 @@ const ProjectImages = ({ images }: { images: ProjectImage[] }) => {
             />
 
             {imagesCount > 1 && (
-                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-5">
+                <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-5 text-neutral-800">
                     <span
-                        className="w-28 py-1.5 text-center bg-pink-300 hover:bg-pink-400 cursor-pointer rounded transition-colors"
+                        className="py-1.5 px-1.5 rounded-full text-center hover:text-sky-500 bg-white/40 hover:bg-white/70 cursor-pointer transition-colors"
                         onClick={handlePrevBtn}
                     >
-                        PREVIOUS
+                        <FaChevronRight size={24} />
                     </span>
                     <span
-                        className="w-28 py-1.5 text-center bg-pink-300 hover:bg-pink-400 cursor-pointer rounded transition-colors"
+                        className="py-1.5 px-1.5 rounded-full text-center hover:text-sky-500 bg-white/40 hover:bg-white/70 cursor-pointer transition-colors"
                         onClick={handleNextBtn}
                     >
-                        NEXT
+                        <FaChevronLeft size={24} />
                     </span>
                 </div>
             )}
