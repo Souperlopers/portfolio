@@ -56,7 +56,7 @@ const ScrollBar = () => {
     ];
 
     return (
-        <div className="fixed bottom-40 right-4 z-40">
+        <div className="fixed top-60 right-4 z-40">
             <div className="flex flex-col rounded-full border border-white/15 bg-black/40 backdrop-blur-xl shadow-[0_10px_40px_rgba(0,0,0,0.18)]">
                 {items.map((item, index) => {
                     const isActive = activeSection === item.id;
