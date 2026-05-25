@@ -5,6 +5,7 @@ export { default as ScrollBar } from "@/Partials/home/ScrollBar";
 
 export { default as Profile } from "@/Partials/member/Profile";
 export { default as MemberProjects } from "@/Partials/member/MemberProjects";
+export {default as Contact} from "@/Partials/member/ContactMember"
 
 export { default as Info } from "@/Partials/project/ProjectInfo";
 export { default as DetailButtons } from "@/Partials/project/DetailButtons";
