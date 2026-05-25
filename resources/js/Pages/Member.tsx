@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 import MainLayout from "@/Layouts/MainLayout";
 import { MemberPageProps } from "@/types";
 import { Head } from "@inertiajs/react";
-import { Profile, MemberProjects } from "@/index";
+import { Profile, MemberProjects, Contact } from "@/index";
 
 export default function Member({ member }: MemberPageProps) {
     const info = member.data || {};
@@ -13,6 +13,7 @@ export default function Member({ member }: MemberPageProps) {
             <Head title={`SouperLopers | ${info.name}`} />
             <Profile info={info} />
             <MemberProjects projects={projects} />
+            <Contact />
         </div>
     );
 }
