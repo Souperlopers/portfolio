@@ -2,6 +2,8 @@ goal: create a portfolio webapp in -1 week and -6 days
 
 TODO_Z check this out: gallery: https://github.com/xiaolin/react-image-gallery = ???
 
+TODO_S projects section's data in the HomePage don't have a description
+
 TODO_S pagination function on frontend
 TODO_S ulid
 TODO_S project time ranges
