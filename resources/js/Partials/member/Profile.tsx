@@ -2,6 +2,8 @@ import { useState } from "react";
 import { Member } from "@/types/member";
 
 const Profile = ({ info }: { info: Member }) => {
+    console.log(info);
+
     const [imgLoaded, setImgLoaded] = useState(false);
     return (
         <div className="flex justify-between gap-3 w-full rounded">
@@ -17,9 +19,18 @@ const Profile = ({ info }: { info: Member }) => {
                     style={{ display: imgLoaded ? "block" : "none" }}
                 />
             </div>
-            <div className="flex flex-col gap-5 lg:w-5/6 w-2/3 py-3 bg-pink-200">
-                <span>{info.name}</span>
-                <span>{info.position}</span>
+            <div className="flex flex-col justify-between lg:w-5/6 w-2/3 border border-white/40 rounded-xl p-5 shadow-lg shadow-white/10">
+                <div className="flex flex-col gap-1">
+                    <span className="text-white/90 text-3xl font-bold">
+                        {info.name}
+                    </span>
+                    <span className="text-sky-400 text-xl font-semibold">
+                        {info.position}
+                    </span>
+                </div>
+                <span className="text-white/80 text-lg font-semibold">
+                    {info.description}
+                </span>
             </div>
         </div>
     );
