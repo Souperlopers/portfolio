@@ -1,5 +1,6 @@
 import { Project } from "@/types/project";
 import { DetailButtons } from "@/index";
+import TagButtons from "@/Components/TagButtons";
 
 const ProjectInfo = ({ info }: { info: Project }) => {
     const technologies = info.technologies || [];
@@ -11,14 +12,7 @@ const ProjectInfo = ({ info }: { info: Project }) => {
             </div>
             <div className="md:text-xl text-base">{info.description}</div>
             <div className="flex flex-wrap gap-5">
-                {technologies.map((tech) => (
-                    <p
-                        key={tech.id}
-                        className="text-cyan-500 font-semibold md:text-lg text-sm truncate max-w-20"
-                    >
-                        {tech.title}
-                    </p>
-                ))}
+                <TagButtons tags={technologies} />
             </div>
             <div className="flex gap-10">
                 <DetailButtons links={info.links || {}} />
