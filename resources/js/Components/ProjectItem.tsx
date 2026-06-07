@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "@inertiajs/react";
 import { ProjectBrief } from "@/types/project";
-import SkillsTag from "./SkillsTag";
+import TagButtons from "./TagButtons";
 
 const ProjectItem = ({ projectData }: { projectData: ProjectBrief }) => {
     const [imgLoaded, setImgLoaded] = useState(false);
@@ -52,7 +52,7 @@ const ProjectItem = ({ projectData }: { projectData: ProjectBrief }) => {
                 <h3 className="text-white font-bold text-lg sm:text-xl truncate">
                     {title}
                 </h3>
-                <SkillsTag skills={technologies} />
+                <TagButtons tags={technologies} />
             </div>
             <Link
                 href={projectData.url}
