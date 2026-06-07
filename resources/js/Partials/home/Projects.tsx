@@ -7,13 +7,13 @@ const Projects = ({ projects }: { projects: ProjectBrief[] }) => {
     const topThreeProjects = projects.slice(0, 3);
 
     return (
-        <section id="projects" className="sm:px-10 lg:p-5 py-14 w-full">
+        <section id="projects" className="sm:px-10 lg:p- px-3 py-14 w-full">
             <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between pb-5">
                 <h2 className="text-2xl sm:text-3xl font-extrabold text-text-primary">
                     پروژه‌ها
                 </h2>
             </div>
-            <div className="rounded-3xl bg-primary/10 ring-1 ring-white/10 backdrop-blur-xl sm:p-5 lg:p-5">
+            <div className="rounded-3xl bg-primary/10 md:ring-1 ring-white/10 backdrop-blur-xl sm:p-5 lg:p-5">
                 {projectsCount === 0 && <EmptyProjects />}
 
                 <div className="flex flex-col gap-5">
