@@ -18,11 +18,10 @@ const ScrollBar = () => {
         const sections = ["projects", "members"];
         const observers: IntersectionObserver[] = [];
 
-        // این تنظیمات threshold رو به یک مقدار منعطف‌تر تغییر می‌دهیم
         const observerOptions = {
-            root: null, // کل صفحه (viewport)
-            rootMargin: "-20% 0px -20% 0px", // بخش فعال رو در وسط صفحه نگه می‌داره
-            threshold: 0, // به محض ورود، فعال بشه
+            root: null,
+            rootMargin: "-20% 0px -20% 0px",
+            threshold: 0,
         };
 
         sections.forEach((id) => {
@@ -61,7 +60,7 @@ const ScrollBar = () => {
 
     return (
         <div className="fixed bottom-1 left-1/2 -translate-x-1/2 z-40 md:top-60 md:right-4 md:left-auto md:translate-x-0">
-            <div className="flex flex-row md:flex-col rounded-full border border-white/15 bg-black/40 backdrop-blur-xl shadow-[0_10px_40px_rgba(0,0,0,0.18)]">
+            <div className="flex flex-row md:flex-col rounded-full border border-text-secondary/15 bg-primary/90 backdrop-blur-xl shadow-[0_10px_40px_rgba(0,0,0,0.18)]">
                 {items.map((item, index) => {
                     const isActive = activeSection === item.id;
 
@@ -76,8 +75,8 @@ const ScrollBar = () => {
                                 ${item.rounded}
                                 ${
                                     isActive
-                                        ? "bg-white/20 text-sky-400 shadow-inner"
-                                        : "text-white/75 hover:text-white hover:bg-white/10"
+                                        ? "bg-text-primary/20 text-light-accent shadow-inner"
+                                        : "text-text-primary/75 hover:text-text-primary hover:bg-text-primary/5"
                                 }
                             `}
                         >
@@ -95,7 +94,7 @@ const ScrollBar = () => {
                                     absolute bottom-16 left-1/2 -translate-x-1/2
                                     md:right-16 md:top-1/2 md:bottom-auto md:left-auto md:-translate-y-1/2 md:translate-x-0
                                     whitespace-nowrap px-3 py-1.5 rounded-xl
-                                    bg-neutral-900/85 text-white text-sm
+                                    bg-primary/85 text-text-primary text-sm
                                     shadow-xl backdrop-blur-md
                                     opacity-0 translate-y-3 scale-95
                                     pointer-events-none
@@ -113,7 +112,7 @@ const ScrollBar = () => {
                             )}
 
                             {index === 0 && (
-                                <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-8 h-px bg-white/10" />
+                                <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-8 h-px bg-text-primary/10" />
                             )}
                         </button>
                     );

@@ -17,15 +17,13 @@ export default {
                 vazir: ['"vazir"', "sans-serif"],
             },
             colors: {
-                // secondary > primary > tertiary > surface
-                'bg-primary': '#252526',
-                'bg-secondary': '#1E1E1E', //darker primary
-                'bg-tertiary': '#2D2D30', //lighter primary
-                'surface': '#3E3E42', // lighter tertiary
+                // Background colors:
+                'primary': '#252526',
+                'secondary': '#3E3E42',
 
-                'text-primary': '#D4D4D4',  // white
-                'text-secondary': '#CCCCCC', // darker primary
-                'text-muted': '#858585', // darker secondary
+                //Text colors:
+                'text-primary': '#fff',  // white
+                'text-secondary': '#D4D4D4',  // darker secondary
 
                 'light-accent': '#38bdf8', //sky 400
                 'accent': '#007ACC', //vs blue
@@ -35,14 +33,14 @@ export default {
                 'warning': '#CEA14C', //light orange
                 'error': '#F48771', //orange
 
-                'bg-primary-light': '#FFFFFF', // white
-                'bg-secondary-light': '#F3F3F3',
+                'primary-light': '#FFFFFF', // white
+                'secondary-light': '#F3F3F3',
                 'surface-light': '#FAFAFA',
 
                 'text-primary-light': '#1E1E1E',
                 'text-secondary-light': '#3E3E42',
                 'text-muted-light': '#6E6E6E',
-                
+
                 'border-light': '#E5E5E5',
             }
         },

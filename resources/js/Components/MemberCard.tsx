@@ -17,7 +17,7 @@ const MemberCard = ({ memberData }: { memberData: MemberBrief }) => {
         <div
             className="
                 group relative overflow-hidden
-                bg-white/10 backdrop-blur-lg border border-white/20
+                bg-text-primary/10 backdrop-blur-lg border border-text-secondary/40
                 rounded-2xl shadow-[0_10px_40px_rgba(0,0,0,0.08)]
                 hover:shadow-[0_10px_40px_rgba(0,0,0,0.25)]
                 transition-all duration-500 ease-out
@@ -33,9 +33,9 @@ const MemberCard = ({ memberData }: { memberData: MemberBrief }) => {
                     opacity-0 group-hover:opacity-20 blur-2xl rounded-full transition-all duration-500
                 "
                 />
-                <div className="relative w-28 h-28 rounded-full overflow-hidden border-2 border-white/40 shadow-inner">
+                <div className="relative w-28 h-28 rounded-full overflow-hidden border-2 border-border/90 shadow-inner">
                     {!imgLoaded && (
-                        <div className="absolute inset-0 bg-neutral-700 animate-pulse rounded-full" />
+                        <div className="absolute inset-0 bg-secondary animate-pulse rounded-full" />
                     )}
                     <img
                         src={thumbnail}
@@ -51,12 +51,12 @@ const MemberCard = ({ memberData }: { memberData: MemberBrief }) => {
                 <h3
                     className="
                         text-white font-semibold text-lg truncate
-                        group-hover:text-sky-400 transition-colors duration-300 max-w-52 lg:max-w-48
+                        group-hover:text-light-accent transition-colors duration-300 max-w-52 lg:max-w-48
                     "
                 >
                     {name}
                 </h3>
-                <p className="text-gray-300 text-sm">{position}</p>
+                <p className="text-text-secondary text-sm">{position}</p>
             </div>
 
             <div className="flex flex-wrap gap-2 px-4">
@@ -67,8 +67,8 @@ const MemberCard = ({ memberData }: { memberData: MemberBrief }) => {
                 href={url}
                 className="
                     mt-5 inline-block px-4 py-1.5 w-32
-                    text-sm text-light-accent font-semibold border border-sky-500/30 rounded-full
-                hover:bg-sky-500 hover:text-white
+                    text-sm text-light-accent font-semibold border border-light-accent/30 rounded-full
+                hover:bg-light-accent/80 hover:text-text-primary
                     transition-all duration-300
                 "
             >

@@ -11,9 +11,9 @@ const ProjectItem = ({ projectData }: { projectData: ProjectBrief }) => {
         <article
             className="
         group w-full rounded-2xl overflow-hidden
-        bg-white/10 ring-1 ring-white/10 backdrop-blur-xl
+        bg-text-primary/5 ring-1 ring-text-secondary/50 backdrop-blur-xl
         transition-all duration-500 ease-out
-        hover:bg-white/15 hover:ring-white/40 hover:-translate-y-[2px]
+        hover:bg-text-primary/15 hover:ring-text-secondary/80 hover:-translate-y-[2px]
         flex flex-col sm:flex-row
         relative
       "
@@ -49,7 +49,7 @@ const ProjectItem = ({ projectData }: { projectData: ProjectBrief }) => {
             </div>
 
             <div className="flex-1 p-5 sm:p-6 flex flex-col gap-3 mb-14">
-                <h3 className="text-white font-bold text-lg sm:text-xl truncate">
+                <h3 className="text-text-primary font-bold text-lg sm:text-xl truncate">
                     {title}
                 </h3>
                 <TagsComponent tags={technologies} />
