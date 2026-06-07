@@ -1,25 +1,26 @@
-import React from "react";
 import { motion } from "framer-motion";
 import { MessageCircle, Mail } from "lucide-react";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaTelegramPlane } from "react-icons/fa";  
 
 const ContactMember = () => {
     const socialLinks = [
         {
             name: "LinkedIn",
             href: "https://www.linkedin.com/in/zahra-rostami-4049b2327",
-            icon: MessageCircle,
+            icon: FaLinkedin,
             color: "group-hover:text-blue-700",
         },
         {
             name: "GitHub",
             href: "https://github.com/zahraRostami1999",
-            icon: MessageCircle,
-            color: "group-hover:text-[#333]",
+            icon: FaGithub,
+            color: "group-hover:text-neutral-200",
         },
         {
             name: "Telegram",
             href: "https://telegram.me/zahra_rtm",
-            icon: MessageCircle,
+            icon: FaTelegramPlane,
             color: "group-hover:text-blue-500",
         },
         {
@@ -29,8 +30,9 @@ const ContactMember = () => {
             color: "group-hover:text-red-700",
         },
     ];
+
     return (
-        <div className="bg-(--bg-container) p-5 py-16 rounded-xl shadow-md border border-(--border) text-(--text-secondary)">
+        <div className="bg-(--bg-container) p-5 py-16 rounded-xl shadow-md border border-border text-text-primary">
             <section>
                 <div className="max-w-4xl mx-auto text-center">
                     <motion.h2
@@ -68,7 +70,7 @@ const ContactMember = () => {
                                     className={`w-12 h-12 md:w-14 md:h-14 text-(--text-secondary) transition-colors duration-300 ${link.color}`}
                                 />
 
-                                <span className="absolute -top-10 left-1/2 transform -translate-x-1/2 bg-(--text-secondary) text-(--bg-container) text-sm px-4 py-2 rounded-lg opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity duration-300 whitespace-nowrap">
+                                <span className="absolute -top-10 left-1/2 transform -translate-x-1/2 bg-secondary text-text-primary text-sm px-4 py-2 rounded-lg opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity duration-300 whitespace-nowrap">
                                     {link.name}
                                 </span>
                             </motion.a>
