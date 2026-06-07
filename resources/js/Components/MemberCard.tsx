@@ -67,7 +67,7 @@ const MemberCard = ({ memberData }: { memberData: MemberBrief }) => {
                 href={url}
                 className="
                     mt-5 inline-block px-4 py-1.5 w-32
-                    text-sm text-sky-400 font-semibold border border-sky-500/30 rounded-full
+                    text-sm text-light-accent font-semibold border border-sky-500/30 rounded-full
                 hover:bg-sky-500 hover:text-white
                     transition-all duration-300
                 "
