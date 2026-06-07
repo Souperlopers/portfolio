@@ -1,6 +1,6 @@
 import { Project } from "@/types/project";
 import { DetailButtons } from "@/index";
-import TagButtons from "@/Components/TagButtons";
+import TagButtons from "@/Components/TagsComponent";
 
 const ProjectInfo = ({ info }: { info: Project }) => {
     const technologies = info.technologies || [];

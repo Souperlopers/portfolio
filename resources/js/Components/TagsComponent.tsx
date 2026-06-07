@@ -1,6 +1,6 @@
 import { Tag } from "@/types/tag";
 
-const TagButtons = ({ tags }: { tags: Tag[] }) => {
+const TagsComponent = ({ tags }: { tags: Tag[] }) => {
     return (
         <div className="flex flex-wrap gap-2 min-h-8">
             {tags.map((tag) => (
@@ -15,4 +15,4 @@ const TagButtons = ({ tags }: { tags: Tag[] }) => {
     );
 };
 
-export default TagButtons;
+export default TagsComponent;

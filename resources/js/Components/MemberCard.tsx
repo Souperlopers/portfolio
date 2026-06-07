@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "@inertiajs/react";
 import { MemberBrief } from "@/types/member";
-import TagButtons from "./TagButtons";
+import TagsComponent from "./TagsComponent";
 
 const MemberCard = ({ memberData }: { memberData: MemberBrief }) => {
     const [imgLoaded, setImgLoaded] = useState(false);
@@ -60,7 +60,7 @@ const MemberCard = ({ memberData }: { memberData: MemberBrief }) => {
             </div>
 
             <div className="flex flex-wrap gap-2 px-4">
-                <TagButtons tags={skills} />
+                <TagsComponent tags={skills} />
             </div>
 
             <Link
