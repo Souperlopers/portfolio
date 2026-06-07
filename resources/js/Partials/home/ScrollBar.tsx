@@ -59,7 +59,7 @@ const ScrollBar = () => {
     ];
 
     return (
-        <div className="fixed bottom-1 left-1/2 -translate-x-1/2 z-40 md:top-60 md:right-4 md:left-auto md:translate-x-0">
+        <div className="md:block hidden fixed bottom-1 left-1/2 -translate-x-1/2 z-40 md:top-60 md:right-4 md:left-auto md:translate-x-0">
             <div className="flex flex-row md:flex-col rounded-full border border-text-secondary/15 bg-primary/90 backdrop-blur-xl shadow-[0_10px_40px_rgba(0,0,0,0.18)]">
                 {items.map((item, index) => {
                     const isActive = activeSection === item.id;
