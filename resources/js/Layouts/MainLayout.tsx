@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import Header from "@/Components/Header";
 
 export default function MainLayout({ children }: { children: ReactNode }) {
     return (
@@ -9,6 +10,7 @@ export default function MainLayout({ children }: { children: ReactNode }) {
         "
         dir="rtl"
         >
+            <Header />
             {children}
         </div>
     );
