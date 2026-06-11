@@ -17,60 +17,58 @@ const MemberCard = ({ memberData }: { memberData: MemberBrief }) => {
         <div
             className="
                 group relative overflow-hidden
-                bg-text-primary/10 backdrop-blur-lg border border-text-secondary/40
-                rounded-2xl shadow-[0_10px_40px_rgba(0,0,0,0.08)]
+                bg-black backdrop-blur-lg border border-text-secondary/10
+                rounded-xl shadow-[0_10px_40px_rgba(0,0,0,0.08)]
                 hover:shadow-[0_10px_40px_rgba(0,0,0,0.25)]
                 transition-all duration-500 ease-out
-                flex flex-col items-center justify-between
-                p-6 min-h-[320px]
+                flex flex-col items-center justify-between gap-5
+                px-2 py-4 min-h-[320px]
                 hover:-translate-y-1
             "
         >
-            <div className="relative flex items-center justify-center">
-                <div
-                    className="
+            <div className="flex flex-col w-full ">
+                <div className="relative flex items-center w-full bg-slate-400 rounded">
+                    <div
+                        className="
                     absolute inset-0 bg-gradient-to-br from-sky-300 via-sky-500 to-blue-600
                     opacity-0 group-hover:opacity-20 blur-2xl rounded-full transition-all duration-500
                 "
-                />
-                <div className="relative w-28 h-28 rounded-full overflow-hidden border-2 border-border/90 shadow-inner">
-                    {!imgLoaded && (
-                        <div className="absolute inset-0 bg-secondary animate-pulse rounded-full" />
-                    )}
-                    <img
-                        src={thumbnail}
-                        alt={`${name} thumbnail`}
-                        onLoad={() => setImgLoaded(true)}
-                        style={{ display: imgLoaded ? "block" : "none" }}
-                        className="object-cover w-full h-full rounded-full"
                     />
+                    <div className="relative w-28 h-28 top-10 rounded-full overflow-hidden border-2 border-border/90 shadow-inner">
+                        {!imgLoaded && (
+                            <div className="absolute inset-0 bg-secondary animate-pulse rounded-full" />
+                        )}
+                        <img
+                            src={thumbnail}
+                            alt={`${name} thumbnail`}
+                            onLoad={() => setImgLoaded(true)}
+                            style={{ display: imgLoaded ? "block" : "none" }}
+                            className="object-cover w-full h-full rounded-full"
+                        />
+                    </div>
                 </div>
-            </div>
 
-            <div className="mt-5 text-center space-y-2 pb-2">
-                <h3
-                    className="
-                        text-white font-semibold text-lg truncate
-                        group-hover:text-light-accent transition-colors duration-300 max-w-52 lg:max-w-48
+                <div className="mt-5 w-full text-right space-y-1 pb-2 pt-10">
+                    <h3
+                        className="
+                        text-white font-semibold text-xl truncate
+                        group-hover:text-light-accent transition-colors duration-300 max-w-52 lg:max-w-64
                     "
-                >
-                    {name}
-                </h3>
-                <p className="text-text-secondary text-sm">{position}</p>
-            </div>
+                    >
+                        {name}
+                    </h3>
+                    <p className="text-stone-400 text-sm">{position}</p>
+                </div>
 
-            <div className="flex flex-wrap gap-2 px-4">
-                <TagsComponent tags={skills} />
+                <div className="flex flex-wrap gap-2 w-full">
+                    <TagsComponent tags={skills} />
+                </div>
             </div>
 
             <Link
                 href={url}
-                className="
-                    mt-5 inline-block px-4 py-1.5 w-32
-                    text-sm text-light-accent font-semibold border border-light-accent/30 rounded-full
-                hover:bg-light-accent/80 hover:text-text-primary
-                    transition-all duration-300
-                "
+                className="btn btn-block font-medium 
+            bg-light-accent hover:bg-light-accent-hover"
             >
                 مشاهده پروفایل
             </Link>
