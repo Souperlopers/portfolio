@@ -23,9 +23,10 @@ export default {
 
                 //Text colors:
                 'text-primary': '#fff',  // white
-                'text-secondary': '#D4D4D4',  // darker secondary
+                'text-secondary': '#D4D4D4',  
 
-                'light-accent': '#38bdf8', //sky 400
+                'light-accent': '#0ea5e9', //sky 500
+                'light-accent-hover': '#0284c7', // sky 600
                 'accent': '#007ACC', //vs blue
                 'border': '#3C3C3C', // neutral
 
@@ -47,4 +48,5 @@ export default {
     },
 
     plugins: [forms],
+    plugins: [require("daisyui")],
 };
