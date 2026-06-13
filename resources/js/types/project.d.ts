@@ -25,6 +25,11 @@ export type Project = {
     links?: ProjectLinks;
 };
 
+export type ProjectItemProps = {
+    projectData: ProjectBrief;
+    index: number;
+}
+
 export type ProjectLinks = {
     preview?: string;
     github?: string;
