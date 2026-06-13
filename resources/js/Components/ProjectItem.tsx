@@ -1,14 +1,19 @@
 import { useState } from "react";
 import { Link } from "@inertiajs/react";
-import { ProjectBrief } from "@/types/project";
+import { ProjectItemProps } from "@/types/project";
 import TagsComponent from "./TagsComponent";
 
-const ProjectItem = ({ projectData }: { projectData: ProjectBrief }) => {
+const ProjectItem = ({ projectData, index }: ProjectItemProps) => {
     const [imgLoaded, setImgLoaded] = useState(false);
     const { title = "بدون نام", technologies = [] } = projectData;
 
+    const CheckIsEven = (index: number) => (index % 2 === 0 ? true : false);
+
     return (
-        <div className="flex justify-center">
+        <div
+            className="flex justify-center"
+            dir={CheckIsEven(index) ? "rtl" : "ltr"}
+        >
             <article
                 className="
         group w-[300px] md:w-full rounded-2xl overflow-hidden
