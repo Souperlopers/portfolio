@@ -60,10 +60,11 @@ const ProjectItem = ({ projectData, index }: ProjectItemProps) => {
                     </h3>
                     <TagsComponent tags={technologies} />
                 </div>
-                <Link
-                    href={projectData.url}
-                    className="
-                    absolute left-3 bottom-3
+                <div className="flex items-end p-2">
+                    <Link
+                        href={projectData.url}
+                        className="
+                    btn flex items-end
                     rounded-full px-5 py-2.5
                     bg-gradient-to-r from-cyan-400 to-blue-500
                     text-white font-semibold
@@ -71,9 +72,10 @@ const ProjectItem = ({ projectData, index }: ProjectItemProps) => {
                     transition-all duration-300
                     group-hover:shadow-[0_16px_40px_rgba(34,211,238,0.35)]
                 "
-                >
-                    <span>جزئیات</span>
-                </Link>
+                    >
+                        <span>جزئیات</span>
+                    </Link>
+                </div>
             </article>
         </div>
     );
