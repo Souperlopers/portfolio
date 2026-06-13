@@ -11,7 +11,7 @@ const Banner = ({ fileName }: { fileName: string }) => {
                 <img
                     src={`/assets/images/${fileName}`}
                     alt="banner"
-                    className="cover"
+                    className="object-cover w-full h-full"
                     onLoad={() => setImgLoaded(true)}
                     style={{ display: imgLoaded ? "block" : "none" }}
                 />
