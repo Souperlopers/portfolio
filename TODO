@@ -5,8 +5,6 @@ TODO_Z set default image to member's banner
 
 TODO_S I can't set favIcon. favIcon file is in the public directory
 
-TODO_Z check this out: gallery: https://github.com/xiaolin/react-image-gallery = ???
-
 TODO_S projects section's data in the HomePage don't have a description
 
 TODO_S pagination function on frontend
