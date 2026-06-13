@@ -1,49 +1,28 @@
-import { useState } from "react";
+import { useRef } from "react";
 import { ProjectImage } from "@/types/project";
-import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
+import ImageGallery from "react-image-gallery";
+import "react-image-gallery/styles/image-gallery.css";
+import type { ImageGalleryRef } from "react-image-gallery";
 
 const ProjectImages = ({ images }: { images: ProjectImage[] }) => {
-    const [currentIndex, setCurrentIndex] = useState(0);
-    const imagesCount = images.length;
+    const items = images.map((image) => ({
+        original: image.url,
+        thumbnail: image.url,
+    }));
 
-    const handlePrevBtn = () => {
-        setCurrentIndex((prevIndex) =>
-            prevIndex === 0 ? imagesCount - 1 : prevIndex - 1,
-        );
-    };
+    const galleryRef = useRef<ImageGalleryRef>(null);
 
-    const handleNextBtn = () => {
-        setCurrentIndex((prevIndex) =>
-            prevIndex === imagesCount - 1 ? 0 : prevIndex + 1,
-        );
-    };
-
-    if (imagesCount === 0) return null;
+    if (items.length === 0) return null;
 
     return (
-        <div className="lg:w-1/2 h-72 border border-neutral-700 rounded-xl relative overflow-hidden">
-            <img
-                src={images[currentIndex].url}
-                alt={`Project image ${currentIndex}`}
-                className="w-full h-full object-cover rounded"
+        <div className="w-full lg:w-1/2 rounded overflow-hidden" dir="ltr">
+            <ImageGallery
+                ref={galleryRef}
+                items={items}
+                showPlayButton={true}
+                useTranslate3D={false}
+                onSlide={(index) => console.log("Slid to", index)}
             />
-
-            {imagesCount > 1 && (
-                <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-5 text-neutral-800">
-                    <span
-                        className="py-1.5 px-1.5 rounded-full text-center hover:text-sky-500 bg-white/40 hover:bg-white/70 cursor-pointer transition-colors"
-                        onClick={handlePrevBtn}
-                    >
-                        <FaChevronRight size={24} />
-                    </span>
-                    <span
-                        className="py-1.5 px-1.5 rounded-full text-center hover:text-sky-500 bg-white/40 hover:bg-white/70 cursor-pointer transition-colors"
-                        onClick={handleNextBtn}
-                    >
-                        <FaChevronLeft size={24} />
-                    </span>
-                </div>
-            )}
         </div>
     );
 };
