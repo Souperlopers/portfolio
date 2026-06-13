@@ -3,11 +3,13 @@ import EmptyProjects from "@/Components/EmptyProjects";
 import { ProjectBrief } from "@/types/project";
 
 const Projects = ({ projects }: { projects: ProjectBrief[] }) => {
+    console.log(projects);
+
     const projectsCount = projects.length;
     const topThreeProjects = projects.slice(0, 3);
 
     return (
-        <section id="projects" className="sm:px-10 lg:p- px-3 py-14 w-full">
+        <section id="projects" className="sm:px-10 lg:px-5 px-3 py-14 w-full">
             <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between pb-5">
                 <h2 className="text-2xl sm:text-3xl font-extrabold text-text-primary">
                     پروژه‌ها
@@ -17,8 +19,12 @@ const Projects = ({ projects }: { projects: ProjectBrief[] }) => {
                 {projectsCount === 0 && <EmptyProjects />}
 
                 <div className="flex flex-col gap-5">
-                    {topThreeProjects.map((project) => (
-                        <ProjectItem key={project.id} projectData={project} />
+                    {topThreeProjects.map((project, index) => (
+                        <ProjectItem
+                            key={project.id}
+                            index={index}
+                            projectData={project}
+                        />
                     ))}
                 </div>
 
