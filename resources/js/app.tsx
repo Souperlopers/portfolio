@@ -4,6 +4,8 @@ import "../css/app.css";
 import { createRoot, hydrateRoot } from "react-dom/client";
 import { createInertiaApp } from "@inertiajs/react";
 import { resolvePageComponent } from "laravel-vite-plugin/inertia-helpers";
+import { Suspense } from "react";
+import Loading from "./Components/Loading";
 
 const appName = import.meta.env.VITE_APP_NAME || "Laravel";
 
@@ -20,7 +22,11 @@ createInertiaApp({
             return;
         }
 
-        createRoot(el).render(<App {...props} />);
+        createRoot(el).render(
+            <Suspense fallback={<Loading />}>
+                <App {...props} />
+            </Suspense>,
+        );
     },
     progress: {
         color: "#4B5563",
