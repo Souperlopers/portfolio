@@ -3,10 +3,10 @@ import { useState } from "react";
 const Banner = ({ fileName }: { fileName: string }) => {
     const [imgLoaded, setImgLoaded] = useState(false);
     return (
-        <div className="h-96 w-full relative rounded">
-            <div className="flex justify-end w-full h-full">
+        <div className="w-full h-20 sm:h-64 md:h-80 lg:h-96 relative rounded">
+            <div className="flex justify-end lg:w-full lg:h-full md:w-full md:h-42 w-full overflow-hidden">
                 {!imgLoaded && (
-                    <div className="lg:w-full lg:h-96 md:w-full md:h-42 sm:w-24 sm:h-32 w-20 h-28 bg-neutral-500" />
+                    <div className="w-full h-full bg-neutral-300 animate-pulse absolute inset-0" />
                 )}
                 <img
                     src={`/assets/images/${fileName}`}
