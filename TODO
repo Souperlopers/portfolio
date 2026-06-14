@@ -3,6 +3,8 @@ goal: create a portfolio webapp in -1 week and -6 days
 TODO_Z add banner section to member page
 TODO_Z set default image to member's banner
 
+TODO_Z desig home page banner for mobile mode
+
 TODO_S I can't set favIcon. favIcon file is in the public directory
 
 TODO_S projects section's data in the HomePage don't have a description
