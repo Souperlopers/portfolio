@@ -15,7 +15,7 @@ const Projects = ({ projects }: { projects: ProjectBrief[] }) => {
                     پروژه‌ها
                 </h2>
             </div>
-            <div className="rounded-3xl bg-primary/10 md:ring-1 ring-white/10 backdrop-blur-xl sm:p-5 lg:p-5">
+            <div className="backdrop-blur-xl">
                 {projectsCount === 0 && <EmptyProjects />}
 
                 <div className="flex flex-col gap-5">
