@@ -6,77 +6,41 @@ import TagsComponent from "./TagsComponent";
 const ProjectItem = ({ projectData, index }: ProjectItemProps) => {
     const [imgLoaded, setImgLoaded] = useState(false);
     const { title = "بدون نام", technologies = [] } = projectData;
-
-    const CheckIsEven = (index: number) => (index % 2 === 0 ? true : false);
+    const description =
+        "سامانه هوشمند مدیریت دارایی‌ فیزیکی جهت ثبت و بهینه‌سازی اموال سازمانی به همراه گزارش‌گیری.";
 
     return (
-        <div
-            className="flex justify-center"
-            dir={CheckIsEven(index) ? "rtl" : "ltr"}
-        >
-            <article
-                className="
-        group w-[300px] md:w-full rounded-2xl overflow-hidden
-        bg-text-primary/5 ring-1 ring-text-secondary/50 backdrop-blur-xl
-        transition-all duration-500 ease-out
-        hover:bg-text-primary/15 hover:ring-text-secondary/80 hover:-translate-y-[2px]
-        flex flex-col sm:flex-row
-        relative
-      "
-            >
-                <div className="relative sm:w-[260px] w-full h-44 sm:h-auto">
-                    <div
-                        className="
-            absolute inset-0
-            bg-gradient-to-br from-cyan-500/25 via-transparent to-blue-500/20
-        "
-                    />
-
+        <div className="flex justify-center md:w-full">
+            <div className="md:w-full md:h-40 h-[350px] w-[300px] flex md:flex-row md:gap-3 gap-2 flex-col rounded-lg border border-white/20 hover:border-blue-500 overflow-hidden bg-black/30">
+                <div className="relative md:w-64 h-40 w-[300px] overflow-hidden">
+                    <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/25 via-transparent to-blue-500/20" />
                     {!imgLoaded && (
                         <div className="absolute inset-0 bg-neutral-800/60 animate-pulse" />
                     )}
-
                     <img
                         src={projectData.thumbnail}
                         alt={`${title} cover`}
-                        className="
-                    absolute inset-0 w-full h-full object-cover
-                    group-hover:scale-105
-                    transition-all ease-in-out duration-300
-                    "
+                        className="w-full h-full object-cover "
                         onLoad={() => setImgLoaded(true)}
                         style={{
                             opacity: imgLoaded ? 1 : 0,
                             transition: "opacity 300ms ease",
                         }}
                     />
-
-                    <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition" />
                 </div>
-
-                <div className="flex-1 p-5 sm:p-6 flex flex-col gap-3 mb-14">
-                    <h3 className="text-text-primary font-bold text-lg sm:text-xl truncate">
+                <div className="flex-1 flex flex-col md:gap-2 gap-1 md:py-2 md:px-0 px-2 py-0">
+                    <h3 className="h-8 overflow-hidden text-text-primary font-bold text-lg sm:text-xl truncate md:max-w-[700px] max-w-64">
                         {title}
                     </h3>
                     <TagsComponent tags={technologies} />
+                    <p className="md:text-lg text-sm lg:h-8 h-14 overflow-hidden">{description}</p>
                 </div>
-                <div className="flex items-end p-2">
-                    <Link
-                        href={projectData.url}
-                        className="
-                    btn flex items-end
-                    rounded-full px-5 py-2.5
-                    bg-gradient-to-r from-cyan-400 to-blue-500
-                    text-white font-semibold
-                    shadow-[0_12px_30px_rgba(34,211,238,0.15)]
-                    transition-all duration-300
-                    group-hover:shadow-[0_16px_40px_rgba(34,211,238,0.35)]
-                "
-                    >
+                <div className="flex md:justify-center justify-end items-end md:p-3 px-2 pb-2">
+                    <Link href={projectData.url} className="bg-sky-600 md:hover:bg-sky-700 active:bg-sky-600 btn btn-soft font-medium">
                         <span>جزئیات</span>
                     </Link>
                 </div>
-            </article>
+            </div>
         </div>
     );
 };
