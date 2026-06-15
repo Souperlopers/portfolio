@@ -28,7 +28,7 @@ export default {
                 'light-accent': '#0ea5e9', //sky 500
                 'light-accent-hover': '#0284c7', // sky 600
                 'accent': '#007ACC', //vs blue
-                'border': '#3C3C3C', // neutral
+                'border': '#f5f5f4', 
 
                 'success': '#4EC9B0', //light cyan
                 'warning': '#CEA14C', //light orange
@@ -42,7 +42,7 @@ export default {
                 'text-secondary-light': '#3E3E42',
                 'text-muted-light': '#6E6E6E',
 
-                'border-light': '#E5E5E5',
+                'border-light': '#78716c',
             }
         },
     },
