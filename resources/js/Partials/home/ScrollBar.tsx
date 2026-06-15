@@ -69,7 +69,7 @@ const ScrollBar = () => {
                             key={item.id}
                             onClick={() => scrollToSection(item.id)}
                             className={`
-                                group relative lg:w-12 lg:h-20 w-28 h-12 flex items-center justify-center
+                                group relative md:w-12 md:h-20 w-28 h-12 flex items-center justify-center
                                 transition-all duration-300 ease-out
                                 active:scale-95
                                 ${item.rounded}
