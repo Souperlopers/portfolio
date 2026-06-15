@@ -9,7 +9,7 @@ const Projects = ({ projects }: { projects: ProjectBrief[] }) => {
     const topThreeProjects = projects.slice(0, 3);
 
     return (
-        <section id="projects" className="sm:px-10 lg:px-5 px-3 py-14 w-full">
+        <section id="projects" className="lg:px-5 px-3 py-14 w-full">
             <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between pb-5">
                 <h2 className="text-2xl sm:text-3xl font-extrabold text-text-primary">
                     پروژه‌ها
