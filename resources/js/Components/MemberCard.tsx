@@ -27,14 +27,14 @@ const MemberCard = ({ memberData }: { memberData: MemberBrief }) => {
             "
         >
             <div className="flex flex-col w-full ">
-                <div className="relative flex items-center w-full bg-slate-400 rounded">
+                <div className="relative flex justify-center items-center w-full">
                     <div
                         className="
                     absolute inset-0 bg-gradient-to-br from-sky-300 via-sky-500 to-blue-600
                     opacity-0 group-hover:opacity-20 blur-2xl rounded-full transition-all duration-500
                 "
                     />
-                    <div className="relative w-28 h-28 top-10 rounded-full overflow-hidden border-2 border-border/90 shadow-inner">
+                    <div className="relative w-28 h-28 rounded-full overflow-hidden border-2 border-border/90 shadow-inner">
                         {!imgLoaded && (
                             <div className="absolute inset-0 bg-secondary animate-pulse rounded-full" />
                         )}
@@ -48,19 +48,21 @@ const MemberCard = ({ memberData }: { memberData: MemberBrief }) => {
                     </div>
                 </div>
 
-                <div className="mt-5 w-full text-right space-y-1 pb-2 pt-10">
-                    <h3
-                        className="
+                <div className="mt-5 w-full space-y-1 pb-2">
+                    <div className="flex justify-center w-full">
+                        <h3
+                            className="
                         text-white font-semibold text-xl truncate
-                        group-hover:text-light-accent transition-colors duration-300 max-w-52 lg:max-w-64
+                        group-hover:text-light-accent transition-colors duration-300 ax-w-64
                     "
-                    >
-                        {name}
-                    </h3>
-                    <p className="text-stone-400 text-sm">{position}</p>
+                        >
+                            {name}
+                        </h3>
+                    </div>
+                    <p className="text-stone-400 text-sm text-center">{position}</p>
                 </div>
 
-                <div className="flex flex-wrap gap-2 w-full">
+                <div className="flex flex-wrap justify-center gap-2 w-full">
                     <TagsComponent tags={skills} />
                 </div>
             </div>
