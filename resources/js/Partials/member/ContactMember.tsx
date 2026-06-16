@@ -1,35 +1,38 @@
 import { motion } from "framer-motion";
-import { MessageCircle, Mail } from "lucide-react";
+import { Mail } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { FaTelegramPlane } from "react-icons/fa";  
+import { IoCall } from "react-icons/io5";
+import { Member } from "@/types/member";
 
-const ContactMember = () => {
-    const socialLinks = [
+const ContactMember = ({ info }: { info: Member }) => {
+    const allLinks = [
         {
             name: "LinkedIn",
-            href: "https://www.linkedin.com/in/zahra-rostami-4049b2327",
+            href: info.linkedin,
             icon: FaLinkedin,
             color: "group-hover:text-blue-700",
         },
         {
             name: "GitHub",
-            href: "https://github.com/zahraRostami1999",
+            href: info.github,
             icon: FaGithub,
             color: "group-hover:text-neutral-200",
         },
         {
-            name: "Telegram",
-            href: "https://telegram.me/zahra_rtm",
-            icon: FaTelegramPlane,
-            color: "group-hover:text-blue-500",
+            name: "Phone",
+            href: info.phone,
+            icon: IoCall,
+            color: "group-hover:text-green-600",
         },
         {
             name: "Email",
-            href: "mailto:zahrarostami137878@gmail.com",
+            href: info.email ? `mailto:${info.email}` : undefined,
             icon: Mail,
             color: "group-hover:text-red-700",
         },
     ];
+
+    const socialLinks = allLinks.filter((link) => link.href);
 
     return (
         <div className="bg-(--bg-container) p-5 py-16 rounded-xl shadow-md border border-border text-text-primary">
