@@ -13,7 +13,7 @@ export default function Member({ member }: MemberPageProps) {
             <Head title={`SouperLopers | ${info.name}`} />
             <Profile info={info} />
             <MemberProjects projects={projects} />
-            <Contact />
+            <Contact info={info}/>
         </div>
     );
 }
