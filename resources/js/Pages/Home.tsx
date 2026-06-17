@@ -19,7 +19,7 @@ export default function Home({ projects, members }: HomePageProps) {
         <>
             <Head title="SouperLopers" />
             <ScrollBar />
-            <Banner fileName="banner-dark.svg" />
+            <Banner fileName="banner-dark.webp" />
             <Projects projects={projects.data} />
             <Members members={members.data} />
         </>
