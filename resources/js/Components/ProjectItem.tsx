@@ -5,9 +5,7 @@ import TagsComponent from "./TagsComponent";
 
 const ProjectItem = ({ projectData, index }: ProjectItemProps) => {
     const [imgLoaded, setImgLoaded] = useState(false);
-    const { title = "بدون نام", technologies = [] } = projectData;
-    const description =
-        "سامانه هوشمند مدیریت دارایی‌ فیزیکی جهت ثبت و بهینه‌سازی اموال سازمانی به همراه گزارش‌گیری.";
+    const { title = "بدون نام", technologies = [], description } = projectData;
 
     return (
         <div className="flex justify-center md:w-full">
