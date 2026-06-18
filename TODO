@@ -6,8 +6,6 @@ TODO_Z design home page banner for mobile mode
 
 TODO_S I can't set favIcon. favIcon file is in the public directory
 
-TODO_S projects section's data in the HomePage don't have a description
-
 TODO_S pagination function on frontend
 TODO_S ulid
 TODO_S project time ranges
