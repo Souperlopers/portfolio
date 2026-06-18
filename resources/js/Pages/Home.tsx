@@ -13,7 +13,7 @@ export default function Home({ projects, members }: HomePageProps) {
         return () => clearTimeout(interval);
     }, []);
 
-    if(loading) return <Loading />;
+    if (loading) return <Loading />;
 
     return (
         <>
