@@ -10,6 +10,7 @@ export type ProjectBrief = {
     id: number|string;
     title: string;
     url: string;
+    description?: string;
     thumbnail?: string;
     technologies?: Tag[];
 };
