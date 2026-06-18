@@ -26,6 +26,12 @@ class ProjectBriefResource extends JsonResource
             //     : $this->priority,
         ];
 
+        // append short description
+        if ($this->description) {
+            $short_desc = explode('. ', $this->description)[0] . '.';
+            $base['description'] = $short_desc;
+        }
+
         // append thumbnail if there is any
         if ($this->thumbnail) {
             $base['thumbnail'] = request()->schemeAndHttpHost() . $this->thumbnail;
