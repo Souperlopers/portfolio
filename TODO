@@ -1,10 +1,8 @@
 goal: create a portfolio webapp in -99 week and -99 days
 
-TODO_Z set default image to member's banner
+TODO_Z set default image for member's banner
 
 TODO_Z design home page banner for mobile mode
-
-TODO_S I can't set favIcon. favIcon file is in the public directory
 
 TODO_S pagination function on frontend
 TODO_S ulid
