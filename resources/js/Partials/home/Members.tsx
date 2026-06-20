@@ -3,14 +3,12 @@ import { MemberBrief } from "@/types/member";
 
 const Members = ({ members }: { members: MemberBrief[] }) => {
     return (
-        <section id="members" className="lg:px-5 px-3 w-full">
+        <section id="members" className="lg:w-[1300px] w-[300px]">
             <h2 className="text-2xl sm:text-3xl font-extrabold text-text-primary pb-4">
                 توسعه‌دهندگان
             </h2>
             <div
-                className="
-                    grid 
-                    lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1
+                className="flex flex-wrap
                     lg:gap-5 gap-3
                 "
             >
