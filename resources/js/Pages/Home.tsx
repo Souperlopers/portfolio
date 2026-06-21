@@ -6,11 +6,10 @@ import { HomePageProps } from "@/types";
 
 export default function Home({ projects, members }: HomePageProps) {
     const [loading, setLoading] = useState(true);
+
     useEffect(() => {
-        const interval = setTimeout(() => {
-            setLoading(false);
-        }, 2000);
-        return () => clearTimeout(interval);
+        const timer = setTimeout(() => setLoading(false), 1800);
+        return () => clearTimeout(timer);
     }, []);
 
     if (loading) return <Loading />;
@@ -18,8 +17,7 @@ export default function Home({ projects, members }: HomePageProps) {
     return (
         <>
             <Head title="SouperLopers" />
-            <ScrollBar />
-            <Banner fileName="banner-dark.svg" />
+            <Banner />
             <Projects projects={projects.data} />
             <Members members={members.data} />
         </>
