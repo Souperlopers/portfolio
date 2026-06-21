@@ -2,8 +2,8 @@ import { motion, useScroll, useTransform } from "framer-motion";
 
 const Logo = () => {
     const { scrollY } = useScroll();
-    const souperX = useTransform(scrollY, [0, 300], ["0px", "10px"]);
-    const souperY = useTransform(scrollY, [0, 300], ["0px", "0px"]);
+    const souperX = useTransform(scrollY, [0, 300], ["0px", "12px"]);
+    const souperY = useTransform(scrollY, [0, 300], ["0px", "-2px"]);
     const logoW = useTransform(scrollY, [0,300], ["320px" , "100px"]);
 
     const lopersX = useTransform(scrollY, [0, 300], ["0px", "-55px"]);
