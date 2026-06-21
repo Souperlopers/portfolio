@@ -21,7 +21,7 @@ const Logo = () => {
                 right: logoRight,
                 width: logoW,
             }}
-            className="absolute z-[100] flex lg:w-80 w-40 selection:bg-transparent"
+            className="fixed z-[100] flex lg:w-80 w-40 selection:bg-transparent "
             dir="ltr"
         >
             <motion.div style={{ x: souperX, y: souperY }}>
