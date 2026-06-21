@@ -120,7 +120,7 @@ const Header = () => {
         >
             <motion.div
                 style={{ background: headerBg }}
-                className="flex items-center px-8 py-4 h-[95px]"
+                className="flex items-center px-8 py-4 h-[80px]"
             >
                 <motion.div
                     className={`flex ${isScrolled ? "justify-start pr-32" : "justify-center gap-40"} gap-16 ml-20 font-medium text-white w-full`}
