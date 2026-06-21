@@ -1,7 +1,7 @@
 import { ReactNode, useState, useEffect } from "react";
 import { Head } from "@inertiajs/react";
 import MainLayout from "@/Layouts/MainLayout";
-import { Banner, Projects, Members, ScrollBar, Loading } from "@/index";
+import { Banner, Projects, Members, Logo, Loading } from "@/index";
 import { HomePageProps } from "@/types";
 
 export default function Home({ projects, members }: HomePageProps) {
@@ -18,6 +18,7 @@ export default function Home({ projects, members }: HomePageProps) {
         <>
             <Head title="SouperLopers" />
             <Banner />
+            <Logo/>
             <Projects projects={projects.data} />
             <Members members={members.data} />
         </>
