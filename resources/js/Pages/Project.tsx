@@ -13,11 +13,11 @@ export default function Project({ project }: ProjectPageProps) {
         <div className="flex flex-col gap-5 lg:p-5 p-3">
             <Head title={`SouperLopers ${projectData.title}`} />
             <div className="w-full flex flex-col gap-10">
-                <div className="flex lg:flex-row flex-col justify-between items-start rounded gap-5">
+                <div id="info" className="flex lg:flex-row flex-col justify-between items-start rounded gap-5">
                     <Info info={projectData} />
                     <Images images={images} />
                 </div>
-                <div className="">
+                <div className="" id="members">
                     <Contributors contributors={contributors} />
                 </div>
             </div>
