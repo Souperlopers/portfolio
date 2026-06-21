@@ -1,22 +1,19 @@
-import { useState } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
+import BannerImage from "./BannerImage";
 
-const Banner = ({ fileName }: { fileName: string }) => {
-    const [imgLoaded, setImgLoaded] = useState(false);
+const Banner = () => {
+    const { scrollY } = useScroll();
+    
+    const bannerOpacity = useTransform(scrollY, [0, 500], [1, 0.4]);
+    const bannerScale = useTransform(scrollY, [0, 500], [1, 0.95]);
+
     return (
-        <div className="w-full h-36 sm:h-48 md:h-64 lg:h-96 relative rounded">
-            <div className="flex justify-end lg:w-full lg:h-full md:w-full md:h-42 w-full overflow-hidden">
-                {!imgLoaded && (
-                    <div className="w-full h-full bg-neutral-300 animate-pulse absolute inset-0" />
-                )}
-                <img
-                    src={`/assets/images/${fileName}`}
-                    alt="banner"
-                    className="object-cover w-full h-full"
-                    onLoad={() => setImgLoaded(true)}
-                    style={{ display: imgLoaded ? "block" : "none" }}
-                />
-            </div>
-        </div>
+        <motion.div
+            style={{ opacity: bannerOpacity, scale: bannerScale }}
+            className="relative mx-auto w-[1350px] max-w-full h-[490px] overflow-hidden"
+        >
+            <BannerImage />
+        </motion.div>
     );
 };
 
