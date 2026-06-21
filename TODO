@@ -4,6 +4,7 @@ TODO_Z set default image for member's banner
 
 TODO_Z design home page banner for mobile mode
 
+TODO_S change memberData url to : '/members/{member:slug}'
 TODO_S pagination function on frontend
 TODO_S ulid
 TODO_S project time ranges
