@@ -31,6 +31,7 @@ const Header = () => {
         homePageNavigationItems,
     );
     const pathname = usePage().url;
+    const [activeSection, setActiveSection] = useState("");
 
     const [hoveredItem, setHoveredItem] = useState<string | null>(null);
 
@@ -82,6 +83,35 @@ const Header = () => {
             });
         }
     };
+    useEffect(() => {
+        const sections = ["projects", "members"];
+        const observers: IntersectionObserver[] = [];
+
+        const observerOptions = {
+            root: null,
+            rootMargin: "-20% 0px -20% 0px",
+            threshold: 0,
+        };
+
+        sections.forEach((id) => {
+            const element = document.getElementById(id);
+            if (!element) return;
+
+            const observer = new IntersectionObserver(([entry]) => {
+                if (entry.isIntersecting) {
+                    setActiveSection(id);
+                }
+            }, observerOptions);
+
+            observer.observe(element);
+            observers.push(observer);
+        });
+
+        return () => observers.forEach((observer) => observer.disconnect());
+    }, []);
+
+    console.log(activeSection);
+    
 
     return (
         <motion.header
@@ -101,14 +131,14 @@ const Header = () => {
                             style={{ fontSize: itemFontSize }}
                             onClick={() => scrollToSection(item)}
                             onMouseEnter={() => setHoveredItem(item.title)}
-                            className="relative py-2 text-white transition-colors duration-200 focus-visible:outline-none opacity-80 hover:opacity-100"
+                            className={`relative ${activeSection===item.id ? "text-sky-500":""} py-2 text-white transition-colors duration-200 focus-visible:outline-none opacity-80 hover:opacity-100`}
                         >
                             <span>{item.title}</span>
 
                             {hoveredItem === item.title && (
                                 <motion.span
                                     layoutId="nav-underline"
-                                    className="absolute bottom-0 left-0 right-0 h-[2px] bg-sky-500"
+                                    className={`absolute bottom-0 left-0 right-0 h-[2px] bg-sky-500`}
                                     transition={{
                                         type: "spring",
                                         stiffness: 300,
