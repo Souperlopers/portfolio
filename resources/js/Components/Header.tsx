@@ -31,7 +31,7 @@ const Header = () => {
         homePageNavigationItems,
     );
     const pathname = usePage().url;
-    const [activeSection, setActiveSection] = useState("");
+    const [activeSection, setActiveSection] = useState("projects");    
 
     const [hoveredItem, setHoveredItem] = useState<string | null>(null);
 
