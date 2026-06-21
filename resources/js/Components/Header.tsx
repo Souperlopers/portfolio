@@ -1,6 +1,11 @@
 import { useState, useEffect } from "react";
 import { Link, usePage } from "@inertiajs/react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import {
+    motion,
+    useScroll,
+    useTransform,
+    useMotionValueEvent,
+} from "framer-motion";
 import { NavigationItems } from "@/types/navigation";
 
 const homePageNavigationItems: NavigationItems[] = [
@@ -22,15 +27,36 @@ const memberPageNavigationItems: NavigationItems[] = [
 ];
 
 const Header = () => {
-    const [navigationList, setNavigationList] = useState(homePageNavigationItems);
+    const [navigationList, setNavigationList] = useState(
+        homePageNavigationItems,
+    );
     const pathname = usePage().url;
+
+    const [hoveredItem, setHoveredItem] = useState<string | null>(null);
+
+    const [isScrolled, setIsScrolled] = useState(false);
 
     const { scrollY } = useScroll();
 
-    const headerY = useTransform(scrollY, [0, 200], ["500px", "10px"]);
-    
-    const logoOpacity = useTransform(scrollY, [0, 300], [0, 1]);
-    const headerBg = useTransform(scrollY, [0, 300], ["rgba(0,0,0,0)", "rgba(0,0,0,0)"]);
+    useMotionValueEvent(scrollY, "change", (latest) => {
+        if (latest > 400) {
+            setIsScrolled(true);
+        } else {
+            setIsScrolled(false);
+        }
+    });
+
+    const headerY = useTransform(scrollY, [0, 400], ["500px", "0px"]);
+
+    const headerBg = useTransform(
+        scrollY,
+        [0, 700],
+        [
+            "linear-gradient(to top, rgba(51, 51, 51, 0), rgba(37, 37, 38, 0))",
+            "linear-gradient(to top, rgba(51, 51, 51, 0.99), rgba(37, 37, 38, 0.99))",
+        ],
+    );
+    const itemFontSize = useTransform(scrollY, [0, 400], ["30px", "20px"]);
 
     useEffect(() => {
         const headerList = [
@@ -60,33 +86,39 @@ const Header = () => {
     return (
         <motion.header
             style={{ y: headerY }}
-            className="fixed -translate-x-1/2 z-50 w-full max-w-[1350px] px-5 pointer-events-none"
+            className="fixed -translate-x-1/2 z-50  lg:w-[1350px] w-[300px] rounded"
         >
             <motion.div
-                style={{ backgroundColor: headerBg }}
-                className="flex items-center px-8 py-4 "
+                style={{ background: headerBg }}
+                className="flex items-center px-8 py-4 h-[95px]"
             >
-                <motion.div style={{ opacity: logoOpacity }} className="flex items-center">
-                    <Link href="/">
-                        <img
-                            src="/assets/images/logo.svg"
-                            alt="SouperLopers"
-                            className=""
-                        />
-                    </Link>
-                </motion.div>
-
-                <nav className="flex justify-center items-center gap-16 text-3xl ml-20 font-medium text-white w-full">
+                <motion.div
+                    className={`flex ${isScrolled ? "justify-start pr-32" : "justify-center gap-40"} gap-16 ml-20 font-medium text-white w-full`}
+                >
                     {navigationList.map((item) => (
-                        <button
+                        <motion.button
                             key={item.title}
+                            style={{ fontSize: itemFontSize }}
                             onClick={() => scrollToSection(item)}
-                            className="hover:text-sky-300 transition-colors duration-300 w-48"
+                            onMouseEnter={() => setHoveredItem(item.title)}
+                            className="relative py-2 text-white transition-colors duration-200 focus-visible:outline-none opacity-80 hover:opacity-100"
                         >
-                            {item.title}
-                        </button>
+                            <span>{item.title}</span>
+
+                            {hoveredItem === item.title && (
+                                <motion.span
+                                    layoutId="nav-underline"
+                                    className="absolute bottom-0 left-0 right-0 h-[2px] bg-sky-500"
+                                    transition={{
+                                        type: "spring",
+                                        stiffness: 300,
+                                        damping: 30,
+                                    }}
+                                />
+                            )}
+                        </motion.button>
                     ))}
-                </nav>
+                </motion.div>
             </motion.div>
         </motion.header>
     );
