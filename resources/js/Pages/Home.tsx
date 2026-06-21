@@ -15,13 +15,13 @@ export default function Home({ projects, members }: HomePageProps) {
     if (loading) return <Loading />;
 
     return (
-        <>
+        <div className="w-[1350px] relative">
             <Head title="SouperLopers" />
             <Banner />
             <Logo/>
             <Projects projects={projects.data} />
             <Members members={members.data} />
-        </>
+        </div>
     );
 }
 
