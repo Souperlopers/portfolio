@@ -14,7 +14,7 @@ const MemberCard = ({ memberData }: { memberData: MemberBrief }) => {
     } = memberData;
 
     return (
-        <div className="flex justify-center md:w-[310px] sm:w-full">
+        <div className="flex justify-center md:w-[310px] w-full">
             <div
                 className="lg:w-[310px] w-[300px] px-2 py-4 min-h-[320px]
                 group relative overflow-hidden
