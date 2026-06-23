@@ -13,7 +13,7 @@ const Projects = ({ projects }: { projects: ProjectBrief[] }) => {
     const topThreeProjects = projects.slice(0, 3 * showMoreCount);
 
     return (
-        <section id="projects" className="py-14 w-[1300px]">
+        <section id="projects" className="py-14 w-full max-w-[1350px] mx-auto px-5">
             <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between pb-5">
                 <h2 className="text-2xl sm:text-3xl font-extrabold text-text-primary">
                     پروژه‌ها
