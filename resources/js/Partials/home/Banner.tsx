@@ -9,7 +9,7 @@ const Banner = () => {
     return (
         <motion.div
             style={{ opacity: bannerOpacity }}
-            className="relative mx-auto lg:w-[1350px] w-[400px] max-w-full h-[510px] overflow-hidden mb-12"
+            className="relative mx-auto lg:w-[1350px] w-[400px] max-w-full overflow-hidden mb-12"
         >
             <BannerImage />
         </motion.div>
