@@ -3,7 +3,7 @@ import { MemberBrief } from "@/types/member";
 
 const Members = ({ members }: { members: MemberBrief[] }) => {
     return (
-        <section id="members" className="lg:w-[1300px] w-[300px]">
+        <section id="members" className="w-full max-w-[1350px] mx-auto px-5">
             <h2 className="text-2xl sm:text-3xl font-extrabold text-text-primary pb-4">
                 توسعه‌دهندگان
             </h2>
