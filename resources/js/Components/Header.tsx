@@ -31,11 +31,12 @@ const Header = () => {
         homePageNavigationItems,
     );
     const pathname = usePage().url;
-    const [activeSection, setActiveSection] = useState("projects");    
+    const [activeSection, setActiveSection] = useState("projects");
 
     const [hoveredItem, setHoveredItem] = useState<string | null>(null);
 
     const [isScrolled, setIsScrolled] = useState(false);
+    const isMobiled = window.innerWidth < 600;
 
     const { scrollY } = useScroll();
 
@@ -47,17 +48,25 @@ const Header = () => {
         }
     });
 
-    const headerY = useTransform(scrollY, [0, 400], ["500px", "0px"]);
+    const headerY = useTransform(
+        scrollY,
+        [0, 100],
+        [isMobiled ? "140px" : "510px", isMobiled ? "0px" : "0px"],
+    );
 
     const headerBg = useTransform(
         scrollY,
-        [0, 700],
+        [0, isMobiled ? 200 : 700],
         [
             "linear-gradient(to top, rgba(51, 51, 51, 0), rgba(37, 37, 38, 0))",
             "linear-gradient(to top, rgba(51, 51, 51, 0.99), rgba(37, 37, 38, 0.99))",
         ],
     );
-    const itemFontSize = useTransform(scrollY, [0, 400], ["30px", "20px"]);
+    const itemFontSize = useTransform(
+        scrollY,
+        [0, 400],
+        [isMobiled ? "16px" : "30px", isMobiled ? "15px" : "20px"],
+    );
 
     useEffect(() => {
         const headerList = [
@@ -110,20 +119,17 @@ const Header = () => {
         return () => observers.forEach((observer) => observer.disconnect());
     }, []);
 
-    console.log(activeSection);
-    
-
     return (
         <motion.header
             style={{ y: headerY }}
-            className="fixed -translate-x-1/2 z-50  lg:w-[1350px] w-[300px] rounded"
+            className="fixed -translate-x-1/2 z-50 w-full max-w-[1350px] rounded"
         >
             <motion.div
                 style={{ background: headerBg }}
-                className="flex items-center px-8 py-4 h-[80px]"
+                className="flex items-center h-[80px] w-full"
             >
                 <motion.div
-                    className={`flex ${isScrolled ? "justify-start pr-32" : "justify-center gap-40"} gap-16 ml-20 font-medium text-white w-full`}
+                    className={`flex w-full ${isScrolled ? "justify-start gap-8 lg:pr-32 pr-24" : "justify-center lg:gap-40 gap-8"} font-medium text-white w-full`}
                 >
                     {navigationList.map((item) => (
                         <motion.button
@@ -131,7 +137,7 @@ const Header = () => {
                             style={{ fontSize: itemFontSize }}
                             onClick={() => scrollToSection(item)}
                             onMouseEnter={() => setHoveredItem(item.title)}
-                            className={`relative ${activeSection===item.id ? "text-sky-500":""} py-2 text-white transition-colors duration-200 focus-visible:outline-none opacity-80 hover:opacity-100`}
+                            className={`relative ${activeSection === item.id ? "text-sky-500" : ""} py-2 text-white transition-colors duration-200 focus-visible:outline-none opacity-80 hover:opacity-100`}
                         >
                             <span>{item.title}</span>
 
