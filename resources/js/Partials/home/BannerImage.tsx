@@ -8,7 +8,7 @@ const BannerImage = () => {
     const onLoad = () => setImagesLoadedCount((prev) => prev + 1);
 
     return (
-        <div className="relative w-full" style={{ aspectRatio: "1350 / 490" }}>
+        <div className="relative w-full" style={{ aspectRatio: "1350 / 510" }}>
             {!allLoaded && (
                 <div className="absolute inset-0 bg-[#333333] rounded skeleton" />
             )}
@@ -21,7 +21,7 @@ const BannerImage = () => {
                     left: "-9%",
                     top: "0%",
                     width: "89%",
-                    height: "106%",
+                    height: "103%",
                     zIndex: 10,
                     display: allLoaded ? "block" : "none",
                 }}
@@ -47,7 +47,7 @@ const BannerImage = () => {
                 style={{
                     position: "absolute",
                     left: "15%",
-                    bottom: "9%",
+                    bottom: "11%",
                     height: "30%",
                     width: "auto",
                     zIndex: 50,
@@ -74,7 +74,7 @@ const BannerImage = () => {
                 onLoad={onLoad}
                 style={{
                     position: "absolute",
-                    left: "31%",
+                    left: "29%",
                     top: "19%",
                     width: "15%",
                     height: "auto",
@@ -88,7 +88,7 @@ const BannerImage = () => {
                 onLoad={onLoad}
                 style={{
                     position: "absolute",
-                    left: "38%",
+                    left: "37%",
                     bottom: "8%",
                     height: "56%",
                     width: "auto",
@@ -98,15 +98,13 @@ const BannerImage = () => {
             />
             <div
                 style={{
-                    position: "absolute",
-                    bottom: "26%",
-                    right: "8%",
                     zIndex: 50,
                     fontSize: "clamp(0.9rem, 2vw, 1.875rem)",
                     fontFamily: "Vazir, sans-serif",
                     color: "white",
                     filter: "drop-shadow(0 4px 6px rgba(0,0,0,0.5))",
                 }}
+                className="absolute lg:bottom-[26%] lg:right-[8%] right-[5%] bottom-[15%]"
             >
                 تیم توسعه‌ نرم افزار
             </div>
