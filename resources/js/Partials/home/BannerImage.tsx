@@ -19,7 +19,7 @@ const BannerImage = () => {
                 style={{
                     position: "absolute",
                     left: "-9%",
-                    top: "0%",
+                    top: "-1%",
                     width: "89%",
                     height: "103%",
                     zIndex: 10,
@@ -46,8 +46,8 @@ const BannerImage = () => {
                 onLoad={onLoad}
                 style={{
                     position: "absolute",
-                    left: "15%",
-                    bottom: "11%",
+                    left: "18.8%",
+                    bottom: "7.6%",
                     height: "30%",
                     width: "auto",
                     zIndex: 50,
@@ -74,7 +74,7 @@ const BannerImage = () => {
                 onLoad={onLoad}
                 style={{
                     position: "absolute",
-                    left: "29%",
+                    left: "30%",
                     top: "19%",
                     width: "15%",
                     height: "auto",
@@ -88,7 +88,7 @@ const BannerImage = () => {
                 onLoad={onLoad}
                 style={{
                     position: "absolute",
-                    left: "37%",
+                    left: "36.4%",
                     bottom: "8%",
                     height: "56%",
                     width: "auto",
