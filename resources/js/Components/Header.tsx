@@ -41,7 +41,7 @@ const Header = () => {
     const { scrollY } = useScroll();
 
     useMotionValueEvent(scrollY, "change", (latest) => {
-        if (latest > 400) {
+        if (latest > 300) {
             setIsScrolled(true);
         } else {
             setIsScrolled(false);
@@ -129,7 +129,7 @@ const Header = () => {
                 className="flex items-center h-[80px] w-full"
             >
                 <motion.div
-                    className={`flex w-full ${isScrolled ? "justify-start gap-8 lg:pr-32 pr-24" : "justify-center lg:gap-40 gap-8"} font-medium text-white w-full`}
+                    className={`flex w-full ${isScrolled ? "justify-start gap-8 lg:pr-40 pr-24" : "justify-center lg:gap-40 gap-8"} font-medium text-white w-full`}
                 >
                     {navigationList.map((item) => (
                         <motion.button
