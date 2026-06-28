@@ -11,9 +11,15 @@ export default function Member({ member }: MemberPageProps) {
     return (
         <div className="flex flex-col gap-5 w-full lg:p-5 p-3">
             <Head title={`SouperLopers | ${info.name}`} />
-            <Profile info={info} />
-            <MemberProjects projects={projects} />
-            <Contact info={info}/>
+            <div id="profile">
+                <Profile info={info} />
+            </div>
+            <div id="projects">
+                <MemberProjects projects={projects} />
+            </div>
+            <div id="contact">
+                <Contact info={info} />
+            </div>
         </div>
     );
 }
