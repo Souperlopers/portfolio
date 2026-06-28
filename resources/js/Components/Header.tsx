@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link, usePage } from "@inertiajs/react";
+import { usePage } from "@inertiajs/react";
 import {
     motion,
     useScroll,
@@ -30,43 +30,10 @@ const Header = () => {
     const [navigationList, setNavigationList] = useState(
         homePageNavigationItems,
     );
-    const pathname = usePage().url;
+
     const [activeSection, setActiveSection] = useState("projects");
-
     const [hoveredItem, setHoveredItem] = useState<string | null>(null);
-
-    const [isScrolled, setIsScrolled] = useState(false);
-    const isMobiled = window.innerWidth < 600;
-
-    const { scrollY } = useScroll();
-
-    useMotionValueEvent(scrollY, "change", (latest) => {
-        if (latest > 100) {
-            setIsScrolled(true);
-        } else {
-            setIsScrolled(false);
-        }
-    });
-
-    const headerY = useTransform(
-        scrollY,
-        [0, 100],
-        [isMobiled ? "140px" : "510px", isMobiled ? "0px" : "0px"],
-    );
-
-    const headerBg = useTransform(
-        scrollY,
-        [0, isMobiled ? 200 : 700],
-        [
-            "linear-gradient(to top, rgba(51, 51, 51, 0), rgba(37, 37, 38, 0))",
-            "linear-gradient(to top, rgba(51, 51, 51, 0.99), rgba(37, 37, 38, 0.99))",
-        ],
-    );
-    const itemFontSize = useTransform(
-        scrollY,
-        [0, 400],
-        [isMobiled ? "16px" : "30px", isMobiled ? "15px" : "20px"],
-    );
+    const pathname = usePage().url;
 
     useEffect(() => {
         const headerList = [
@@ -93,7 +60,7 @@ const Header = () => {
         }
     };
     useEffect(() => {
-        const sections = ["projects", "members"];
+        const sections = ["projects", "members", "info", "profile", "contact"];
         const observers: IntersectionObserver[] = [];
 
         const observerOptions = {
@@ -118,6 +85,39 @@ const Header = () => {
 
         return () => observers.forEach((observer) => observer.disconnect());
     }, []);
+
+    // Animation
+    const { scrollY } = useScroll();
+    const [isScrolled, setIsScrolled] = useState(false);
+    const isMobiled = window.innerWidth < 600;
+
+    useMotionValueEvent(scrollY, "change", (latest) => {
+        if (latest > 100) {
+            setIsScrolled(true);
+        } else {
+            setIsScrolled(false);
+        }
+    });
+
+    const headerY = useTransform(
+        scrollY,
+        [0, 100],
+        [isMobiled ? "140px" : "510px", isMobiled ? "0px" : "0px"],
+    );
+
+    const headerBg = useTransform(
+        scrollY,
+        [0, isMobiled ? 200 : 200],
+        [
+            "linear-gradient(to top, rgba(51, 51, 51, 0), rgba(37, 37, 38, 0))",
+            "linear-gradient(to top, rgba(51, 51, 51, 0.99), rgba(37, 37, 38, 0.99))",
+        ],
+    );
+    const itemFontSize = useTransform(
+        scrollY,
+        [0, 100],
+        [isMobiled ? "16px" : "30px", isMobiled ? "15px" : "20px"],
+    );
 
     return (
         <motion.header
