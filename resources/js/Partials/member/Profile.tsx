@@ -1,42 +1,66 @@
 import { useState } from "react";
 import { Member } from "@/types/member";
+import TagsComponent from "../../Components/TagsComponent";
 
 const Profile = ({ info }: { info: Member }) => {
     console.log(info);
-    
-    const [imgLoaded, setImgLoaded] = useState(false);
+
+    const [imgError, setImgError] = useState(false);
+    const initial = info.name?.trim()[0] ?? "؟";
+    const showFallback = !info.thumbnail || imgError;
+
     return (
-        <div className="flex flex-col justify-between md:gap-32 gap-20 w-full rounded">
-            {/* banner, image */}
-            <div className="w-full h-56 bg-stone-400 rounded relative avatar">
-                <div className="md:w-48 md:h-48 w-32 h-32 flex justify-center absolute md:top-32 top-40 md:right-5 right-2 rounded-full border-4 border-b-sky-600 overflow-hidden">
-                    {!imgLoaded && (
-                        <div className="lg:w-48 lg:h-48 md:w-full md:h-42 sm:w-24 sm:h-32 w-20 h-28 bg-neutral-500 rounded-full" />
-                    )}
-                    <img
-                        src={info.thumbnail}
-                        alt={`${info.name} cover`}
-                        className="w-full h-full object-cover"
-                        onLoad={() => setImgLoaded(true)}
-                        style={{ display: imgLoaded ? "block" : "none" }}
-                    />
+        <div className="w-full rounded-xl border border-white/10 bg-white/5 overflow-hidden">
+            {/* banner */}
+            <div className="w-full h-40 md:h-52 bg-gradient-to-br from-sky-500/20 via-white/5 to-blue-600/10" />
+
+            {/* avatar + info */}
+            <div className="px-4 md:px-6 pb-6">
+                <div className="relative -mt-12 md:-mt-16 mb-4">
+                    <div
+                        className="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden
+                        ring-4 ring-white/10 shrink-0"
+                    >
+                        {showFallback ? (
+                            <div
+                                className="w-full h-full bg-sky-500/15
+                                flex items-center justify-center"
+                            >
+                                <span className="text-3xl md:text-4xl font-medium text-sky-400">
+                                    {initial}
+                                </span>
+                            </div>
+                        ) : (
+                            <img
+                                src={info.thumbnail}
+                                alt={`${info.name} cover`}
+                                className="w-full h-full object-cover"
+                                onError={() => setImgError(true)}
+                            />
+                        )}
+                    </div>
                 </div>
-            </div>
-            <div className="flex flex-col justify-between gap-5 w-full px-5">
-                <div className="flex flex-col gap-3">
-                    {/* name */}
-                    <span className="text-text-primary md:text-4xl text-2xl font-semibold truncate md:max-w-[800px] overflow-hidden">
-                    {info.name}
+
+                <div className="flex flex-col gap-2">
+                    <span className="text-white text-xl md:text-3xl font-medium truncate max-w-[600px]">
+                        {info.name}
                     </span>
-                    {/* position */}
-                    <span className="text-stone-400 md:text-base text-sm font-semibold truncate md:max-w-[800px] overflow-hidden">
+                    <span className="text-white/40 text-sm md:text-base truncate max-w-[600px]">
                         {info.position}
                     </span>
+                    {info.description && (
+                        <p className="text-white/60 text-sm md:text-base leading-relaxed mt-1 max-w-[680px]">
+                            {info.description}
+                        </p>
+                    )}
+
+                    {/* skills */}
+                    {info?.skills && info.skills?.length > 0 && (
+                        <div className="mt-3">
+                            <TagsComponent tags={info.skills} />
+                        </div>
+                    )}
                 </div>
-                {/* description */}
-                <span className="text-white/80 md:text-lg text-base font-semibold">
-                    {info.description}
-                </span>
             </div>
         </div>
     );

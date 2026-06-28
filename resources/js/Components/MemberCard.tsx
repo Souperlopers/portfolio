@@ -4,7 +4,7 @@ import { MemberBrief } from "@/types/member";
 import TagsComponent from "./TagsComponent";
 
 const MemberCard = ({ memberData }: { memberData: MemberBrief }) => {
-    const [imgLoaded, setImgLoaded] = useState(false);
+    const [imgError, setImgError] = useState(false);
     const {
         name = "بدون نام",
         position = "بدون سمت",
@@ -13,71 +13,50 @@ const MemberCard = ({ memberData }: { memberData: MemberBrief }) => {
         skills = [],
     } = memberData;
 
+    const initial = name.trim()[0] ?? "؟";
+    const showFallback = !thumbnail || imgError;
+
     return (
-        <div className="flex justify-center md:w-[310px] w-full">
-            <div
-                className="lg:w-[310px] w-[300px] px-2 py-4 min-h-[320px]
-                group relative overflow-hidden
-                bg-black backdrop-blur-lg border border-stone-500
-                rounded-xl shadow-[0_10px_40px_rgba(0,0,0,0.08)]
-                hover:shadow-[0_10px_40px_rgba(0,0,0,0.25)]
-                transition-all duration-500 ease-out
-                flex flex-col gap-5  hover:-translate-y-1
-            "
-            >
-                <div className="flex flex-col w-full ">
-                    <div className="relative flex justify-center items-center w-full">
-                        <div
-                            className="
-                    absolute inset-0 bg-gradient-to-br from-sky-300 via-sky-500 to-blue-600
-                    opacity-0 group-hover:opacity-20 blur-2xl rounded-full transition-all duration-500
-                "
-                        />
-                        <div className="relative w-28 h-28 rounded-full overflow-hidden border-2 border-border/90 shadow-inner">
-                            {!imgLoaded && (
-                                <div className="absolute inset-0 bg-secondary animate-pulse rounded-full" />
-                            )}
-                            <img
-                                src={thumbnail}
-                                alt={`${name} thumbnail`}
-                                onLoad={() => setImgLoaded(true)}
-                                style={{
-                                    display: imgLoaded ? "block" : "none",
-                                }}
-                                className="object-cover w-full h-full rounded-full"
-                            />
-                        </div>
-                    </div>
+        <div className="w-[300px] md:w-[320px] lg:w-[310px] flex flex-col items-center gap-3 md:gap-4 px-4 md:px-6 py-5 md:py-7
+            rounded-xl border border-white/10 bg-white/5
+            hover:border-sky-500/40 hover:bg-white/[0.07]
+            transition-all duration-200">
 
-                    <div className="mt-5 w-full space-y-1 pb-2">
-                        <div className="flex justify-center w-full">
-                            <h3
-                                className="
-                        text-white font-semibold text-xl truncate
-                        group-hover:text-light-accent transition-colors duration-300 ax-w-64
-                    "
-                            >
-                                {name}
-                            </h3>
-                        </div>
-                        <p className="text-stone-400 text-sm text-center">
-                            {position}
-                        </p>
+            <div className="relative w-20 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 rounded-full overflow-hidden shrink-0">
+                {showFallback ? (
+                    <div className="w-full h-full rounded-full bg-sky-500/15 border border-sky-500/20
+                        flex items-center justify-center">
+                        <span className="text-2xl md:text-3xl lg:text-4xl font-medium text-sky-400">
+                            {initial}
+                        </span>
                     </div>
-
-                    <div className="flex flex-wrap justify-center gap-2 w-full">
-                        <TagsComponent tags={skills} />
-                    </div>
-                </div>
-
-                <Link
-                    href={url}
-                    className="btn btn-block font-medium 
-            bg-light-accent hover:bg-light-accent-hover"
-                >
-                    مشاهده پروفایل
-                </Link>
+                ) : (
+                    <img
+                        src={thumbnail}
+                        alt={`${name} thumbnail`}
+                        onError={() => setImgError(true)}
+                        className="object-cover w-full h-full"
+                    />
+                )}
             </div>
+
+            <div className="flex flex-col items-center gap-1 w-full">
+                <h3 className="text-base md:text-lg lg:text-xl font-medium text-white truncate max-w-[220px] md:max-w-[260px]">
+                    {name}
+                </h3>
+                <p className="text-xs md:text-sm text-white/40">{position}</p>
+            </div>
+
+            <TagsComponent tags={skills} />
+
+            <Link
+                href={url}
+                className="w-full text-center py-1.5 md:py-2 text-sm md:text-base font-medium
+                    text-sky-400 border border-sky-500/30 rounded-lg
+                    hover:bg-sky-500/10 transition-colors duration-150 mt-auto"
+            >
+                مشاهده پروفایل
+            </Link>
         </div>
     );
 };

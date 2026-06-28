@@ -7,47 +7,36 @@ const Projects = ({ projects }: { projects: ProjectBrief[] }) => {
     const [showMoreCount, setShowMoreCount] = useState(1);
     const projectsCount = projects.length;
 
-    const isShowMore =
-        projectsCount > 3 && projectsCount > 3 * showMoreCount ? true : false;
-
-    const topThreeProjects = projects.slice(0, 3 * showMoreCount);
+    const isShowMore = projectsCount > 3 && projectsCount > 3 * showMoreCount;
+    const visibleProjects = projects.slice(0, 3 * showMoreCount);
 
     return (
         <section id="projects" className="py-14 w-full max-w-[1350px] mx-auto px-5">
-            <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between pb-5">
-                <h2 className="text-2xl sm:text-3xl font-extrabold text-text-primary">
-                    پروژه‌ها
-                </h2>
-            </div>
-            <div className="backdrop-blur-xl">
-                {projectsCount === 0 && <EmptyProjects />}
+            <h2 className="text-xl md:text-2xl lg:text-3xl font-medium text-white mb-6">
+                پروژه‌ها
+            </h2>
 
-                <div className="flex flex-col gap-5">
-                    {topThreeProjects.map((project, index) => (
-                        <ProjectItem
-                            key={project.id}
-                            index={index}
-                            projectData={project}
-                        />
-                    ))}
+            {projectsCount === 0 && <EmptyProjects />}
+
+            <div className="flex flex-col gap-3">
+                {visibleProjects.map((project, index) => (
+                    <ProjectItem key={project.id} index={index} projectData={project} />
+                ))}
+            </div>
+
+            {isShowMore && (
+                <div className="mt-5 flex justify-end">
+                    <button
+                        type="button"
+                        className="inline-flex items-center gap-2 px-4 py-1.5 text-sm
+                            text-white/50 border border-white/10 rounded-lg
+                            hover:text-white/80 hover:border-white/20 transition-colors duration-150"
+                        onClick={() => setShowMoreCount((prev) => prev + 1)}
+                    >
+                        پروژه‌های بیشتر
+                    </button>
                 </div>
-
-                {isShowMore && (
-                    <div className="mt-6 flex justify-end">
-                        <button
-                            type="button"
-                            className="group inline-flex items-center gap-2 rounded-full px-5 py-2.5
-                        bg-white/10 text-white ring-1 ring-white/15
-                        hover:bg-white/15 transition"
-                            onClick={() => {
-                                setShowMoreCount((prev) => prev + 1);
-                            }}
-                        >
-                            <span>پروژه‌های بیشتر</span>
-                        </button>
-                    </div>
-                )}
-            </div>
+            )}
         </section>
     );
 };
