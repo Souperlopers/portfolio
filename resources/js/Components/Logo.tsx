@@ -12,16 +12,16 @@ const Logo = () => {
 
     const { scrollY } = useScroll();
 
-    const souperX = useTransform(scrollY, [0, 300], [isMobiled?"545px":"-30px", isMobiled?"850px":"780px"]);
-    const souperY = useTransform(scrollY, [0, 300], [isMobiled?"-250px":"0px", isMobiled?"-320px":"-280px"]);
-    const lopersX = useTransform(scrollY, [0, 300], [isMobiled?"545px":"-30px", isMobiled?"650px":"580px"]);
-    const lopersY = useTransform(scrollY, [0, 300], [isMobiled?"-250px":"0px", isMobiled?"-250px":"-210px"]);
+    const souperX = useTransform(scrollY, [0, 100], [isMobiled?"545px":"-30px", isMobiled?"850px":"780px"]);
+    const souperY = useTransform(scrollY, [0, 100], [isMobiled?"-250px":"0px", isMobiled?"-320px":"-280px"]);
+    const lopersX = useTransform(scrollY, [0, 100], [isMobiled?"545px":"-30px", isMobiled?"650px":"580px"]);
+    const lopersY = useTransform(scrollY, [0, 100], [isMobiled?"-250px":"0px", isMobiled?"-250px":"-210px"]);
     const logoScale = useTransform(
         scrollY,
-        [0, 300],
+        [0, 100],
         [isMobiled ? 0.36 : 1, isMobiled ? 0.30 : 0.35],
     );
-    const ptxOpacity = useTransform(scrollY, [0, 300], [1, 0]);
+    const ptxOpacity = useTransform(scrollY, [0, 100], [1, 0]);
 
     return (
         <motion.div
