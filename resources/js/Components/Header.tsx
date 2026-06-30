@@ -92,7 +92,7 @@ const Header = () => {
     const isMobiled = window.innerWidth < 600;
 
     useMotionValueEvent(scrollY, "change", (latest) => {
-        if (latest > 100) {
+        if (latest > 50) {
             setIsScrolled(true);
         } else {
             setIsScrolled(false);
@@ -122,7 +122,7 @@ const Header = () => {
     return (
         <motion.header
             style={{ y: headerY }}
-            className="fixed -translate-x-1/2 z-50 w-full max-w-[1350px] rounded"
+            className="fixed z-50 w-full max-w-[1350px]"
         >
             <motion.div
                 style={{ background: headerBg }}
