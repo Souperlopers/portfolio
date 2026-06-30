@@ -17,7 +17,7 @@ const MemberCard = ({ memberData }: { memberData: MemberBrief }) => {
     const showFallback = !thumbnail || imgError;
 
     return (
-        <div className="w-[300px] md:w-[320px] lg:w-[310px] flex flex-col items-center gap-3 md:gap-4 px-4 md:px-6 py-5 md:py-7
+        <div className="w-[310px] md:w-[300px] lg:w-[310px] flex flex-col items-center gap-3 md:gap-4 px-4 md:px-6 py-5 md:py-7
             rounded-xl border border-white/10 bg-white/5
             hover:border-sky-500/40 hover:bg-white/[0.07]
             transition-all duration-200">
