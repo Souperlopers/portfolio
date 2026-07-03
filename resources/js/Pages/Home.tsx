@@ -3,7 +3,6 @@ import { Head } from "@inertiajs/react";
 import MainLayout from "@/Layouts/MainLayout";
 import { Banner, Projects, Members, Logo, Loading } from "@/index";
 import { HomePageProps } from "@/types";
-import Subtract1 from "@/Partials/home/Subtract1";
 
 export default function Home({ projects, members }: HomePageProps) {
     const [loading, setLoading] = useState(true);
