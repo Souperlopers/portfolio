@@ -17,11 +17,9 @@ export default function Home({ projects, members }: HomePageProps) {
 
     return (
         <>
-            <Banner />
-
-
             <div className="w-full max-w-[1343px] relative">
                 <Head title="SouperLopers" />
+                <Banner />
                 <Logo />
                 <Projects projects={projects.data} />
                 <Members members={members.data} />
