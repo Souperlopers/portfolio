@@ -1,7 +1,7 @@
 import { useState , useEffect       } from "react"           ;
 import { ReactNode                  } from "react"           ;
 import { router   , Head            } from "@inertiajs/react";
-import { Banner   , Loading, Header } from "@/index"         ;
+import { Banner   , Loading, MainHeader } from "@/index"         ;
 
 export default function MainLayout({ children }: { children: ReactNode }) {
     const [isloading, setIsloading] = useState(false);
@@ -26,7 +26,7 @@ export default function MainLayout({ children }: { children: ReactNode }) {
             >
             <Head      title="SouperLopers" />
             {isloading && <Loading />}
-            <Header    />
+            <MainHeader    />
             <Banner    />
             {children }
         </div>

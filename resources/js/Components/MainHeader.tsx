@@ -26,7 +26,7 @@ const memberPageNavigationItems: NavigationItems[] = [
     { title: "تماس با توسعه‌دهنده", id: "contact" },
 ];
 
-const Header = () => {
+const MainHeader = () => {
     const [navigationList, setNavigationList] = useState(
         homePageNavigationItems,
     );
@@ -174,4 +174,4 @@ const Header = () => {
     );
 };
 
-export default Header;
+export default MainHeader;
