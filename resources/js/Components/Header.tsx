@@ -86,10 +86,24 @@ const Header = () => {
         return () => observers.forEach((observer) => observer.disconnect());
     }, []);
 
+    const [isMobiled, setIsMobiled] = useState(
+        () => typeof window !== "undefined" && window.innerWidth < 600,
+    );
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobiled(window.innerWidth < 600);
+        };
+
+        handleResize();
+
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
+
     // Animation
     const { scrollY } = useScroll();
     const [isScrolled, setIsScrolled] = useState(false);
-    const isMobiled = window.innerWidth < 600;
 
     useMotionValueEvent(scrollY, "change", (latest) => {
         if (latest > 50) {
