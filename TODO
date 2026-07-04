@@ -1,7 +1,9 @@
 goal: create a portfolio webapp in -99 week and -99 days
 
-TODO_Z remove Loading with timeout and add real loading
 TODO_Z add some padding for projects section in home page
+
+TODO_Z define header for Member and Project Pages
+TODO_Z add Layout for Member and Project Pages
 
 TODO_S change memberData url to : '/members/{member:slug}'
 TODO_S pagination function on frontend
