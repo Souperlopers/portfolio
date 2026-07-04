@@ -1,5 +1,6 @@
-import { useState } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { useState                          } from "react"        ;
+import { motion  , useScroll, useTransform } from "framer-motion";
+import { Logo                              } from "@/index"      ;
 
 const TOTAL_IMAGES = 6;
 
@@ -12,7 +13,9 @@ const Banner = () => {
     const bannerOpacity = useTransform(scrollY, [0, 400], [1, 0.1]);
 
     return (
-        <motion.div
+        <>
+            {allLoaded && <Logo />}
+                <motion.div
             style={{ opacity: bannerOpacity, aspectRatio: "1360 / 510" }}
             className="lg:w-[1350px] md:w-[900px] sm:w-[600px] w-[400px] relative"
         >
@@ -120,12 +123,14 @@ const Banner = () => {
                     fontFamily: "Vazir, sans-serif",
                     color: "white",
                     filter: "drop-shadow(0 4px 6px rgba(0,0,0,0.5))",
+                    display: allLoaded ? "block" : "none",
                 }}
                 className="absolute lg:bottom-[26%] lg:right-[13%] right-[5%] bottom-[15%]"
             >
                 تیم توسعه‌ نرم افزار
             </div>
         </motion.div>
+        </>
     );
 };
 
