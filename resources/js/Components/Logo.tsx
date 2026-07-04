@@ -6,9 +6,15 @@ import {
     useMotionValueEvent,
 } from "framer-motion";
 
+const TOTAL_IMAGES = 3;
+
 const Logo = () => {
     const [isMobiled, setIsMobiled] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
+
+    const [imagesLoadedCount, setImagesLoadedCount] = useState(0);
+    const allLoaded = imagesLoadedCount >= TOTAL_IMAGES;
+    const onLoad = () => setImagesLoadedCount((prev) => prev + 1);
 
     useEffect(() => {
         const checkWidth = () => setIsMobiled(window.innerWidth < 900);
@@ -26,8 +32,6 @@ const Logo = () => {
             setIsScrolled(false);
         }
     });
-
-    console.log(isScrolled);
 
     const souperX = useTransform(
         scrollY,
@@ -77,10 +81,11 @@ const Logo = () => {
 
     return (
         <motion.div
-            className={`fixed ${isMobiled ? "top-5" : "top-20"} top-5 z-[50] flex items-center selection:bg-transparent`}
+            className={`fixed ${isMobiled ? "top-5" : "top-20"} top-5 z-50 flex items-center selection:bg-transparent`}
+            // calc(1/2 screan width - (1/2 main content + Logo width))
             style={{
                 right: isMobiled
-                    ? "calc(20vw - 160px + 112px)"
+                    ? "calc(50vw - 260px + 80px)"
                     : "calc(50vw - 675px + 112px)",
             }}
             dir="ltr"
@@ -102,7 +107,9 @@ const Logo = () => {
                     <img
                         src="/assets/images/logo-images/souper.svg"
                         alt="souper"
+                        onLoad={onLoad}
                         className="w-full drop-shadow-2xl"
+                        style={{ display: allLoaded ? "block" : "none" }}
                     />
                 </motion.div>
 
@@ -117,7 +124,9 @@ const Logo = () => {
                     <img
                         src="/assets/images/logo-images/lopers.svg"
                         alt="lopers"
+                        onLoad={onLoad}
                         className="w-full"
+                        style={{ display: allLoaded ? "block" : "none" }}
                     />
                 </motion.div>
 
@@ -135,7 +144,9 @@ const Logo = () => {
                     <img
                         src="/assets/images/logo-images/ptx.svg"
                         alt="ptx"
+                        onLoad={onLoad}
                         className="w-3 lg:w-8 z-50"
+                        style={{ display: allLoaded ? "block" : "none" }}
                     />
                 </motion.div>
             </motion.div>
