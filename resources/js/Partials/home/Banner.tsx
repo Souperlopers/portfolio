@@ -13,14 +13,14 @@ const Banner = () => {
 
     return (
         <motion.div
-            style={{ opacity: bannerOpacity }}
-            className="w-[1350px] h-[500px] relative"
+            style={{ opacity: bannerOpacity, aspectRatio: "1360 / 510" }}
+            className="lg:w-[1350px] md:w-[900px] sm:w-[600px] w-[400px] relative"
         >
             {!allLoaded && (
                 <div className="absolute inset-0 bg-[#333333] rounded skeleton" />
             )}
             <div
-                className="w-[1360px] absolute"
+                className="lg:w-[1360px] md:w-[950px] sm:w-[660px] w-[400px] absolute"
                 style={{ aspectRatio: "1360 / 510" }}
             >
                 <img
@@ -31,15 +31,15 @@ const Banner = () => {
                         position: "absolute",
                         left: "-15%",
                         top: "-1%",
-                        width: "1360px",
-                        height: "510px",
+                        width: "100.7%",
+                        height: "102%",
                         zIndex: 10,
                         display: allLoaded ? "block" : "none",
                     }}
                 />
             </div>
             <div
-                className="w-[3002px] absolute"
+                className="lg:w-[3002px] md:w-[2100px] sm:w-[1400px] w-[900px] absolute"
                 style={{ aspectRatio: "3002 / 400" }}
             >
                 <img
@@ -49,9 +49,9 @@ const Banner = () => {
                     style={{
                         position: "absolute",
                         right: "-26%",
-                        top: "-120px",
-                        width: "3002px",
-                        height: "400px",
+                        top: "-27%",
+                        width: "222.4%",
+                        height: "100%",
                         zIndex: 5,
                         display: allLoaded ? "block" : "none",
                     }}
