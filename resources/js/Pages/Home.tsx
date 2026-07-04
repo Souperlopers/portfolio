@@ -1,22 +1,11 @@
-import { ReactNode, useState, useEffect } from "react";
-import { Head } from "@inertiajs/react";
+import { ReactNode } from "react";
 import MainLayout from "@/Layouts/MainLayout";
-import { Projects, Members, Loading } from "@/index";
+import { Projects, Members } from "@/index";
 import { HomePageProps } from "@/types";
 
 export default function Home({ projects, members }: HomePageProps) {
-    const [loading, setLoading] = useState(true);
-
-    useEffect(() => {
-        const timer = setTimeout(() => setLoading(false), 1800);
-        return () => clearTimeout(timer);
-    }, []);
-
-    if (loading) return <Loading />;
-
     return (
         <>
-            <Head title="SouperLopers" />
             <Projects projects={projects.data} />
             <Members members={members.data} />
         </>
