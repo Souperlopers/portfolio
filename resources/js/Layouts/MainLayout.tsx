@@ -1,13 +1,13 @@
-import { useState , useEffect       } from "react"           ;
-import { ReactNode                  } from "react"           ;
-import { router   , Head            } from "@inertiajs/react";
-import { Banner   , Loading, MainHeader } from "@/index"         ;
+import { useState  , useEffect } from "react"            ;
+import { ReactNode             } from "react"            ;
+import { router    , Head      } from "@inertiajs/react" ;
+import { Loading  , MainHeader } from "@/index"          ;
 
 export default function MainLayout({ children }: { children: ReactNode }) {
     const [isloading, setIsloading] = useState(false);
 
     useEffect(() => {
-        const removeStart = router.on("start", () => setIsloading(true));
+        const removeStart  = router.on("start" , () => setIsloading(true ));
         const removeFinish = router.on("finish", () => setIsloading(false));
 
         return () => {
@@ -27,7 +27,6 @@ export default function MainLayout({ children }: { children: ReactNode }) {
             <Head      title="SouperLopers" />
             {isloading && <Loading />}
             <MainHeader    />
-            <Banner    />
             {children }
         </div>
     );
