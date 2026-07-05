@@ -11,14 +11,14 @@ const Projects = ({ projects }: { projects: ProjectBrief[] }) => {
     const visibleProjects = projects.slice(0, 3 * showMoreCount);
 
     return (
-        <section id="projects" className="py-14 w-full max-w-[1350px] mx-auto px-5">
+        <section id="projects" className="scroll-mt-20 py-14 w-full max-w-[1350px] mx-auto px-5">
             <h2 className="text-xl md:text-2xl lg:text-3xl font-medium text-white mb-6">
                 پروژه‌ها
             </h2>
 
             {projectsCount === 0 && <EmptyProjects />}
 
-            <div className="flex flex-col gap-3">
+            <div className="flex flex-col gap-6 lg:px-5">
                 {visibleProjects.map((project, index) => (
                     <ProjectItem key={project.id} index={index} projectData={project} />
                 ))}
