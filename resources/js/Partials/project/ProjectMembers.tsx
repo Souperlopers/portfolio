@@ -1,5 +1,6 @@
 import MemberCard from "@/Components/MemberCard";
 import { MemberBrief } from "@/types/member";
+import styles from "../home/style/MembersStyle.module.css";
 
 const ProjectMembers = ({
     contributors,
@@ -7,7 +8,7 @@ const ProjectMembers = ({
     contributors: MemberBrief[];
 }) => {
     return (
-        <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-1 gap-5">
+       <div className={styles.container}>
             {contributors.map((contributor) => (
                 <MemberCard key={contributor.id} memberData={contributor}/>
             ))}
