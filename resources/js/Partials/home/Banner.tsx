@@ -1,6 +1,6 @@
-import { useState                          } from "react"        ;
-import { motion  , useScroll, useTransform } from "framer-motion";
-import { Logo                              } from "@/index"      ;
+import { useState                           } from "react"         ;
+import { motion   , useScroll, useTransform } from "framer-motion" ;
+import { MainLogo                           } from "@/index"       ;
 
 const TOTAL_IMAGES = 6;
 
@@ -14,7 +14,7 @@ const Banner = () => {
 
     return (
         <>
-            {allLoaded && <Logo />}
+            {allLoaded && <MainLogo />}
                 <motion.div
             style={{ opacity: bannerOpacity, aspectRatio: "1360 / 510" }}
             className="lg:w-[1350px] md:w-[900px] sm:w-[600px] w-[400px] relative"
