@@ -1,21 +1,35 @@
-import { ReactNode } from "react";
-import MainLayout from "@/Layouts/MainLayout";
-import { MemberPageProps } from "@/types";
-import { Head } from "@inertiajs/react";
-import { Profile, MemberProjects, Contact } from "@/index";
+import { ReactNode       }                           from "react"              ;
+import   Layout                                      from "@/Layouts/Layout"   ;
+import { MemberPageProps }                           from "@/types"            ;
+import { Head            }                           from "@inertiajs/react"   ;
+import { Profile         , MemberProjects, Contact } from "@/index"            ;
+import { NavigationItems }                           from "@/types/navigation" ;
+
+const memberPageNavigationItems: NavigationItems[] = [
+    { title: "خانه"                , href : "/"        },
+    { title: "مهارت ها"            , id   : "profile"  },
+    { title: "پروژه های مربوطه"    , id   : "projects" },
+    { title: "تماس با توسعه‌دهنده" , id   : "contact"  },
+];
 
 export default function Member({ member }: MemberPageProps) {
-    const info = member.data || {};
+    const info     = member.data               || {};
     const projects = member.data.contributions || [];
 
     return (
-        <div className="flex flex-col gap-4 w-full lg:p-5 p-3">
+        <div className="flex flex-col gap-4 w-full lg:p-5 p-3 mt-20">
             <Head title={`SouperLopers | ${info.name}`} />
-            <Profile info={info} />
-            <MemberProjects projects={projects} />
-            <Contact info={info} />
+            <div id="profile" className="scroll-mt-20">
+                <Profile info={info} />
+            </div>
+            <div id="projects" className="scroll-mt-20">
+                <MemberProjects projects={projects} />
+            </div>
+            <div id="contact" className="scroll-mt-20">
+                <Contact info={info} />
+            </div>
         </div>
     );
 }
 
-Member.layout = (page: ReactNode) => <MainLayout children={page} />;
+Member.layout = (page: ReactNode) => <Layout children={page} navigationList={memberPageNavigationItems} />;
