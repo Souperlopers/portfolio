@@ -1,9 +1,15 @@
-import { useState  , useEffect } from "react"            ;
-import { ReactNode             } from "react"            ;
-import { router    , Head      } from "@inertiajs/react" ;
-import { Loading  , MainHeader } from "@/index"          ;
+import { useState        , useEffect  } from "react"              ;
+import { ReactNode                    } from "react"              ;
+import { router          , Head       } from "@inertiajs/react"   ;
+import { Loading         , MainHeader } from "@/index"            ;
+import { NavigationItems              } from "@/types/navigation" ;
 
-export default function MainLayout({ children }: { children: ReactNode }) {
+//style 
+const containerStyle = "min-h-screen relative overflow-hidden pb-5 bg-[#252526] font-vazir flex flex-col justify-start items-center";
+
+const TITLE = "SouperLopers";
+
+export default function MainLayout({ children, navigationList}: { children: ReactNode, navigationList: NavigationItems[]}) {
     const [isloading, setIsloading] = useState(false);
 
     useEffect(() => {
@@ -14,19 +20,13 @@ export default function MainLayout({ children }: { children: ReactNode }) {
             removeStart();
             removeFinish();
         };
-    }, []);
+    }, [navigationList]);
 
     return (
-        <div
-            dir="rtl"
-            className="min-h-screen relative
-            overflow-hidden pb-5
-            bg-[#252526] font-vazir
-            flex flex-col justify-start items-center"
-            >
-            <Head      title="SouperLopers" />
+        <div dir="rtl" className={containerStyle}>
+            <Head title={TITLE} />
             {isloading && <Loading />}
-            <MainHeader    />
+            <MainHeader  navigationList={navigationList}  />
             {children }
         </div>
     );
