@@ -17,8 +17,14 @@ export default {
                 vazir: ['"vazir"', "sans-serif"],
             },
             colors: {
+
+                'primary': '#4daafc',
                 // Background colors:
-                'primary': '#252526',
+                'primary-bg': '#252526',
+                'btn-bg': '#0078d4',
+                'btn-hover': '#015ea5',
+
+
                 'secondary': '#3E3E42',
 
                 //Text colors:
