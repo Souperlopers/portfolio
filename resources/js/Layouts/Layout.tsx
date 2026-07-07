@@ -4,6 +4,9 @@ import { ReactNode                   } from "react"              ;
 import { Loading         , Header    } from "@/index"            ;
 import { NavigationItems             } from "@/types/navigation" ;
 
+//style
+const containerStyle = "min-h-screen overflow-hidden bg-[#252526] font-vazir pb-5";
+
 export default function Layout({ children, navigationList }: { children: ReactNode, navigationList: NavigationItems[]}) {
     const [isloading, setIsloading] = useState(false);
 
@@ -15,13 +18,10 @@ export default function Layout({ children, navigationList }: { children: ReactNo
             removeStart();
             removeFinish();
         };
-    }, []);
+    }, [navigationList]);
+
     return (
-        <div
-            dir="rtl"
-            className="min-h-screen overflow-hidden 
-                    bg-[#252526] font-vazir pb-5"
-        >
+        <div dir="rtl" className={containerStyle}>
             {isloading && <Loading />}
             <Header navigationList={navigationList}/>
             {children}
