@@ -13,7 +13,7 @@ const notScrolledStyle = " justify-center lg:gap-40"                  ;
 const navItemStyle       = "relative py-2 transition-all duration-200 focus-visible:outline-none text-white hover:text-white";
 const activeNotItemStyle = "opacity-60 hover:opacity-90"                                                                     ;
 
-const underLineStyle = "absolute bottom-0 left-0 right-0 h-[2px] bg-sky-500";
+const underLineStyle = "absolute bottom-0 left-0 right-0 h-[2px] bg-primary";
 
 const MainHeader = ({navigationList}:{navigationList:NavigationItems[]}) => {
     const [activeSection, setActiveSection] = useState(navigationList[0].id || "");
@@ -93,7 +93,7 @@ const MainHeader = ({navigationList}:{navigationList:NavigationItems[]}) => {
     });
 
     const headerY      = useTransform(scrollY,[0, 100],[isMobiled ? "140px" : "510px", isMobiled ? "0px"  : "0px" ],);
-    const itemFontSize = useTransform(scrollY,[0, 100],[isMobiled ? "16px"  : "30px" , isMobiled ? "15px" : "20px"],);
+    const itemFontSize = useTransform(scrollY,[0, 100],[isMobiled ? "14px"  : "30px" , isMobiled ? "14px" : "16px"],);
     
     const headerBg = useTransform(
         scrollY,[0, isMobiled ? 200 : 200],
