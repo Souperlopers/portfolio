@@ -19,7 +19,8 @@ const ProjectImages = ({ images }: { images: ProjectImage[] }) => {
             <ImageGallery
                 ref={galleryRef}
                 items={items}
-                showPlayButton={true}
+                showPlayButton={false}
+                showFullscreenButton={false}
                 useTranslate3D={false}
                 onSlide={(index) => console.log("Slid to", index)}
             />
