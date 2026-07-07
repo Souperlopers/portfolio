@@ -1,29 +1,31 @@
-import { useState, useEffect } from "react";
-import {
-    motion,
-    useScroll,
-    useTransform,
-    useMotionValueEvent,
-} from "framer-motion";
-import { NavigationItems } from "@/types/navigation";
+import { useState       , useEffect                                 } from "react"             ;
+import { motion         ,useScroll,useTransform,useMotionValueEvent,} from "framer-motion"     ;
+import { NavigationItems                                            } from "@/types/navigation";
 
-const homePageNavigationItems: NavigationItems[] = [
-    { title: "نمونه کار", id: "projects" },
-    { title: "اعضا", id: "members" },
-    { title: "مشخصات ما", id: "about" },
-];
+// style
+const wrapperStyle   = "fixed z-50 w-full max-w-[1350px]"  ;
+const containerStyle = "flex items-center h-[80px] w-full" ;
 
-const MainHeader = () => {
-    const [activeSection, setActiveSection] = useState("projects");
-    const [hoveredItem, setHoveredItem] = useState<string | null>(null);
+const itemParentStyle  = "flex w-full  font-medium text-white gap-8 " ;
+const scrolledStyle    = " justify-start gap-8 lg:pr-40 pr-24"        ;
+const notScrolledStyle = " justify-center lg:gap-40"                  ;
 
+const navItemStyle       = "relative py-2 transition-all duration-200 focus-visible:outline-none text-white hover:text-white";
+const activeNotItemStyle = "opacity-60 hover:opacity-90"                                                                     ;
 
+const underLineStyle = "absolute bottom-0 left-0 right-0 h-[2px] bg-sky-500";
+
+const MainHeader = ({navigationList}:{navigationList:NavigationItems[]}) => {
+    const [activeSection, setActiveSection] = useState(navigationList[0].id || "");
+
+    //scroll
     const scrollToSection = (item: NavigationItems) => {
         if (item.href) {
             window.location.href = item.href;
             return;
         }
-        const element = document.getElementById(item.id!);
+        if (!item.id) return;
+        const element = document.getElementById(item.id);
         if (element) {
             element.scrollIntoView({
                 behavior: "smooth",
@@ -31,9 +33,12 @@ const MainHeader = () => {
             });
         }
     };
+
+    //observer for activate section
     useEffect(() => {
-        const sections = ["projects", "members"];
-        const observers: IntersectionObserver[] = [];
+        const sections         = navigationList      .map((item)=>item.id) || [ ] ;
+        const observers       :  IntersectionObserver[] = [ ]                     ;
+              setActiveSection(  navigationList      [0]?.id || "")               ;
 
         const observerOptions = {
             root: null,
@@ -42,6 +47,7 @@ const MainHeader = () => {
         };
 
         sections.forEach((id) => {
+            if (!id) return;
             const element = document.getElementById(id);
             if (!element) return;
 
@@ -51,14 +57,14 @@ const MainHeader = () => {
                 }
             }, observerOptions);
 
-            observer.observe(element);
-            observers.push(observer);
+            observer .observe(element );
+            observers.push   (observer);
         });
 
         return () => observers.forEach((observer) => observer.disconnect());
-    }, []);
+    }, [navigationList]);
 
-    // check scrooling
+    // check resize
     const [isMobiled, setIsMobiled] = useState(
         () => typeof window !== "undefined" && window.innerWidth < 600,
     );
@@ -98,32 +104,31 @@ const MainHeader = () => {
     return (
         <motion.header
             style={{ y: headerY }}
-            className="fixed z-50 w-full max-w-[1350px]"
+            className={wrapperStyle}
         >
             <motion.div
                 style={{ background: headerBg }}
-                className="flex items-center h-[80px] w-full"
+                className={containerStyle}
             >
                 <motion.div
-                    className={`flex w-full ${isScrolled ? "justify-start gap-8 lg:pr-40 pr-24" : "justify-center lg:gap-40 gap-8"} font-medium text-white w-full`}
+                    className={`${itemParentStyle} ${isScrolled? scrolledStyle : notScrolledStyle}`}
                 >
-                    {homePageNavigationItems.map((item) => (
+                    {navigationList.map((item) => (
                         <motion.button
                             key={item.title}
                             style={{ fontSize: itemFontSize }}
                             onClick={() => scrollToSection(item)}
-                            onMouseEnter={() => setHoveredItem(item.title)}
-                            className={`relative ${activeSection === item.id ? "text-sky-500" : ""} py-2 text-white transition-colors duration-200 focus-visible:outline-none opacity-80 hover:opacity-100`}
+                            className={`${navItemStyle} ${activeSection != item.id && activeNotItemStyle}`}
                         >
                             <span>{item.title}</span>
 
-                            {hoveredItem === item.title && (
+                            {activeSection === item.id && (
                                 <motion.span
                                     layoutId="nav-underline"
-                                    className={`absolute bottom-0 left-0 right-0 h-[2px] bg-sky-500`}
+                                    className={underLineStyle}
                                     transition={{
                                         type: "spring",
-                                        stiffness: 300,
+                                        stiffness: 200,
                                         damping: 30,
                                     }}
                                 />
