@@ -11,3 +11,10 @@
         justify-content: center;
     }
 }
+
+@media (min-width: 650px) {
+    .container {
+       padding-right: 7px;
+       padding-left: 10px;
+    }
+}
