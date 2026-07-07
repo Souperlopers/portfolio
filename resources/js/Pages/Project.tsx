@@ -18,7 +18,7 @@ export default function Project({ project }: ProjectPageProps) {
     const contributors = projectData.contributors || [];
 
     return (
-        <div className="flex flex-col gap-5 lg:p-5 p-3 w-full max-w-[1350px] mt-20">
+        <div className="flex flex-col gap-5 lg:p-5 p-3 w-full max-w-[1350px] mt-24">
             <Head title={`SouperLopers ${projectData.title}`} />
             <div className="w-full flex flex-col gap-10">
                 <div
@@ -29,6 +29,9 @@ export default function Project({ project }: ProjectPageProps) {
                     <Images images={images} />
                 </div>
                 <div className="scroll-mt-20" id="members">
+                    <h2 className="text-xl md:text-2xl lg:text-3xl font-medium text-white mb-5 md:mb-7 pr-1">
+                     توسعه‌دهندگان
+                    </h2>
                     <Contributors contributors={contributors} />
                 </div>
             </div>
