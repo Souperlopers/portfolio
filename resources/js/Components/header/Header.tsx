@@ -7,12 +7,12 @@ import { Logo           , DrawerMenu } from "@/index"            ;
 const constainerStyle = "fixed z-40 w-full max-w-[1350px] flex lg:justify-start justify-between items-center py-3";
 const backgroundColor = "linear-gradient(to top, rgba(51, 51, 51, 0.99), rgba(37, 37, 38, 0.99))";
 
-const itemParentStyle = "lg:flex hidden w-full justify-start gap-8 lg:mr-10 mr-6 font-medium md:text-[20px] text-[15px] text-white";
+const itemParentStyle = "lg:flex hidden w-full justify-start gap-8 lg:mr-10 mr-6 font-medium md:text-[16px] text-[14px] text-white";
 
 const navItemStyle       = "relative py-2 transition-all duration-200 focus-visible:outline-none text-white hover:text-white";
 const activeNotItemStyle = "opacity-60 hover:opacity-90"   
 
-const underLineStyle = "absolute bottom-0 left-0 right-0 h-[2px] bg-sky-500";
+const underLineStyle = "absolute bottom-0 left-0 right-0 h-[2px] bg-primary";
 
 const Header = ({navigationList}:{navigationList:NavigationItems[]}) => {
         const [activeSection, setActiveSection] = useState(navigationList[0].id || "");
