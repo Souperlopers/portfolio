@@ -19,36 +19,9 @@ export default {
             colors: {
 
                 'primary': '#4daafc',
-                // Background colors:
-                'primary-bg': '#252526',
+                'bg-primary': '#252526',
                 'btn-bg': '#0078d4',
                 'btn-hover': '#015ea5',
-
-
-                'secondary': '#3E3E42',
-
-                //Text colors:
-                'text-primary': '#fff',  // white
-                'text-secondary': '#D4D4D4',  
-
-                'light-accent': '#0ea5e9', //sky 500
-                'light-accent-hover': '#0284c7', // sky 600
-                'accent': '#007ACC', //vs blue
-                'border': '#f5f5f4', 
-
-                'success': '#4EC9B0', //light cyan
-                'warning': '#CEA14C', //light orange
-                'error': '#F48771', //orange
-
-                'primary-light': '#FFFFFF', // white
-                'secondary-light': '#F3F3F3',
-                'surface-light': '#FAFAFA',
-
-                'text-primary-light': '#1E1E1E',
-                'text-secondary-light': '#3E3E42',
-                'text-muted-light': '#6E6E6E',
-
-                'border-light': '#78716c',
             }
         },
     },
