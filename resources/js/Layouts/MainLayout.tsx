@@ -5,7 +5,7 @@ import { Loading         , MainHeader } from "@/index"            ;
 import { NavigationItems              } from "@/types/navigation" ;
 
 //style 
-const containerStyle = "min-h-screen overflow-hidden pb-5 bg-primary-bg font-vazir flex flex-col justify-start items-center";
+const containerStyle = "min-h-screen overflow-hidden pb-5 bg-bg-primary font-vazir flex flex-col justify-start items-center";
 
 const TITLE = "SouperLopers";
 
