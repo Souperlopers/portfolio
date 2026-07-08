@@ -18,7 +18,7 @@ export default function Project({ project }: ProjectPageProps) {
     const contributors = projectData.contributors || [];
 
     return (
-        <div className="flex flex-col gap-5 lg:py-5 lg:px-20 p-3 w-full max-w-[1350px] mt-24">
+        <div className="flex flex-col gap-5 lg:py-5 lg:px-20 px-5 w-full max-w-[1350px] mt-24">
             <Head title={`SouperLopers ${projectData.title}`} />
             <div className="w-full flex flex-col gap-10">
                 <div
