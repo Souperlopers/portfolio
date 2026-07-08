@@ -15,19 +15,19 @@ const ContactMember = ({ info }: { info: Member }) => {
     const socialLinks = allLinks.filter((link) => link.href);
 
     return (
-        <div className="bg-(--bg-container) px-5 py-14 rounded-xl border border-white/10 text-text-primary">
-            <div className="max-w-2xl mx-auto flex flex-col items-center gap-10">
+        <div className="text-text-primary">
+            <div className="flex md:flex-row flex-col items-center gap-10 w-full">
 
                 <motion.h2
                     initial={{ opacity: 0, y: -16 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, ease: "easeOut" }}
-                    className="text-2xl md:text-3xl font-medium text-white"
+                    className="text-2xl md:text-3xl font-medium text-white w-full"
                 >
                     راه‌های ارتباطی
                 </motion.h2>
 
-                <div className="flex flex-wrap justify-center gap-4 md:gap-5">
+                <div className="w-full flex flex-wrap md:justify-end justify-between md:gap-5">
                     {socialLinks.map((link, index) => (
                         <motion.a
                             key={link.name}
@@ -38,7 +38,7 @@ const ContactMember = ({ info }: { info: Member }) => {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.1 + index * 0.08, duration: 0.4, ease: "easeOut" }}
                             whileHover={{ y: -4 }}
-                            className="flex flex-col items-center gap-2.5 px-6 py-5
+                            className="flex flex-col items-center gap-2.5 md:px-6 md:py-5 px-5 py-4
                                 border border-white/10 rounded-xl bg-white/5
                                 hover:border-sky-500/40 hover:bg-white/[0.07]
                                 transition-colors duration-200 group"
