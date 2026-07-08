@@ -5,7 +5,7 @@ import { Loading         , Header    } from "@/index"            ;
 import { NavigationItems             } from "@/types/navigation" ;
 
 //style
-const containerStyle = "min-h-screen overflow-hidden bg-primary-bg font-vazir pb-5 flex flex-col justify-start items-center";
+const containerStyle = "min-h-screen overflow-hidden bg-bg-primary font-vazir pb-5 flex flex-col justify-start items-center";
 
 export default function Layout({ children, navigationList }: { children: ReactNode, navigationList: NavigationItems[]}) {
     const [isloading, setIsloading] = useState(false);
