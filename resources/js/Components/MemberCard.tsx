@@ -18,8 +18,8 @@ const MemberCard = ({ memberData }: { memberData: MemberBrief }) => {
 
     return (
         <div className="w-[310px] md:w-[300px] lg:w-[310px] flex flex-col items-center gap-3 md:gap-4 px-4 md:px-6 py-5 md:py-7
-            rounded-xl border border-white/10 bg-white/5
-            hover:border-sky-500/40 hover:bg-white/[0.07]
+            rounded-xl border border-white/10 hover:border-white/30 bg-white/5
+            hover:bg-white/[0.07]
             transition-all duration-200">
 
             <div className="relative w-20 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 rounded-full overflow-hidden shrink-0">
