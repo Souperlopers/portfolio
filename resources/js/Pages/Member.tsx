@@ -17,7 +17,7 @@ export default function Member({ member }: MemberPageProps) {
     const projects = member.data.contributions || [];
 
     return (
-        <div className="flex flex-col gap-4 w-full max-w-[1350px] lg:p-5 p-3 mt-20">
+        <div className="flex flex-col lg:gap-16 gap-5 w-full max-w-[1350px] lg:py-5 lg:px-20 p-3 mt-20">
             <Head title={`SouperLopers | ${info.name}`} />
             <div id="profile" className="scroll-mt-20">
                 <Profile info={info} />
