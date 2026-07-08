@@ -13,7 +13,7 @@ const DrawerMenu = ({ list, onItemClick }: {
     };
 
     return (
-        <div dir="ltr">
+        <div dir="rtl">
             <div className="drawer">
                 <input
                     id="my-drawer-1"
@@ -36,7 +36,7 @@ const DrawerMenu = ({ list, onItemClick }: {
                         className="drawer-overlay"
                     ></label>
                     
-                    <ul className="menu bg-base-200 min-h-full w-60 p-4 text-base-content text-base">
+                    <ul className="menu bg-bg-primary min-h-full  w-64 p-4 text-base-content text-base">
                         {list.map((item, index) => (
                             <li key={index}>
                                 <a 
@@ -44,7 +44,9 @@ const DrawerMenu = ({ list, onItemClick }: {
                                         onItemClick(item);   
                                         closeDrawer();       
                                     }}
-                                    className="cursor-pointer py-2"
+                                    className="rounded-none cursor-pointer py-2 active:bg-bg-primary hover:bg-bg-primary 
+                                    border-r-2 border-bg-primary
+                                    active:border-r-2  active:border-primary hover:border-r-2  hover:border-primary"
                                 >
                                     {item.title}
                                 </a>
