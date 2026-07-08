@@ -2,6 +2,7 @@ import ProjectItem from "@/Components/ProjectItem";
 import EmptyProjects from "@/Components/EmptyProjects";
 import { ProjectBrief } from "@/types/project";
 import { useState } from "react";
+import { HiArrowLongLeft } from "react-icons/hi2";
 
 const Projects = ({ projects }: { projects: ProjectBrief[] }) => {
     const [showMoreCount, setShowMoreCount] = useState(1);
@@ -11,7 +12,7 @@ const Projects = ({ projects }: { projects: ProjectBrief[] }) => {
     const visibleProjects = projects.slice(0, 3 * showMoreCount);
 
     return (
-        <section id="projects" className="scroll-mt-20 py-14 mt-8 w-full max-w-[1350px] mx-auto px-10">
+        <section id="projects" className="scroll-mt-20 py-14 mt-8 w-full max-w-[1350px] mx-auto px-20">
             <h2 className="text-xl md:text-2xl lg:text-3xl font-medium text-white mb-6 pr-1">
                 پروژه‌ها
             </h2>
@@ -26,14 +27,9 @@ const Projects = ({ projects }: { projects: ProjectBrief[] }) => {
 
             {isShowMore && (
                 <div className="mt-5 flex justify-end ml-1">
-                    <button
-                        type="button"
-                        className="inline-flex items-center gap-2 px-5 py-1.5 text-sm
-                            text-white/50 border border-white/10 rounded-lg
-                            hover:text-white/80 hover:border-white/20 transition-colors duration-150"
-                        onClick={() => setShowMoreCount((prev) => prev + 1)}
-                    >
-                        پروژه‌های بیشتر
+                    <button className="inline-flex items-center gap-1 text-[15px] text-primary" type="button" onClick={() => setShowMoreCount((prev) => prev + 1)}>
+                         پروژه‌های بیشتر
+                            <HiArrowLongLeft  size={15} />
                     </button>
                 </div>
             )}
