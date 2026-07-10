@@ -6,13 +6,13 @@ import { HiArrowLongLeft } from "react-icons/hi2";
 
 const ProjectItem = ({ projectData, index }: ProjectItemProps) => {
     const [imgLoaded, setImgLoaded] = useState(false);
-    const { title = "بدون نام", technologies = [], description } = projectData;
+    const { title = "بدون نام", technologies = [], description="" } = projectData;
 
     return (
         <div
-            className=" card lg:card-side p-2.5 w-full flex md:flex-row flex-col-reverse rounded-xl
-            border border-white/10 hover:border-white/20
-            bg-white/5 hover:bg-white/[0.1] overflow-hidden transition-all duration-200"
+            className="mx-auto md:mx-0 card lg:card-side w-[310px] md:w-full p-2.5 flex md:flex-row flex-col-reverse rounded-xl
+            border border-white/10 hover:border-white/25
+            bg-white/5 overflow-hidden transition-all duration-200"
         >
             {/* content */}
             <div className="flex-1 flex flex-col justify-center lg:px-5 pt-5 pb-2 gap-5 min-w-0">
@@ -21,24 +21,15 @@ const ProjectItem = ({ projectData, index }: ProjectItemProps) => {
                         {title}
                     </h3>
                     <TagsComponent tags={technologies} justify=""/>
-                    <p className="md:text-base text-sm text-white/50 line-clamp-2 leading-relaxed">
+                    <p className="md:text-base text-sm text-white/50 md:line-clamp-1 line-clamp-2 leading-relaxed">
                         {description}
                     </p>
                 </div>
                 
             {/* button */}
             <div className="flex items-end md:justify-start justify-end shrink-0">
-                {/* <Link
-                    href={projectData.url}
-                    className="inline-flex items-center px-4 py-1.5 text-sm font-medium
-                        text-primary border border-primary rounded-lg
-                        hover:border-blue-200 hover:text-blue-200 transition-colors duration-150"
-                >
-                    جزئیات
-                </Link> */}
-                <Link href={projectData.url} className="text-primary text-sm">
-                    <p className="inline-flex items-center gap-1">مشاهده جزئیات 
-                        <HiArrowLongLeft  size={15} />
+                <Link href={projectData.url} className="text-[#0d1014] text-sm bg-btn-bg-secundary rounded-lg py-1 md:py-1.5 md:px-5 px-[15px]">
+                    <p className="inline-flex items-center gap-1">جزئیات 
                     </p>
                 </Link>
             </div>
