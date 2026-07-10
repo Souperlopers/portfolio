@@ -5,6 +5,9 @@ import { Head            }                           from "@inertiajs/react"   ;
 import { Profile         , MemberProjects, Contact } from "@/index"            ;
 import { NavigationItems }                           from "@/types/navigation" ;
 
+//style
+const scrollStyle = "scroll-mt-20";
+
 const memberPageNavigationItems: NavigationItems[] = [
     { title: "خانه"                , href : "/"        },
     { title: "مهارت ها"            , id   : "profile"  },
@@ -17,18 +20,18 @@ export default function Member({ member }: MemberPageProps) {
     const projects = member.data.contributions || [];
 
     return (
-        <div className="flex flex-col lg:gap-16 gap-5 w-full max-w-[1350px] lg:py-5 lg:px-20 px-5 mt-20">
+        <>
             <Head title={`SouperLopers | ${info.name}`} />
-            <div id="profile" className="scroll-mt-20">
+            <div id="profile" className={scrollStyle}>
                 <Profile info={info} />
             </div>
-            <div id="projects" className="scroll-mt-20">
+            <div id="projects" className={scrollStyle}>
                 <MemberProjects projects={projects} />
             </div>
-            <div id="contact" className="scroll-mt-20">
+            <div id="contact" className={scrollStyle}>
                 <Contact info={info} />
             </div>
-        </div>
+        </>
     );
 }
 
