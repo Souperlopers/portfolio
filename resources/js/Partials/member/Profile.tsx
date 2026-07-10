@@ -4,13 +4,14 @@ import TagsComponent from "../../Components/TagsComponent";
 
 const Profile = ({ info }: { info: Member }) => {
     console.log(info);
+    const {name="", description="", position="", thumbnail="", skills=""} = info;
 
     const [imgError, setImgError] = useState(false);
-    const initial = info.name?.trim()[0] ?? "؟";
-    const showFallback = !info.thumbnail || imgError;
+    const initial = name?.trim()[0] ?? "؟";
+    const showFallback = !thumbnail || imgError;
 
     return (
-        <div className="w-full rounded-xl border border-white/10 bg-white/5 overflow-hidden">
+        <div className="w-full min-h-[500px] rounded-xl border border-white/10 bg-white/5 overflow-hidden ">
             {/* banner */}
             <div className="w-full h-40 md:h-52 bg-gradient-to-br from-sky-500/20 via-white/5 to-blue-600/10" />
 
@@ -32,8 +33,8 @@ const Profile = ({ info }: { info: Member }) => {
                             </div>
                         ) : (
                             <img
-                                src={info.thumbnail}
-                                alt={`${info.name} cover`}
+                                src={thumbnail}
+                                alt={`${name} cover`}
                                 className="w-full h-full object-cover"
                                 onError={() => setImgError(true)}
                             />
@@ -42,22 +43,22 @@ const Profile = ({ info }: { info: Member }) => {
                 </div>
 
                 <div className="flex flex-col gap-2">
-                    <span className="text-white text-xl md:text-3xl font-medium truncate max-w-[600px]">
-                        {info.name}
+                    <span className="text-white text-xl md:text-3xl font-semibold truncate">
+                        {name}
                     </span>
-                    <span className="text-white/40 text-sm md:text-base truncate max-w-[600px]">
-                        {info.position}
+                    <span className="text-white/40 text-sm md:text-base truncate">
+                        {position}
                     </span>
-                    {info.description && (
-                        <p className="text-white/60 text-sm md:text-base leading-relaxed mt-1 max-w-[680px]">
-                            {info.description}
+                    {description && (
+                        <p className="text-white/60 text-sm md:text-base leading-relaxed mt-1">
+                            {description}
                         </p>
                     )}
 
                     {/* skills */}
-                    {info?.skills && info.skills?.length > 0 && (
+                    {skills && skills?.length > 0 && (
                         <div className="mt-3">
-                            <TagsComponent tags={info.skills} />
+                            <TagsComponent tags={skills} justify="" />
                         </div>
                     )}
                 </div>
