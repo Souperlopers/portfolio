@@ -21,6 +21,7 @@ export default {
                 'primary': '#4daafc',
                 'bg-primary': '#252526',
                 'btn-bg': '#0078d4',
+                'btn-bg-secundary':'#e6eefa',
                 'btn-hover': '#015ea5',
             }
         },
