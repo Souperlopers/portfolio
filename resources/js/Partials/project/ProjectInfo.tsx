@@ -12,7 +12,7 @@ const ProjectInfo = ({ info }: { info: Project }) => {
             </div>
             <div className="md:text-xl text-base">{info.description}</div>
             <div className="flex flex-wrap gap-5">
-                <TagButtons tags={technologies} />
+                <TagButtons tags={technologies} justify="" />
             </div>
             <div className="flex gap-10">
                 <DetailButtons links={info.links || {}} />
