@@ -66,8 +66,8 @@ const Banner = () => {
                 onLoad={onLoad}
                 style={{
                     position: "absolute",
-                    left: "17%",
-                    bottom: "11%",
+                    left: "18%",
+                    bottom: "10.5%",
                     height: "28%",
                     width: "auto",
                     zIndex: 50,
