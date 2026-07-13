@@ -1,6 +1,9 @@
 import { HiOutlineEnvelope } from "react-icons/hi2";
 import { SiGithub } from "react-icons/si";
 
+const GITHUBURL = "https://github.com/SouperLopers";
+const EMAILURL = "contact@sprlpr.ir"
+
 const AboutUs = () => {
     return (
         <section
@@ -35,14 +38,14 @@ const AboutUs = () => {
                         team@souperlopers.dev
                     </a>
                     <a
-                        href="https://github.com/SouperLopers"
+                        href={GITHUBURL}
                         target="_blank"
                         rel="noopener noreferrer"
                         dir="ltr"
                         className="inline-flex items-center gap-2 text-sm md:text-base text-white/60 hover:text-primary transition-colors duration-150"
                     >
                         <SiGithub size={18} />
-                        github.com/Souperlopers
+                        {EMAILURL}
                     </a>
                 </div>
             </div>
