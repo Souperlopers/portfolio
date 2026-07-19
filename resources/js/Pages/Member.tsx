@@ -20,7 +20,7 @@ export default function Member({ member }: MemberPageProps) {
     const projects = member.data.contributions || [];
 
     return (
-        <>
+        <div className="flex flex-col gap-10">
             <Head title={`SouperLopers | ${info.name}`} />
             <div id="profile" className={scrollStyle}>
                 <Profile info={info} />
@@ -31,7 +31,7 @@ export default function Member({ member }: MemberPageProps) {
             <div id="contact" className={scrollStyle}>
                 <Contact info={info} />
             </div>
-        </>
+        </div>
     );
 }
 
