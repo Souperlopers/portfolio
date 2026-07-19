@@ -20,7 +20,7 @@ const Profile = ({ info }: { info: Member }) => {
                 <div className="relative -mt-12 md:-mt-16 mb-4">
                     <div
                         className="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden
-                        ring-4 ring-white/10 shrink-0"
+                        ring-4 ring-primary shrink-0"
                     >
                         {showFallback ? (
                             <div
