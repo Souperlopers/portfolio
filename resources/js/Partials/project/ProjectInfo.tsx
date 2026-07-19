@@ -6,7 +6,7 @@ const ProjectInfo = ({ info }: { info: Project }) => {
     const technologies = info.technologies || [];
 
     return (
-        <div className="md:w-[47%] w-full flex flex-col justify-between gap-10 text-neutral-50">
+        <div className="md:w-[40%] p-5 w-full flex flex-col justify-between gap-10 text-neutral-50">
             <div className="text-2xl font-semibold truncate max-w-80 md:max-w-96">
                 {info.title}
             </div>
