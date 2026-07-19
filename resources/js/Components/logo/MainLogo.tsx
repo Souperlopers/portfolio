@@ -34,20 +34,20 @@ const MainLogo = () => {
         }
     });
 
-    const souperX = useTransform(scrollY,[0, 70],[isMobiled ? "-10px" : "0px"  , isMobiled ? "35px" : "130px"],);
-    const souperY = useTransform(scrollY,[0, 50],[isMobiled ? "0px" : "0px", isMobiled ? "0px"  : "-75px"],);
+    const souperX = useTransform(scrollY,[0, isMobiled?70:250],[isMobiled ? "-10px" : "0px"  , isMobiled ? "35px" : "130px"],);
+    const souperY = useTransform(scrollY,[0,isMobiled?50:50],[isMobiled ? "0px" : "0px", isMobiled ? "0px"  : "-75px"],);
 
-    const lopersX = useTransform(scrollY,[0, 100],[isMobiled ? "-10px" : "0px", isMobiled ? "-17px" : "65px" ],);
-    const lopersY = useTransform(scrollY,[0, 100],[isMobiled ? "0px" : "0px", isMobiled ? "20px" : "-52px"],);
+    const lopersX = useTransform(scrollY,[0, isMobiled?100:350],[isMobiled ? "-10px" : "0px", isMobiled ? "-20px" : "60px" ],);
+    const lopersY = useTransform(scrollY,[0, isMobiled?100:200],[isMobiled ? "0px" : "0px", isMobiled ? "15px" : "-55px"],);
 
-    const souperWidth = useTransform(scrollY,[0, 50],[isMobiled ? "50px" : "150px", isMobiled ? "40px" : "50px"],);
-    const lopersWidth = useTransform(scrollY,[0, 50],[isMobiled ? "50px" : "170px", isMobiled ? "40px" : "50px"],);
+    const souperWidth = useTransform(scrollY,[0, isMobiled?50:120],[isMobiled ? "50px" : "150px", isMobiled ? "40px" : "50px"],);
+    const lopersWidth = useTransform(scrollY,[0, isMobiled?50:280],[isMobiled ? "50px" : "170px", isMobiled ? "40px" : "50px"],);
 
-    const ptxOpacity = useTransform(scrollY, [0, 100], [1, 1   ]);
-    const ptxScale   = useTransform(scrollY, [0, 180], [1, 0.01]);
+    const ptxOpacity = useTransform(scrollY, [0, isMobiled?100:400], [1, 1   ]);
+    const ptxScale   = useTransform(scrollY, [0, isMobiled?100:300], [1, 0.01]);
 
-    const ptxX = useTransform(scrollY,[0, 100],[isMobiled ? "5px" : "40px", isMobiled ? "5px" : "100px" ],);
-    const ptxY = useTransform(scrollY,[0, 100],[isMobiled ? "-2px" : "0"   , isMobiled ? "25px" : "-55px"],);
+    const ptxX = useTransform(scrollY,[0, isMobiled?100:300],[isMobiled ? "5px" : "40px", isMobiled ? "5px" : "100px" ],);
+    const ptxY = useTransform(scrollY,[0, isMobiled?100:300],[isMobiled ? "-2px" : "0"   , isMobiled ? "25px" : "-55px"],);
 
     return (
         <Link href="/">
