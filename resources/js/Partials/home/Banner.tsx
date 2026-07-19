@@ -26,13 +26,13 @@ const Banner = () => {
                     />
 
                     {/* blue section */}
-                    {/* <img
+                    <img
                         src="/assets/images/banner-images/Subtract.svg"
                         alt="blue section of banner"
                         onLoad={onLoad}
-                        className={`absolute z-10 ${allLoaded ? "block" : "none"}  w-[75%] -translate-x-[50%] -translate-y-[20px] top-[10px]`}
+                        className={`absolute z-10 ${allLoaded ? "block" : "none"}  w-[60%] -translate-x-[70%] -translate-y-[20%]`}
                         style={{left: "calc(50%)"}}
-                    /> */}
+                    />
 
                     {/* developers section */}
                     {/* <div className="">
