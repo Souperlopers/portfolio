@@ -16,9 +16,9 @@ const Banner = () => {
         <>
             {/* {allLoaded && <MainLogo />} */}
             <div className="h-[460px] w-full bg-blue-50 flex justify-center">
-                <div className="relative overflow-visible bg-blue-300 w-full max-w-7xl h-full">
+                <div className="relative overflow-x-visible bg-blue-300 w-full max-w-7xl h-full">
                     {/* blue section */}
-                    <div className="absolute h-100 left-0 top-100 w-1/2 h-1/2 overflow-visible">
+                    {/* <div className="absolute h-100 left-0 top-100 w-1/2 h-1/2 overflow-visible bg-orange-300">
                         <div className="relative w-full h-full">
                             <img
                                 src="/assets/images/banner-images/Subtract.svg"
@@ -49,28 +49,22 @@ const Banner = () => {
                                 }}
                             />
                         </div>
-                    </div>
+                    </div> */}
 
                     {/* white section */}
-                    <div className="absolute w-1/2 h-1/2">
-                        <div className="relative w-full h-full">
-                            <img
-                                src="/assets/images/banner-images/Subtract2.svg"
-                                alt="banner white section"
-                                onLoad={onLoad}
-                                style={{
-                                    position: "absolute",
-                                    width: "222.4%",
-                                    height: "100%",
-                                    zIndex: 5,
-                                    display: allLoaded ? "block" : "none",
-                                }}
-                            />
-                        </div>
+                    <div
+                        className="relative w-[100] h-[100%] overflow-x-visible"
+                    >
+                        <img
+                            src="/assets/images/banner-images/Subtract2.svg"
+                            alt="banner white section"
+                            onLoad={onLoad}
+                            className={`absolute z-5 left-1/2 min-w-[170%] -translate-x-1/2 ${allLoaded ? "block" : "none"}`}
+                        />
                     </div>
 
                     {/* developers section */}
-                    <div className="absolute w-1/2 h-1/2">
+                    {/* <div className="absolute w-1/2 h-1/2 bg-green-400">
                         <div className="relative w-full h-full">
                             <img
                                 src="/assets/images/banner-images/plant.svg"
@@ -129,7 +123,7 @@ const Banner = () => {
                                 }}
                             />
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             </div>
             {/* <motion.div
