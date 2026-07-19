@@ -4,7 +4,7 @@ import { MainLogo } from "@/index";
 
 const TOTAL_IMAGES = 6;
 
-const Banner = () => {
+export default function Banner(){
     const [imagesLoadedCount, setImagesLoadedCount] = useState(0);
     const allLoaded = imagesLoadedCount >= TOTAL_IMAGES;
     const onLoad = () => setImagesLoadedCount((prev) => prev + 1);
@@ -98,49 +98,3 @@ const Banner = () => {
     );
 };
 
-export default Banner;
-
-/**
- * {allLoaded ? "block" : "none"}`}
-                                style={{
-                                    left: "18%",
-                                    bottom: "10.5%",
-                                    height: "28%",
-                                    width: "auto",
-                                }}
-                            />
-                            <img
-                                src="/assets/images/banner-images/Girl.svg"
-                                alt="banner girl"
-                                onLoad={onLoad}
-                                className={`absolute z-50 ${allLoaded ? "block" : "none"}`}
-                                style={{
-                                    left: "21%",
-                                    bottom: "10%",
-                                    height: "51%",
-                                    width: "auto",
-                                }}
-                            />
-                            <img
-                                src="/assets/images/banner-images/MAAAN.svg"
-                                alt="banner man"
-                                onLoad={onLoad}
-                                className={`absolute z-50 ${allLoaded ? "block" : "none"}`}
-                                style={{
-                                    left: "38%",
-                                    bottom: "18%",
-                                    height: "50%",
-                                    width: "auto",
-                                }}
-                            />
-                            <img
-                                src="/assets/images/banner-images/monitor.svg"
-                                alt="banner monitor"
-                                onLoad={onLoad}
-                                className={`absolute z-50 ${allLoaded ? "block" : "none"}`}
-                                style={{
-                                    left: "30%",
-                                    top: "19%",
-                                    width: "13%",
-                                    height: "auto",
- */
