@@ -2,7 +2,7 @@ import { ProjectLinks } from "@/types/project";
 import { Link } from "@inertiajs/react";
 
 //style
-const buttonStyle = "bg-sky-500 rounded md:w-32 w-24 px-3 py-2 md:font-semibold md:text-base text-sm";
+const buttonStyle = "bg-btn-bg rounded md:w-32 w-24 px-3 py-2 md:font-semibold md:text-base text-sm";
 
 const DetailButtons = ({ links }: { links: ProjectLinks }) => {
     
