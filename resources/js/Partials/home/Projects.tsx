@@ -14,7 +14,7 @@ const Projects = ({ projects }: { projects: ProjectBrief[] }) => {
     return (
         <section id="projects" className="scroll-mt-20 py-14 mt-8 w-full max-w-[1350px] mx-auto lg:px-20 px-5">
             <h2 className="text-xl md:text-2xl lg:text-3xl font-medium text-white mb-6 pr-1">
-                پروژه‌ها
+                نمونه کار
             </h2>
 
             {projectsCount === 0 && <EmptyProjects />}
@@ -26,7 +26,7 @@ const Projects = ({ projects }: { projects: ProjectBrief[] }) => {
             </div>
 
             {isShowMore && (
-                <div className="mt-5 flex justify-end ml-1">
+                <div className="mt-5 flex md:justify-end justify-center ml-1">
                     <button className="inline-flex items-center gap-1 text-[15px] text-primary" type="button" onClick={() => setShowMoreCount((prev) => prev + 1)}>
                          پروژه‌های بیشتر
                             <HiArrowLongLeft  size={15} />

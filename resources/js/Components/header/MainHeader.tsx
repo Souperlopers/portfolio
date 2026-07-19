@@ -3,8 +3,8 @@ import { motion         ,useScroll,useTransform,useMotionValueEvent,} from "fram
 import { NavigationItems                                            } from "@/types/navigation";
 
 // style
-const wrapperStyle   = "fixed z-50 w-full max-w-[1350px]"  ;
-const containerStyle = "flex items-center h-[80px] w-full" ;
+const wrapperStyle   = "fixed z-50 w-full flex flex-col justify-start items-center"  ;
+const containerStyle = "flex items-center h-[80px] w-full max-w-[1350px]" ;
 
 const itemParentStyle  = "flex w-full  font-medium text-white gap-8 " ;
 const scrolledStyle    = " justify-start gap-8 lg:pr-40 pr-24"        ;
@@ -92,26 +92,26 @@ const MainHeader = ({navigationList}:{navigationList:NavigationItems[]}) => {
         }
     });
 
-    const headerY      = useTransform(scrollY,[0, 100],[isMobiled ? "140px" : "510px", isMobiled ? "0px"  : "0px" ],);
-    const itemFontSize = useTransform(scrollY,[0, 100],[isMobiled ? "14px"  : "30px" , isMobiled ? "14px" : "16px"],);
+    const headerY      = useTransform(scrollY,[0, isMobiled ? 100 : 400],[isMobiled ? "140px" : "510px", isMobiled ? "0px"  : "0px" ],);
+    const itemFontSize = useTransform(scrollY,[0, 100],[isMobiled ? "14px"  : "30px" , isMobiled ? "14px" : "18px"],);
     
     const headerBg = useTransform(
-        scrollY,[0, isMobiled ? 200 : 200],
+        scrollY,[0, isMobiled ? 100 : 200],
         ["linear-gradient(to top, rgba(51, 51, 51, 0), rgba(37, 37, 38, 0))",
         "linear-gradient(to top, rgba(51, 51, 51, 0.99), rgba(37, 37, 38, 0.99))",],
         );
    
     return (
         <motion.header
-            style={{ y: headerY }}
+            style={{ y: headerY, background: headerBg  }}
             className={wrapperStyle}
         >
             <motion.div
-                style={{ background: headerBg }}
+                
                 className={containerStyle}
             >
                 <motion.div
-                    className={`${itemParentStyle} ${isScrolled? scrolledStyle : notScrolledStyle}`}
+                    className={`${itemParentStyle} ${isScrolled? scrolledStyle : notScrolledStyle} h-full`}
                 >
                     {navigationList.map((item) => (
                         <motion.button
