@@ -16,7 +16,7 @@ const Banner = () => {
         <>
             {/* {allLoaded && <MainLogo />} */}
             <div className="h-[460px] w-full bg-blue-50 flex justify-center align-middle">
-                <div className="relative overflow-x-visible bg-blue-300 w-full h-full max-w-7xl">
+                <div className="relative overflow-visible bg-blue-300 w-full h-full max-w-7xl max-h-[460px]">
                     {/* white section */}
                     <img
                         src="/assets/images/banner-images/Subtract2.svg"
@@ -25,40 +25,42 @@ const Banner = () => {
                         className={`absolute z-5 ${allLoaded ? "block" : "none"} left-1/2 min-w-[170%] -translate-x-1/2`}
                     />
 
-                    <div className="absolute w-[60%] -translate-x-[50%] -translate-y-[20%]">
-                        {/* blue section */}
-                        <img
-                            src="/assets/images/banner-images/Subtract.svg"
-                            alt="blue section of banner"
-                            onLoad={onLoad}
-                            className={`absolute z-10 ${allLoaded ? "block" : "none"}`}
-                        />
+                    <div className="absolute w-[60%] left-[10vh] translate-y-[-5vh]">
+                        <div className="relative w-full h-full">
+                            {/* blue section */}
+                            <img
+                                src="/assets/images/banner-images/Subtract.svg"
+                                alt="blue section of banner"
+                                onLoad={onLoad}
+                                className={`absolute z-10 ${allLoaded ? "block" : "none"}`}
+                            />
 
-                        {/* developers section */}
-                        <img
-                            src="/assets/images/banner-images/plant.svg"
-                            alt="banner plant"
-                            onLoad={onLoad}
-                            className={`absolute z-50 ${allLoaded ? "block" : "none"}`}
-                        />
-                        <img
+                            {/* developers section */}
+                            <img
+                                src="/assets/images/banner-images/plant.svg"
+                                alt="banner plant"
+                                onLoad={onLoad}
+                                className={`absolute z-50 ${allLoaded ? "block" : "none"} w-[7%] translate-x-[-1200%] translate-y-[200%]`}
+                            />
+                            {/* <img
                             src="/assets/images/banner-images/Girl.svg"
                             alt="banner girl"
                             onLoad={onLoad}
                             className={`absolute z-50 ${allLoaded ? "block" : "none"}`}
-                        />
-                        <img
+                        /> */}
+                            {/* <img
                             src="/assets/images/banner-images/MAAAN.svg"
                             alt="banner man"
                             onLoad={onLoad}
                             className={`absolute z-50 ${allLoaded ? "block" : "none"}`}
-                        />
-                        <img
+                        /> */}
+                            {/* <img
                             src="/assets/images/banner-images/monitor.svg"
                             alt="banner monitor"
                             onLoad={onLoad}
                             className={`absolute z-50 ${allLoaded ? "block" : "none"}`}
-                        />
+                        /> */}
+                        </div>
                     </div>
                 </div>
             </div>
@@ -97,3 +99,48 @@ const Banner = () => {
 };
 
 export default Banner;
+
+/**
+ * {allLoaded ? "block" : "none"}`}
+                                style={{
+                                    left: "18%",
+                                    bottom: "10.5%",
+                                    height: "28%",
+                                    width: "auto",
+                                }}
+                            />
+                            <img
+                                src="/assets/images/banner-images/Girl.svg"
+                                alt="banner girl"
+                                onLoad={onLoad}
+                                className={`absolute z-50 ${allLoaded ? "block" : "none"}`}
+                                style={{
+                                    left: "21%",
+                                    bottom: "10%",
+                                    height: "51%",
+                                    width: "auto",
+                                }}
+                            />
+                            <img
+                                src="/assets/images/banner-images/MAAAN.svg"
+                                alt="banner man"
+                                onLoad={onLoad}
+                                className={`absolute z-50 ${allLoaded ? "block" : "none"}`}
+                                style={{
+                                    left: "38%",
+                                    bottom: "18%",
+                                    height: "50%",
+                                    width: "auto",
+                                }}
+                            />
+                            <img
+                                src="/assets/images/banner-images/monitor.svg"
+                                alt="banner monitor"
+                                onLoad={onLoad}
+                                className={`absolute z-50 ${allLoaded ? "block" : "none"}`}
+                                style={{
+                                    left: "30%",
+                                    top: "19%",
+                                    width: "13%",
+                                    height: "auto",
+ */
