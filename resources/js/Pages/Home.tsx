@@ -6,8 +6,8 @@ import { NavigationItems }                           from "@/types/navigation"  
 
 const homePageNavigationItems: NavigationItems[] = [
     { title: "نمونه کار", id: "projects" },
-    { title: "اعضا"     , id: "members"  },
-    { title: "مشخصات ما", id: "about"    },
+    { title: "توسعه‌دهندگان"     , id: "members"  },
+    { title: "تماس با ما", id: "about"    },
 ];
 
 export default function Home({ projects, members }: HomePageProps) {
