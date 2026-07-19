@@ -26,7 +26,7 @@ export default function MainLayout({ children, navigationList}: { children: Reac
         <div dir="rtl" className={containerStyle}>
             <Head title={TITLE} />
             {isloading && <Loading />}
-            <MainHeader  navigationList={navigationList}  />
+            {/* <MainHeader  navigationList={navigationList}  /> */}
             {children }
         </div>
     );
