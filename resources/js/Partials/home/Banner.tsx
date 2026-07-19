@@ -41,7 +41,7 @@ const Banner = () => {
                             onLoad={onLoad}
                             className={`absolute z-50 ${allLoaded ? "block" : "none"}`}
                             style={{
-                                left: "50%",
+                                left: "18%",
                                 bottom: "10.5%",
                                 height: "28%",
                                 width: "auto",
