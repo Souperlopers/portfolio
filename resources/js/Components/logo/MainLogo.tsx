@@ -26,7 +26,7 @@ export default function MainLogo() {
 
     return (
         <Link
-            className={`aspect-[313/150] ${scrolled ? "fixed top-2 -right-5 w-[150px]" : "absolute translate-x-[-10%] translate-y-[30%] w-[32%]"} z-50 duration-700`}
+            className={`aspect-[313/150] ${scrolled ? "fixed top-2 -right-5 w-[150px]" : "absolute translate-x-[-50%] md:translate-x-[-10%] translate-y-[10%] md:translate-y-[30%] w-[45%] md:w-[32%]"} z-50 duration-700`}
             dir="ltr"
             href="/"
         >
