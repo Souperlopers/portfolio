@@ -15,17 +15,17 @@ export default function Banner(){
     return (
         <>
             {/* {allLoaded && <MainLogo />} */}
-            <div className="h-[460px] w-full bg-blue-50 flex justify-center align-middle">
-                <div className="relative overflow-visible bg-blue-300 w-full h-full max-w-7xl max-h-[460px]">
+            <div className="h-[500px] w-full flex justify-center align-middle">
+                <div className="relative overflow-visible w-full h-full max-w-7xl max-h-[460px]">
                     {/* white section */}
                     <img
                         src="/assets/images/banner-images/Subtract2.svg"
                         alt="banner white section"
                         onLoad={onLoad}
-                        className={`absolute z-5 ${allLoaded ? "block" : "none"} left-1/2 min-w-[170%] -translate-x-1/2`}
+                        className={`absolute z-5 ${allLoaded ? "block" : "none"} left-1/2 min-w-[190%] -translate-x-[53%] -translate-y-[15%]`}
                     />
 
-                    <div className="absolute w-[60%] left-[10vh] translate-y-[-5vh]">
+                    <div className="absolute w-[66%] -left-[7%] -translate-y-[7vh]">
                         <div className="relative w-full h-full">
                             {/* blue section */}
                             <img
@@ -40,26 +40,26 @@ export default function Banner(){
                                 src="/assets/images/banner-images/plant.svg"
                                 alt="banner plant"
                                 onLoad={onLoad}
-                                className={`absolute z-50 ${allLoaded ? "block" : "none"} w-[7%] translate-x-[-1200%] translate-y-[200%]`}
+                                className={`absolute z-50 ${allLoaded ? "block" : "none"} w-[6%] translate-x-[-950%] translate-y-[304%]`}
                             />
-                            {/* <img
+                            <img
                             src="/assets/images/banner-images/Girl.svg"
                             alt="banner girl"
                             onLoad={onLoad}
-                            className={`absolute z-50 ${allLoaded ? "block" : "none"}`}
-                        /> */}
-                            {/* <img
+                            className={`absolute z-50 ${allLoaded ? "block" : "none"} w-[17%] translate-x-[-250%] translate-y-[105%]`}
+                            />
+                            <img
                             src="/assets/images/banner-images/MAAAN.svg"
                             alt="banner man"
                             onLoad={onLoad}
-                            className={`absolute z-50 ${allLoaded ? "block" : "none"}`}
-                        /> */}
-                            {/* <img
+                            className={`absolute z-50 ${allLoaded ? "block" : "none"} w-[20%] translate-x-[-60%] translate-y-[100%]`}
+                        />
+                            <img
                             src="/assets/images/banner-images/monitor.svg"
                             alt="banner monitor"
                             onLoad={onLoad}
-                            className={`absolute z-50 ${allLoaded ? "block" : "none"}`}
-                        /> */}
+                            className={`absolute z-50 ${allLoaded ? "block" : "none"} w-[18%] translate-x-[-146%] translate-y-[150%]`}
+                        />
                         </div>
                     </div>
                 </div>

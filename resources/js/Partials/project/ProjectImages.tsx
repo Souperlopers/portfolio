@@ -15,15 +15,17 @@ const ProjectImages = ({ images }: { images: ProjectImage[] }) => {
     if (items.length === 0) return null;
 
     return (
-        <div className="w-full lg:w-1/2 rounded overflow-hidden" dir="ltr">
-            <ImageGallery
-                ref={galleryRef}
-                items={items}
-                showPlayButton={false}
-                showFullscreenButton={false}
-                useTranslate3D={false}
-                onSlide={(index) => console.log("Slid to", index)}
-            />
+        <div className="w-full md:w-2/3 p-5 rounded-xl bg-white/15 overflow-hidden" dir="ltr">
+            <div>
+                <ImageGallery
+                    ref={galleryRef}
+                    items={items}
+                    showPlayButton={false}
+                    showFullscreenButton={false}
+                    useTranslate3D={false}
+                    onSlide={(index) => console.log("Slid to", index)}
+                />
+            </div>
         </div>
     );
 };
