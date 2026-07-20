@@ -46,13 +46,13 @@ export default function Banner(){
                             src="/assets/images/banner-images/Girl.svg"
                             alt="banner girl"
                             onLoad={onLoad}
-                            className={`absolute z-50 ${allLoaded ? "block" : "none"} w-[17%] translate-x-[-250%] translate-y-[105%]`}
+                            className={`absolute z-50 ${allLoaded ? "block" : "none"} w-[22%] translate-x-[-180%] translate-y-[107%]`}
                             />
                             <img
                             src="/assets/images/banner-images/MAAAN.svg"
                             alt="banner man"
                             onLoad={onLoad}
-                            className={`absolute z-50 ${allLoaded ? "block" : "none"} w-[20%] translate-x-[-60%] translate-y-[100%]`}
+                            className={`absolute z-50 ${allLoaded ? "block" : "none"} w-[28%] translate-x-[-25%] translate-y-[100%]`}
                         />
                             <img
                             src="/assets/images/banner-images/monitor.svg"
