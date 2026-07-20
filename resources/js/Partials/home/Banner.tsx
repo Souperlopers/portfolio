@@ -14,9 +14,11 @@ export default function Banner(){
 
     return (
         <>
-            {/* {allLoaded && <MainLogo />} */}
             <div className="h-[500px] w-full flex justify-center align-middle">
                 <div className="relative overflow-visible w-full h-full max-w-7xl max-h-[460px]">
+                    {/* logo */}
+                    {allLoaded && <MainLogo />}
+            
                     {/* white section */}
                     <img
                         src="/assets/images/banner-images/Subtract2.svg"
@@ -46,7 +48,7 @@ export default function Banner(){
                             src="/assets/images/banner-images/Girl.svg"
                             alt="banner girl"
                             onLoad={onLoad}
-                            className={`absolute z-50 ${allLoaded ? "block" : "none"} w-[22%] translate-x-[-180%] translate-y-[107%]`}
+                            className={`absolute z-50 ${allLoaded ? "block" : "none"} w-[18%] translate-x-[-200%] translate-y-[120%]`}
                             />
                             <img
                             src="/assets/images/banner-images/MAAAN.svg"
