@@ -4,11 +4,6 @@ import { router          , Head       } from "@inertiajs/react"   ;
 import { Loading         , MainHeader } from "@/index"            ;
 import { NavigationItems              } from "@/types/navigation" ;
 
-//style 
-const containerStyle = "min-h-screen overflow-hidden bg-bg-primary font-vazir flex flex-col justify-start items-center";
-
-const TITLE = "SouperLopers";
-
 export default function MainLayout({ children, navigationList}: { children: ReactNode, navigationList: NavigationItems[]}) {
     const [isloading, setIsloading] = useState(false);
 
@@ -23,8 +18,8 @@ export default function MainLayout({ children, navigationList}: { children: Reac
     }, [navigationList]);
 
     return (
-        <div dir="rtl" className={containerStyle}>
-            <Head title={TITLE} />
+        <div dir="rtl" className={`min-h-screen overflow-x-hidden bg-bg-primary font-vazir flex flex-col justify-start items-center`}>
+            <Head title={'SouperLopers'} />
             {isloading && <Loading />}
             {/* <MainHeader  navigationList={navigationList}  /> */}
             {children }
