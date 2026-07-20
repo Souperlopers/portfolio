@@ -37,17 +37,17 @@ export default function MainLogo() {
                 <img
                     src={SouperSrc}
                     alt="Souper"
-                    className={`w-[45%] h-[60%] ${scrolled ? "top-[3%] left-[33.33%]" : "top-1/2 -translate-y-1/2 left-0"} absolute transition-all will-change-transform duration-1000 ease-in-out`}
+                    className={`w-[45%] h-[60%] ${scrolled ? "top-[3%] left-[33.33%]" : "top-1/2 -translate-y-1/2 left-0"} absolute transition-position will-change-transform duration-1000 ease-in-out`}
                 />
                 <img
                     src={LopersSrc}
                     alt="Lopers"
-                    className={`w-[45%] h-[60%] ${scrolled ? "left-[21.21%] bottom-[3%]" : "bottom-1/2 translate-y-1/2 left-[45%]"} absolute transition-all will-change-transform duration-1000 ease-in-out`}
+                    className={`w-[45%] h-[60%] ${scrolled ? "left-[21.21%] bottom-[3%]" : "bottom-1/2 translate-y-1/2 left-[45%]"} absolute transition-position will-change-transform duration-1000 ease-in-out`}
                 />
                 <img
                     src={PtxSrc}
                     alt="Gul"
-                    className={`w-[8%] h-[40%] ${scrolled ? "right-[22%] bottom-[15%] rotate-[80deg]" : "bottom-1/2 translate-y-1/2 right-0"} absolute transition-all will-change-transform duration-1000 ease-in-out`}
+                    className={`w-[8%] h-[40%] ${scrolled ? "right-[22%] bottom-[15%] rotate-[80deg]" : "opacity-0 bottom-1/2 translate-y-1/2 right-0"} absolute transition-position will-change-transform duration-300 ease-in-out`}
                 />
             </div>
         </Link>
