@@ -26,12 +26,12 @@ export default function MainLogo() {
 
     return (
         <Link
-            className={` ${scrolled ? "fixed top-2 -right-5" : "absolute -translate-x-20 translate-y-20"} z-50 duration-700`}
+            className={`aspect-[330/150] ${scrolled ? "fixed top-2 -right-5 h-[70px]" : "absolute -translate-x-20 translate-y-20 h-[150px]"} z-50 duration-700`}
             dir="ltr"
             href="/"
         >
             <div
-                className={`${scrolled ? "h-[70px]" : "h-[150px]"} aspect-[330/150] relative cursor-pointer ease-linear`}
+                className={`h-full w-full relative cursor-pointer ease-linear`}
             >
                 <img
                     src={SouperSrc}

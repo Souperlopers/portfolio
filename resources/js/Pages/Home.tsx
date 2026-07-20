@@ -14,9 +14,9 @@ export default function Home({ projects, members }: HomePageProps) {
     return (
         <>
             <Banner />
-            {/* <Projects projects={projects.data} />
+            <Projects projects={projects.data} />
             <Members members={members.data} />
-            <About /> */}
+            <About />
         </>
     );
 }
