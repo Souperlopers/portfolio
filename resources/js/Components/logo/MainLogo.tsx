@@ -26,7 +26,7 @@ export default function MainLogo() {
 
     return (
         <Link
-            className={`aspect-[330/150] ${scrolled ? "fixed top-2 -right-5 h-[70px]" : "absolute -translate-x-20 translate-y-20 h-[150px]"} z-50 duration-700`}
+            className={`aspect-[313/150] ${scrolled ? "fixed top-2 -right-5 h-[70px]" : "absolute -translate-x-20 translate-y-20 h-[150px]"} z-50 duration-700`}
             dir="ltr"
             href="/"
         >
@@ -41,7 +41,7 @@ export default function MainLogo() {
                 <img
                     src={LopersSrc}
                     alt="Lopers"
-                    className={`w-[45%] h-[60%] ${scrolled ? "left-[21.21%] bottom-[3%]" : "bottom-1/2 translate-y-1/2 left-[45%]"} absolute transition-position will-change-transform duration-700 ease-in-out`}
+                    className={`w-[43.76%] h-[60%] ${scrolled ? "left-[21.21%] bottom-[3%]" : "bottom-1/2 translate-y-1/2 left-[45%]"} absolute transition-position will-change-transform duration-700 ease-in-out`}
                 />
                 <img
                     src={PtxSrc}
