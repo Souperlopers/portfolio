@@ -30,22 +30,22 @@ const AboutUs = () => {
 
                 <div className="flex flex-wrap items-center md:justify-start justify-center gap-4 md:gap-6 mt-8 pt-6 border-t border-white/10">
                     <a
-                        href="mailto:team@souperlopers.dev"
+                        href={`mailto:${EMAILURL}`}
                         dir="ltr"
-                        className="inline-flex items-center gap-2 text-sm md:text-base text-white/60 hover:text-primary transition-colors duration-150"
+                        className="inline-flex gap-2 text-sm md:text-base text-white/60 hover:text-primary transition-colors duration-150"
                     >
-                        <HiOutlineEnvelope size={18} />
-                        team@souperlopers.dev
+                         ایمیل
+                        <HiOutlineEnvelope size={20} />
                     </a>
                     <a
                         href={GITHUBURL}
                         target="_blank"
                         rel="noopener noreferrer"
                         dir="ltr"
-                        className="inline-flex items-center gap-2 text-sm md:text-base text-white/60 hover:text-primary transition-colors duration-150"
+                        className="inline-flex gap-2 text-sm md:text-base text-white/60 hover:text-primary transition-colors duration-150"
                     >
-                        <SiGithub size={18} />
-                        {EMAILURL}
+                        گیت‌هاب 
+                        <SiGithub size={20} />
                     </a>
                 </div>
             </div>

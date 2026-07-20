@@ -27,9 +27,9 @@ const Projects = ({ projects }: { projects: ProjectBrief[] }) => {
 
             {isShowMore && (
                 <div className="mt-5 flex md:justify-end justify-center ml-1">
-                    <button className="inline-flex items-center gap-1 text-[15px] text-primary" type="button" onClick={() => setShowMoreCount((prev) => prev + 1)}>
+                    <button className="inline-flex items-center gap-1 text-[15px] text-primary hover:text-btn-bg duration-300" type="button" onClick={() => setShowMoreCount((prev) => prev + 1)}>
                          پروژه‌های بیشتر
-                            <HiArrowLongLeft  size={15} />
+                        <HiArrowLongLeft  size={15} />
                     </button>
                 </div>
             )}
