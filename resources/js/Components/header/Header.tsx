@@ -73,14 +73,14 @@ export default function Header({
         return () => window.removeEventListener("scroll", handleScroll);
     });
 
-    const isBelowHero = hasHero && !isScrolled
+    const isBelowHero = hasHero && !isScrolled // other pages || scrolled hero page
 
     return (
         <>
             <Logo isCompact={hasHero ? isScrolled : true} />
             {hasHero && <Hero />}
             <header
-                className={`sticky top-0 h-fit z-50 flex justify-center items-center gap-10`}
+                className={`sticky top-0 h-20 z-50 flex justify-center items-center gap-10 ${!isBelowHero && "py-2"}`}
             >
                 <div id="header-logo" className={`aspect-[313/150] w-[120px] ${isBelowHero && "hidden"}`}></div>
                 <nav
