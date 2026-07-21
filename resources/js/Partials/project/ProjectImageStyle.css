@@ -40,9 +40,14 @@
     -webkit-backdrop-filter: blur(12px);
     border: 1px solid rgba(255, 255, 255, 0.15);
     padding: 0px;
-    top: 50%;
-    bottom: auto;
-    transform: translateY(-50%);
+    position: absolute;
+}
+
+.image-gallery-left-nav::after,
+.image-gallery-right-nav::after {
+    content: "";
+    position: absolute;
+    inset: -70px 0;
 }
 
 .image-gallery-left-nav .image-gallery-svg,
@@ -86,11 +91,6 @@
     }
 }
 
-@media (max-width: 620px) {
-    .image-gallery-slide {
-        min-height: 250px;
-    }
-}
 
 @media (max-width: 550px) {
     .image-gallery-slide {
