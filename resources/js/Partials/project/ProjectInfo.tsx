@@ -5,11 +5,11 @@ import TagButtons from "@/Components/TagsComponent";
 export default function ({ info }: { info: Project }){
     const technologies = info.technologies || [];
     return (
-        <div className="lg:max-w-[40%] w-full min-h-[400px] md:p-5 p-0 flex flex-col justify-between gap-7 text-neutral-50">
+        <div className="lg:max-w-[40%] w-full min-h-[400px] flex flex-col justify-between gap-7 text-primary-content">
             <div className="text-3xl font-semibold truncate max-w-80 md:max-w-96">
                 {info.title}
             </div>
-            <div className="md:text-lg text-base text-slate-200/70">{info.description}</div>
+            <div className="md:text-lg text-base text-secondary-content">{info.description}</div>
             <div className="flex flex-wrap gap-5">
                 <h2 className="md:text-xl text-lg">تکنولوژی‌ها</h2>
                 <TagButtons tags={technologies} />

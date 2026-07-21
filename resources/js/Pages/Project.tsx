@@ -12,7 +12,7 @@ export default function Project({ project }: ProjectPageProps) {
     return (
         <>
             <Head title={`SouperLopers ${projectData.title}`} />
-            <div className={`w-full max-w-[1360px] flex flex-col gap-10 md:px-10 px-5`}>
+            <div className={`w-full max-w-[1360px] flex flex-col gap-10`}>
                 <div
                     id="info"
                     className={`scroll-mt-20 flex lg:flex-row flex-col justify-between items-start rounded gap-5`}

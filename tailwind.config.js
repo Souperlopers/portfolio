@@ -20,11 +20,40 @@ export default {
 
                 'primary': '#4daafc',
                 'bg-primary': '#252526',
-                'btn-bg': '#0078d4',
-                'btn-bg-secundary':'#e6eefa',
+                'btn-primary': '#0078d4',
+                'btn-secundary': '#e6eefa',
                 'btn-hover': '#015ea5',
             }
         },
+    },
+     daisyui: {
+        themes: [
+            {
+                souperlopers: {
+                    "primary": "#007ACC",
+                    "primary-content": "#FFFFFF",
+
+                    "secondary": "#252526",
+                    "secondary-content": "#9FB1D1",
+
+                    "accent": "#3794FF",
+                    "accent-content": "#FFFFFF",
+
+                    "neutral": "#1E1E1E",
+                    "neutral-content": "#FFFFFF",
+
+                    "base-100": "#0D1014",
+                    "base-200": "#252526",
+                    "base-300": "#2D2D30",
+                    "base-content": "#CCCCCC",
+
+                    "info": "#3794FF",
+                    "success": "#4EC9B0",
+                    "warning": "#CCA700",
+                    "error": "#F14C4C",
+                },
+            },
+        ],
     },
 
     plugins: [forms],

@@ -7,7 +7,7 @@ export default function Hero() {
     const onLoad = () => setImagesLoadedCount((prev) => prev + 1);
 
     return (
-        <div className="h-[600px] w-full relative overflow-x-hidden">
+        <div className="h-[600px] w-full relative overflow-x-hidden bg-base-300">
             {/* white section */}
             <img
                 className={`absolute top-0 max-w-[2096px] left-[calc(50%-100px)] -translate-x-1/2`}
@@ -37,31 +37,32 @@ export default function Hero() {
 
                     </img>
 
-                    {/* developers section */}
-                    <img
-                        src="/assets/images/banner-images/plant.svg"
-                        alt="banner plant"
-                        onLoad={onLoad}
-                        className={`absolute z-40 w-[6%] translate-x-[-950%] translate-y-[304%]`}
-                    />
-                    <img
-                        src="/assets/images/banner-images/Girl.svg"
-                        alt="banner girl"
-                        onLoad={onLoad}
-                        className={`absolute z-40 w-[18%] translate-x-[-200%] translate-y-[120%]`}
-                    />
-                    <img
-                        src="/assets/images/banner-images/MAAAN.svg"
-                        alt="banner man"
-                        onLoad={onLoad}
-                        className={`absolute z-40 w-[28%] translate-x-[-25%] translate-y-[100%]`}
-                    />
-                    <img
-                        src="/assets/images/banner-images/monitor.svg"
-                        alt="banner monitor"
-                        onLoad={onLoad}
-                        className={`absolute z-40 w-[18%] translate-x-[-146%] translate-y-[150%]`}
-                    />
+                        {/* developers section */}
+                        <img
+                            src="/assets/images/banner-images/plant.svg"
+                            alt="banner plant"
+                            onLoad={onLoad}
+                            className={`absolute z-40 w-[6%] translate-x-[-950%] translate-y-[304%]`}
+                        />
+                        <img
+                            src="/assets/images/banner-images/Girl.svg"
+                            alt="banner girl"
+                            onLoad={onLoad}
+                            className={`absolute z-40 w-[18%] translate-x-[-200%] translate-y-[120%]`}
+                        />
+                        <img
+                            src="/assets/images/banner-images/MAAAN.svg"
+                            alt="banner man"
+                            onLoad={onLoad}
+                            className={`absolute z-40 w-[28%] translate-x-[-25%] translate-y-[100%]`}
+                        />
+                        <img
+                            src="/assets/images/banner-images/monitor.svg"
+                            alt="banner monitor"
+                            onLoad={onLoad}
+                            className={`absolute z-40 w-[18%] translate-x-[-146%] translate-y-[150%]`}
+                        />
+                    </div>
                 </div>
             </div>
         </div>

@@ -8,7 +8,7 @@ const AboutUs = () => {
     return (
         <section
             id="about"
-            className="scroll-mt-20 py-14 mt-8 w-full max-w-[1350px] mx-auto lg:px-20 px-5"
+            className="scroll-mt-20 w-full max-w-[1350px] mx-auto"
         >
             <h2 className="text-xl md:text-2xl lg:text-3xl font-medium text-white mb-6 pr-1">
                 تماس با ما

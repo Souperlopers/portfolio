@@ -20,7 +20,7 @@ const ProjectItem = ({ projectData, index }: ProjectItemProps) => {
                     <h3 className="md:text-3xl text-base font-semibold text-white truncate">
                         {title}
                     </h3>
-                    <TagsComponent tags={technologies} justify=""/>
+                    <TagsComponent tags={technologies}/>
                     <p className="md:text-base text-sm text-white/50 md:line-clamp-1 line-clamp-2 leading-relaxed">
                         {description}
                     </p>
@@ -28,7 +28,7 @@ const ProjectItem = ({ projectData, index }: ProjectItemProps) => {
                 
             {/* button */}
             <div className="flex items-end md:justify-start justify-end shrink-0">
-                <Link href={projectData.url} className="text-[#0d1014] text-sm bg-btn-bg-secundary rounded-lg py-1 md:py-1.5 md:px-5 px-[15px]">
+                <Link href={projectData.url} className="text-[#0d1014] text-sm bg-btn-secundary  rounded-lg py-1 md:py-1.5 md:px-5 px-[15px]">
                     <p className="inline-flex items-center gap-1">جزئیات 
                     </p>
                 </Link>
