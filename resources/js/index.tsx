@@ -1,4 +1,4 @@
-export { default as Banner     } from "@/Partials/home/Banner"         ;
+export { default as Hero       } from "@/Partials/home/Hero"         ;
 export { default as Projects   } from "@/Partials/home/Projects"       ;
 export { default as Members    } from "@/Partials/home/Members"        ;
 export { default as About      } from "@/Partials/home/AboutUs"        ;

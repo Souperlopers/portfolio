@@ -4,7 +4,7 @@ import { MainLogo } from "@/index";
 
 const TOTAL_IMAGES = 6;
 
-export default function Banner() {
+export default function Hero() {
     const [imagesLoadedCount, setImagesLoadedCount] = useState(0);
     const allLoaded = imagesLoadedCount >= TOTAL_IMAGES;
     const onLoad = () => setImagesLoadedCount((prev) => prev + 1);
