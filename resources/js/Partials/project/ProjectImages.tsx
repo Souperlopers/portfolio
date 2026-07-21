@@ -2,6 +2,7 @@ import { useRef } from "react";
 import { ProjectImage } from "@/types/project";
 import ImageGallery from "react-image-gallery";
 import "react-image-gallery/styles/image-gallery.css";
+import "./ProjectImageStyle.css"
 import type { ImageGalleryRef } from "react-image-gallery";
 
 const ProjectImages = ({ images }: { images: ProjectImage[] }) => {
@@ -15,7 +16,7 @@ const ProjectImages = ({ images }: { images: ProjectImage[] }) => {
     if (items.length === 0) return null;
 
     return (
-        <div className="w-full md:w-2/3 p-5 rounded-xl bg-white/15 overflow-hidden" dir="ltr">
+        <div className="w-full lg:max-w-[900px] overflow-hidden" dir="ltr">
             <div>
                 <ImageGallery
                     ref={galleryRef}

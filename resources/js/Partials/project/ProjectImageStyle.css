@@ -1,0 +1,105 @@
+.image-gallery-slide {
+    min-height: 400px;
+    border-radius: 15px !important;
+    padding: 30px;
+    margin-bottom: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    cursor: auto;
+}
+
+.image-gallery-slide .image-gallery-image {
+    max-height: none !important;
+    border-radius: 8px !important;
+}
+
+.image-gallery-thumbnail {
+    border-radius: 8px;
+    overflow: hidden;
+    width: 140px;
+}
+
+.image-gallery-thumbnail img {
+    border-radius: 8px;
+    max-width: 200px;
+    min-height: 70px;
+}
+
+.image-gallery-left-nav,
+.image-gallery-right-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 9999px;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 0px;
+    top: 50%;
+    bottom: auto;
+    transform: translateY(-50%);
+}
+
+.image-gallery-left-nav .image-gallery-svg,
+.image-gallery-right-nav .image-gallery-svg {
+    width: 32px;
+    height: 32px;
+}
+
+@media (min-width: 1020px) {
+    .image-gallery-slide {
+        min-height: 300px;
+    }
+}
+
+@media (max-width: 800px) {
+    .image-gallery-slide {
+        min-height: 300px;
+    }
+
+    .image-gallery-slide {
+        padding: 15px;
+    }
+    .image-gallery-thumbnail {
+        width: 90px;
+    }
+    .image-gallery-thumbnail img {
+        max-width: 90px;
+        min-height: 50px;
+    }
+
+    .image-gallery-left-nav,
+    .image-gallery-right-nav {
+        width: 40px;
+        height: 40px;
+    }
+
+    .image-gallery-left-nav .image-gallery-svg,
+    .image-gallery-right-nav .image-gallery-svg {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+@media (max-width: 620px) {
+    .image-gallery-slide {
+        min-height: 250px;
+    }
+}
+
+@media (max-width: 550px) {
+    .image-gallery-slide {
+        min-height: 180px;
+    }
+}
+
+@media (max-width: 400px) {
+    .image-gallery-slide {
+        min-height: 100px;
+    }
+}
