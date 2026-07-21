@@ -3,10 +3,12 @@ goal: create a portfolio webapp in -99 week and -99 days
 TODO_Z header background when !isBelowHero
 TODO_Z navbar buttons background
 TODO_Z organize developer shapes
-TODO_Z wait untill load for hero and logo shapes (show loading or skeleton?)
 TODO_Z decrease top padding in member and project pages
+TODO_Z wait untill load for hero and logo shapes (show loading or skeleton?)
+TODO_Z add skeleton for gallery images
 TODO_Z what if a member doesnt have banner? 
 TODO_Z main content responsiveness
+TODO_Z check todo_z tag on todo tree extension
 
 TODO_S header, hero, and logo responsiveness
 TODO_S fill database
