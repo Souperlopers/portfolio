@@ -79,35 +79,31 @@ export default function Header({
 
     return (
         <>
+            {hasHero && <Hero />}
             <header
                 className={`fixed z-50 w-full flex flex-col justify-start items-center`}
             >
-                <div
-                    className={`flex items-center h-[80px] w-full max-w-[1350px]`}
+                <Logo isCompact={true} />
+                <nav
+                    className={`flex w-full font-medium text-white gap-8 h-full ${hasHero && !isScrolled ? "justify-center lg:gap-40" : "justify-start gap-8 lg:pr-40 pr-24"}`}
                 >
-                    <Logo isCompact={isScrolled} />
-                    <nav
-                        className={`flex w-full  font-medium text-white gap-8 ${isScrolled ? "justify-start gap-8 lg:pr-40 pr-24" : "justify-center lg:gap-40"} h-full`}
-                    >
-                        {navigationList.map((item) => (
-                            <button
-                                key={item.title}
-                                onClick={() => scrollToSection(item)}
-                                className={`relative py-2 transition-all duration-200 focus-visible:outline-none text-white hover:text-white ${activeSection != item.id && "opacity-60 hover:opacity-90"}`}
-                            >
-                                <span>{item.title}</span>
+                    {navigationList.map((item) => (
+                        <button
+                            key={item.title}
+                            onClick={() => scrollToSection(item)}
+                            className={`relative py-2 transition-all duration-200 focus-visible:outline-none text-white hover:text-white ${activeSection != item.id && "opacity-60 hover:opacity-90"}`}
+                        >
+                            <span>{item.title}</span>
 
-                                {activeSection === item.id && (
-                                    <span
-                                        className={`absolute bottom-0 left-0 right-0 h-[2px] bg-primary`}
-                                    />
-                                )}
-                            </button>
-                        ))}
-                    </nav>
-                </div>
+                            {activeSection === item.id && (
+                                <span
+                                    className={`absolute bottom-0 left-0 right-0 h-[2px] bg-primary`}
+                                />
+                            )}
+                        </button>
+                    ))}
+                </nav>
             </header>
-            {hasHero && <Hero />}
         </>
     );
 }
