@@ -10,9 +10,7 @@ export default function Header({
     navigationList: NavigationItem[];
     hasHero: boolean;
 }) {
-    const [activeSection, setActiveSection] = useState(
-        navigationList[0].id || "",
-    );
+    const [activeSection, setActiveSection] = useState<string | null>(null);
 
     // scroll
     const scrollToSection = (item: NavigationItem) => {
@@ -34,8 +32,6 @@ export default function Header({
     useEffect(() => {
         const sections = navigationList.map((item) => item.id) || [];
         const observers: IntersectionObserver[] = [];
-        setActiveSection(navigationList[0]?.id || "");
-
         const observerOptions = {
             root: null,
             rootMargin: "-20% 0px -20% 0px",
@@ -83,9 +79,9 @@ export default function Header({
             <Logo isCompact={hasHero ? isScrolled : true} />
             {hasHero && <Hero />}
             <header
-                className={`sticky top-0 h-20 z-50 w-full flex justify-start items-center`}
+                className={`sticky top-0 h-20 w-full flex justify-start items-center`}
             >
-                <Link href="/" id="header-logo" className="aspect-[313/150] w-[150px]"></Link>
+                <Link href="/" id="header-logo" className="aspect-[313/150] w-[120px]"></Link>
                 <nav
                     className={`flex justify-start font-medium transition-position will-change-transform duration-500 text-white h-full ${hasHero && !isScrolled ? "gap-60" : "gap-8"}`}
                 >
