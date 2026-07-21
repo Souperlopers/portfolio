@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { NavigationItem } from "@/types/navigation";
 import { Hero, Logo } from "@/index";
-import { Link } from "@inertiajs/react";
 
 export default function Header({
     navigationList,
@@ -91,7 +90,7 @@ export default function Header({
                         <button
                             key={item.title}
                             onClick={() => scrollToSection(item)}
-                            className={`h-fit text-white text-nowrap ${isBelowHero ? "bg-gray-900 p-2 rounded-xl" : activeSection === item.id ? "border-b border-primary" : "opacity-60 hover:opacity-90"}`}
+                            className={`h-fit text-white text-nowrap ${isBelowHero ? "bg-slate-800 p-2 rounded-xl" : activeSection === item.id ? "border-b border-primary" : "opacity-60 hover:opacity-90"}`}
                         >
                             {item.title}
                         </button>
