@@ -7,7 +7,7 @@ export default function Hero() {
     const onLoad = () => setImagesLoadedCount((prev) => prev + 1);
 
     return (
-        <div className="h-[calc(100vh-100px)] w-full relative overflow-x-hidden">
+        <div className="h-[550px] w-full relative overflow-x-hidden">
             {/* white section */}
             <img
                 className={`absolute top-0 max-w-[2096px] left-[calc(50%-100px)] -translate-x-1/2`}
@@ -21,7 +21,7 @@ export default function Hero() {
 
             {/* describtion */}
             <p className="absolute z-50 text-2xl text-center w-[400px] top-[400px] left-[calc(50vw+150px)]">
-                تولیدکننده نرم‌افزارهای اداری و تجاری
+                تولیدکننده انواع نرم‌افزارهای اداری و تجاری
             </p>
 
 

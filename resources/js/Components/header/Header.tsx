@@ -80,17 +80,17 @@ export default function Header({
             <Logo isCompact={hasHero ? isScrolled : true} />
             {hasHero && <Hero />}
             <header
-                className={`sticky top-0 h-20 z-50 flex justify-center items-center gap-10 ${!isBelowHero && "py-2"}`}
+                className={`sticky top-0 z-50 flex justify-center items-center gap-10 ${isBelowHero ? "h-[calc(100vh-550px)]" : "h-[80px] py-2"} transition-all will-change-transform duration-300 ease-in-out`}
             >
-                <div id="header-logo" className={`aspect-[313/150] w-[120px] ${isBelowHero && "hidden"}`}></div>
+                <div id="header-logo" className={`aspect-[313/150] ${isBelowHero ? "hidden":"w-[120px]"} transition-all will-change-transform duration-300 ease-in-out`}></div>
                 <nav
-                    className={`flex justify-start items-center font-medium transition-position will-change-transform duration-500 ${isBelowHero ? "gap-60 text-4xl" : "w-full gap-20 text-xl"}`}
+                    className={`flex justify-start items-center ${isBelowHero ? "w-fit gap-60 text-4xl" : "w-full gap-20 text-xl"} transition-all will-change-transform duration-300 ease-in-out`}
                 >
                     {navigationList.map((item) => (
                         <button
                             key={item.title}
                             onClick={() => scrollToSection(item)}
-                            className={`h-fit text-white text-nowrap ${isBelowHero ? "bg-slate-800 p-2 rounded-xl" : activeSection === item.id ? "border-b border-primary" : "opacity-60 hover:opacity-90"}`}
+                            className={`h-fit font-medium text-white text-nowrap p-2 ${isBelowHero ? "bg-slate-800 rounded-xl" : activeSection === item.id ? "border-b border-primary" : "opacity-60 hover:opacity-90"} transition-all will-change-transform duration-300 ease-in-out`}
                         >
                             {item.title}
                         </button>
