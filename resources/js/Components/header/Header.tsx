@@ -56,12 +56,7 @@ export default function Header({ data }: { data: HeaderData }) {
         return () => observers.forEach((observer) => observer.disconnect());
     }, [navigationList]);
 
-
-    const [scrolled, setScrolled] = useState(false);
-
-    const SouperSrc = "/assets/images/logo-images/souper.svg";
-    const LopersSrc = "/assets/images/logo-images/lopers.svg";
-    const PtxSrc = "/assets/images/logo-images/ptx.svg";
+    const [isScrolled, setScrolled] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -79,14 +74,18 @@ export default function Header({ data }: { data: HeaderData }) {
         return () => window.removeEventListener("scroll", handleScroll);
     });
 
-
     return (
         <>
-            {data.isHero && <Hero />}
-            {data.isHero && <MainLogo />}
-            <header className={`fixed z-50 w-full flex flex-col justify-start items-center`}>
-                <div className={`flex items-center h-[80px] w-full max-w-[1350px]`}>
-                    <div className={`flex w-full  font-medium text-white gap-8 ${isScrolled ? "justify-start gap-8 lg:pr-40 pr-24" : "justify-center lg:gap-40"} h-full`}>
+            <header
+                className={`fixed z-50 w-full flex flex-col justify-start items-center`}
+            >
+                <div
+                    className={`flex items-center h-[80px] w-full max-w-[1350px]`}
+                >
+                    <MainLogo isCompact={isScrolled} />
+                    <nav
+                        className={`flex w-full  font-medium text-white gap-8 ${isScrolled ? "justify-start gap-8 lg:pr-40 pr-24" : "justify-center lg:gap-40"} h-full`}
+                    >
                         {navigationList.map((item) => (
                             <button
                                 key={item.title}
@@ -102,9 +101,10 @@ export default function Header({ data }: { data: HeaderData }) {
                                 )}
                             </button>
                         ))}
-                    </div>
+                    </nav>
                 </div>
             </header>
+            {data.isHero && <Hero />}
         </>
     );
 }
