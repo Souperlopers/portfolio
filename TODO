@@ -10,6 +10,7 @@ TODO_Z what if a member doesnt have banner?
 TODO_Z main content responsiveness
 TODO_Z check todo_z tag on todo tree extension
 
+TODO_S design decision: what should we do with navbar in small screens: hamburger, scroller button, keep it
 TODO_S header, hero, and logo responsiveness
 TODO_S fill database
 
