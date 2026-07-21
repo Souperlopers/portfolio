@@ -1,8 +1,8 @@
-export { default as Hero       } from "@/Partials/home/Hero"         ;
-export { default as Projects   } from "@/Partials/home/Projects"       ;
-export { default as Members    } from "@/Partials/home/Members"        ;
-export { default as About      } from "@/Partials/home/AboutUs"        ;
-export { default as MainLogo   } from "@/Components/logo/MainLogo"     ;
+export { default as Hero     } from "@/Partials/home/Hero"     ;
+export { default as Projects } from "@/Partials/home/Projects" ;
+export { default as Members  } from "@/Partials/home/Members"  ;
+export { default as About    } from "@/Partials/home/AboutUs"  ;
+export { default as Logo     } from "@/Components/logo/Logo"   ;
 
 export { default as Profile        } from "@/Partials/member/Profile"       ;
 export { default as MemberProjects } from "@/Partials/member/MemberProjects";
@@ -15,5 +15,4 @@ export { default as Contributors  } from "@/Partials/project/ProjectMembers";
 
 export { default as Loading    } from "@/Components/Loading"       ;
 export { default as Header     } from "@/Components/header/Header" ;
-export { default as Logo       } from "@/Components/logo/Logo"     ;
 export { default as DrawerMenu } from "@/Components/DrawerMenu"    ;

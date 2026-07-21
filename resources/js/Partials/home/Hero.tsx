@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { MainLogo } from "@/index";
+import { Logo } from "@/index";
 
 const TOTAL_IMAGES = 6;
 
@@ -16,7 +16,6 @@ export default function Hero() {
         <div className="h-[100vh] w-full flex justify-center align-middle">
             <div className="relative overflow-visible w-full h-full max-w-7xl max-h-[460px]">
                 {/* logo */}
-                {allLoaded && <MainLogo />}
                 <p className="absolute z-50 md:text-3xl text-xl md:top-[370px] md:right-[10%] left-20 top-[30%]">
                     تیم توسعه‌ نرم‌افزار
                 </p>

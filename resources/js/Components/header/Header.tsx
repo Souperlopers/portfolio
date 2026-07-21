@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { HeaderData, NavigationItems } from "@/types/navigation";
-import Hero from "@/Partials/home/Hero";
-import MainLogo from "../logo/MainLogo";
+import { Hero, Logo } from "@/index";
 
 export default function Header({ data }: { data: HeaderData }) {
     const navigationList = data.navList;
@@ -82,7 +81,7 @@ export default function Header({ data }: { data: HeaderData }) {
                 <div
                     className={`flex items-center h-[80px] w-full max-w-[1350px]`}
                 >
-                    <MainLogo isCompact={isScrolled} />
+                    <Logo isCompact={isScrolled} />
                     <nav
                         className={`flex w-full  font-medium text-white gap-8 ${isScrolled ? "justify-start gap-8 lg:pr-40 pr-24" : "justify-center lg:gap-40"} h-full`}
                     >
@@ -90,7 +89,7 @@ export default function Header({ data }: { data: HeaderData }) {
                             <button
                                 key={item.title}
                                 onClick={() => scrollToSection(item)}
-                                className={`${navItemStyle} ${activeSection != item.id && activeNotItemStyle}`}
+                                className={`relative py-2 transition-all duration-200 focus-visible:outline-none text-white hover:text-white ${activeSection != item.id && "opacity-60 hover:opacity-90"}`}
                             >
                                 <span>{item.title}</span>
 
