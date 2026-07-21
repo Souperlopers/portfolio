@@ -7,7 +7,7 @@ export default function Hero() {
     const onLoad = () => setImagesLoadedCount((prev) => prev + 1);
 
     return (
-        <div className="h-[600px] w-full relative overflow-x-hidden">
+        <div className="h-[calc(100vh-100px)] w-full relative overflow-x-hidden">
             {/* white section */}
             <img
                 className={`absolute top-0 max-w-[2096px] left-[calc(50%-100px)] -translate-x-1/2`}
