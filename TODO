@@ -1,6 +1,25 @@
 goal: create a portfolio webapp in -99 week and -99 days
 
-TODO_S change memberData url to : '/members/{member:slug}'
+TODO_Z header background when !isBelowHero
+TODO_Z navbar buttons background
+TODO_Z organize developer shapes
+TODO_Z wait untill load for hero and logo shapes (show loading or skeleton?)
+TODO_Z decrease top padding in member and project pages
+TODO_Z what if a member doesnt have banner? 
+TODO_Z main content responsiveness
+
+TODO_S header, hero, and logo responsiveness
+TODO_S fill database
+
+TODO_S (customized 404 status code)[https://inertiajs.com/docs/v2/advanced/error-handling]
+
+TODO_Z panel
+TODO_S authentication
+TODO_S panel
+
+TODO_S redis
+
+TODO_S create input for website
 TODO_S pagination function on frontend
 TODO_S ulid
 TODO_S project time ranges
@@ -8,11 +27,5 @@ TODO_S add reviews
 TODO_S add storage name hider
 TODO_S add storage image project/member based folders
 TODO_S add unique method to asset parameters in migrations
-TODO_S redis
+
 TODO_S en/fa locale switching
-
-TODO_S input (oauth)
-TODO_S panel
-TODO_Z panel
-
-TODO_S (INTERNET)[https://inertiajs.com/docs/v2/advanced/error-handling]: customized 404 status code
