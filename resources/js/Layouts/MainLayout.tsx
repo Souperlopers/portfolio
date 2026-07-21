@@ -29,7 +29,7 @@ export default function MainLayout({
         <>
             {isloading && <Loading />}
             <Header navigationList={navigationList} hasHero={hasHero} />
-            <main className="flex flex-col justify-start items-center">
+            <main className="flex flex-col justify-start gap-16 items-center bg-base-300 md:p-20 px-5 py-10">
                 {children}
             </main>
         </>

@@ -46,12 +46,12 @@ const MemberCard = ({ memberData }: { memberData: MemberBrief }) => {
                 <p className="text-xs md:text-sm text-white/40">{position}</p>
             </div>
 
-            <TagsComponent tags={skills} justify="center" />
+            <TagsComponent tags={skills} />
 
             <Link
                 href={url}
                 className="w-full text-center py-1.5 md:py-2 text-sm md:text-base font-medium
-                  rounded-lg bg-btn-bg hover:bg-btn-hover
+                  rounded-lg bg-btn-primary hover:bg-btn-hover
                      transition-all duration-150 mt-auto"
             >
                 مشاهده پروفایل
