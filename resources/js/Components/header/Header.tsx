@@ -85,9 +85,9 @@ export default function Header({
             <header
                 className={`sticky top-0 h-20 z-50 w-full flex justify-start items-center`}
             >
-                <Link href="/" id="header-logo" className="w-[150px]"></Link>
+                <Link href="/" id="header-logo" className="aspect-[313/150] w-[150px]"></Link>
                 <nav
-                    className={`flex w-full font-medium text-white gap-8 h-full ${hasHero && !isScrolled ? "justify-center lg:gap-40" : "justify-start gap-8"}`}
+                    className={`flex justify-start font-medium transition-position will-change-transform duration-500 text-white h-full ${hasHero && !isScrolled ? "gap-60" : "gap-8"}`}
                 >
                     {navigationList.map((item) => (
                         <button

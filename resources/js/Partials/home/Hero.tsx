@@ -7,10 +7,10 @@ export default function Hero() {
     const onLoad = () => setImagesLoadedCount((prev) => prev + 1);
 
     return (
-        <div className="h-[100vh] w-full flex justify-center align-middle">
+        <div className="h-[80vh] w-full flex justify-center align-middle">
             <div className="relative overflow-visible w-full h-full max-w-7xl max-h-[460px]">
                 {/* logo */}
-                <Link href="/" id="hero-logo" className="absolute w-[45%] md:w-[32%]"></Link>
+                <Link href="/" id="hero-logo" className={`absolute aspect-[313/90] w-[45%]`}></Link>
 
                 {/* describtion */}
                 <p className="absolute z-50 md:text-3xl text-xl md:top-[370px] md:right-[10%] left-20 top-[30%]">
