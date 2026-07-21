@@ -51,7 +51,7 @@
     height: 32px;
 }
 
-@media (max-width: 1320px) {
+@media (min-width: 1020px) {
     .image-gallery-slide {
         min-height: 300px;
     }
