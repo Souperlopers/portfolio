@@ -1,12 +1,12 @@
-import { ReactNode       }                           from "react"              ;
-import   Layout                                      from "@/Layouts/MainLayout"   ;
-import { MemberPageProps }                           from "@/types"            ;
-import { Head            }                           from "@inertiajs/react"   ;
-import { Profile         , MemberProjects, Contact } from "@/index"            ;
-import { NavigationItems }                           from "@/types/navigation" ;
+import { ReactNode } from "react";
+import MainLayout from "@/Layouts/MainLayout";
+import { MemberPageProps } from "@/types";
+import { Head } from "@inertiajs/react";
+import { Profile, MemberProjects, Contact } from "@/index";
+import { NavigationItem } from "@/types/navigation";
 
 export default function Member({ member }: MemberPageProps) {
-    const info     = member.data               || {};
+    const info = member.data || {};
     const projects = member.data.contributions || [];
 
     return (
@@ -25,11 +25,14 @@ export default function Member({ member }: MemberPageProps) {
     );
 }
 
-const navList: NavigationItems[] = [
-    { title: "خانه"                , href : "/"        },
-    { title: "مهارت ها"            , id   : "profile"  },
-    { title: "پروژه های مربوطه"    , id   : "projects" },
-    { title: "تماس با توسعه‌دهنده" , id   : "contact"  },
-];
-
-Member.layout = (page: ReactNode) => <Layout children={page} HeaderData={{ navList }} />;
+Member.layout = (page: ReactNode) => (
+    <MainLayout
+        children={page}
+        navigationList={[
+            { title: "خانه", href: "/" },
+            { title: "مهارت ها", id: "profile" },
+            { title: "پروژه های مربوطه", id: "projects" },
+            { title: "تماس با توسعه‌دهنده", id: "contact" },
+        ]}
+    />
+);

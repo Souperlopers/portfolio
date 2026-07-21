@@ -1,17 +1,21 @@
 import { useState, useEffect } from "react";
-import { HeaderData, NavigationItems } from "@/types/navigation";
+import { NavigationItem } from "@/types/navigation";
 import Hero from "@/Partials/home/Hero";
 import MainLogo from "../logo/MainLogo";
 
-export default function Header({ data }: { data: HeaderData }) {
-    const navigationList = data.navList;
-
+export default function Header({
+    navigationList,
+    hasHero = false,
+}: {
+    navigationList: NavigationItem[];
+    hasHero: boolean;
+}) {
     const [activeSection, setActiveSection] = useState(
         navigationList[0].id || "",
     );
 
     // scroll
-    const scrollToSection = (item: NavigationItems) => {
+    const scrollToSection = (item: NavigationItem) => {
         if (item.href) {
             window.location.href = item.href;
             return;
@@ -104,7 +108,7 @@ export default function Header({ data }: { data: HeaderData }) {
                     </nav>
                 </div>
             </header>
-            {data.isHero && <Hero />}
+            {hasHero && <Hero />}
         </>
     );
 }

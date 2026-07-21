@@ -1,10 +1,5 @@
-export type NavigationItems = {
+export type NavigationItem = {
     title: string
     id?: string ,
     href?: string,
-}
-
-export type HeaderData = {
-    isHero?: boolean
-    navList: NavigationItems[]
 }
