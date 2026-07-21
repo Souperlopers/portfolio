@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { NavigationItem } from "@/types/navigation";
 import { Hero, Logo } from "@/index";
+import { Link } from "@inertiajs/react";
 
 export default function Header({
     navigationList,
@@ -79,13 +80,14 @@ export default function Header({
 
     return (
         <>
+            <Logo isCompact={hasHero ? isScrolled : true} />
             {hasHero && <Hero />}
             <header
-                className={`fixed z-50 w-full flex flex-col justify-start items-center`}
+                className={`sticky top-0 h-20 z-50 w-full flex justify-start items-center`}
             >
-                <Logo isCompact={true} />
+                <Link href="/" id="header-logo" className="w-[150px]"></Link>
                 <nav
-                    className={`flex w-full font-medium text-white gap-8 h-full ${hasHero && !isScrolled ? "justify-center lg:gap-40" : "justify-start gap-8 lg:pr-40 pr-24"}`}
+                    className={`flex w-full font-medium text-white gap-8 h-full ${hasHero && !isScrolled ? "justify-center lg:gap-40" : "justify-start gap-8"}`}
                 >
                     {navigationList.map((item) => (
                         <button
