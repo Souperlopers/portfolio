@@ -78,30 +78,26 @@ export default function Header({
         return () => window.removeEventListener("scroll", handleScroll);
     });
 
+    const isBelowHero = hasHero && !isScrolled
+
     return (
         <>
             <Logo isCompact={hasHero ? isScrolled : true} />
             {hasHero && <Hero />}
             <header
-                className={`sticky top-0 h-20 z-50 w-full flex justify-start items-center`}
+                className={`sticky top-0 h-fit z-50 flex justify-center items-center gap-10`}
             >
-                <Link href="/" id="header-logo" className="aspect-[313/150] w-[150px]"></Link>
+                <div id="header-logo" className={`aspect-[313/150] w-[150px] ${isBelowHero && "hidden"}`}></div>
                 <nav
-                    className={`flex justify-start font-medium transition-position will-change-transform duration-500 text-white h-full ${hasHero && !isScrolled ? "gap-60" : "gap-8"}`}
+                    className={`flex justify-start items-center font-medium transition-position will-change-transform duration-500 ${isBelowHero ? "gap-60 text-4xl" : "w-full gap-20 text-xl"}`}
                 >
                     {navigationList.map((item) => (
                         <button
                             key={item.title}
                             onClick={() => scrollToSection(item)}
-                            className={`relative py-2 transition-all duration-200 focus-visible:outline-none text-white hover:text-white ${activeSection != item.id && "opacity-60 hover:opacity-90"}`}
+                            className={`h-fit text-white text-nowrap ${isBelowHero ? "bg-gray-900 p-2 rounded-xl" : activeSection === item.id ? "border-b border-primary" : "opacity-60 hover:opacity-90"}`}
                         >
-                            <span>{item.title}</span>
-
-                            {activeSection === item.id && (
-                                <span
-                                    className={`absolute bottom-0 left-0 right-0 h-[2px] bg-primary`}
-                                />
-                            )}
+                            {item.title}
                         </button>
                     ))}
                 </nav>

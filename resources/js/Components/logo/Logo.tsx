@@ -1,6 +1,7 @@
 import { createPortal } from "react-dom";
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import { Link } from "@inertiajs/react";
 
 export default function Logo({ isCompact = true }: { isCompact: boolean }) {
     const [target, setTarget] = useState<HTMLElement | null>(null);
@@ -49,12 +50,14 @@ export default function Logo({ isCompact = true }: { isCompact: boolean }) {
                     transition={{ duration: ANIMATION_TIME / 1000, ease: "linear" }}
                     className={`h-full w-full z-50 relative`}
                 >
-                    <img src={`/assets/images/logo-images/souper.svg`} alt="Souper"
-                        className={`absolute w-[45%] h-[60%] ${(state == "compact_start" || state === "wide_end") ? "top-[3%] left-[33.33%]" : "top-1/2 -translate-y-1/2 left-0"} transition-all will-change-transform duration-700 ease-out `} />
-                    <img src={`/assets/images/logo-images/lopers.svg`} alt="Lopers"
-                        className={`absolute w-[43.76%] h-[60%] ${(state == "compact_start" || state === "wide_end") ? "left-[21.21%] bottom-[3%]" : "bottom-1/2 translate-y-1/2 left-[28.5%]"} transition-all will-change-transform duration-700 ease-out `} />
-                    <img src={`/assets/images/logo-images/ptx.svg`} alt="Gul"
-                        className={`absolute w-[8%] h-[40%] ${(state == "compact_start" || state === "wide_end") ? "right-[22%] bottom-[15%] rotate-[80deg]" : "opacity-0.5 bottom-1/2 translate-y-1/2 left-[65%]"} transition-all will-change-transform duration-700 ease-out `} />
+                    <Link href="/">
+                        <img src={`/assets/images/logo-images/souper.svg`} alt="Souper"
+                            className={`absolute w-[45%] h-[60%] ${(state == "compact_start" || state === "wide_end") ? "top-[3%] left-[33.33%]" : "top-1/2 -translate-y-1/2 left-0"} transition-all will-change-transform duration-700 ease-out `} />
+                        <img src={`/assets/images/logo-images/lopers.svg`} alt="Lopers"
+                            className={`absolute w-[43.76%] h-[60%] ${(state == "compact_start" || state === "wide_end") ? "left-[21.21%] bottom-[3%]" : "bottom-1/2 translate-y-1/2 left-[28.5%]"} transition-all will-change-transform duration-700 ease-out `} />
+                        <img src={`/assets/images/logo-images/ptx.svg`} alt="Gul"
+                            className={`absolute w-[8%] h-[40%] ${(state == "compact_start" || state === "wide_end") ? "right-[22%] bottom-[15%] rotate-[80deg]" : "opacity-0.5 bottom-1/2 translate-y-1/2 left-[65%]"} transition-all will-change-transform duration-700 ease-out `} />
+                    </Link>
                 </motion.div>
             </AnimatePresence>,
             target,
