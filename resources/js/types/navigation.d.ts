@@ -3,3 +3,8 @@ export type NavigationItems = {
     id?: string ,
     href?: string,
 }
+
+export type HeaderData = {
+    isHero?: boolean
+    navList: NavigationItems[]
+}

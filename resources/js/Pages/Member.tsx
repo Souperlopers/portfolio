@@ -1,19 +1,9 @@
 import { ReactNode       }                           from "react"              ;
-import   Layout                                      from "@/Layouts/Layout"   ;
+import   Layout                                      from "@/Layouts/MainLayout"   ;
 import { MemberPageProps }                           from "@/types"            ;
 import { Head            }                           from "@inertiajs/react"   ;
 import { Profile         , MemberProjects, Contact } from "@/index"            ;
 import { NavigationItems }                           from "@/types/navigation" ;
-
-//style
-const scrollStyle = "scroll-mt-20";
-
-const memberPageNavigationItems: NavigationItems[] = [
-    { title: "خانه"                , href : "/"        },
-    { title: "مهارت ها"            , id   : "profile"  },
-    { title: "پروژه های مربوطه"    , id   : "projects" },
-    { title: "تماس با توسعه‌دهنده" , id   : "contact"  },
-];
 
 export default function Member({ member }: MemberPageProps) {
     const info     = member.data               || {};
@@ -22,17 +12,24 @@ export default function Member({ member }: MemberPageProps) {
     return (
         <div className="flex flex-col gap-10">
             <Head title={`SouperLopers | ${info.name}`} />
-            <div id="profile" className={scrollStyle}>
+            <div id="profile" className={`scroll-mt-20`}>
                 <Profile info={info} />
             </div>
-            <div id="projects" className={scrollStyle}>
+            <div id="projects" className={`scroll-mt-20`}>
                 <MemberProjects projects={projects} />
             </div>
-            <div id="contact" className={scrollStyle}>
+            <div id="contact" className={`scroll-mt-20`}>
                 <Contact info={info} />
             </div>
         </div>
     );
 }
 
-Member.layout = (page: ReactNode) => <Layout children={page} navigationList={memberPageNavigationItems} />;
+const navList: NavigationItems[] = [
+    { title: "خانه"                , href : "/"        },
+    { title: "مهارت ها"            , id   : "profile"  },
+    { title: "پروژه های مربوطه"    , id   : "projects" },
+    { title: "تماس با توسعه‌دهنده" , id   : "contact"  },
+];
+
+Member.layout = (page: ReactNode) => <Layout children={page} HeaderData={{ navList }} />;

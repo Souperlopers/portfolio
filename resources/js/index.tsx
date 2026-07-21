@@ -3,7 +3,6 @@ export { default as Projects   } from "@/Partials/home/Projects"       ;
 export { default as Members    } from "@/Partials/home/Members"        ;
 export { default as About      } from "@/Partials/home/AboutUs"        ;
 export { default as MainLogo   } from "@/Components/logo/MainLogo"     ;
-export { default as MainHeader } from "@/Components/header/MainHeader" ;
 
 export { default as Profile        } from "@/Partials/member/Profile"       ;
 export { default as MemberProjects } from "@/Partials/member/MemberProjects";
