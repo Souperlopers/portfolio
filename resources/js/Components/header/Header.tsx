@@ -90,7 +90,7 @@ export default function Header({
                         <button
                             key={item.title}
                             onClick={() => scrollToSection(item)}
-                            className={`h-fit font-medium text-white text-nowrap p-2 ${isBelowHero ? "bg-slate-800 rounded-xl" : activeSection === item.id ? "border-b border-primary" : "opacity-60 hover:opacity-90"} transition-all will-change-transform duration-300 ease-in-out`}
+                            className={`h-fit font-medium text-white text-nowrap p-2 ${isBelowHero ? "" : activeSection === item.id ? "border-b border-primary" : "opacity-60 hover:opacity-90"} transition-all will-change-transform duration-300 ease-in-out`}
                         >
                             {item.title}
                         </button>

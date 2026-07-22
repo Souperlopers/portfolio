@@ -1,6 +1,5 @@
 goal: create a portfolio webapp in -99 week and -99 days
 
-TODO_Z navbar buttons background
 TODO_Z organize developer shapes
 TODO_Z decrease top padding in member and project pages
 TODO_Z wait untill load for hero and logo shapes (show loading or skeleton?)
