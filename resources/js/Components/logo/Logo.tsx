@@ -37,7 +37,7 @@ export default function Logo({ isCompact = true }: { isCompact: boolean }) {
     const animationState: StateType = isCompact
         ? (timePassed ? "compact_start" : "compact_end")
         : (timePassed ? "wide_start" : "wide_end")
-    const isOnTop = (animationState == "compact_start" || animationState === "wide_end")
+    const isOnTop = (animationState === "compact_end" || animationState === "wide_start")
 
     return !target
         ? null
@@ -53,11 +53,11 @@ export default function Logo({ isCompact = true }: { isCompact: boolean }) {
                 >
                     <Link href="/">
                         <img src={`/assets/images/logo-images/souper.svg`} alt="Souper"
-                            className={`absolute w-[45%] h-[60%] ${isOnTop ? "top-[3%] left-[33.33%]" : "top-1/2 -translate-y-1/2 left-0"} transition-all will-change-transform duration-700 ease-out `} />
+                            className={`absolute ${isOnTop ? "w-[45%] top-0 left-0" : "w-[80%] top-0 left-[20%"} transition-all will-change-transform duration-700 ease-out `} />
                         <img src={`/assets/images/logo-images/lopers.svg`} alt="Lopers"
-                            className={`absolute w-[43.76%] h-[60%] ${isOnTop ? "left-[21.21%] bottom-[3%]" : "bottom-1/2 translate-y-1/2 left-[28.5%]"} transition-all will-change-transform duration-700 ease-out `} />
+                            className={`absolute ${isOnTop ? "w-[43.76%] bottom-0 left-[45%]" : "w-[80%] bottom-0 left-0"} transition-all will-change-transform duration-700 ease-out `} />
                         <img src={`/assets/images/logo-images/ptx.svg`} alt="Gul"
-                            className={`absolute w-[8%] h-[40%] ${isOnTop ? "right-[22%] bottom-[15%] rotate-[80deg]" : "opacity-0.5 bottom-1/2 translate-y-1/2 left-[65%]"} transition-all will-change-transform duration-700 ease-out `} />
+                            className={`absolute ${isOnTop ? "w-[11.24%] bottom-1/2 translate-y-1/2 right-0" : "w-[8%] bottom-[5%] right-[5%] rotate-[80deg]"} transition-all will-change-transform duration-700 ease-out `} />
                     </Link>
                 </motion.div>
             </AnimatePresence>,

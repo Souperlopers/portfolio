@@ -6,24 +6,24 @@ export default function Hero() {
     const onLoad = () => setImagesLoadedCount((prev) => prev + 1);
 
     return (
-        <div className="h-[540px] w-full relative overflow-x-hidden">
+        <div className="h-[55vh] w-full relative overflow-hidden">
             {/* white section */}
             <img
-                className={`absolute top-0 max-w-[2096px] left-[calc(50%-100px)] -translate-x-1/2`}
+                className={`absolute aspect-[3042/510] max-w-[350vw] translate-x-[50vw]`}
                 src="/assets/images/banner-images/Subtract2.svg"
                 alt="banner white section"
                 onLoad={onLoad}
             />
 
             {/* logo */}
-            {/* <div id="hero-logo" className={`z-50 absolute aspect-[313/90] w-[500px] top-20 left-[calc(50vw+150px)]`}></div> */}
+            <div id="hero-logo" className={`z-50 absolute w-3/4 sm: aspect-[313/90] top-[15%] left-1/2 -translate-x-1/2`}></div>
 
             {/* describtion */}
-            {/* <p className="absolute z-50 text-2xl text-center w-[400px] top-[400px] left-[calc(50vw+150px)]">
+            <p className="absolute z-50 text-2xl xs:text-3xl text-balance w-3/4 bottom-0 pb-4 left-1/2 -translate-x-1/2">
                 تولیدکننده انواع نرم‌افزارهای اداری و تجاری
-            </p> */}
+            </p>
 
-            {/* <div className="absolute w-[900px] aspect-[1086/684] left-[calc(50vw-800px)] -top-12">
+            <div className="hidden sm:visible absolute h-[40vh] aspect-[1086/684] left-1/2 -translate-x-1/2 top-1/2">
                 <div className="relative w-full h-full">
                     <img // blue section
                         src="/assets/images/banner-images/Subtract.svg"
@@ -32,32 +32,32 @@ export default function Hero() {
                         className={`absolute z-10 w-full h-full`}
                     />
 
-                    <img // developers section
+                    <img // plant
                         src="/assets/images/banner-images/plant.svg"
                         alt="banner plant"
                         onLoad={onLoad}
-                        className={`absolute z-40 w-[6%] translate-x-[-950%] translate-y-[285%]`}
+                        className={`absolute z-40 w-[6%] left-[17%] top-[40%] opacity-50`}
                     />
-                    <img
+                    <img // girl
                         src="/assets/images/banner-images/Girl.svg"
                         alt="banner girl"
                         onLoad={onLoad}
-                        className={`absolute z-40 w-[17.5%] translate-x-[-230%] translate-y-[110%]`}
+                        className={`absolute z-40 w-[14%] bottom-[8%] left-[35%]`}
                     />
-                    <img
+                    <img // boy
                         src="/assets/images/banner-images/MAAAN.svg"
                         alt="banner man"
                         onLoad={onLoad}
-                        className={`absolute z-40 w-[32%] translate-x-[-35%] translate-y-[100%]`}
+                        className={`absolute z-40 w-[28%] right-[20%] bottom-[15%]`}
                     />
-                    <img
+                    <img // monitor
                         src="/assets/images/banner-images/monitor.svg"
                         alt="banner monitor"
                         onLoad={onLoad}
-                        className={`absolute z-40 w-[18%] translate-x-[-135%] translate-y-[150%]`}
+                        className={`-translate-x-1/2 -translate-y-1/2 absolute z-40 w-[20%] left-[55%] top-[45%]`}
                     />
                 </div>
-            </div> */}
+            </div>
 
         </div>
     );

@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { NavigationItem } from "@/types/navigation";
 import { Hero, Logo } from "@/index";
+import Hamburger from "./Hamburger";
 
 export default function Header({
     navigationList,
@@ -11,7 +12,7 @@ export default function Header({
 }) {
     const [activeSection, setActiveSection] = useState<string | null>(null);
 
-    // scroll
+    // scroll to navbar item on click
     const scrollToSection = (item: NavigationItem) => {
         if (item.href) {
             window.location.href = item.href;
@@ -61,10 +62,7 @@ export default function Header({
         const handleScroll = () => {
             const scrollY = window.scrollY;
             const threshold = 100; // pixels from top
-
             setScrolled(scrollY > threshold);
-            console.log(scrollY);
-            console.log(scrollY > threshold);
         };
 
         handleScroll();
@@ -82,21 +80,26 @@ export default function Header({
             <header
                 className={`sticky top-0 z-50 flex justify-center items-center gap-10 ${isBelowHero ? "h-[calc(100vh-550px)]" : "h-[80px] py-2 bg-gradient-to-b from-[#010103] via-[#050912]/90 to-[#121927]/80 backdrop-blur-lg"} transition-all will-change-transform duration-300 ease-in-out`}
             >
-                <div id="header-logo" className={`aspect-[313/150] ${isBelowHero ? "hidden":"w-[120px]"} transition-all will-change-transform duration-300 ease-in-out`}></div>
+                <div className={`navbar-start`}>
+                    <div id="header-logo" className={`${isBelowHero && "hidden"} aspect-[200/150] w-[50%] transition-all will-change-transform duration-300 ease-in-out`}></div>
+                </div>
                 <nav
-                    className={`flex justify-start items-center ${isBelowHero ? "w-fit gap-60 text-4xl" : "w-full gap-20 text-xl"} transition-all will-change-transform duration-300 ease-in-out`}
+                    className={`flex navbar-center ${isBelowHero ? "flex-col h-full justify-evenly items-stretch w-fit" : "hidden flex-row justify-start items-center w-full"} transition-all will-change-transform duration-300 ease-in-out`}
                 >
                     {navigationList.map((item) => (
                         <button
                             key={item.title}
                             onClick={() => scrollToSection(item)}
-                            className={`h-fit font-medium text-white text-nowrap p-2 ${isBelowHero ? "" : activeSection === item.id ? "border-b border-primary" : "opacity-60 hover:opacity-90"} transition-all will-change-transform duration-300 ease-in-out`}
+                            className={`h-fit font-medium text-white text-nowrap text-3xl xs:text-5xl p-2 ${isBelowHero ? "bg-slate-800 rounded-xl" : activeSection === item.id ? "border-b border-primary" : "opacity-60 hover:opacity-90"} transition-all will-change-transform duration-300 ease-in-out`}
                         >
                             {item.title}
                         </button>
                     ))}
                 </nav>
-            </header> */}
+                <div className={`navbar-end`}>
+                    {!isBelowHero && <Hamburger navList={navigationList} classNames={`${isBelowHero && "hidden"}`} clickHandler={scrollToSection} />}
+                </div>
+            </header>
         </>
     );
 }

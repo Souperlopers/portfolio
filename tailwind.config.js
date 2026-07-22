@@ -17,12 +17,20 @@ export default {
                 vazir: ['"vazir"', "sans-serif"],
             },
             colors: {
-
                 'primary': '#4daafc',
                 'bg-primary': '#252526',
                 'btn-primary': '#0078d4',
-                'btn-secundary': '#e6eefa',
+                'btn-secondary': '#e6eefa',
                 'btn-hover': '#015ea5',
+            },
+            screens: {
+                'xs'    :   '480px'                          ,
+                'h-xs'  : { 'raw'  : '(min-height: 480px)' } ,
+                'h-sm'  : { 'raw'  : '(min-height: 640px)' } ,
+                'h-md'  : { 'raw'  : '(min-height: 768px)' } ,
+                'h-lg'  : { 'raw'  : '(min-height: 1024px)' },
+                'h-xl'  : { 'raw'  : '(min-height: 1280px)' },
+                'h-2xl' : { 'raw'  : '(min-height: 1536px)' },
             }
         },
     },
