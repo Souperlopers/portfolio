@@ -26,7 +26,7 @@ export default {
             }
         },
     },
-     daisyui: {
+    daisyui: {
         themes: [
             {
                 souperlopers: {
@@ -42,9 +42,9 @@ export default {
                     "neutral": "#1E1E1E",
                     "neutral-content": "#FFFFFF",
 
-                    "base-100": "#0D1014",
-                    "base-200": "#252526",
-                    "base-300": "#2D2D30",
+                    "base-100": "#070B14", 
+                    "base-200": "#0E1420",
+                    "base-300": "#151C2B",
                     "base-content": "#CCCCCC",
 
                     "info": "#3794FF",
@@ -56,6 +56,8 @@ export default {
         ],
     },
 
-    plugins: [forms],
-    plugins: [require("daisyui")],
+    plugins: [
+        forms,
+        require("daisyui"),
+    ],
 };
