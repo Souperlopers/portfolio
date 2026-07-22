@@ -79,7 +79,7 @@ export default function Header({
         <>
             <Logo isCompact={hasHero ? isScrolled : true} />
             {hasHero && <Hero />}
-            <header
+            {/* <header
                 className={`sticky top-0 z-50 flex justify-center items-center gap-10 ${isBelowHero ? "h-[calc(100vh-550px)]" : "h-[80px] py-2"} transition-all will-change-transform duration-300 ease-in-out`}
             >
                 <div id="header-logo" className={`aspect-[313/150] ${isBelowHero ? "hidden":"w-[120px]"} transition-all will-change-transform duration-300 ease-in-out`}></div>
@@ -96,7 +96,7 @@ export default function Header({
                         </button>
                     ))}
                 </nav>
-            </header>
+            </header> */}
         </>
     );
 }

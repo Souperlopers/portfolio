@@ -1,4 +1,3 @@
-import { Link } from "@inertiajs/react";
 import { useState } from "react";
 
 export default function Hero() {
@@ -17,28 +16,23 @@ export default function Hero() {
             />
 
             {/* logo */}
-            <div id="hero-logo" className={`z-50 absolute aspect-[313/90] w-[500px] top-20 left-[calc(50vw+150px)]`}></div>
+            {/* <div id="hero-logo" className={`z-50 absolute aspect-[313/90] w-[500px] top-20 left-[calc(50vw+150px)]`}></div> */}
 
             {/* describtion */}
-            <p className="absolute z-50 text-2xl text-center w-[400px] top-[400px] left-[calc(50vw+150px)]">
+            {/* <p className="absolute z-50 text-2xl text-center w-[400px] top-[400px] left-[calc(50vw+150px)]">
                 تولیدکننده انواع نرم‌افزارهای اداری و تجاری
-            </p>
+            </p> */}
 
-
-            <div className="absolute w-[900px] aspect-[1086/684] left-[calc(50vw-800px)] -top-12">
+            {/* <div className="absolute w-[900px] aspect-[1086/684] left-[calc(50vw-800px)] -top-12">
                 <div className="relative w-full h-full">
-                    {/* blue section */}
-                    <img
+                    <img // blue section
                         src="/assets/images/banner-images/Subtract.svg"
                         alt="blue section of banner"
                         onLoad={onLoad}
                         className={`absolute z-10 w-full h-full`}
-                    >
+                    />
 
-                    </img>
-
-                    {/* developers section */}
-                    <img
+                    <img // developers section
                         src="/assets/images/banner-images/plant.svg"
                         alt="banner plant"
                         onLoad={onLoad}
@@ -63,7 +57,8 @@ export default function Hero() {
                         className={`absolute z-40 w-[18%] translate-x-[-146%] translate-y-[150%]`}
                     />
                 </div>
-            </div>
+            </div> */}
+
         </div>
     );
 }
