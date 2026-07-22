@@ -61,8 +61,11 @@ export default function Header({
     useEffect(() => {
         const handleScroll = () => {
             const scrollY = window.scrollY;
-            const threshold = 100; // pixels from top
-            setScrolled(scrollY > threshold);
+            if (scrollY > 415) {
+                setScrolled(true);
+            } else if (scrollY < 300) {
+                setScrolled(false);
+            }
         };
 
         handleScroll();
@@ -78,13 +81,11 @@ export default function Header({
             <Logo isCompact={hasHero ? isScrolled : true} />
             {hasHero && <Hero />}
             <header
-                className={`sticky top-0 z-50 flex justify-center items-center gap-10 ${isBelowHero ? "h-[calc(100vh-550px)]" : "h-[80px] py-2 bg-gradient-to-b from-[#010103] via-[#050912]/90 to-[#121927]/80 backdrop-blur-lg"} transition-all will-change-transform duration-300 ease-in-out`}
+                className={`sticky top-0 z-50 flex items-center ${isBelowHero ? "h-[45vh] flex-col" : "px-5 justify-between sm:justify-start h-[80px] py-2 bg-gradient-to-b from-[#010103] via-[#050912]/90 to-[#121927]/80 backdrop-blur-lg"} transition-all will-change-transform duration-300 ease-in-out`}
             >
-                <div className={`navbar-start`}>
-                    <div id="header-logo" className={`${isBelowHero && "hidden"} aspect-[200/150] w-[50%] transition-all will-change-transform duration-300 ease-in-out`}></div>
-                </div>
+                <div id="header-logo" className={`${isBelowHero && "hidden"} aspect-[200/150] h-[50px] transition-all will-change-transform duration-300 ease-in-out`}></div>
                 <nav
-                    className={`flex navbar-center ${isBelowHero ? "flex-col h-full justify-evenly items-stretch w-fit" : "hidden flex-row justify-start items-center w-full"} transition-all will-change-transform duration-300 ease-in-out`}
+                    className={`flex ${isBelowHero ? "flex-col h-full justify-evenly items-stretch w-fit" : "hidden sm:visible flex-row justify-start items-center w-full"} transition-all will-change-transform duration-300 ease-in-out`}
                 >
                     {navigationList.map((item) => (
                         <button
@@ -96,9 +97,7 @@ export default function Header({
                         </button>
                     ))}
                 </nav>
-                <div className={`navbar-end`}>
-                    {!isBelowHero && <Hamburger navList={navigationList} classNames={`${isBelowHero && "hidden"}`} clickHandler={scrollToSection} />}
-                </div>
+                {!isBelowHero && <Hamburger navList={navigationList} classNames={`${isBelowHero ? "hidden" : "visible sm:hidden"}`} clickHandler={scrollToSection} />}
             </header>
         </>
     );
