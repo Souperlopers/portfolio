@@ -7,7 +7,7 @@ export default function Hero() {
     const onLoad = () => setImagesLoadedCount((prev) => prev + 1);
 
     return (
-        <div className="h-[550px] w-full relative overflow-x-hidden">
+        <div className="h-[540px] w-full relative overflow-x-hidden">
             {/* white section */}
             <img
                 className={`absolute top-0 max-w-[2096px] left-[calc(50%-100px)] -translate-x-1/2`}
@@ -42,25 +42,25 @@ export default function Hero() {
                         src="/assets/images/banner-images/plant.svg"
                         alt="banner plant"
                         onLoad={onLoad}
-                        className={`absolute z-40 w-[6%] translate-x-[-950%] translate-y-[304%]`}
+                        className={`absolute z-40 w-[6%] translate-x-[-950%] translate-y-[285%]`}
                     />
                     <img
                         src="/assets/images/banner-images/Girl.svg"
                         alt="banner girl"
                         onLoad={onLoad}
-                        className={`absolute z-40 w-[18%] translate-x-[-200%] translate-y-[120%]`}
+                        className={`absolute z-40 w-[17.5%] translate-x-[-230%] translate-y-[110%]`}
                     />
                     <img
                         src="/assets/images/banner-images/MAAAN.svg"
                         alt="banner man"
                         onLoad={onLoad}
-                        className={`absolute z-40 w-[28%] translate-x-[-25%] translate-y-[100%]`}
+                        className={`absolute z-40 w-[32%] translate-x-[-35%] translate-y-[100%]`}
                     />
                     <img
                         src="/assets/images/banner-images/monitor.svg"
                         alt="banner monitor"
                         onLoad={onLoad}
-                        className={`absolute z-40 w-[18%] translate-x-[-146%] translate-y-[150%]`}
+                        className={`absolute z-40 w-[18%] translate-x-[-135%] translate-y-[150%]`}
                     />
                 </div>
             </div>
