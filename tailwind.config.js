@@ -42,9 +42,9 @@ export default {
                     "neutral": "#1E1E1E",
                     "neutral-content": "#FFFFFF",
 
-                    "base-100": "#070B14", // Header / Navbar
-                    "base-200": "#0E1420", // Cards
-                    "base-300": "#151C2B", // Main Background
+                    "base-100": "#070B14", 
+                    "base-200": "#0E1420",
+                    "base-300": "#151C2B",
                     "base-content": "#CCCCCC",
 
                     "info": "#3794FF",
