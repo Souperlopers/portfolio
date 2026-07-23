@@ -1,8 +1,10 @@
 goal: create a portfolio webapp in -99 week and -99 days
 
-TODO_Z wait untill load for hero and logo shapes (show loading or skeleton?)
+TODO_Z project section: display 2 colmns in lg and 1 col in sm
+TODO_Z redesign Project Item
+TODO_Z add circle before sections title
 TODO_Z add skeleton for gallery images
-TODO_Z what if a member doesnt have banner? 
+TODO_Z what if a member doesnt have banner? display difault banner
 TODO_Z main content responsiveness
 TODO_Z check todo_z tag on todo tree extension
 
