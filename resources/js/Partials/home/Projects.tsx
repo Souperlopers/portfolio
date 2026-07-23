@@ -8,8 +8,8 @@ const Projects = ({ projects }: { projects: ProjectBrief[] }) => {
     const [showMoreCount, setShowMoreCount] = useState(1);
     const projectsCount = projects.length;
 
-    const isShowMore = projectsCount > 3 && projectsCount > 3 * showMoreCount;
-    const visibleProjects = projects.slice(0, 3 * showMoreCount);
+    const isShowMore = projectsCount > 2 && projectsCount > 2 * showMoreCount;
+    const visibleProjects = projects.slice(0, 2 * showMoreCount);
 
     return (
         <section id="projects" className="scroll-mt-20 w-full max-w-[1350px] mx-auto">
@@ -19,7 +19,7 @@ const Projects = ({ projects }: { projects: ProjectBrief[] }) => {
 
             {projectsCount === 0 && <EmptyProjects />}
 
-            <div className="flex flex-col gap-6 lg:px-1">
+            <div className="grid lg:grid-cols-2 grid-cols-1 gap-5">
                 {visibleProjects.map((project, index) => (
                     <ProjectItem key={project.id} index={index} projectData={project} />
                 ))}
