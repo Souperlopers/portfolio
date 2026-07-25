@@ -2,6 +2,7 @@ import { createPortal } from "react-dom";
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Link } from "@inertiajs/react";
+import clsx from "clsx/lite";
 
 export default function Logo({ isCompact = true }: { isCompact: boolean }) {
     const [target, setTarget] = useState<HTMLElement | null>(null);
@@ -39,10 +40,7 @@ export default function Logo({ isCompact = true }: { isCompact: boolean }) {
     }, [isCompact]);
 
     type StateType =
-        | "compact_start"
-        | "compact_end"
-        | "wide_start"
-        | "wide_end";
+        "compact_start" | "compact_end" | "wide_start" | "wide_end";
     const animationState: StateType = isCompact
         ? timePassed
             ? "compact_start"
@@ -66,26 +64,47 @@ export default function Logo({ isCompact = true }: { isCompact: boolean }) {
                           duration: ANIMATION_TIME / 1000,
                           ease: "linear",
                       }}
-                      className={`h-full w-full z-50 relative`}
+                      className="relative z-50 h-full w-full"
                   >
                       <Link href="/">
                           <img
-                              src={`/assets/images/logo-images/souper.svg`}
+                              src="/assets/images/logo-images/souper.svg"
                               alt="Souper"
                               onLoad={onLoad}
-                              className={`absolute ${isOnTop ? "w-[45%] top-0 left-0" : "w-[80%] top-0 left-[20%"} transition-all will-change-transform duration-700 ease-out ${allLoaded ? "block" : "hidden"}`}
+                              className={clsx(
+                                  `absolute`, // basic
+                                  "transition-all duration-700 ease-out will-change-transform", // animation
+                                  allLoaded ? "block" : "hidden", // loading
+                                  isOnTop // position
+                                      ? "left-0 top-0 w-[45%]"
+                                      : "left-[20% top-0 w-[80%]",
+                              )}
                           />
                           <img
-                              src={`/assets/images/logo-images/lopers.svg`}
+                              src="/assets/images/logo-images/lopers.svg"
                               alt="Lopers"
                               onLoad={onLoad}
-                              className={`absolute ${isOnTop ? "w-[43.76%] bottom-0 left-[45%]" : "w-[80%] bottom-0 left-0"} transition-all will-change-transform duration-700 ease-out ${allLoaded ? "block" : "hidden"}`}
+                              className={clsx(
+                                  `absolute`, // basic
+                                  "transition-all duration-700 ease-out will-change-transform", // animation
+                                  allLoaded ? "block" : "hidden", // loading
+                                  isOnTop // position
+                                      ? "bottom-0 left-[45%] w-[43.76%]"
+                                      : "bottom-0 left-0 w-[80%]",
+                              )}
                           />
                           <img
-                              src={`/assets/images/logo-images/ptx.svg`}
+                              src="/assets/images/logo-images/ptx.svg"
                               alt="Gul"
                               onLoad={onLoad}
-                              className={`absolute ${isOnTop ? "w-[11.24%] bottom-1/2 translate-y-1/2 right-0" : "w-[8%] bottom-[5%] right-[5%] rotate-[80deg]"} transition-all will-change-transform duration-700 ease-out ${allLoaded ? "block" : "hidden"}`}
+                              className={clsx(
+                                  `absolute`, // basic
+                                  allLoaded ? "block" : "hidden", // loading
+                                  "transition-all duration-700 ease-out will-change-transform", // animation
+                                  isOnTop // position
+                                      ? "bottom-1/2 right-0 w-[11.24%] translate-y-1/2"
+                                      : "bottom-[5%] right-[5%] w-[8%] rotate-[80deg]",
+                              )}
                           />
                       </Link>
                   </motion.div>
