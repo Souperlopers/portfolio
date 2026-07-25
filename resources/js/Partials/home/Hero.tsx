@@ -8,11 +8,11 @@ export default function Hero() {
 
     return (
         <>
-            {!allLoaded && <div className="skeleton h-[55vh] w-full"></div>}
-            <div
+            <div // 
                 className={clsx(
-                    "relative overflow-hidden", // basic
-                    "h-[55vh] w-full", // dimensions
+					!allLoaded && "skeleton",
+                    "relative overflow-x-hidden", // basic
+                    "h-[500px] w-full", // dimensions
                 )}
             >
                 {/* white section */}
@@ -23,8 +23,8 @@ export default function Hero() {
                     className={clsx(
 						allLoaded ? "block" : "hidden", // loading
                         "absolute", // basic
-                        "aspect-[3042/510] max-w-[350vw]", // dimension
-                        "translate-x-[50vw]", // position
+                        "aspect-[3042/510] h-[400px] max-w-none", // dimension
+                        "left-[calc(50%-400px)] -translate-x-1/2", // position on < xsm
                     )}
                 />
 
@@ -34,8 +34,8 @@ export default function Hero() {
                     className={clsx(
 						allLoaded ? "block" : "hidden", // loading
                         "absolute z-50", // basic
-                        "aspect-[313/90] w-3/4", // dimension
-                        "left-1/2 top-[15%] -translate-x-1/2", // position,
+                        "aspect-[313/90] w-3/4 max-w-[450px]", // dimension
+                        "left-1/2 top-14 -translate-x-1/2", // position,
                     )}
                 ></div>
 
