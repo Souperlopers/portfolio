@@ -3,6 +3,7 @@ goal: create a portfolio webapp in -99 week and -99 days
 TODO_Z run `npm i` to install tailwind class sorter plugin (you have to use prettier as your default formatter)
 TODO_Z uninstall inline-fold extension and install [Tailwind Stash](https://marketplace.visualstudio.com/items?itemName=beumerr.tailwind-stash) 
 TODO_Z use clsx from now: npm i cslx
+TODO_Z optional: install [this](https://marketplace.visualstudio.com/items?itemName=Hamidk.classname-fold) extension to fold classnames when needed
 
 TODO_Z add circle before sections title
 TODO_Z add skeleton for gallery images
