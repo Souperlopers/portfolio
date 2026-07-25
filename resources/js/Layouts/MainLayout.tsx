@@ -3,6 +3,7 @@ import { ReactNode } from "react";
 import { Header, Loading } from "@/index";
 import { NavigationItem } from "@/types/navigation";
 import { router } from "@inertiajs/react";
+import clsx from "clsx/lite";
 
 export default function MainLayout({
     children,
@@ -29,7 +30,12 @@ export default function MainLayout({
         <>
             {isloading && <Loading />}
             <Header navigationList={navigationList} hasHero={hasHero} />
-            <main className="flex flex-col justify-start gap-16 items-center md:px-20 md:py-10 px-5 py-10">
+            <main
+                className={clsx(
+                    "flex flex-col items-center justify-start gap-16", // flex
+                    "px-5 py-10 md:px-20 md:py-10", // paddings
+                )}
+            >
                 {children}
             </main>
         </>
