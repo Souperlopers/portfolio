@@ -9,17 +9,17 @@ export default function ({ tags }: { tags: Tag[] }) {
                 <div
                     key={tag.id}
                     dir="ltr"
-                    className={`flex items-center gap-2 bg-white/5 rounded-xl px-4 py-2 text-sm`}
+                    className={`flex items-center justify-center gap-1.5 bg-white/5 rounded-xl px-3 py-1.5 text-sm`}
                 >
                     {hasIcon && (
                         <img
-                            className="w-5 h-5"
+                            className="w-4 h-4"
                             src={`/assets/icons/${tag.title}.svg`}
                             alt={tag.title}
                             onError={() => setHasIcon(false)}
                         />
                     )}
-                    <span className={`truncate max-w-20`}>{tag.title}</span>
+                    <span className={`truncate max-w-20 sm:text-sm text-xs pt-0.5`}>{tag.title}</span>
                 </div>
             ))}
         </div>

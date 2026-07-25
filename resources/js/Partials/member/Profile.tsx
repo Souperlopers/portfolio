@@ -11,7 +11,7 @@ const Profile = ({ info }: { info: Member }) => {
     const showFallback = !thumbnail || imgError;
 
     return (
-        <div className="w-full min-h-[500px] rounded-xl border border-white/10 bg-white/5 overflow-hidden ">
+        <div className="w-full min-h-[500px] rounded-xl bg-base-200 border border-primary/10 shadow-[0_10px_30px_rgba(0,0,0,.25)] overflow-hidden ">
             {/* banner */}
             <div className="w-full h-40 md:h-52 bg-gradient-to-br from-sky-500/20 via-white/5 to-blue-600/10" />
 
@@ -58,7 +58,7 @@ const Profile = ({ info }: { info: Member }) => {
                     {/* skills */}
                     {skills && skills?.length > 0 && (
                         <div className="mt-3">
-                            <TagsComponent tags={skills} justify="" />
+                            <TagsComponent tags={skills} />
                         </div>
                     )}
                 </div>

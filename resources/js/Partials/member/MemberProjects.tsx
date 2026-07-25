@@ -10,7 +10,7 @@ const MemberProjects = ({ projects }: { projects: ProjectBrief[] }) => {
             <h2 className="text-2xl sm:text-3xl font-extrabold text-white">
                 پروژه‌ها
             </h2>
-            <div className="flex flex-col gap-5">
+            <div className="grid lg:grid-cols-2 grid-cols-1 gap-5">
                 {projectsCount === 0 && <EmptyProjects />}
                 {projects.map((project, index) => (
                     <ProjectItem

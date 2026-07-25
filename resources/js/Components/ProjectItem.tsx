@@ -4,57 +4,54 @@ import { ProjectItemProps } from "@/types/project";
 import TagsComponent from "./TagsComponent";
 import { HiArrowLongLeft } from "react-icons/hi2";
 
-const ProjectItem = ({ projectData, index }: ProjectItemProps) => {
+export default function ProjectItem({ projectData, index }: ProjectItemProps) {
     const [imgLoaded, setImgLoaded] = useState(false);
-    const { title = "بدون نام", technologies = [], description="" } = projectData;
-
+    const {
+        title = "بدون نام",
+        technologies = [],
+        description = "",
+    } = projectData;
     return (
         <div
-            className="mx-auto md:mx-0 card lg:card-side w-[310px] md:w-full p-2.5 flex md:flex-row flex-col-reverse rounded-xl
-            border border-white/10 hover:border-white/25
-            bg-white/5 overflow-hidden transition-all duration-200"
+            className="flex flex-col sm:gap-5 gap-3 card p-2.5 rounded-xl bg-base-200 border border-primary/10 hover:-translate-y-1 hover:border-primary/25
+            hover:shadow-[0_16px_40px_rgba(47,91,255,.15)] shadow-[0_10px_30px_rgba(0,0,0,25)] overflow-hidden duration-300 bg-gradient-to-b from-base-300 to-[#0B1120]"
         >
-            {/* content */}
-            <div className="flex-1 flex flex-col justify-center lg:px-5 pt-5 pb-2 gap-5 min-w-0">
-                <div className="flex flex-col gap-5">
-                    <h3 className="md:text-3xl text-base font-semibold text-white truncate">
+            <div className="flex flex-col-reverse xs:flex-row sm:justify-between justify-center sm:gap-5 gap-3">
+                {/* info */}
+                <div className="w-full xs:max-w-[45%] flex flex-col sm:gap-5 gap-3">
+                    <h3 className="md:text-3xl text-xl font-semibold text-base-content truncate">
                         {title}
                     </h3>
-                    <TagsComponent tags={technologies}/>
-                    <p className="md:text-base text-sm text-white/50 md:line-clamp-1 line-clamp-2 leading-relaxed">
+                    <p className="md:text-base text-sm text-base-content/70 md:line-clamp-2 line-clamp-3 leading-relaxed">
                         {description}
                     </p>
+                    <TagsComponent tags={technologies} />
                 </div>
-                
-            {/* button */}
-            <div className="flex items-end md:justify-start justify-end shrink-0">
-                <Link href={projectData.url} className="text-[#0d1014] text-sm bg-btn-secundary  rounded-lg py-1 md:py-1.5 md:px-5 px-[15px]">
-                    <p className="inline-flex items-center gap-1">جزئیات 
-                    </p>
-                </Link>
+                {/* image */}
+                <div className="w-full xs:max-w-[50%] relative md:min-h-[200px] h-44 shrink-0 overflow-hidden">
+                    {!imgLoaded && (
+                        <div className="absolute inset-0 bg-white/5 animate-pulse" />
+                    )}
+                    <img
+                        src={projectData.thumbnail}
+                        alt={`${title} cover`}
+                        className="w-full h-full object-cover opacity-80 rounded-xl"
+                        onLoad={() => setImgLoaded(true)}
+                        style={{
+                            opacity: imgLoaded ? 1 : 0,
+                            transition: "opacity 300ms ease",
+                        }}
+                    />
+                </div>
             </div>
-            </div>
-
-             {/* image */}
-            <div className="relative md:w-[55%] md:h-72 h-44 shrink-0 overflow-hidden">
-                {!imgLoaded && (
-                    <div className="absolute inset-0 bg-white/5 animate-pulse" />
-                )}
-                <img
-                    src={projectData.thumbnail}
-                    alt={`${title} cover`}
-                    className="w-full h-full object-cover opacity-80 rounded-xl"
-                    onLoad={() => setImgLoaded(true)}
-                    style={{
-                        opacity: imgLoaded ? 0.85 : 0,
-                        transition: "opacity 300ms ease",
-                    }}
-                />
-            </div>
+            <Link
+                href={projectData.url}
+                className="text-primary hover:bg-primary/10 text-center border border-primary hover:border-primary/30 font-medium rounded-lg py-1 md:py-2 md:px-5 px-[15px] duration-300"
+            >
+                <button className="inline-flex items-center gap-1 sm:text-sm text-xs md:text-base truncate">
+                    مشاهده جزئیات
+                </button>
+            </Link>
         </div>
-       
     );
-};
-
-export default ProjectItem;
-
+}
