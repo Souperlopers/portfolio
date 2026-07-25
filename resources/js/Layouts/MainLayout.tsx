@@ -1,30 +1,30 @@
-import { useState, useEffect } from "react";
-import { ReactNode } from "react";
-import { Header, Loading } from "@/index";
-import { NavigationItem } from "@/types/navigation";
-import { router } from "@inertiajs/react";
-import clsx from "clsx/lite";
+import { useState, useEffect } from "react"
+import { ReactNode } from "react"
+import { Header, Loading } from "@/index"
+import { NavigationItem } from "@/types/navigation"
+import { router } from "@inertiajs/react"
+import clsx from "clsx/lite"
 
 export default function MainLayout({
     children,
     navigationList,
     hasHero = false,
 }: {
-    children: ReactNode;
-    navigationList: NavigationItem[];
-    hasHero?: boolean;
+    children: ReactNode
+    navigationList: NavigationItem[]
+    hasHero?: boolean
 }) {
-    const [isloading, setIsloading] = useState(false);
+    const [isloading, setIsloading] = useState(false)
 
     useEffect(() => {
-        const removeStart = router.on("start", () => setIsloading(true));
-        const removeFinish = router.on("finish", () => setIsloading(false));
+        const removeStart = router.on("start", () => setIsloading(true))
+        const removeFinish = router.on("finish", () => setIsloading(false))
 
         return () => {
-            removeStart();
-            removeFinish();
-        };
-    }, [navigationList]);
+            removeStart()
+            removeFinish()
+        }
+    }, [navigationList])
 
     return (
         <>
@@ -39,5 +39,5 @@ export default function MainLayout({
                 {children}
             </main>
         </>
-    );
+    )
 }

@@ -1,20 +1,22 @@
-import { useState } from "react";
-import { clsx } from "clsx/lite";
+import { useState } from "react"
+import { clsx } from "clsx/lite"
 
 export default function Hero() {
-    const [imagesLoadedCount, setImagesLoadedCount] = useState(0);
-    const allLoaded = imagesLoadedCount >= 6;
-    const onLoad = () => setImagesLoadedCount((prev) => prev + 1);
+    const [imagesLoadedCount, setImagesLoadedCount] = useState(0)
+    const allLoaded = imagesLoadedCount >= 6
+    const onLoad = () => setImagesLoadedCount((prev) => prev + 1)
 
     return (
         <>
             {!allLoaded && <div className="skeleton h-[55vh] w-full"></div>}
-            <div className={clsx(
-				"relative overflow-hidden", // basic
-				"h-[55vh] w-full", // dimensions
-			)}>
-				{/* white section */}
-                <img 
+            <div
+                className={clsx(
+                    "relative overflow-hidden", // basic
+                    "h-[55vh] w-full", // dimensions
+                )}
+            >
+                {/* white section */}
+                <img
                     src="/assets/images/banner-images/Subtract2.svg"
                     alt="banner white section"
                     onLoad={onLoad}
@@ -25,19 +27,19 @@ export default function Hero() {
                     )}
                 />
 
-				{/* logo */}
-                <div 
+                {/* logo */}
+                <div
                     id="hero-logo"
                     className={clsx(
                         "absolute z-50", // basic
-						"aspect-[313/90] w-3/4", // dimension
-						"left-1/2 top-[15%] -translate-x-1/2" // position,
+                        "aspect-[313/90] w-3/4", // dimension
+                        "left-1/2 top-[15%] -translate-x-1/2", // position,
                     )}
-				></div>
+                ></div>
 
                 {/* describtion */}
                 <p
-                    className={clsx(		
+                    className={clsx(
                         "absolute z-50 w-3/4 pb-4", // base
                         "text-balance text-2xl xs:text-3xl", // text
                         "top-[calc()] sm-h:bottom-0", // vertical position
@@ -106,5 +108,5 @@ export default function Hero() {
                 </div>
             </div>
         </>
-    );
+    )
 }

@@ -41,6 +41,7 @@
 		"react-image-gallery": "^2.1.2"
 	},
 	"prettier": {
+		"semi": false,
 		"plugins": [
 			"prettier-plugin-tailwindcss"
 		]

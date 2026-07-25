@@ -1,78 +1,79 @@
-import { useState, useEffect } from "react";
-import { NavigationItem } from "@/types/navigation";
-import { Hero, Logo } from "@/index";
-import Hamburger from "./Hamburger";
+import { useState, useEffect } from "react"
+import { NavigationItem } from "@/types/navigation"
+import { Hero, Logo } from "@/index"
+import Hamburger from "./Hamburger"
+import { clsx } from "clsx/lite"
 
 export default function Header({
     navigationList,
     hasHero = false,
 }: {
-    navigationList: NavigationItem[];
-    hasHero: boolean;
+    navigationList: NavigationItem[]
+    hasHero: boolean
 }) {
-    const [activeSection, setActiveSection] = useState<string | null>(null);
+    const [activeSection, setActiveSection] = useState<string | null>(null)
 
     // scroll to navbar item on click
     const scrollToSection = (item: NavigationItem) => {
         if (item.href) {
-            window.location.href = item.href;
-            return;
+            window.location.href = item.href
+            return
         }
-        if (!item.id) return;
-        const element = document.getElementById(item.id);
+        if (!item.id) return
+        const element = document.getElementById(item.id)
         if (element) {
             element.scrollIntoView({
                 behavior: "smooth",
                 block: "start",
-            });
+            })
         }
-    };
+    }
 
     //observer for activate section
     useEffect(() => {
-        const sections = navigationList.map((item) => item.id) || [];
-        const observers: IntersectionObserver[] = [];
+        const sections = navigationList.map((item) => item.id) || []
+        const observers: IntersectionObserver[] = []
         const observerOptions = {
             root: null,
             rootMargin: "-20% 0px -20% 0px",
             threshold: 0,
-        };
+        }
 
         sections.forEach((id) => {
-            if (!id) return;
-            const element = document.getElementById(id);
-            if (!element) return;
+            if (!id) return
+            const element = document.getElementById(id)
+            if (!element) return
 
             const observer = new IntersectionObserver(([entry]) => {
                 if (entry.isIntersecting) {
-                    setActiveSection(id);
+                    setActiveSection(id)
                 }
-            }, observerOptions);
+            }, observerOptions)
 
-            observer.observe(element);
-            observers.push(observer);
-        });
+            observer.observe(element)
+            observers.push(observer)
+        })
 
-        return () => observers.forEach((observer) => observer.disconnect());
-    }, [navigationList]);
+        return () => observers.forEach((observer) => observer.disconnect())
+    }, [navigationList])
 
     // calculate header breakpoint when hero exists
-    const [isScrolled, setScrolled] = useState(false);
+    const [isScrolled, setScrolled] = useState(false)
     useEffect(() => {
         const handleScroll = () => {
-            const scrollY = window.scrollY;
+            const scrollY = window.scrollY
             if (scrollY > 415) {
-                setScrolled(true);
+                setScrolled(true)
             } else if (scrollY < 300) {
-                setScrolled(false);
+                setScrolled(false)
             }
-        };
+        }
 
-        handleScroll();
+        handleScroll()
 
-        window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
-    });
+        window.addEventListener("scroll", handleScroll)
+        return () => window.removeEventListener("scroll", handleScroll)
+    })
 
     // determine header position
     const isBelowHero = hasHero && !isScrolled // other pages || scrolled hero page
@@ -105,5 +106,5 @@ export default function Header({
                 />}
             </header>
         </>
-    );
+    )
 }
