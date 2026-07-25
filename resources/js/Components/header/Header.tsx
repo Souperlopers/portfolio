@@ -83,27 +83,74 @@ export default function Header({
             <Logo isCompact={hasHero ? isScrolled : true} />
             {hasHero && <Hero />}
             <header
-                className={`sticky top-0 z-50 flex items-center ${isBelowHero ? "h-[45vh] flex-col" : "px-5 shadow-[0_10px_30px_rgba(255,255,255,.05)] justify-between sm:justify-start h-[80px] py-2 bg-gradient-to-b from-[#010103] via-[#050912]/90 to-[#121927]/80 backdrop-blur-lg"} transition-all will-change-transform duration-300 ease-in-out`}
+                className={clsx(
+                    "sticky z-50", // basic
+                    "top-0", // dimension
+                    "flex items-center", // flex
+                    "transition-all duration-300 ease-in-out will-change-transform", // animation
+                    isBelowHero
+                        ? clsx(
+                              "flex-col", // flex
+                              "h-[45vh]", // dimension
+                          )
+                        : clsx(
+                              "justify-between sm:justify-start", // flex
+                              "h-[80px]", // dimension
+                              "px-5 py-2", // padding
+                              "bg-gradient-to-b from-[#010103] via-[#050912]/90 to-[#121927]/80 backdrop-blur-lg", // background
+                              "shadow-[0_10px_30px_rgba(255,255,255,.05)]", // shadow
+                          ),
+                )}
             >
-                <div id="header-logo" className={`${isBelowHero && "hidden"} aspect-[200/150] h-[50px] transition-all will-change-transform duration-300 ease-in-out`}></div>
+                <div
+                    id="header-logo"
+                    className={clsx(
+                        isBelowHero && "hidden", // hide when under hero
+                        "aspect-[200/150] h-[50px]", // dimension
+                        "transition-all duration-300 ease-in-out will-change-transform", // animation
+                    )}
+                ></div>
+
                 <nav
-                    className={`flex ${isBelowHero ? "flex-col h-full justify-evenly items-stretch w-fit" : "hidden sm:visible flex-row justify-start items-center w-full"} transition-all will-change-transform duration-300 ease-in-out`}
+                    className={clsx(
+                        "transition-all duration-300 ease-in-out will-change-transform", // animation
+                        "flex", // flex
+                        isBelowHero
+                            ? clsx(
+                                  "flex-col items-stretch justify-evenly", // flex
+                                  "h-full w-fit", // dimension
+                              )
+                            : clsx(
+                                  "flex-row items-center justify-start", // flex
+                                  "w-full", // dimension
+                                  "hidden sm:visible", // hide on smaller than sm
+                              ),
+                    )}
                 >
                     {navigationList.map((item) => (
                         <button
                             key={item.title}
                             onClick={() => scrollToSection(item)}
-                            className={`h-fit font-medium text-white text-nowrap text-3xl xs:text-5xl p-2 ${isBelowHero ? "bg-slate-800 rounded-xl" : activeSection === item.id ? "border-b border-primary" : "opacity-60 hover:opacity-90"} transition-all will-change-transform duration-300 ease-in-out`}
+                            className={clsx(
+                                "text-nowrap p-2 text-3xl font-medium text-white xs:text-5xl", // text
+                                "transition-all duration-300 ease-in-out will-change-transform", // animation
+                                "h-fit", // dimension
+                                isBelowHero
+                                    ? "rounded-xl bg-slate-800" // on hero
+                                    : activeSection === item.id
+                                      ? "border-b border-primary" // active
+                                      : "opacity-60 hover:opacity-90", // not active
+                            )}
                         >
                             {item.title}
                         </button>
                     ))}
                 </nav>
-                {!isBelowHero && <Hamburger
+                <Hamburger
                     navList={navigationList}
-                    classNames={`${isBelowHero ? "hidden" : "visible sm:hidden"}`}
                     clickHandler={scrollToSection}
-                />}
+                    classNames={isBelowHero ? "hidden" : "visible sm:hidden"}
+                />
             </header>
         </>
     )
