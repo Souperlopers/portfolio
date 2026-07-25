@@ -21,6 +21,7 @@ export default function Hero() {
                     alt="banner white section"
                     onLoad={onLoad}
                     className={clsx(
+						allLoaded ? "block" : "hidden", // loading
                         "absolute", // basic
                         "aspect-[3042/510] max-w-[350vw]", // dimension
                         "translate-x-[50vw]", // position
@@ -31,6 +32,7 @@ export default function Hero() {
                 <div
                     id="hero-logo"
                     className={clsx(
+						allLoaded ? "block" : "hidden", // loading
                         "absolute z-50", // basic
                         "aspect-[313/90] w-3/4", // dimension
                         "left-1/2 top-[15%] -translate-x-1/2", // position,
