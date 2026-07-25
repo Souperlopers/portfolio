@@ -1,5 +1,9 @@
 goal: create a portfolio webapp in -99 week and -99 days
 
+TODO_Z run `npm i` to install tailwind class sorter plugin (you have to use prettier as your default formatter)
+TODO_Z uninstall inline-fold extension and install [Tailwind Stash](https://marketplace.visualstudio.com/items?itemName=beumerr.tailwind-stash) 
+TODO_Z use clsx from now: npm i cslx
+
 TODO_Z add circle before sections title
 TODO_Z add skeleton for gallery images
 TODO_Z what if a member doesnt have banner? display difault banner
