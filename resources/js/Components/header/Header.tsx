@@ -81,7 +81,7 @@ export default function Header({
             <Logo isCompact={hasHero ? isScrolled : true} />
             {hasHero && <Hero />}
             <header
-                className={`sticky top-0 z-50 flex items-center ${isBelowHero ? "h-[45vh] flex-col" : "px-5 justify-between sm:justify-start h-[80px] py-2 bg-gradient-to-b from-[#010103] via-[#050912]/90 to-[#121927]/80 backdrop-blur-lg"} transition-all will-change-transform duration-300 ease-in-out`}
+                className={`sticky top-0 z-50 flex items-center shadow-[0_10px_30px_rgba(255,255,255,.05)] ${isBelowHero ? "h-[45vh] flex-col" : "px-5 justify-between sm:justify-start h-[80px] py-2 bg-gradient-to-b from-[#010103] via-[#050912]/90 to-[#121927]/80 backdrop-blur-lg"} transition-all will-change-transform duration-300 ease-in-out`}
             >
                 <div id="header-logo" className={`${isBelowHero && "hidden"} aspect-[200/150] h-[50px] transition-all will-change-transform duration-300 ease-in-out`}></div>
                 <nav
