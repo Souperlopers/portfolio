@@ -16,8 +16,8 @@ export default function Logo({ isCompact = true }: { isCompact: boolean }) {
     const ANIMATION_TIME = 200
 
     const relatedPositions = {
-        x: isCompact ? -40 : 40,
-        y: isCompact ? -100 : 100,
+        x: isCompact ? -80 : 80,
+        y: isCompact ? -200 : 200,
         opacity: 0,
         scale: isCompact ? 2 : 0.5,
     }
