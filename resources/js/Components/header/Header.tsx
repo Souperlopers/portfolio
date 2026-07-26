@@ -125,7 +125,7 @@ export default function Header({
                             : clsx(
                                   "hidden sm:flex", // Hide on mobile, show on sm+
                                   "w-full", // dimension
-                                  "flex-row items-center justify-center gap-4", // flex
+                                  "flex-row items-center justify-center gap-5", // flex
                               ),
                     )}
                 >
@@ -134,18 +134,19 @@ export default function Header({
                             key={item.id}
                             onClick={() => scrollToSection(item)}
                             className={clsx(
+                                "py-1.5", // padding
                                 "flex items-center justify-between", // flex
-                                "px-3 py-2 md:px-4 md:py-2.5", // padding
-                                "bg-base-200/60", //bg
                                 "text-nowrap font-medium text-base-content", // text common
                                 "transition-all duration-300 ease-in-out will-change-transform", // animation
-                                "border border-primary/20", //border
-                                "hover:border-primary/50 hover:bg-base-200 hover:text-primary", //hover
                                 isBelowHero
                                     ? clsx(
                                           "gap-4", // content gap
                                           "rounded-xl", // container
                                           "text-3xl sm:text-4xl", // text dimmension
+                                          "border border-primary/20", // border
+                                          "bg-base-200/60", // background color
+                                          "hover:border-primary/50 hover:bg-base-200 hover:text-primary", // hover
+                                          "px-3 py-2 md:px-4 md:py-2.5", // padding
                                       )
                                     : clsx(
                                           "gap-2", // content gap
