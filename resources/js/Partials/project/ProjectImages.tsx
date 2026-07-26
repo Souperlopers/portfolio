@@ -6,40 +6,56 @@ import "./ProjectImageStyle.css"
 import type { GalleryItem, ImageGalleryRef } from "react-image-gallery"
 import clsx from "clsx/lite"
 
-const ProjectImages = ({ images }: { images: ProjectImage[] }) => {
+export default function ProjectImages({ images }: { images: ProjectImage[] }) {
     const galleryRef = useRef<ImageGalleryRef>(null)
 
-    const items: GalleryItem[] = images.map((image) => ({
+    const items: GalleryItem[] = images.map((image, index) => ({
         original: image.url,
         thumbnail: image.url,
+        description: index.toString(),
     }))
 
     if (!items.length) return null
 
-    // skeleton states and rendered nodes
-    const [loadedCount, setLoadedCount] = useState(0)
-    const allLoaded = loadedCount >= items.length
-
-    const renderImage = (item: GalleryItem, isThumbnail: boolean) => (
-        <div
-            className={clsx(
-                allLoaded ? "block" : "skeleton", // skeleton
-                "flex items-center justify-center", // flex
-                "aspect-[16/9] h-full w-full", // dimesnion
-            )}
-        >
-            <img
-                onLoad={(e) => setLoadedCount((prev) => prev + 1)}
-                className={clsx(
-                    !allLoaded && "hidden", // loading
-                    !isThumbnail && "image-gallery-image", // main image class
-                    isThumbnail && "image-gallery-thumbnail-image", // thumbnail class
-                )}
-                alt={item.originalAlt}
-                src={isThumbnail ? item.thumbnail : item.original}
-            />
-        </div>
+    // track loading state per image index
+    const [loadedStates, setLoadedStates] = useState<boolean[]>(
+        items.map(() => false),
     )
+
+    const markAsLoaded = (index: number) => {
+        setLoadedStates((prev) => {
+            const newState = [...prev]
+            newState[index] = true
+            return newState
+        })
+    }
+
+    const isImageLoaded = (index: number) => loadedStates[index]
+
+    const renderImage = (item: GalleryItem, isThumbnail: boolean) => {
+        const i: number = Number(item.description)
+        const isLoaded = isImageLoaded(i)
+        return (
+            <div
+                className={clsx(
+                    isLoaded ? "block" : "skeleton", // skeleton
+                    "flex items-center justify-center", // flex
+                    "aspect-[16/9] h-full w-full", // dimesnion
+                )}
+            >
+                <img
+                    onLoad={(e) => markAsLoaded(i)}
+                    className={clsx(
+                        !isLoaded && "hidden", // loading
+                        !isThumbnail && "image-gallery-image", // main image class
+                        isThumbnail && "image-gallery-thumbnail-image", // thumbnail class
+                    )}
+                    alt={isThumbnail ? item.thumbnailAlt : item.originalAlt}
+                    src={isThumbnail ? item.thumbnail : item.original}
+                />
+            </div>
+        )
+    }
 
     return (
         <div dir="ltr" className="w-full lg:max-w-[800px]">
@@ -66,5 +82,3 @@ const ProjectImages = ({ images }: { images: ProjectImage[] }) => {
         </div>
     )
 }
-
-export default ProjectImages
