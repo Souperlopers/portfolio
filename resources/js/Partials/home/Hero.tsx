@@ -41,9 +41,9 @@ export default function Hero() {
             {/* describtion */}
             <p
                 className={clsx(
-                    "absolute z-50 w-3/4 pb-4", // base
+                    "absolute z-50 w-3/4", // base
                     "text-balance text-center text-2xl xs:text-3xl", // text
-                    "bottom-32", // vertical position (inside white section)
+                    "bottom-36", // vertical position (inside white section)
                     "left-1/2 -translate-x-1/2", // horizontal position
                 )}
             >
