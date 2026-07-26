@@ -82,12 +82,14 @@ export default function Header({
         <>
             <Logo isCompact={hasHero ? isScrolled : true} />
             {hasHero && <Hero />}
-            <div className={isScrolled ? "h-[20px]" : "h-0"} />
+            <div
+                className={isScrolled ? "h-[calc(100vh-450px-80px)]" : "h-0"}
+            />
             <header
                 className={clsx(
                     "sticky z-50", // basic
                     "flex items-center", // flex
-                    "transition-all duration-300 ease-in-out will-change-transform", // animation
+                    "max-w-[100vw] overflow-hidden", // avoid layout shifting when transiting from hero to on-top
                     isBelowHero
                         ? clsx(
                               "flex-col justify-around", // flex
@@ -95,7 +97,7 @@ export default function Header({
                               "min-h-[200px]", // avoid conflicting with main content when height is too low
                           )
                         : clsx(
-                              "justify-between sm:justify-start", // flex
+                              "justify-between gap-5 sm:justify-start", // flex
                               "top-0", // position
                               "h-[80px]", // dimension
                               "px-5 py-2", // padding
@@ -115,17 +117,15 @@ export default function Header({
 
                 <nav
                     className={clsx(
-                        "transition-all duration-300 ease-in-out will-change-transform", // animation
-                        "flex", // flex
                         isBelowHero
                             ? clsx(
-                                  "flex-col items-stretch justify-evenly", // flex
+                                  "flex flex-col items-stretch justify-evenly", // flex
                                   "h-full w-fit", // dimension
                               )
                             : clsx(
-                                  "flex-row items-center justify-start", // flex
+                                  "hidden xs:flex", // Hide on mobile, show on sm+
                                   "w-full", // dimension
-                                  "hidden sm:visible", // hide on smaller than sm
+                                  "flex-row items-center justify-center gap-12", // flex
                               ),
                     )}
                 >
@@ -143,9 +143,11 @@ export default function Header({
                                           "rounded-xl bg-slate-800", // container and background
                                           "text-4xl sm:text-6xl xs:text-5xl", // text dimmension
                                       )
-                                    : activeSection === item.id
-                                      ? "border-b border-primary" // active
-                                      : "opacity-60 hover:opacity-90", // not active
+                                    : clsx(
+                                          "border-b border-primary",
+                                          activeSection !== item.id && // not active
+                                              "border-opacity-0 opacity-60 hover:opacity-90",
+                                      ),
                             )}
                         >
                             {item.title}
@@ -155,7 +157,11 @@ export default function Header({
                 <Hamburger
                     navList={navigationList}
                     clickHandler={scrollToSection}
-                    classNames={isBelowHero ? "hidden" : "visible sm:hidden"}
+                    classNames={
+                        isBelowHero
+                            ? "hidden"
+                            : "visible xs:invisible min-w-[66px]"
+                    }
                 />
             </header>
         </>
