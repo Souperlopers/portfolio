@@ -126,7 +126,7 @@ export default function Header({
                             : clsx(
                                   "hidden sm:flex", // Hide on mobile, show on sm+
                                   "w-full", // dimension
-                                  "flex-row items-center justify-center gap-5 lg:justify-start lg:gap-14", // flex
+                                  "flex-row items-center justify-center gap-14 lg:justify-start", // flex
                               ),
                     )}
                 >
