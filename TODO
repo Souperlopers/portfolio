@@ -1,7 +1,6 @@
 goal: create a portfolio webapp in -99 week and -99 days
 
 TODO_Z add skeleton for gallery images
-TODO_Z main content responsiveness
 
 TODO_S design decision: what should we do with navbar in small screens: hamburger, scroller button, keep it
 TODO_S header, hero, and logo responsiveness
