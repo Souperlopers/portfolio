@@ -6,7 +6,6 @@ TODO_Z project item button moves up when no tags exist
 TODO_Z move main content headers to right 
 TODO_Z xs is removed. dont use it from now on
 
-TODO_S fix loading logo
 TODO_S move svg content into components
 TODO_S fill database
 
