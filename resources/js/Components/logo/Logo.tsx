@@ -102,7 +102,7 @@ export default function Logo({ isCompact = true }: { isCompact: boolean }) {
                                   "transition-all duration-700 ease-out will-change-transform", // animation
                                   isOnTop // position
                                       ? "bottom-1/2 right-0 w-[11.24%] translate-y-1/2"
-                                      : "bottom-[5%] right-[5%] w-[8%] rotate-[80deg]",
+                                      : "bottom-[15%] right-[5%] w-[8%] rotate-[80deg]",
                               )}
                           />
                       </Link>

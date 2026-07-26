@@ -134,11 +134,15 @@ export default function Header({
                             key={item.title}
                             onClick={() => scrollToSection(item)}
                             className={clsx(
-                                "text-nowrap p-2 text-3xl font-medium text-white xs:text-5xl", // text
+                                "p-2", // padding
+                                "text-nowrap font-medium text-white", // text common
                                 "transition-all duration-300 ease-in-out will-change-transform", // animation
                                 "h-fit", // dimension
                                 isBelowHero
-                                    ? "rounded-xl bg-slate-800" // on hero
+                                    ? clsx(
+                                          "rounded-xl bg-slate-800", // container and background
+                                          "text-4xl sm:text-6xl xs:text-5xl", // text dimmension
+                                      )
                                     : activeSection === item.id
                                       ? "border-b border-primary" // active
                                       : "opacity-60 hover:opacity-90", // not active
