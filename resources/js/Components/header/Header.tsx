@@ -125,7 +125,7 @@ export default function Header({
                             : clsx(
                                   "hidden xs:flex", // Hide on mobile, show on sm+
                                   "w-full", // dimension
-                                  "flex-row items-center justify-center gap-12", // flex
+                                  "flex-row items-center justify-center gap-4", // flex
                               ),
                     )}
                 >
@@ -134,20 +134,23 @@ export default function Header({
                             key={item.id}
                             onClick={() => scrollToSection(item)}
                             className={clsx(
+                                "flex items-center justify-between", // flex
                                 "px-3 py-2 md:px-4 md:py-2.5", // padding
                                 "bg-base-200/60", //bg
                                 "text-nowrap font-medium text-base-content", // text common
                                 "transition-all duration-300 ease-in-out will-change-transform", // animation
                                 "border border-primary/20", //border
                                 "hover:border-primary/50 hover:bg-base-200 hover:text-primary", //hover
-                                "h-fit", // dimension
                                 isBelowHero
                                     ? clsx(
+                                          "gap-4", // content gap
                                           "rounded-xl", // container
                                           "text-3xl sm:text-6xl xs:text-5xl", // text dimmension
                                       )
                                     : clsx(
-                                          "border-b border-primary",
+                                          "gap-2", // content gap
+                                          "w-fit", // dimension
+                                          "border-b border-primary", // bottom border
                                           activeSection !== item.id && // not active
                                               "border-opacity-0 opacity-60 hover:opacity-90",
                                       ),

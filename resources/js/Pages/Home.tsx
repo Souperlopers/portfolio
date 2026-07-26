@@ -21,24 +21,24 @@ export default function Home({ projects, members }: HomePageProps) {
 }
 
 const projectsContent = (
-    <span className="flex items-center justify-between gap-4">
+    <>
         <p>نمونه کار</p>
         <MdOutlineWorkOutline />
-    </span>
+    </>
 )
 
 const membersContent = (
-    <span className="flex items-center justify-between gap-4">
+    <>
         <p>توسعه‌دهندگان</p>
         <IoCodeSlashOutline />
-    </span>
+    </>
 )
 
 const aboutContent = (
-    <span className="flex items-center justify-between gap-4">
+    <>
         <p>تماس با ما</p>
         <MdOutlineMailOutline />
-    </span>
+    </>
 )
 
 Home.layout = (page: ReactNode) => (
