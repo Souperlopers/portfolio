@@ -23,21 +23,21 @@ export default function Home({ projects, members }: HomePageProps) {
 
 const projectsContent = (
     <>
-        <p>نمونه کار</p>
+        <span>نمونه کار</span>
         <CgWebsite />
     </>
 )
 
 const membersContent = (
     <>
-        <p>توسعه‌دهندگان</p>
+        <span>توسعه‌دهندگان</span>
         <ImUsers />
     </>
 )
 
 const aboutContent = (
     <>
-        <p>تماس با ما</p>
+        <span>تماس با ما</span>
         <IoCall />
     </>
 )
