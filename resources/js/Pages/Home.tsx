@@ -3,8 +3,9 @@ import MainLayout from "@/Layouts/MainLayout"
 import { Head } from "@inertiajs/react"
 import { Projects, Members, About } from "@/index"
 import { HomePageProps } from "@/types"
-import { IoCodeSlashOutline } from "react-icons/io5"
-import { MdOutlineWorkOutline, MdOutlineMailOutline } from "react-icons/md"
+import { CgWebsite } from "react-icons/cg"
+import { ImUsers } from "react-icons/im"
+import { IoCall } from "react-icons/io5"
 
 export default function Home({ projects, members }: HomePageProps) {
     return (
@@ -23,21 +24,21 @@ export default function Home({ projects, members }: HomePageProps) {
 const projectsContent = (
     <>
         <span>نمونه کار</span>
-        <MdOutlineWorkOutline />
+        <CgWebsite />
     </>
 )
 
 const membersContent = (
     <>
         <span>توسعه‌دهندگان</span>
-        <IoCodeSlashOutline />
+        <ImUsers />
     </>
 )
 
 const aboutContent = (
     <>
         <span>تماس با ما</span>
-        <MdOutlineMailOutline />
+        <IoCall />
     </>
 )
 

@@ -5,7 +5,8 @@ import { Head } from "@inertiajs/react"
 import { Profile, MemberProjects, Contact } from "@/index"
 import { GoHome } from "react-icons/go"
 import { IoCodeSlashOutline } from "react-icons/io5"
-import { MdOutlineWorkOutline, MdOutlineMailOutline } from "react-icons/md"
+import { CgWebsite } from "react-icons/cg"
+import { IoCall } from "react-icons/io5"
 
 const homeContent = (
     <>
@@ -23,14 +24,14 @@ const profileContent = (
 
 const projectsContent = (
     <>
-        <MdOutlineWorkOutline />
+        <CgWebsite />
         <span>پروژه‌های مربوطه</span>
     </>
 )
 
 const contactContent = (
     <>
-        <MdOutlineMailOutline />
+        <IoCall />
         <span>تماس با توسعه‌دهنده</span>
     </>
 )
@@ -60,7 +61,7 @@ Member.layout = (page: ReactNode) => (
         children={page}
         navigationList={[
             { content: homeContent, href: "/" },
-            { content: "مهارت ها", id: "profile" },
+            { content: profileContent, id: "profile" },
             { content: projectsContent, id: "projects" },
             { content: contactContent, id: "contact" },
         ]}

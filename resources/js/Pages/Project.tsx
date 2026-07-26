@@ -4,25 +4,28 @@ import { ProjectPageProps } from "@/types"
 import { Head } from "@inertiajs/react"
 import { Info, Images, Contributors } from "@/index"
 import { GoHome } from "react-icons/go"
-import { IoCodeSlashOutline } from "react-icons/io5"
 import { TbBrandStackshare } from "react-icons/tb"
+import { ImUsers } from "react-icons/im"
 
 const homeContent = (
-    <span className="flex items-center justify-center gap-3">
-        <GoHome /> خانه
-    </span>
+    <>
+        <GoHome />
+        <span>خانه</span>
+    </>
 )
 
 const infoContent = (
-    <span className="flex items-center justify-center gap-3">
-        <TbBrandStackshare /> تکنولوژی‌های پروژه
-    </span>
+    <>
+        <TbBrandStackshare />
+        <span>تکنولوژی‌های پروژه</span>
+    </>
 )
 
 const membersContent = (
-    <span className="flex items-center justify-center gap-3">
-        <IoCodeSlashOutline /> توسعه‌دهندگان پروژه
-    </span>
+    <>
+        <ImUsers />
+        <span>توسعه‌دهندگان پروژه</span>
+    </>
 )
 
 export default function Project({ project }: ProjectPageProps) {
