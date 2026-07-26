@@ -97,7 +97,7 @@ export default function Header({
                               "min-h-[200px]", // avoid conflicting with main content when height is too low
                           )
                         : clsx(
-                              "justify-between gap-5", // flex
+                              "justify-between gap-5 lg:gap-16", // flex
                               "top-0", // position
                               "h-[80px]", // dimension
                               "px-5 py-2", // padding
@@ -119,13 +119,14 @@ export default function Header({
                     className={clsx(
                         isBelowHero
                             ? clsx(
-                                  "flex flex-col items-stretch justify-evenly", // flex
-                                  "h-full w-fit", // dimension
+                                  "flex flex-col items-stretch justify-evenly lg:flex-row", // flex
+                                  "h-full w-fit lg:h-fit lg:w-full", // dimension
+								  "max-w-[1500px]", // avoid being full screen on very large screens
                               )
                             : clsx(
                                   "hidden sm:flex", // Hide on mobile, show on sm+
                                   "w-full", // dimension
-                                  "flex-row items-center justify-center gap-5", // flex
+                                  "flex-row items-center justify-center gap-5 lg:justify-start lg:gap-14", // flex
                               ),
                     )}
                 >
@@ -134,7 +135,6 @@ export default function Header({
                             key={item.id}
                             onClick={() => scrollToSection(item)}
                             className={clsx(
-                                "py-1.5", // padding
                                 "flex items-center justify-between", // flex
                                 "text-nowrap font-medium text-base-content", // text common
                                 "transition-all duration-300 ease-in-out will-change-transform", // animation
@@ -149,6 +149,7 @@ export default function Header({
                                           "px-3 py-2 md:px-4 md:py-2.5", // padding
                                       )
                                     : clsx(
+                                          "py-1.5", // padding
                                           "gap-2", // content gap
                                           "w-fit", // dimension
                                           "border-b border-primary", // bottom border

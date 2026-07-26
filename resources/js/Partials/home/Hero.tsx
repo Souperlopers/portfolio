@@ -21,9 +21,9 @@ export default function Hero() {
                 onLoad={onLoad}
                 className={clsx(
                     allLoaded ? "block" : "hidden", // loading
-                    "absolute", // basic
+                    "absolute -translate-x-1/2", // basic
                     "aspect-[3042/510] h-full max-w-none", // dimension
-                    "left-[calc(50%-500px)] -translate-x-1/2", // position
+                    "left-[calc(50%-500px)] lg:left-[calc(50%-150px)] 2xl:left-1/2", // position
                 )}
             />
 
@@ -32,25 +32,33 @@ export default function Hero() {
                 id="hero-logo"
                 className={clsx(
                     allLoaded ? "block" : "hidden", // loading
-                    "absolute z-50", // basic
-                    "aspect-[313/90] w-3/4 max-w-[450px]", // dimension
-                    "left-1/2 top-14 -translate-x-1/2", // position,
+                    "absolute z-50 -translate-x-1/2", // basic
+                    "aspect-[313/90] max-w-[450px]", // dimension basic
+                    "w-3/4 lg:w-[400px] xl:w-[600px]", // dimension responsive
+                    "left-1/2 top-14 lg:left-[calc(50%+280px)] xl:left-[calc(50%+350px)] 2xl:left-[calc(50%+500px)]", // position responsive,
                 )}
             ></div>
 
             {/* describtion */}
             <p
                 className={clsx(
-                    "absolute z-50 w-3/4", // base
+                    "absolute z-50 w-3/4 -translate-x-1/2", // base
                     "text-balance text-center text-2xl sm:text-3xl", // text
-                    "bottom-36", // vertical position (inside white section)
-                    "left-1/2 -translate-x-1/2", // horizontal position
+                    "lg:w-[300px] xl:w-full", // dimension
+                    "bottom-36 lg:bottom-40", // vertical position
+                    "left-1/2 lg:left-[calc(50%+280px)] xl:left-[calc(50%+350px)] 2xl:left-[calc(50%+490px)]", // horizontal position
                 )}
             >
                 تولیدکننده انواع نرم‌افزارهای اداری و تجاری
             </p>
 
-            <div className="absolute left-1/2 top-1/2 hidden aspect-[1086/684] h-[40vh] -translate-x-1/2 sm:visible">
+            <div
+                className={clsx(
+                    "left-1/2 top-1/2 -translate-x-1/2", // position
+                    "aspect-[1086/684] h-[40vh]", // dimension
+                    "hidden lg:absolute", // visibility
+                )}
+            >
                 <div className="relative h-full w-full">
                     <img // blue section
                         src="/assets/images/banner-images/Subtract.svg"
