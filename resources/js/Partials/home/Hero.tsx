@@ -34,8 +34,8 @@ export default function Hero() {
                     allLoaded ? "block" : "hidden", // loading
                     "absolute z-50 -translate-x-1/2", // basic
                     "aspect-[313/90] max-w-[450px]", // dimension basic
-                    "w-3/4 lg:w-[400px] xl:w-[600px]", // dimension responsive
-                    "left-1/2 top-14 lg:left-[calc(50%+280px)] xl:left-[calc(50%+350px)] 2xl:left-[calc(50%+500px)]", // position responsive,
+                    "w-3/4 lg:w-[350px] xl:w-[600px]", // dimension responsive
+                    "left-1/2 top-14 lg:left-[calc(50%+290px)] xl:left-[calc(50%+350px)] 2xl:left-[calc(50%+500px)]", // position responsive,
                 )}
             ></div>
 
@@ -52,16 +52,17 @@ export default function Hero() {
                 تولیدکننده انواع نرم‌افزارهای اداری و تجاری
             </p>
 
+            {/* blue section */}
             <div
                 className={clsx(
-					"absolute", // basic
-                    "right-[calc(50%-100px)] bottom-0", // position
+                    "absolute", // basic
+                    "bottom-0 right-[calc(50%-90px)]", // position
                     "aspect-[1086/684] h-[480px] xl:h-[500px]", // dimension
                     "hidden lg:block", // visibility
                 )}
             >
                 <div className="relative h-full w-full">
-                    <img // blue section
+                    <img
                         src="/assets/images/banner-images/Subtract.svg"
                         alt="blue section of banner"
                         onLoad={onLoad}
