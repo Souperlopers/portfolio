@@ -63,7 +63,7 @@ export default function Logo({ isCompact = true }: { isCompact: boolean }) {
                           duration: ANIMATION_TIME / 1000,
                           ease: "linear",
                       }}
-                      className="relative z-50 h-full w-full"
+                      className={`relative z-50 h-full w-full ${!allLoaded && "skeleton"}`}
                   >
                       <Link href="/">
                           <img

@@ -64,7 +64,8 @@ export default function Hamburger({
                 role="menu"
                 tabIndex={-1}
                 className={clsx(
-                    isOpen ? "block" : "hidden",
+                    isOpen ? "block" : "hidden", // toggling logic
+                    "text-2xl", // text
                     "menu-xl menu dropdown-content", // daisyui menu
                     "w-fit", // demension
                     "mt-3 p-2", // padding and margin
