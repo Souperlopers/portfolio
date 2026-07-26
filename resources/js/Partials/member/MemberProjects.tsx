@@ -7,7 +7,7 @@ const MemberProjects = ({ projects }: { projects: ProjectBrief[] }) => {
 
     return (
         <div className="py-3 rounded flex flex-col gap-6">
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-white">
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-white pr-10 border-r-4 border-primary">
                 پروژه‌ها
             </h2>
             <div className="grid lg:grid-cols-2 grid-cols-1 gap-5">

@@ -22,7 +22,7 @@ export default function Project({ project }: ProjectPageProps) {
                 </div>
                 <div id="members" className={`scroll-mt-20`}>
                     <h2
-                        className={`text-xl md:text-2xl lg:text-3xl font-medium text-white mb-5 md:mb-7 pr-1`}
+                        className={`text-xl md:text-2xl lg:text-3xl font-medium text-white mb-5 md:mb-7 pr-10 border-r-4 border-primary`}
                     >
                         توسعه‌دهندگان
                     </h2>

@@ -10,7 +10,7 @@ const AboutUs = () => {
             id="about"
             className="scroll-mt-20 w-full max-w-[1350px] mx-auto"
         >
-            <h2 className="text-xl md:text-2xl lg:text-3xl font-medium text-white mb-6 pr-1">
+            <h2 className="text-xl md:text-2xl lg:text-3xl font-medium text-white mb-6 pr-10 border-r-4 border-primary">
                 تماس با ما
             </h2>
 

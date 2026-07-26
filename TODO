@@ -1,8 +1,6 @@
 goal: create a portfolio webapp in -99 week and -99 days
 
-TODO_Z add circle before sections title
 TODO_Z add skeleton for gallery images
-TODO_Z what if a member doesnt have banner? display difault banner
 TODO_Z main content responsiveness
 
 TODO_S design decision: what should we do with navbar in small screens: hamburger, scroller button, keep it

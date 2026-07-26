@@ -8,8 +8,8 @@ export default function Home({ projects, members }: HomePageProps) {
     return (
         <>
             <Head title={"SouperLopers"} />
-            {/* <Projects projects={projects.data} /> */}
-            {/* <Members members={members.data} /> */}
+            <Projects projects={projects.data} />
+            <Members members={members.data} />
             <About />
             <About />
             <About />

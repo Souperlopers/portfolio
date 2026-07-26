@@ -36,7 +36,7 @@ const ContactMember = ({ info }: { info: Member }) => {
                 initial={{ opacity: 0, y: -16 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.45 }}
-                className="text-2xl md:text-3xl font-semibold text-white mb-8"
+                className="text-2xl md:text-3xl font-semibold text-white mb-8 pr-10 border-r-4 border-primary"
             >
                 راه‌های ارتباطی
             </motion.h2>
