@@ -1,5 +1,7 @@
+import { ReactNode } from "react"
+
 export type NavigationItem = {
-    title: string
+    content: ReactNode
     id?: string
     href?: string
 }

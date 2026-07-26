@@ -131,17 +131,20 @@ export default function Header({
                 >
                     {navigationList.map((item) => (
                         <button
-                            key={item.title}
+                            key={item.id}
                             onClick={() => scrollToSection(item)}
                             className={clsx(
-                                "p-2", // padding
-                                "text-nowrap font-medium text-white", // text common
+                                "px-3 py-2 md:px-4 md:py-2.5", // padding
+                                "bg-base-200/60", //bg
+                                "text-nowrap font-medium text-base-content", // text common
                                 "transition-all duration-300 ease-in-out will-change-transform", // animation
+                                "border border-primary/20", //border
+                                "hover:border-primary/50 hover:bg-base-200 hover:text-primary", //hover
                                 "h-fit", // dimension
                                 isBelowHero
                                     ? clsx(
-                                          "rounded-xl bg-slate-800", // container and background
-                                          "text-4xl sm:text-6xl xs:text-5xl", // text dimmension
+                                          "rounded-xl", // container
+                                          "text-3xl sm:text-6xl xs:text-5xl", // text dimmension
                                       )
                                     : clsx(
                                           "border-b border-primary",
@@ -150,7 +153,7 @@ export default function Header({
                                       ),
                             )}
                         >
-                            {item.title}
+                            {item.content}
                         </button>
                     ))}
                 </nav>

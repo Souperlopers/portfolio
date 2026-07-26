@@ -1,28 +1,49 @@
-import { ReactNode } from "react";
-import MainLayout from "@/Layouts/MainLayout";
-import { ProjectPageProps } from "@/types";
-import { Head } from "@inertiajs/react";
-import { Info, Images, Contributors } from "@/index";
+import { ReactNode } from "react"
+import MainLayout from "@/Layouts/MainLayout"
+import { ProjectPageProps } from "@/types"
+import { Head } from "@inertiajs/react"
+import { Info, Images, Contributors } from "@/index"
+import { GoHome } from "react-icons/go"
+import { IoCodeSlashOutline } from "react-icons/io5"
+import { TbBrandStackshare } from "react-icons/tb"
+
+const homeContent = (
+    <span className="flex items-center justify-center gap-3">
+        <GoHome /> خانه
+    </span>
+)
+
+const infoContent = (
+    <span className="flex items-center justify-center gap-3">
+        <TbBrandStackshare /> تکنولوژی‌های پروژه
+    </span>
+)
+
+const membersContent = (
+    <span className="flex items-center justify-center gap-3">
+        <IoCodeSlashOutline /> توسعه‌دهندگان پروژه
+    </span>
+)
 
 export default function Project({ project }: ProjectPageProps) {
-    const projectData = project.data;
-    const images = projectData.images || [];
-    const contributors = projectData.contributors || [];
+    const projectData = project.data
+    const images = projectData.images || []
+    const contributors = projectData.contributors || []
 
     return (
         <>
             <Head title={`SouperLopers ${projectData.title}`} />
-            <div className={`w-full max-w-[1360px] flex flex-col gap-10`}>
+            <div className={`flex w-full max-w-[1360px] flex-col gap-10`}>
                 <div
                     id="info"
-                    className={`scroll-mt-20 flex lg:flex-row flex-col justify-between items-start rounded gap-5`}
+                    className={`flex scroll-mt-20 flex-col items-start justify-between gap-5 rounded lg:flex-row`}
                 >
                     <Info info={projectData} />
                     <Images images={images} />
                 </div>
                 <div id="members" className={`scroll-mt-20`}>
                     <h2
-                        className={`text-xl md:text-2xl lg:text-3xl font-medium text-white mb-5 md:mb-7 pr-1`}
+                        className={`mb-5 border-r-4 border-primary pr-10 text-xl font-medium text-white md:mb-7 md:text-2xl lg:text-3xl`}
                     >
                         توسعه‌دهندگان
                     </h2>
@@ -30,16 +51,16 @@ export default function Project({ project }: ProjectPageProps) {
                 </div>
             </div>
         </>
-    );
+    )
 }
 
 Project.layout = (page: ReactNode) => (
     <MainLayout
         children={page}
         navigationList={[
-            { title: "خانه", href: "/" },
-            { title: "تکنولوژی‌های پروژه", id: "info" },
-            { title: "توسعه‌دهندگان پروژه", id: "members" },
+            { content: homeContent, href: "/" },
+            { content: infoContent, id: "info" },
+            { content: membersContent, id: "members" },
         ]}
     />
-);
+)
