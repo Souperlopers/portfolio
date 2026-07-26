@@ -83,7 +83,7 @@ export default function Header({
             <Logo isCompact={hasHero ? isScrolled : true} />
             {hasHero && <Hero />}
             <div
-                className={isScrolled ? "h-[calc(100vh-450px-80px)]" : "h-0"}
+                className={hasHero && isScrolled ? "h-[calc(100vh-450px-80px)]" : "h-0"}
             />
             <header
                 className={clsx(

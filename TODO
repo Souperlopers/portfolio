@@ -1,10 +1,13 @@
 goal: create a portfolio webapp in -99 week and -99 days
 
-TODO_Z add skeleton for gallery images
+TODO_Z add skeleton to logo
+TODO_Z add skeleton to gallery images
 TODO_Z project item button moves up when no tags exist
 TODO_Z move main content headers to right 
 TODO_Z xs is removed. dont use it from now on
 
+TODO_S fix loading logo
+TODO_S move svg content into components
 TODO_S fill database
 
 TODO_S (customized 404 status code)[https://inertiajs.com/docs/v2/advanced/error-handling]
