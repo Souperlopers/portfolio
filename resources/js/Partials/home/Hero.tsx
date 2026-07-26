@@ -54,9 +54,10 @@ export default function Hero() {
 
             <div
                 className={clsx(
-                    "left-1/2 top-1/2 -translate-x-1/2", // position
-                    "aspect-[1086/684] h-[40vh]", // dimension
-                    "hidden lg:absolute", // visibility
+					"absolute", // basic
+                    "right-[calc(50%-100px)] bottom-0", // position
+                    "aspect-[1086/684] h-[480px] xl:h-[500px]", // dimension
+                    "hidden lg:block", // visibility
                 )}
             >
                 <div className="relative h-full w-full">
