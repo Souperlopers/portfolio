@@ -19,7 +19,7 @@ const Projects = ({ projects }: { projects: ProjectBrief[] }) => {
 
             {projectsCount === 0 && <EmptyProjects />}
 
-            <div className="grid lg:grid-cols-2 grid-cols-1 gap-5">
+            <div className="grid lg:grid-cols-2 grid-cols-1 gap-8">
                 {visibleProjects.map((project, index) => (
                     <ProjectItem key={project.id} index={index} projectData={project} />
                 ))}
