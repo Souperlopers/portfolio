@@ -1,22 +1,90 @@
-import { NavigationItem } from "@/types/navigation";
+import { NavigationItem } from "@/types/navigation"
+import clsx from "clsx/lite"
+import { useEffect, useRef, useState } from "react"
 
-export default function Hamburger({ navList, classNames, clickHandler }: { navList: NavigationItem[], classNames: string, clickHandler: any }) {
-    const innerClickHandler = (e: any, item: NavigationItem) => {
-        e.preventDefault()
-        clickHandler(item)
+export default function Hamburger({
+    navList,
+    classNames,
+    clickHandler,
+}: {
+    navList: NavigationItem[]
+    classNames: string
+    clickHandler: (item: NavigationItem) => void
+}) {
+    const [isOpen, setIsOpen] = useState(false)
+    const menuRef = useRef<HTMLDivElement>(null)
+    const buttonRef = useRef<HTMLButtonElement>(null)
+
+    const toggleMenu = () => setIsOpen((prev) => !prev)
+
+    const handleClickOutside = (e: MouseEvent) => {
+        if (
+            menuRef.current &&
+            !menuRef.current.contains(e.target as Node) &&
+            buttonRef.current &&
+            !buttonRef.current.contains(e.target as Node)
+        ) {
+            setIsOpen(false)
+        }
     }
 
+    useEffect(() => {
+        document.addEventListener("mousedown", handleClickOutside)
+        return () =>
+            document.removeEventListener("mousedown", handleClickOutside)
+    }, [])
+
     return (
-        <div className={`dropdown text-center ${classNames}`}>
-            <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h7" /> </svg>
-            </div>
+        <div ref={menuRef} className={`dropdown text-center ${classNames}`}>
+            <button
+                ref={buttonRef}
+                onClick={toggleMenu}
+                tabIndex={0}
+                role="button"
+                className="btn btn-circle btn-ghost"
+            >
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="pointer-events-none h-10 w-10"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                >
+                    <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M4 6h16M4 12h16M4 18h7"
+                    />
+                </svg>
+            </button>
+
             <ul
+                id="hamburger-menu"
+                role="menu"
                 tabIndex={-1}
-                className="left-0 menu menu-xl dropdown-content bg-base-100 rounded-box z-1 mt-3 w-fit p-2 shadow">
-                {navList.map(navEl => (
-                    <li key={navEl.title}>
-                        <button onClick={(e) => innerClickHandler(e, navEl)} className="w-full">{navEl.title}</button>
+                className={clsx(
+                    isOpen ? "block" : "hidden",
+                    "menu-xl menu dropdown-content", // daisyui menu
+                    "w-fit", // demension
+                    "mt-3 p-2", // padding and margin
+                    "left-0", // position
+                    "rounded-box bg-base-100 shadow", // style
+                )}
+            >
+                {navList.map((navEl) => (
+                    <li key={navEl.id} role="none">
+                        <button
+                            role="menuitem"
+                            onClick={(e) => {
+                                e.preventDefault()
+                                clickHandler(navEl)
+                                setIsOpen(false)
+                            }}
+                            className="w-full"
+                        >
+                            {navEl.content}
+                        </button>
                     </li>
                 ))}
             </ul>

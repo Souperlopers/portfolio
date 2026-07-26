@@ -89,7 +89,7 @@ export default function Header({
                 className={clsx(
                     "sticky z-50", // basic
                     "flex items-center", // flex
-                    "max-w-[100vw] overflow-hidden", // avoid layout shifting when transiting from hero to on-top
+                    "max-w-[100vw]", // avoid layout shifting when transiting from hero to on-top
                     isBelowHero
                         ? clsx(
                               "flex-col justify-around", // flex
