@@ -14,9 +14,6 @@ export default function Home({ projects, members }: HomePageProps) {
             <Projects projects={projects.data} />
             <Members members={members.data} />
             <About />
-            <About />
-            <About />
-            <About />
         </>
     )
 }
