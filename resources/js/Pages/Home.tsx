@@ -3,8 +3,8 @@ import MainLayout from "@/Layouts/MainLayout"
 import { Head } from "@inertiajs/react"
 import { Projects, Members, About } from "@/index"
 import { HomePageProps } from "@/types"
-import { IoCodeSlashOutline } from "react-icons/io5";
-import { MdOutlineWorkOutline, MdOutlineMailOutline } from "react-icons/md";
+import { IoCodeSlashOutline } from "react-icons/io5"
+import { MdOutlineWorkOutline, MdOutlineMailOutline } from "react-icons/md"
 
 
 const projectsContent = (
