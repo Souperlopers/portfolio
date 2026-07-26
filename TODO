@@ -1,6 +1,5 @@
 goal: create a portfolio webapp in -99 week and -99 days
 
-TODO_Z fix blue section content positions in browser inspect mode (tailwind classes)
 TODO_Z add skeleton to logo
 TODO_Z sometimes header active section doesnt work correctly (talk to me about this)
 TODO_Z add skeleton to gallery images

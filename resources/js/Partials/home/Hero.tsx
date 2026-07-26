@@ -81,7 +81,7 @@ export default function Hero() {
                             "absolute z-40 opacity-50", // basic
                             "w-[6%]", //dimensions
                             allLoaded ? "block" : "hidden", // loading
-                            "left-[17%] top-[40%]", // position
+                            "left-[25%] top-[40%]", // position
                         )}
                     />
                     <img // girl
