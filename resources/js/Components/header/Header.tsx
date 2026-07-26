@@ -97,7 +97,7 @@ export default function Header({
                               "min-h-[200px]", // avoid conflicting with main content when height is too low
                           )
                         : clsx(
-                              "justify-between gap-5 sm:justify-start", // flex
+                              "justify-between gap-5", // flex
                               "top-0", // position
                               "h-[80px]", // dimension
                               "px-5 py-2", // padding
@@ -123,7 +123,7 @@ export default function Header({
                                   "h-full w-fit", // dimension
                               )
                             : clsx(
-                                  "hidden xs:flex", // Hide on mobile, show on sm+
+                                  "hidden sm:flex", // Hide on mobile, show on sm+
                                   "w-full", // dimension
                                   "flex-row items-center justify-center gap-4", // flex
                               ),
@@ -145,7 +145,7 @@ export default function Header({
                                     ? clsx(
                                           "gap-4", // content gap
                                           "rounded-xl", // container
-                                          "text-3xl sm:text-6xl xs:text-5xl", // text dimmension
+                                          "text-3xl sm:text-4xl", // text dimmension
                                       )
                                     : clsx(
                                           "gap-2", // content gap
@@ -166,7 +166,7 @@ export default function Header({
                     classNames={
                         isBelowHero
                             ? "hidden"
-                            : "visible xs:invisible min-w-[66px]"
+                            : "visible sm:invisible min-w-[66px]"
                     }
                 />
             </header>

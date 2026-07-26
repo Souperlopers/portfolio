@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Link } from "@inertiajs/react";
 import { ProjectItemProps } from "@/types/project";
 import TagsComponent from "./TagsComponent";
-import { HiArrowLongLeft } from "react-icons/hi2";
 
 export default function ProjectItem({ projectData, index }: ProjectItemProps) {
     const [imgLoaded, setImgLoaded] = useState(false);
@@ -16,9 +15,9 @@ export default function ProjectItem({ projectData, index }: ProjectItemProps) {
             className="flex flex-col sm:gap-5 gap-3 card p-2.5 rounded-xl bg-base-200 border border-primary/10 hover:-translate-y-1 hover:border-primary/25
             hover:shadow-[0_16px_40px_rgba(47,91,255,.15)] shadow-[0_10px_30px_rgba(0,0,0,25)] overflow-hidden duration-300 bg-gradient-to-b from-base-300 to-[#0B1120]"
         >
-            <div className="flex flex-col-reverse xs:flex-row sm:justify-between justify-center sm:gap-5 gap-3">
+            <div className="flex flex-col-reverse sm:flex-row sm:justify-between justify-center sm:gap-5 gap-3">
                 {/* info */}
-                <div className="w-full xs:max-w-[45%] flex flex-col sm:gap-5 gap-3">
+                <div className="w-full sm:max-w-[45%] flex flex-col sm:gap-5 gap-3">
                     <h3 className="md:text-3xl text-xl font-semibold text-base-content truncate">
                         {title}
                     </h3>
@@ -28,7 +27,7 @@ export default function ProjectItem({ projectData, index }: ProjectItemProps) {
                     <TagsComponent tags={technologies} />
                 </div>
                 {/* image */}
-                <div className="w-full xs:max-w-[50%] relative md:min-h-[200px] h-44 shrink-0 overflow-hidden">
+                <div className="w-full sm:max-w-[50%] relative md:min-h-[200px] h-44 shrink-0 overflow-hidden">
                     {!imgLoaded && (
                         <div className="absolute inset-0 bg-white/5 animate-pulse" />
                     )}

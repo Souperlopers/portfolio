@@ -24,7 +24,6 @@ export default {
                 'btn-hover': '#015ea5',
             },
             screens: {
-                'xs'    : {min: '480px', max: "639px"} ,
                 'xs-h'  : { raw : '(min-height: 480px)' } ,
                 'sm-h'  : { raw : '(min-height: 640px)' } ,
                 'md-h'  : { raw : '(min-height: 768px)' } ,
