@@ -85,16 +85,17 @@ export default function Header({
             <header
                 className={clsx(
                     "sticky z-50", // basic
-                    "top-0", // dimension
                     "flex items-center", // flex
                     "transition-all duration-300 ease-in-out will-change-transform", // animation
                     isBelowHero
                         ? clsx(
-                              "flex-col", // flex
-                              "h-[45vh]", // dimension
+                              "flex-col justify-around", // flex
+                              "h-[calc(100vh-450px)]", // dimension (fill height left from hero)
+                              "min-h-[200px]", // avoid conflicting with main content when height is too low
                           )
                         : clsx(
                               "justify-between sm:justify-start", // flex
+                              "top-0", // position
                               "h-[80px]", // dimension
                               "px-5 py-2", // padding
                               "bg-gradient-to-b from-[#010103] via-[#050912]/90 to-[#121927]/80 backdrop-blur-lg", // background
