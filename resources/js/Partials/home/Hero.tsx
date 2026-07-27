@@ -81,7 +81,7 @@ export default function Hero() {
                             "absolute z-40 opacity-50", // basic
                             "w-[6%]", //dimensions
                             allLoaded ? "block" : "hidden", // loading
-                            "left-[25%] top-[40%]", // position
+                            "left-[29%] top-[65%]", // position
                         )}
                     />
                     <img // girl
@@ -90,8 +90,8 @@ export default function Hero() {
                         onLoad={onLoad}
                         className={clsx(
                             "absolute z-40", // basic
-                            "w-[14%]", // dimension
-                            "bottom-[8%] left-[35%]", // position
+                            "w-[17%]", // dimension
+                            "bottom-[12%] left-[35%]", // position
                             allLoaded ? "block" : "hidden", // loading
                         )}
                     />
@@ -100,8 +100,8 @@ export default function Hero() {
                         alt="banner man"
                         onLoad={onLoad}
                         className={clsx(
-                            "absolute z-40 w-[28%]", // basic
-                            "bottom-[15%] right-[20%]", // position
+                            "absolute z-40 w-[32%]", // basic
+                            "bottom-[12%] right-[15%]", // position
                             allLoaded ? "block" : "hidden", // loading
                         )}
                     />
@@ -111,7 +111,7 @@ export default function Hero() {
                         onLoad={onLoad}
                         className={clsx(
                             "absolute z-40 w-[20%]", // basic
-                            "left-[55%] top-[45%] -translate-x-1/2 -translate-y-1/2", // position
+                            "left-[61%] top-[45%] -translate-x-1/2 -translate-y-1/2", // position
                             allLoaded ? "block" : "hidden", // loading
                         )}
                     />
