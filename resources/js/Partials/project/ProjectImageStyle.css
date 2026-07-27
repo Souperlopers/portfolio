@@ -138,3 +138,18 @@
         min-height: 120px;
     }
 }
+
+/* 
+	===================
+		description 
+   	===================
+*/
+
+.image-gallery-slide .image-gallery-description {
+    /*  move to right */
+    right: 0;
+    left: auto;
+
+    /* decrease background opacity  */
+    background: rgba(0, 0, 0, 0.8);
+}

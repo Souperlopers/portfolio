@@ -4,6 +4,7 @@ import { MemberBrief } from "@/types/member";
 export type ProjectImage = {
     id: number;
     url: string;
+    description: string;
 };
 
 export type ProjectBrief = {

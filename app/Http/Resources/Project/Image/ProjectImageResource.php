@@ -17,6 +17,7 @@ class ProjectImageResource extends JsonResource
         return [
             'id' => (int) $this->id,
             'url' => request()->schemeAndHttpHost() . $this->path,
+			'description' => $this->description,
         ];
     }
 }
