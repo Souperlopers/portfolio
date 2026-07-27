@@ -1,33 +1,33 @@
-import { useState } from "react";
-import { Member } from "@/types/member";
-import TagsComponent from "../../Components/TagsComponent";
+import { useState } from "react"
+import { Member } from "@/types/member"
+import TagsComponent from "../../Components/TagsComponent"
 
 const Profile = ({ info }: { info: Member }) => {
-    console.log(info);
-    const {name="", description="", position="", thumbnail="", skills=""} = info;
+    console.log(info)
+    const {
+        name = "",
+        description = "",
+        position = "",
+        thumbnail = "",
+        skills = "",
+    } = info
 
-    const [imgError, setImgError] = useState(false);
-    const initial = name?.trim()[0] ?? "؟";
-    const showFallback = !thumbnail || imgError;
+    const [imgError, setImgError] = useState(false)
+    const initial = name?.trim()[0] ?? "؟"
+    const showFallback = !thumbnail || imgError
 
     return (
-        <div className="w-full min-h-[500px] rounded-xl bg-base-200 border border-primary/10 shadow-[0_10px_30px_rgba(0,0,0,.25)] overflow-hidden ">
+        <div className="min-h-[500px] w-full overflow-hidden rounded-xl border border-primary/10 bg-base-200 shadow-[0_10px_30px_rgba(0,0,0,.25)]">
             {/* banner */}
-            <div className="w-full h-40 md:h-52 bg-gradient-to-br from-sky-500/20 via-white/5 to-blue-600/10" />
+            <div className="h-40 w-full bg-gradient-to-br from-sky-500/20 via-white/5 to-blue-600/10 md:h-52" />
 
             {/* avatar + info */}
-            <div className="px-4 md:px-6 pb-6">
-                <div className="relative -mt-12 md:-mt-16 mb-4">
-                    <div
-                        className="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden
-                        ring-4 ring-primary shrink-0"
-                    >
+            <div className="px-4 pb-6 md:px-6">
+                <div className="relative -mt-12 mb-4 md:-mt-16">
+                    <div className="h-24 w-24 shrink-0 overflow-hidden rounded-full ring-4 ring-primary md:h-32 md:w-32">
                         {showFallback ? (
-                            <div
-                                className="w-full h-full bg-sky-500/15
-                                flex items-center justify-center"
-                            >
-                                <span className="text-3xl md:text-4xl font-medium text-sky-400">
+                            <div className="flex h-full w-full items-center justify-center bg-base-200/80">
+                                <span className="text-3xl font-medium text-sky-400 md:text-4xl">
                                     {initial}
                                 </span>
                             </div>
@@ -35,7 +35,7 @@ const Profile = ({ info }: { info: Member }) => {
                             <img
                                 src={thumbnail}
                                 alt={`${name} cover`}
-                                className="w-full h-full object-cover"
+                                className="h-full w-full object-cover"
                                 onError={() => setImgError(true)}
                             />
                         )}
@@ -43,14 +43,14 @@ const Profile = ({ info }: { info: Member }) => {
                 </div>
 
                 <div className="flex flex-col gap-2">
-                    <span className="text-white text-xl md:text-3xl font-semibold truncate">
+                    <span className="truncate text-xl font-semibold text-white md:text-3xl">
                         {name}
                     </span>
-                    <span className="text-white/40 text-sm md:text-base truncate">
+                    <span className="truncate text-sm text-white/40 md:text-base">
                         {position}
                     </span>
                     {description && (
-                        <p className="text-white/60 text-sm md:text-base leading-relaxed mt-1">
+                        <p className="mt-1 text-sm leading-relaxed text-white/60 md:text-base">
                             {description}
                         </p>
                     )}
@@ -64,7 +64,7 @@ const Profile = ({ info }: { info: Member }) => {
                 </div>
             </div>
         </div>
-    );
-};
+    )
+}
 
-export default Profile;
+export default Profile
