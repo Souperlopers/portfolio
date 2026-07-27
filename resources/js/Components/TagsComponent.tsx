@@ -28,7 +28,7 @@ export default function ({ tags }: { tags: Tag[] }) {
                             className={clsx(
                                 "h-4 w-4", // dimension
                             )}
-                            src={`/assets/icons/${tag.title}.svg`}
+                            src={`/assets/tags/${tag.title}.svg`}
                             alt={tag.title}
                             onError={() => setHasIcon(false)}
                         />
