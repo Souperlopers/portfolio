@@ -20,6 +20,7 @@ return new class extends Migration
             $table->text('description')->nullable();
             $table->string('position');
             $table->string('thumbnail')/*->unique()*/->nullable();
+            $table->string('banner')/*->unique()*/->nullable();
 
             $table->string('email')->unique()->nullable();
             $table->string('phone')->unique()->nullable();

@@ -25,6 +25,7 @@ class MemberResource extends JsonResource
         foreach (
             [
                 'description',
+                'banner',
                 'phone',
                 'email',
                 'linkedin' => 'linkedin_url',

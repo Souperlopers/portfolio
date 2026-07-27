@@ -14,6 +14,7 @@ export type Member = {
     name: string;
     position: string;
     api: string;
+    banner?: string;
     description?: string;
     phone?: string;
     email?: string;
