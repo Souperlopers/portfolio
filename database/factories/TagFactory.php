@@ -10,18 +10,18 @@ use App\Models\Tag;
  */
 class TagFactory extends Factory
 {
-    /**
-     * Define the model's default state.
-     *
-     * @return array<string, mixed>
-     */
-    public function definition(): array
-    {
-        return [
-            'name' => fake()->unique()->word(),
-            'type' => fake()->randomElement(Tag::TYPES),
-            'priority' => fake()->randomElement([fake()->numberBetween(-128, 127), 0]),
-            'version' => fake()->optional()->semver(true, true),
-        ];
-    }
+	/**
+	 * Define the model's default state.
+	 *
+	 * @return array<string, mixed>
+	 */
+	public function definition(): array
+	{
+		return [
+			'name' => fake()->unique()->randomElement(Tag::NAMES),
+			'type' => fake()->randomElement(Tag::TYPES),
+			'priority' => fake()->randomElement([fake()->numberBetween(-128, 127), 0]),
+			'version' => fake()->optional()->semver(true, true),
+		];
+	}
 }
