@@ -1,11 +1,22 @@
-import MemberCard from "@/Components/MemberCard";
-import { MemberBrief } from "@/types/member";
-import styles from "./style/MembersStyle.module.css";
+import MemberCard from "@/Components/MemberCard"
+import { MemberBrief } from "@/types/member"
+import styles from "./style/MembersStyle.module.css"
+import clsx from "clsx"
 
 const Members = ({ members }: { members: MemberBrief[] }) => {
     return (
-        <section id="members" className="scroll-mt-24 w-full max-w-[1350px] mx-auto">
-            <h2 className="text-xl md:text-2xl lg:text-3xl font-medium text-white mb-5 md:mb-7 pr-10 border-r-4 border-primary">
+        <section
+            id="members"
+            className="mx-auto flex w-full max-w-[1350px] scroll-mt-24 flex-col gap-10"
+        >
+            <h2
+                className={clsx(
+                    "border-r-4 border-primary", // border
+                    "text-xl font-medium md:text-2xl lg:text-3xl", // text division
+                    "text-white", // text color
+                    "pr-5 md:pr-10", // padding
+                )}
+            >
                 توسعه‌دهندگان
             </h2>
             <div className={styles.container}>
@@ -14,7 +25,7 @@ const Members = ({ members }: { members: MemberBrief[] }) => {
                 ))}
             </div>
         </section>
-    );
-};
+    )
+}
 
-export default Members;
+export default Members

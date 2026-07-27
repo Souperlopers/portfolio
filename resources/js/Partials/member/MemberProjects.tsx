@@ -1,16 +1,24 @@
-import ProjectItem from "@/Components/ProjectItem";
-import EmptyProjects from "@/Components/EmptyProjects";
-import { ProjectBrief } from "@/types/project";
+import ProjectItem from "@/Components/ProjectItem"
+import EmptyProjects from "@/Components/EmptyProjects"
+import { ProjectBrief } from "@/types/project"
+import clsx from "clsx"
 
 const MemberProjects = ({ projects }: { projects: ProjectBrief[] }) => {
-    const projectsCount = projects.length;
+    const projectsCount = projects.length
 
     return (
-        <div className="py-3 rounded flex flex-col gap-6">
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-white pr-10 border-r-4 border-primary">
+        <div className="flex flex-col gap-10 rounded py-3">
+            <h2
+                className={clsx(
+                    "border-r-4 border-primary", // border
+                    "text-xl font-medium md:text-2xl lg:text-3xl", // text division
+                    "text-white", // text color
+                    "pr-5 md:pr-10", // padding
+                )}
+            >
                 پروژه‌ها
             </h2>
-            <div className="grid lg:grid-cols-2 grid-cols-1 gap-5">
+            <div className="grid grid-cols-1 gap-5 lg:grid-cols-2">
                 {projectsCount === 0 && <EmptyProjects />}
                 {projects.map((project, index) => (
                     <ProjectItem
@@ -21,7 +29,7 @@ const MemberProjects = ({ projects }: { projects: ProjectBrief[] }) => {
                 ))}
             </div>
         </div>
-    );
-};
+    )
+}
 
-export default MemberProjects;
+export default MemberProjects

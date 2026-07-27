@@ -1,13 +1,9 @@
 goal: create a portfolio webapp in -99 week and -99 days
 
-TODO_Z set main page gap
-TODO_Z set project page gap
-TODO_Z set member page gap
-
 TODO_Z project page doesnt have 'معرفی' header
 TODO_Z add skeleton to member profile
 TODO_Z sometimes header active section doesnt work correctly (talk to me about this)
-TODO_Z move headers of main content to right 
+TODO_Z move headers of main content to right
 
 TODO_S fill database
 

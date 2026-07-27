@@ -32,8 +32,8 @@ export default function MainLayout({
             <Header navigationList={navigationList} hasHero={hasHero} />
             <main
                 className={clsx(
-                    "flex flex-col items-center justify-start gap-16", // flex
-                    "px-5 py-10 md:px-20 md:py-10", // paddings
+                    "flex flex-col items-center justify-start md:gap-16 gap-10", // flex
+                    "px-5 py-10 md:px-20 md:py-16", // paddings
                 )}
             >
                 {children}
