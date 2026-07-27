@@ -13,7 +13,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('tags', function (Blueprint $table) {
-            $table->id();
+            $table->ulid('id')->primary();
             $table->tinyInteger('priority')->default(0)->index();
             $table->enum("type", Tag::TYPES)->index();
             $table->string("name")->index()->unique()->index();

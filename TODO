@@ -5,22 +5,19 @@ TODO_Z check skeleton member image in member card
 TODO_Z do we need all of the font files? delete redundant ones
 TODO_Z display member's banner
 
-TODO_S ulid
 TODO_S fill database
 TODO_S (customized 404 status code)[https://inertiajs.com/docs/v2/advanced/error-handling]
+TODO_S add unique method to asset parameters in migrations
+TODO_S redis
+TODO_S add storage name hider
+TODO_S pagination function on frontend
 
-TODO_Z panel
+# new features
+TODO_Z members panel design
 TODO_S authentication
 TODO_S panel
 TODO_S create input for website
-
-TODO_S redis
-
-TODO_S pagination function on frontend
 TODO_S add reviews
 TODO_S project time ranges
-TODO_S add storage name hider
-TODO_S add storage image project/member based folders
-TODO_S add unique method to asset parameters in migrations
-
 TODO_S en/fa locale switching
+
