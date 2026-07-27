@@ -126,7 +126,7 @@ export default function Header({
                 <div
                     id="header-logo"
                     className={clsx(
-                        isBelowHero && "hidden", // hide when under hero
+                        isBelowHero && "fixed right-5", // hide when under hero
                         "aspect-[200/150] h-[50px]", // dimension
                         "transition-all duration-300 ease-in-out will-change-transform", // animation
                     )}
