@@ -3,38 +3,10 @@ import MainLayout from "@/Layouts/MainLayout"
 import { MemberPageProps } from "@/types"
 import { Head } from "@inertiajs/react"
 import { Profile, MemberProjects, Contact } from "@/index"
-import { GoHome } from "react-icons/go"
+import { AiFillHome } from "react-icons/ai"
 import { IoCodeSlashOutline } from "react-icons/io5"
 import { CgWebsite } from "react-icons/cg"
 import { IoCall } from "react-icons/io5"
-
-const homeContent = (
-    <>
-        <GoHome />
-        <span>خانه</span>
-    </>
-)
-
-const profileContent = (
-    <>
-        <IoCodeSlashOutline />
-        <span>مهارت‌ها</span>
-    </>
-)
-
-const projectsContent = (
-    <>
-        <CgWebsite />
-        <span>پروژه‌های مربوطه</span>
-    </>
-)
-
-const contactContent = (
-    <>
-        <IoCall />
-        <span>تماس با توسعه‌دهنده</span>
-    </>
-)
 
 export default function Member({ member }: MemberPageProps) {
     const info = member.data || {}
@@ -66,4 +38,32 @@ Member.layout = (page: ReactNode) => (
             { content: contactContent, id: "contact" },
         ]}
     />
+)
+
+const homeContent = (
+    <>
+        <AiFillHome />
+        <span>خانه</span>
+    </>
+)
+
+const profileContent = (
+    <>
+        <IoCodeSlashOutline />
+        <span>مهارت‌ها</span>
+    </>
+)
+
+const projectsContent = (
+    <>
+        <CgWebsite />
+        <span>پروژه‌های مربوطه</span>
+    </>
+)
+
+const contactContent = (
+    <>
+        <IoCall />
+        <span>تماس با توسعه‌دهنده</span>
+    </>
 )
