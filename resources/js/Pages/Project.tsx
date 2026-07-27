@@ -3,31 +3,10 @@ import MainLayout from "@/Layouts/MainLayout"
 import { ProjectPageProps } from "@/types"
 import { Head } from "@inertiajs/react"
 import { Info, Images, Contributors } from "@/index"
-import { GoHome } from "react-icons/go"
-import { TbBrandStackshare } from "react-icons/tb"
+import { AiFillHome } from "react-icons/ai"
 import { ImUsers } from "react-icons/im"
+import { LuClipboardList } from "react-icons/lu"
 import clsx from "clsx"
-
-const homeContent = (
-    <>
-        <GoHome />
-        <span>خانه</span>
-    </>
-)
-
-const infoContent = (
-    <>
-        <TbBrandStackshare />
-        <span>معرفی</span>
-    </>
-)
-
-const membersContent = (
-    <>
-        <ImUsers />
-        <span>توسعه‌دهندگان پروژه</span>
-    </>
-)
 
 export default function Project({ project }: ProjectPageProps) {
     const projectData = project.data
@@ -94,4 +73,25 @@ Project.layout = (page: ReactNode) => (
             { content: membersContent, id: "members" },
         ]}
     />
+)
+
+const homeContent = (
+    <>
+        <AiFillHome />
+        <span>خانه</span>
+    </>
+)
+
+const infoContent = (
+    <>
+        <LuClipboardList />
+        <span>معرفی</span>
+    </>
+)
+
+const membersContent = (
+    <>
+        <ImUsers />
+        <span>توسعه‌دهندگان پروژه</span>
+    </>
 )
