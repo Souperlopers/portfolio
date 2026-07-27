@@ -19,7 +19,7 @@ const Projects = ({ projects }: { projects: ProjectBrief[] }) => {
                 "mx-auto", // margin
                 "flex flex-col gap-10", // flex
                 "w-full max-w-[1350px]", // dimension
-                "scroll-mt-20", // prevent a section hidden behind header
+                "scroll-mt-24", // prevent a section hidden behind header
             )}
         >
             <h2

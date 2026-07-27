@@ -31,30 +31,45 @@ export default function Header({
 
     //observer for activate section
     useEffect(() => {
-        const sections = navigationList.map((item) => item.id) || []
-        const observers: IntersectionObserver[] = []
-        const observerOptions = {
-            root: null,
-            rootMargin: "-20% 0px -20% 0px",
-            threshold: 0,
-        }
+        const visibleSections = new Map<string, number>()
 
-        sections.forEach((id) => {
-            if (!id) return
-            const element = document.getElementById(id)
-            if (!element) return
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        visibleSections.set(
+                            entry.target.id,
+                            entry.boundingClientRect.top,
+                        )
+                    } else {
+                        visibleSections.delete(entry.target.id)
+                    }
+                })
 
-            const observer = new IntersectionObserver(([entry]) => {
-                if (entry.isIntersecting) {
-                    setActiveSection(id)
-                }
-            }, observerOptions)
+                if (visibleSections.size === 0) return
 
-            observer.observe(element)
-            observers.push(observer)
+                const active = [...visibleSections.entries()].sort(
+                    (a, b) => Math.abs(a[1]) - Math.abs(b[1]),
+                )[0][0]
+
+                setActiveSection(active)
+            },
+            {
+                root: null,
+                rootMargin: "-20% 0px -20% 0px",
+                threshold: 0,
+            },
+        )
+
+        navigationList.forEach((item) => {
+            if (!item.id) return
+            const element = document.getElementById(item.id)
+            if (element) {
+                observer.observe(element)
+            }
         })
 
-        return () => observers.forEach((observer) => observer.disconnect())
+        return () => observer.disconnect()
     }, [navigationList])
 
     // calculate header breakpoint when hero exists
@@ -83,7 +98,9 @@ export default function Header({
             <Logo isCompact={hasHero ? isScrolled : true} />
             {hasHero && <Hero />}
             <div
-                className={hasHero && isScrolled ? "h-[calc(100vh-450px-80px)]" : "h-0"}
+                className={
+                    hasHero && isScrolled ? "h-[calc(100vh-450px-80px)]" : "h-0"
+                }
             />
             <header
                 className={clsx(
@@ -121,7 +138,7 @@ export default function Header({
                             ? clsx(
                                   "flex flex-col items-stretch justify-evenly lg:flex-row", // flex
                                   "h-full w-fit lg:h-fit lg:w-full", // dimension
-								  "max-w-[1500px]", // avoid being full screen on very large screens
+                                  "max-w-[1500px]", // avoid being full screen on very large screens
                               )
                             : clsx(
                                   "hidden sm:flex", // Hide on mobile, show on sm+

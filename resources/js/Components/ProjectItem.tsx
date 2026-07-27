@@ -102,7 +102,8 @@ export default function ProjectItem({ projectData, index }: ProjectItemProps) {
             >
                 <button
                     className={clsx(
-                        "flex items-center gap-1", // flex
+                        "flex items-center justify-center gap-1", // flex
+                        "w-full", // dimension
                         "text-xs sm:text-sm md:text-base", // text dimension
                         "truncate", // text overflow
                     )}
