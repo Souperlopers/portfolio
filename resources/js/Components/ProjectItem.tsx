@@ -1,40 +1,85 @@
-import { useState } from "react";
-import { Link } from "@inertiajs/react";
-import { ProjectItemProps } from "@/types/project";
-import TagsComponent from "./TagsComponent";
+import { useState } from "react"
+import { Link } from "@inertiajs/react"
+import { ProjectItemProps } from "@/types/project"
+import TagsComponent from "./TagsComponent"
+import clsx from "clsx"
 
 export default function ProjectItem({ projectData, index }: ProjectItemProps) {
-    const [imgLoaded, setImgLoaded] = useState(false);
+    const [imgLoaded, setImgLoaded] = useState(false)
     const {
         title = "بدون نام",
         technologies = [],
         description = "",
-    } = projectData;
+    } = projectData
     return (
         <div
-            className="flex flex-col sm:gap-5 gap-3 card p-2.5 rounded-xl bg-base-200 border border-primary/10 hover:-translate-y-1 hover:border-primary/25
-            hover:shadow-[0_16px_40px_rgba(47,91,255,.15)] shadow-[0_10px_30px_rgba(0,0,0,25)] overflow-hidden duration-300 bg-gradient-to-b from-base-300 to-[#0B1120]"
+            className={clsx(
+                "card", // daisyui
+                "flex flex-col gap-3 p-2.5 sm:gap-5", // flex
+                "overflow-hidden rounded-xl", // container
+                "bg-gradient-to-b from-base-300 to-[#0B1120]", // background color
+                "border border-primary/10", // border
+                "shadow-[0_10px_30px_rgba(0,0,0,25)]", // shadow
+                "transition-all duration-300 ease-in-out will-change-transform", // animation
+                "hover:-translate-y-1 hover:border-primary/25 hover:shadow-[0_16px_40px_rgba(47,91,255,.15)]", // hover
+            )}
         >
-            <div className="flex flex-col-reverse sm:flex-row sm:justify-between justify-center sm:gap-5 gap-3">
+            <div
+                className={clsx(
+                    "flex flex-col-reverse justify-center gap-3 sm:flex-row sm:justify-between sm:gap-5", // flex
+                )}
+            >
                 {/* info */}
-                <div className="w-full sm:max-w-[45%] flex flex-col sm:gap-5 gap-3">
-                    <h3 className="md:text-3xl text-xl font-semibold text-base-content truncate">
+                <div
+                    className={clsx(
+                        "flex flex-col sm:gap-5", // flex
+                        "w-full sm:max-w-[45%]", // dimension
+                    )}
+                >
+                    <h3
+                        className={clsx(
+                            "text-xl font-semibold md:text-3xl", // text dimension
+                            "truncate", // text overflow
+                            "text-base-content", // text color
+                        )}
+                    >
                         {title}
                     </h3>
-                    <p className="md:text-base text-sm text-base-content/70 md:line-clamp-2 line-clamp-3 leading-relaxed">
+                    <p
+                        className={clsx(
+                            "line-clamp-3 md:line-clamp-2", // text overflow
+                            "text-sm md:text-base", // text dimension
+                            "text-base-content/70", // text color
+                        )}
+                    >
                         {description}
                     </p>
                     <TagsComponent tags={technologies} />
                 </div>
                 {/* image */}
-                <div className="w-full sm:max-w-[50%] relative md:min-h-[200px] h-44 shrink-0 overflow-hidden">
+                <div
+                    className={clsx(
+                        "h-44 w-full sm:max-w-[50%] md:min-h-[200px]", // dimension
+                        "relative shrink-0 overflow-hidden", // basic
+                    )}
+                >
                     {!imgLoaded && (
-                        <div className="absolute inset-0 bg-white/5 animate-pulse" />
+                        <div
+                            className={clsx(
+                                "absolute inset-0", // position
+                                "bg-base-200/30", // background color
+                                "animate-pulse", // animation
+                            )}
+                        />
                     )}
                     <img
                         src={projectData.thumbnail}
                         alt={`${title} cover`}
-                        className="w-full h-full object-cover opacity-80 rounded-xl"
+                        className={clsx(
+                            "h-full w-full", // dimension
+                            "rounded-xl", // container
+                            "object-cover opacity-80", // basic
+                        )}
                         onLoad={() => setImgLoaded(true)}
                         style={{
                             opacity: imgLoaded ? 1 : 0,
@@ -45,12 +90,25 @@ export default function ProjectItem({ projectData, index }: ProjectItemProps) {
             </div>
             <Link
                 href={projectData.url}
-                className="text-primary hover:bg-primary/10 text-center border border-primary hover:border-primary/30 font-medium rounded-lg py-1 md:py-2 md:px-5 px-[15px] duration-300"
+                className={clsx(
+                    "px-[15px] py-1 md:px-5 md:py-2", // padding
+                    "rounded-lg", // container
+                    "border border-primary", // border
+                    "text-center font-medium text-primary", // text
+                    "hover:border-primary/30 hover:bg-primary/10", // hover
+                    "transition-all duration-300 ease-in-out will-change-transform", // animation
+                )}
             >
-                <button className="inline-flex items-center gap-1 sm:text-sm text-xs md:text-base truncate">
+                <button
+                    className={clsx(
+                        "flex items-center gap-1", // flex
+                        "text-xs sm:text-sm md:text-base", // text dimension
+                        "truncate", // text overflow
+                    )}
+                >
                     مشاهده جزئیات
                 </button>
             </Link>
         </div>
-    );
+    )
 }
