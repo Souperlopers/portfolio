@@ -1,6 +1,8 @@
 goal: create a portfolio webapp in -99 week and -99 days
 
-TODO_Z do we all of the font files? delete redundant ones
+TODO_Z check skeleton member image in profile component
+TODO_Z check skeleton member image in member card
+TODO_Z do we need all of the font files? delete redundant ones
 TODO_Z display member's banner after set in the backend
 
 TODO_S member page data doesn't have banner
