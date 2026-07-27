@@ -27,7 +27,7 @@ const projectsContent = (
 
 const membersContent = (
     <>
-        <span>توسعه‌دهندگان</span>
+        <span>اعضا</span>
         <ImUsers />
     </>
 )

@@ -26,6 +26,6 @@ describe("Members", () => {
     it("renders nothing inside container when members are empty", () => {
         render(<Members members={[]} />);
 
-        expect(screen.getByText("توسعه‌دهندگان")).toBeInTheDocument();
+        expect(screen.getByText("اعضا")).toBeInTheDocument();
     });
 });

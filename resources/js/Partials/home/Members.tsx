@@ -18,7 +18,7 @@ const Members = ({ members }: { members: MemberBrief[] }) => {
                     "-mr-2 md:-mr-5", // margin
                 )}
             >
-                توسعه‌دهندگان
+                اعضا
             </h2>
             <div className={styles.container}>
                 {members.map((member) => (
