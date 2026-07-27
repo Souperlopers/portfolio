@@ -14,6 +14,7 @@ const MemberProjects = ({ projects }: { projects: ProjectBrief[] }) => {
                     "text-xl font-medium md:text-2xl lg:text-3xl", // text division
                     "text-white", // text color
                     "pr-5 md:pr-10", // padding
+                    "-mr-2 md:-mr-5", // margin
                 )}
             >
                 پروژه‌ها
