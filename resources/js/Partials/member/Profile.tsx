@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Member } from "@/types/member"
 import TagsComponent from "../../Components/TagsComponent"
 
@@ -14,7 +14,13 @@ const Profile = ({ info }: { info: Member }) => {
 
     const [imgError, setImgError] = useState(false)
     const initial = name?.trim()[0] ?? "؟"
+    const [thumbnailLoaded, setThumbnailLoaded] = useState(false)
     const showFallback = !thumbnail || imgError
+
+    useEffect(() => {
+        setThumbnailLoaded(false)
+        setImgError(false)
+    }, [thumbnail])
 
     return (
         <div className="min-h-[500px] w-full overflow-hidden rounded-xl border border-primary/10 bg-base-200 shadow-[0_10px_30px_rgba(0,0,0,.25)]">
@@ -24,10 +30,13 @@ const Profile = ({ info }: { info: Member }) => {
             {/* avatar + info */}
             <div className="px-4 pb-6 md:px-6">
                 <div className="relative -mt-12 mb-4 md:-mt-16">
-                    <div className="h-24 w-24 shrink-0 overflow-hidden rounded-full ring-4 ring-primary md:h-32 md:w-32">
+                    <div className="relative h-24 w-24 shrink-0 overflow-hidden rounded-full ring-4 ring-primary md:h-32 md:w-32">
+                        {!thumbnailLoaded && (
+                            <div className="skeleton absolute h-full w-full" />
+                        )}
                         {showFallback ? (
-                            <div className="flex h-full w-full items-center justify-center bg-base-200/80">
-                                <span className="text-3xl font-medium text-sky-400 md:text-4xl">
+                            <div className="flex h-full w-full items-center justify-center bg-base-300">
+                                <span className="text-3xl font-medium text-primary md:text-4xl">
                                     {initial}
                                 </span>
                             </div>
@@ -37,12 +46,13 @@ const Profile = ({ info }: { info: Member }) => {
                                 alt={`${name} cover`}
                                 className="h-full w-full object-cover"
                                 onError={() => setImgError(true)}
+                                onLoad={() => setThumbnailLoaded(true)}
                             />
                         )}
                     </div>
                 </div>
 
-                <div className="flex flex-col gap-2">
+                <div className="mt-7 flex flex-col gap-2">
                     <span className="truncate text-xl font-semibold text-white md:text-3xl">
                         {name}
                     </span>
