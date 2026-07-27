@@ -18,7 +18,7 @@ class TagFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => fake()->word(),
+            'name' => fake()->unique()->word(),
             'type' => fake()->randomElement(Tag::TYPES),
             'priority' => fake()->randomElement([fake()->numberBetween(-128, 127), 0]),
             'version' => fake()->optional()->semver(true, true),

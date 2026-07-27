@@ -8,20 +8,24 @@ import clsx from "clsx/lite"
 
 export default function ProjectImages({ images }: { images: ProjectImage[] }) {
     const galleryRef = useRef<ImageGalleryRef>(null)
+    const indexSeparator = "###"
 
+    // dont show gallery if there are no images
+    if (!images.length) return null
+
+    // make project images compatible to gallery library
     const items: GalleryItem[] = images.map((image, index) => ({
         original: image.url,
         thumbnail: image.url,
-        description: index.toString(),
+        description: index.toString().concat(indexSeparator, image.description),
     }))
-
-    if (!items.length) return null
 
     // track loading state per image index
     const [loadedStates, setLoadedStates] = useState<boolean[]>(
         items.map(() => false),
     )
 
+    // set loaded function
     const markAsLoaded = (index: number) => {
         setLoadedStates((prev) => {
             const newState = [...prev]
@@ -30,30 +34,39 @@ export default function ProjectImages({ images }: { images: ProjectImage[] }) {
         })
     }
 
+    // get loaded function
     const isImageLoaded = (index: number) => loadedStates[index]
 
+    // image renderer funciton
     const renderImage = (item: GalleryItem, isThumbnail: boolean) => {
-        const i: number = Number(item.description)
-        const isLoaded = isImageLoaded(i)
+        // separate index from description
+        const separated = item.description?.split(indexSeparator) || []
+        const index = Number(separated[0])
+        const description = separated.slice(1).join("")
+
+        // check if image is loaded or not
+        const isLoaded = isImageLoaded(index)
+
         return (
-            <div
-                className={clsx(
-                    isLoaded ? "block" : "skeleton", // skeleton
-                    "flex items-center justify-center", // flex
-                    "aspect-[16/9] h-full w-full", // dimesnion
-                )}
-            >
+            <>
                 <img
-                    onLoad={(e) => markAsLoaded(i)}
+                    onLoad={(e) => markAsLoaded(index)}
                     className={clsx(
-                        !isLoaded && "hidden", // loading
-                        !isThumbnail && "image-gallery-image", // main image class
-                        isThumbnail && "image-gallery-thumbnail-image", // thumbnail class
+                        !isLoaded && "skeleton", // loading
+                        "aspect-[16/9]", // dimesnion
+                        isThumbnail // default library classes
+                            ? "image-gallery-thumbnail-image"
+                            : "image-gallery-image",
                     )}
                     alt={isThumbnail ? item.thumbnailAlt : item.originalAlt}
                     src={isThumbnail ? item.thumbnail : item.original}
                 />
-            </div>
+                {!isThumbnail && description && (
+                    <span dir="rtl" className="image-gallery-description">
+                        {description}
+                    </span>
+                )}
+            </>
         )
     }
 
@@ -65,8 +78,6 @@ export default function ProjectImages({ images }: { images: ProjectImage[] }) {
                 showPlayButton={false}
                 useTranslate3D={false}
                 infinite
-                lazyLoad
-                showThumbnails
                 additionalClass={clsx(
                     "rounded-2xl border border-primary/10", // border
                     "p-2 md:p-4", // margin and padding
