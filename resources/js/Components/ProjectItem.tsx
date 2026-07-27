@@ -15,8 +15,9 @@ export default function ProjectItem({ projectData, index }: ProjectItemProps) {
         <div
             className={clsx(
                 "card", // daisyui
-                "flex flex-col gap-3 p-2.5 sm:gap-5", // flex
+                "flex flex-col gap-3 sm:gap-5", // flex
                 "overflow-hidden rounded-xl", // container
+                "py-5 px-3", // padding
                 "bg-gradient-to-b from-base-300 to-[#0B1120]", // background color
                 "border border-primary/10", // border
                 "shadow-[0_10px_30px_rgba(0,0,0,25)]", // shadow
