@@ -37,7 +37,6 @@ const Profile = ({ info }: { info: Member }) => {
                         ) : (
                             <img
                                 src={thumbnail}
-                                key={thumbnail}
                                 alt={`${name} cover`}
                                 className="h-full w-full object-cover"
                                 onError={() => setImgError(true)}
