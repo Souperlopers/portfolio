@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import { Member } from "@/types/member"
 import TagsComponent from "../../Components/TagsComponent"
+import clsx from "clsx"
 
 const Profile = ({ info }: { info: Member }) => {
     const {
@@ -38,11 +39,12 @@ const Profile = ({ info }: { info: Member }) => {
                             <img
                                 src={thumbnail}
                                 alt={`${name} cover`}
-                                className="h-full w-full object-cover"
+                                className={clsx(
+                                    "h-full w-full", // dimension
+                                    "object-cover", // image behavior
+                                    thumbnailLoaded ? "block" : "hidden",
+                                )}
                                 onError={() => setImgError(true)}
-                                style={{
-                                    display: thumbnailLoaded ? "block" : "none",
-                                }}
                                 onLoad={() => setThumbnailLoaded(true)}
                             />
                         )}
