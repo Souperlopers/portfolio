@@ -1,11 +1,10 @@
 goal: create a portfolio webapp in -99 week and -99 days
 
-TODO_Z project image skeleton
-
 TODO_S fill database
 TODO_S add unique method to asset parameters in migrations
 
 # new features
+
 TODO_S redis
 TODO_S pagination function on frontend
 TODO_Z members panel design
@@ -15,4 +14,3 @@ TODO_S create input for website
 TODO_S add reviews
 TODO_S project time ranges
 TODO_S en/fa locale switching
-
