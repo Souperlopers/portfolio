@@ -17,13 +17,11 @@ class ProjectFactory extends Factory
      */
     public function definition(): array
     {
-        $name = fake()->unique()->words(3, true);
-
         return [
-            'name' => $name,
+            'name' => $name = fake()->unique()->words(3, true),
             'priority' => fake()->randomElement([fake()->numberBetween(-128, 127), 0]),
             'slug' => Str::slug($name),
-            'thumbnail' => '/assets/images/p/' . fake()->randomElement(range(1, 6)) . '.png',
+            'thumbnail' => '/assets/images/projects/thumbnails/' . fake()->randomElement(range(1, 6)) . '.png',
             'url' => fake()->unique()->url(),
             'description' => fake()->paragraph(),
         ];

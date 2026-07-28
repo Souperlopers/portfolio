@@ -1,4 +1,4 @@
-import { ReactNode, useRef, useState } from "react"
+import { useRef, useState } from "react"
 import { ProjectImage } from "@/types/project"
 import ImageGallery from "react-image-gallery"
 import "react-image-gallery/styles/image-gallery.css"

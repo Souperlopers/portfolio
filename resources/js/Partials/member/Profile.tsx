@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react"
 import { Member } from "@/types/member"
 import TagsComponent from "../../Components/TagsComponent"
-import clsx from "clsx"
+import clsx from "clsx/lite"
 
-const Profile = ({ info }: { info: Member }) => {
+export default function Profile({ info }: { info: Member }) {
     const {
         name = "",
         description = "",
@@ -20,7 +20,12 @@ const Profile = ({ info }: { info: Member }) => {
     return (
         <div className="min-h-[500px] w-full overflow-hidden rounded-xl border border-primary/10 bg-base-200 shadow-[0_10px_30px_rgba(0,0,0,.25)]">
             {/* banner */}
-            <div className="h-40 w-full bg-gradient-to-br from-sky-500/20 via-white/5 to-blue-600/10 md:h-52" />
+            <div
+                className={clsx(
+                    "aspect-[4/1] w-full", // dimension
+                    "bg-gradient-to-br from-sky-500/20 via-white/5 to-blue-600/10", // background
+                )}
+            />
 
             {/* avatar + info */}
             <div className="px-4 pb-6 md:px-6">
@@ -75,5 +80,3 @@ const Profile = ({ info }: { info: Member }) => {
         </div>
     )
 }
-
-export default Profile

@@ -67,7 +67,7 @@ export default function Logo({ isCompact = true }: { isCompact: boolean }) {
                   >
                       <Link href="/">
                           <img
-                              src="/assets/images/logo-images/souper.svg"
+                              src="/assets/images/logo/souper.svg"
                               alt="Souper"
                               onLoad={onLoad}
                               className={clsx(
@@ -80,7 +80,7 @@ export default function Logo({ isCompact = true }: { isCompact: boolean }) {
                               )}
                           />
                           <img
-                              src="/assets/images/logo-images/lopers.svg"
+                              src="/assets/images/logo/lopers.svg"
                               alt="Lopers"
                               onLoad={onLoad}
                               className={clsx(
@@ -93,7 +93,7 @@ export default function Logo({ isCompact = true }: { isCompact: boolean }) {
                               )}
                           />
                           <img
-                              src="/assets/images/logo-images/ptx.svg"
+                              src="/assets/images/logo/flower.svg"
                               alt="Gul"
                               onLoad={onLoad}
                               className={clsx(

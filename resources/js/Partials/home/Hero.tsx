@@ -16,7 +16,7 @@ export default function Hero() {
         >
             {/* white section */}
             <img
-                src="/assets/images/banner-images/Subtract2.svg"
+                src="/assets/images/banner/white-section.svg"
                 alt="banner white section"
                 onLoad={onLoad}
                 className={clsx(
@@ -63,7 +63,7 @@ export default function Hero() {
             >
                 <div className="relative h-full w-full">
                     <img
-                        src="/assets/images/banner-images/Subtract.svg"
+                        src="/assets/images/banner/blue-section.svg"
                         alt="blue section of banner"
                         onLoad={onLoad}
                         className={clsx(
@@ -74,7 +74,7 @@ export default function Hero() {
                     />
 
                     <img // plant
-                        src="/assets/images/banner-images/plant.svg"
+                        src="/assets/images/banner/plant.svg"
                         alt="banner plant"
                         onLoad={onLoad}
                         className={clsx(
@@ -85,7 +85,7 @@ export default function Hero() {
                         )}
                     />
                     <img // girl
-                        src="/assets/images/banner-images/Girl.svg"
+                        src="/assets/images/banner/girl.svg"
                         alt="banner girl"
                         onLoad={onLoad}
                         className={clsx(
@@ -96,7 +96,7 @@ export default function Hero() {
                         )}
                     />
                     <img // boy
-                        src="/assets/images/banner-images/MAAAN.svg"
+                        src="/assets/images/banner/boy.svg"
                         alt="banner man"
                         onLoad={onLoad}
                         className={clsx(
@@ -106,7 +106,7 @@ export default function Hero() {
                         )}
                     />
                     <img // monitor
-                        src="/assets/images/banner-images/monitor.svg"
+                        src="/assets/images/banner/monitor.svg"
                         alt="banner monitor"
                         onLoad={onLoad}
                         className={clsx(
