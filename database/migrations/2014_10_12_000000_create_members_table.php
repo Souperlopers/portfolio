@@ -24,8 +24,8 @@ return new class extends Migration
 
             $table->string('email')->unique()->nullable();
             $table->string('phone')->unique()->nullable();
-            $table->string('linkedin_url')->nullable();
-            $table->string('github_url')->nullable();
+            $table->string('linkedin_url')->unique()->nullable();
+            $table->string('github_url')->unique()->nullable();
         });
     }
 

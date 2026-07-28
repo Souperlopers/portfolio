@@ -1,7 +1,8 @@
 goal: create a portfolio webapp in -99 week and -99 days
 
+TODO_Z project image skeleton
+
 TODO_S fill database
-TODO_S (customized 404 status code)[https://inertiajs.com/docs/v2/advanced/error-handling]
 TODO_S add unique method to asset parameters in migrations
 TODO_S redis
 TODO_S add storage name hider

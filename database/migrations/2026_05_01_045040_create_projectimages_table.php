@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('projectimages', function (Blueprint $table) {
-            $table->id();
+            $table->ulid('id')->primary();
             $table->bigInteger('project_id')->unsigned();
             $table->tinyInteger('priority')->default(0)->index();
             $table->string('path')/*->unique()*/;

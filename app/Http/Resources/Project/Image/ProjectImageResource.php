@@ -15,7 +15,7 @@ class ProjectImageResource extends JsonResource
     public function toArray(Request $request): array
     {
         return [
-            'id' => (int) $this->id,
+            'id' => $this->id,
             'url' => request()->schemeAndHttpHost() . $this->path,
 			'description' => $this->description,
         ];

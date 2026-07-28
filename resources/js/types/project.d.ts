@@ -2,7 +2,7 @@ import { Tag } from "@/types/tag";
 import { MemberBrief } from "@/types/member";
 
 export type ProjectImage = {
-    id: number;
+    id: string;
     url: string;
     description: string;
 };
