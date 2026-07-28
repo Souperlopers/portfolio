@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react"
 import { Member } from "@/types/member"
 import TagsComponent from "../../Components/TagsComponent"
+import clsx from "clsx"
 
 const Profile = ({ info }: { info: Member }) => {
-    console.log(info)
     const {
         name = "",
         description = "",
@@ -16,11 +16,6 @@ const Profile = ({ info }: { info: Member }) => {
     const initial = name?.trim()[0] ?? "؟"
     const [thumbnailLoaded, setThumbnailLoaded] = useState(false)
     const showFallback = !thumbnail || imgError
-
-    useEffect(() => {
-        setThumbnailLoaded(false)
-        setImgError(false)
-    }, [thumbnail])
 
     return (
         <div className="min-h-[500px] w-full overflow-hidden rounded-xl border border-primary/10 bg-base-200 shadow-[0_10px_30px_rgba(0,0,0,.25)]">
@@ -44,7 +39,11 @@ const Profile = ({ info }: { info: Member }) => {
                             <img
                                 src={thumbnail}
                                 alt={`${name} cover`}
-                                className="h-full w-full object-cover"
+                                className={clsx(
+                                    "h-full w-full", // dimension
+                                    "object-cover", // image behavior
+                                    thumbnailLoaded ? "block" : "hidden",
+                                )}
                                 onError={() => setImgError(true)}
                                 onLoad={() => setThumbnailLoaded(true)}
                             />
