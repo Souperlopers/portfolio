@@ -15,7 +15,7 @@ export default function Project({ project }: ProjectPageProps) {
 
     return (
         <>
-            <Head title={`SouperLopers ${projectData.title}`} />
+            <Head title={projectData.title} />
             <div
                 className={`flex w-full max-w-[1360px] flex-col gap-10 md:gap-16`}
             >

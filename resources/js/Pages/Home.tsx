@@ -10,7 +10,7 @@ import { IoCall } from "react-icons/io5"
 export default function Home({ projects, members }: HomePageProps) {
     return (
         <>
-            <Head title={"SouperLopers"} />
+            <Head title={"Home"} />
             <Projects projects={projects.data} />
             <Members members={members.data} />
             <About />
