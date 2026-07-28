@@ -4,11 +4,10 @@ TODO_Z project image skeleton
 
 TODO_S fill database
 TODO_S add unique method to asset parameters in migrations
-TODO_S redis
-TODO_S add storage name hider
-TODO_S pagination function on frontend
 
 # new features
+TODO_S redis
+TODO_S pagination function on frontend
 TODO_Z members panel design
 TODO_S authentication
 TODO_S panel
