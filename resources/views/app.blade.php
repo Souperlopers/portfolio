@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html data-theme="souperlopers" lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,10 +8,10 @@
 
         @routes
         @viteReactRefresh
-        @vite(['resources/js/app.tsx', "resources/js/Pages/{$page['component']}.tsx"])
-        @inertiaHead
+        @vite("resources/js/app.tsx")
+        <x-inertia::head />
     </head>
     <body dir="rtl" class="overflow-y-scroll min-h-screen font-vazir bg-base-300">
-        @inertia
+        <x-inertia::app />
     </body>
 </html>

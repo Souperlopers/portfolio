@@ -1,24 +1,27 @@
-import "../css/app.css";
+import "../css/app.css"
 
-import { createRoot } from "react-dom/client";
-import ReactDOMServer from "react-dom/server";
-import createServer from "@inertiajs/react/server";
-import { createInertiaApp } from "@inertiajs/react";
-import { resolvePageComponent } from "laravel-vite-plugin/inertia-helpers";
+import { createInertiaApp } from "@inertiajs/react"
+import createServer from "@inertiajs/react/server"
+import { resolvePageComponent } from "laravel-vite-plugin/inertia-helpers"
+import { ComponentType, Suspense } from "react"
+import ReactDOMServer from "react-dom/server"
+import { title } from "@/app"
+import Loading from "./Components/Loading"
 
-const appName = import.meta.env.VITE_APP_NAME || "Laravel";
-
-createServer(
-    (page) =>
-        createInertiaApp({
-            page,
-            title: (title) => `${title} - ${appName}`,
-            render: ReactDOMServer.renderToString,
-            resolve: (name) =>
-                resolvePageComponent(
-                    `./Pages/${name}.tsx`,
-                    import.meta.glob("./Pages/**/*.tsx"),
-                ),
-            setup: ({ App, props }) => <App {...props} />,
-        }),
-);
+createServer((page) =>
+    createInertiaApp({
+        title,
+        page,
+        render: ReactDOMServer.renderToString,
+        resolve: (name) =>
+            resolvePageComponent(
+                `./Pages/${name}.tsx`,
+                import.meta.glob("./Pages/**/*.tsx"),
+            ) as Promise<ComponentType>,
+        setup: ({ App, props }) => (
+            <Suspense fallback={<Loading />}>
+                <App {...props} />
+            </Suspense>
+        ),
+    }),
+)
