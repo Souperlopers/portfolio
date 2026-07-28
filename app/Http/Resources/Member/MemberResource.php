@@ -21,15 +21,23 @@ class MemberResource extends JsonResource
             'position' => $this->position,
             'api' => request()->schemeAndHttpHost() . '/api/members/' . $this->slug,
         ];
+		
+		foreach (
+            [
+				'شماره تماس' => 'phone' ,
+				'ایمیل'      => 'email' ,
+				'لینکدین'    => 'linkedin_url',
+				'گیت‌هاب'     => 'github_url' ,
+				'فیگما'      => 'figma' ,
+            ] as $key => $value
+        ) {
+            $base['contact'][$key] = $this->{$value};
+        };
 
         foreach (
             [
                 'description',
                 'banner',
-                'phone',
-                'email',
-                'linkedin' => 'linkedin_url',
-                'github' => 'github_url',
                 'preview' => 'url',
             ] as $key => $value
         ) {
