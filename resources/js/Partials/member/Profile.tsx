@@ -10,22 +10,42 @@ export default function Profile({ info }: { info: Member }) {
 		position = "",
 		thumbnail = "",
 		skills = "",
+		banner = "",
 	} = info
 
 	const [imgError, setImgError] = useState(false)
 	const initial = name?.trim()[0] ?? "؟"
 	const [thumbnailLoaded, setThumbnailLoaded] = useState(false)
+	const [bannerLoaded, setBannerLoaded] = useState(false)
 	const showFallback = !thumbnail || imgError
+	console.log(info)
 
 	return (
 		<div className="min-h-[500px] w-full overflow-hidden rounded-xl border border-primary/10 bg-base-200 shadow-[0_10px_30px_rgba(0,0,0,.25)]">
 			{/* banner */}
-			<div
-				className={clsx(
-					"aspect-[4/1] w-full", // dimension
-					"bg-gradient-to-br from-sky-500/20 via-white/5 to-blue-600/10", // background
+			<div className="aspect-[4/1] w-full">
+				{!banner || !bannerLoaded ? (
+					<div
+						className={clsx(
+							"h-full w-full", // dimension
+							"bg-gradient-to-br from-sky-500/20 via-white/5 to-blue-600/10", // background
+						)}
+					/>
+				) : (
+					<img
+						src={banner}
+						alt={`${name} banner`}
+						className={clsx(
+							"h-full w-full", // dimension
+							"object-cover", // image behavior
+							bannerLoaded ? "block" : "hidden", // display after loaded
+							"transition-all duration-300 ease-in-out will-change-transform", // animation
+						)}
+						onError={() => setBannerLoaded(false)}
+						onLoad={() => setBannerLoaded(true)}
+					/>
 				)}
-			/>
+			</div>
 
 			{/* avatar + info */}
 			<div className="px-4 pb-6 md:px-6">
