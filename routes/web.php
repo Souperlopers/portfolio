@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\WebController;
 use Illuminate\Support\Facades\Route;
+use Inertia\Inertia;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,11 +15,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/test', function () {
+	return Inertia::render('TestPage', []);
+});
+
 Route::controller(WebController::class)->name('web.')->group(function () {
 
-    Route::get('/', 'home')->name('home');
+	Route::get('/', 'home')->name('home');
 
-    Route::get('/projects/{project:slug}', 'project')->name('project');
+	Route::get('/projects/{project:slug}', 'project')->name('project');
 
-    Route::get('/{member:slug}', 'member')->name('member');
+	Route::get('/{member:slug}', 'member')->name('member');
 });
