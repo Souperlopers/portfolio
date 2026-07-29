@@ -1,25 +1,23 @@
 import clsx from "clsx/lite"
-import { useEffect, useState } from "react"
+import { colorPalate, POINT_RADIUS, RANGE_WIDTH } from "./Graph"
 import {
-	colorPalate,
-	FINISH_FILLER,
-	PIXEL_PER_DAY,
-	POINT_RADIUS,
-	RANGE_WIDTH,
-	START_FILLER,
-} from "./Graph"
-import { calc_cycle_length, calc_parent_range } from "./component-genaration-functions"
+	calc_cycle_length,
+	calc_parent_timestamp_range,
+	timestamp_to_pixle,
+} from "./component-genaration-functions"
 
 export function generateCycleGraph(matrix: Matrix) {
-	const min_max = calc_parent_range(matrix)
+	const min_max = calc_parent_timestamp_range(matrix)
+	const height = timestamp_to_pixle(min_max.max - min_max.min)
 
 	return (
 		<div
 			className={clsx(
 				"graph", // name
-				"h-min w-full", // dimension
+				"w-full", // dimension
 				"flex flex-row flex-nowrap justify-start gap-2", // flex
 			)}
+			style={{ height }}
 		>
 			{matrix.map((column, index) =>
 				generateCycleColumn(column, min_max, index),
@@ -38,80 +36,56 @@ function generateCycleColumn(
 			key={column_index}
 			className={clsx(
 				"column", // name
-				"h-max", // dimension
-				"flex flex-col", // flex
+				"relative", // base
+				"h-full", // dimension
 			)}
 			style={{
 				width: `${POINT_RADIUS * 2}px`,
 			}}
 		>
-			{column.map((cycle, index) => (
-				<>
-					{index !== 0 &&
-						generateEmptyArea(
-							column[index - 1] as NotActiveCycle,
-							cycle as NotCompletedCycle,
-							index,
-						)}
-					{generateCycle(cycle, min_max, index)}
-				</>
-			))}
+			{column.map((cycle, index) => generateCycle(cycle, min_max, index))}
 		</div>
 	)
 }
 
 function generateCycle(cycle: Cycle, min_max: MinMax, key: number) {
-	const isActive = cycle.completed_at && cycle.completed_at
-	const length = calc_cycle_length(cycle, min_max)
+	const height = calc_cycle_length(cycle, min_max)
+
+	const topDistance = cycle.started_at
+		? Date.parse(cycle.started_at)
+		: min_max.min
+	const top = timestamp_to_pixle(topDistance - min_max.min)
 
 	return (
 		<div
 			key={key}
 			className={clsx(
 				"cycle", // name
-				"flex flex-col items-center", // flex
-				!isActive && "shrink",
+				"absolute", // base
+				"w-full", // dimension
 			)}
+			style={{ top, height }}
 		>
-			{cycle.started_at && generatePoint(cycle, "top")}
+			<div className="relative h-full w-full">
+				{cycle.started_at && generatePoint(cycle, "top")}
 
-			<div
-				className={clsx(
-					"range", // name
-					!isActive && "shrink", // shrink
-				)}
-				style={{
-					background: colorPalate[cycle.name],
-					width: RANGE_WIDTH,
-					height: isActive && `${length}px`,
-				}}
-			/>
+				<div
+					className={clsx(
+						"range", // name
+						"absolute", // base
+						"left-1/2 -translate-x-1/2", // move to center of column
+						"top-0", // position
+					)}
+					style={{
+						background: colorPalate[cycle.name],
+						height,
+						width: RANGE_WIDTH,
+					}}
+				/>
 
-			{cycle.completed_at && generatePoint(cycle, "bottom")}
+				{cycle.completed_at && generatePoint(cycle, "bottom")}
+			</div>
 		</div>
-	)
-}
-
-function generateEmptyArea(
-	prev: NotActiveCycle,
-	after: NotCompletedCycle,
-	key: number,
-) {
-	const length = calc_length_in_pixel(
-		Date.parse(prev.completed_at),
-		Date.parse(after.started_at),
-	)
-
-	return (
-		<div
-			key={`e-${key}`}
-			className={clsx(
-				"empty", // name
-			)}
-			style={{
-				height: length,
-			}}
-		/>
 	)
 }
 
@@ -120,14 +94,14 @@ function generatePoint(cycle: Cycle, pos: "top" | "bottom") {
 		<div
 			className={clsx(
 				"point", // name
+				"absolute", // base
 				"rounded-full", // style
-				"shrink-0", // shrink
+				`${pos}-0`, // stick to top (or bottom)
 			)}
 			style={{
 				background: colorPalate[cycle.name],
 				width: POINT_RADIUS * 2,
 				height: POINT_RADIUS * 2,
-				transform: `translateY(${pos === "bottom" ? "-" : "+"}${POINT_RADIUS / 2}px)`,
 			}}
 		/>
 	)

@@ -1,4 +1,5 @@
-import { FINISH_FILLER, START_FILLER } from "./Graph"
+export const START_FILLER = "1970-01-01 00:00:00"
+export const FINISH_FILLER = "9999-12-31 23:59:59"
 
 export function sort_by_start_then_by_finish(cycles: Column): Column {
 	return cycles.sort((a, b) => {

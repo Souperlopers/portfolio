@@ -10,11 +10,9 @@ import {
 ----------------------------------------
 */
 
-export const POINT_RADIUS = 10
+export const PIXEL_PER_DAY = 1
 export const RANGE_WIDTH = 7
-export const PIXEL_PER_DAY = 10
-export const START_FILLER = "1970-01-01 00:00:00"
-export const FINISH_FILLER = "9999-12-31 23:59:59"
+export const POINT_RADIUS = 4
 
 export const colorPalate = {
 	planning: "#3B82F6",

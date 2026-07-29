@@ -1,3 +1,5 @@
-import Graph from "@/Partials/graph/Graph";
+import Graph from "@/Partials/graph/Graph"
 
-export default () => <Graph />
+export default function TestPage() {
+	return <Graph />
+}
