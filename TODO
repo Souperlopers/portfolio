@@ -1,5 +1,8 @@
 goal: create a portfolio webapp in -99 week and -99 days
 
+TODO_Z fix console errors
+TODO_Z display member banner
+
 TODO_S fill database
 TODO_S add unique method to asset parameters in migrations
 
