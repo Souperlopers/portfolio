@@ -5,7 +5,7 @@ import TagsComponent from "./TagsComponent"
 import clsx from "clsx"
 import { CiImageOn } from "react-icons/ci"
 
-export default function ProjectItem({ projectData, index }: ProjectItemProps) {
+export default function ProjectItem({ projectData }: ProjectItemProps) {
 	const [imgLoaded, setImgLoaded] = useState(false)
 	const {
 		title = "بدون نام",
@@ -65,15 +65,6 @@ export default function ProjectItem({ projectData, index }: ProjectItemProps) {
 						"relative shrink-0 overflow-hidden", // basic
 					)}
 				>
-					{!imgLoaded && (
-						<div
-							className={clsx(
-								"absolute inset-0", // position
-								"bg-base-200/30", // background color
-								"skeleton", // animation
-							)}
-						/>
-					)}
 					{projectData.thumbnail ? (
 						imgLoaded ? (
 							<img
@@ -103,10 +94,10 @@ export default function ProjectItem({ projectData, index }: ProjectItemProps) {
 								"h-full w-full", // dimension
 								"rounded-xl", // container
 								"flex items-center justify-center", // flex
-								"bg-base-200/30", // background color
+								"bg-base-100/70", // background color
 							)}
 						>
-							<CiImageOn size={28} />
+							<CiImageOn size={40} />
 						</div>
 					)}
 				</div>
