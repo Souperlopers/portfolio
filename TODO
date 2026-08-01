@@ -1,5 +1,8 @@
 goal: create a portfolio webapp in -99 week and -99 days
 
+TODO_Z theme switch use redux toolkit or react redux
+TODO_Z just use theme colors
+
 TODO_S fill database
 TODO_S add unique method to asset parameters in migrations
 
