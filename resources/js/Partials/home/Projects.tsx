@@ -16,7 +16,7 @@ const Projects = ({ projects }: { projects: ProjectBrief[] }) => {
         <section
             id="projects"
             className={clsx(
-                "mx-auto", // margin
+                "mx-auto mt-10", // margin
                 "flex flex-col gap-10", // flex
                 "w-full max-w-[1350px]", // dimension
                 "scroll-mt-24", // prevent a section hidden behind header
