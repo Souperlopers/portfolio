@@ -66,7 +66,14 @@ export default function ProjectItem({ projectData }: ProjectItemProps) {
 					)}
 				>
 					{projectData.thumbnail ? (
-						imgLoaded ? (
+						<>
+							<div
+								className={clsx(
+									"absolute inset-0", // position
+									"bg-base-200/30", // background color
+									"skeleton", // animation
+								)}
+							/>
 							<img
 								src={projectData.thumbnail}
 								alt={`${title} cover`}
@@ -79,15 +86,7 @@ export default function ProjectItem({ projectData }: ProjectItemProps) {
 								)}
 								onLoad={() => setImgLoaded(true)}
 							/>
-						) : (
-							<div
-								className={clsx(
-									"absolute inset-0", // position
-									"bg-base-200/30", // background color
-									"skeleton", // animation
-								)}
-							/>
-						)
+						</>
 					) : (
 						<div
 							className={clsx(
