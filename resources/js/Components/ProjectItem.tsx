@@ -7,7 +7,6 @@ import { CiImageOn } from "react-icons/ci"
 
 export default function ProjectItem({ projectData }: ProjectItemProps) {
 	const [imgLoaded, setImgLoaded] = useState(false)
-	const test = false
 	const {
 		title = "بدون نام",
 		technologies = [],
@@ -66,7 +65,7 @@ export default function ProjectItem({ projectData }: ProjectItemProps) {
 						"relative shrink-0 overflow-hidden", // basic
 					)}
 				>
-					{test ? (
+					{projectData.thumbnail ? (
 						<>
 							<div
 								className={clsx(
