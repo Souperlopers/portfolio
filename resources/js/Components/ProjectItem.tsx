@@ -7,6 +7,7 @@ import { CiImageOn } from "react-icons/ci"
 
 export default function ProjectItem({ projectData }: ProjectItemProps) {
 	const [imgLoaded, setImgLoaded] = useState(false)
+	const test = false
 	const {
 		title = "بدون نام",
 		technologies = [],
@@ -65,7 +66,7 @@ export default function ProjectItem({ projectData }: ProjectItemProps) {
 						"relative shrink-0 overflow-hidden", // basic
 					)}
 				>
-					{projectData.thumbnail ? (
+					{test ? (
 						<>
 							<div
 								className={clsx(
@@ -96,7 +97,12 @@ export default function ProjectItem({ projectData }: ProjectItemProps) {
 								"bg-base-100/70", // background color
 							)}
 						>
-							<CiImageOn size={40} />
+							<CiImageOn
+								className={clsx(
+									"-rotate-[20deg] opacity-25", // display
+								)}
+								size={90}
+							/>
 						</div>
 					)}
 				</div>
@@ -104,7 +110,7 @@ export default function ProjectItem({ projectData }: ProjectItemProps) {
 			<Link
 				href={projectData.url}
 				className={clsx(
-					"px-[15px] py-1 md:px-5 md:py-2", // padding
+					"px-[15px] py-3 md:px-5 md:py-2", // padding
 					"rounded-lg", // container
 					"border border-primary", // border
 					"text-center font-medium text-primary", // text
