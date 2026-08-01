@@ -17,26 +17,25 @@ export default {
                 vazir: ['"vazir"', "sans-serif"],
             },
             colors: {
-                'primary': '#4daafc',
                 'bg-primary': '#252526',
                 'btn-primary': '#0078d4',
                 'btn-secondary': '#e6eefa',
                 'btn-hover': '#015ea5',
             },
             screens: {
-                'xs-h'  : { raw : '(min-height: 480px)' } ,
-                'sm-h'  : { raw : '(min-height: 640px)' } ,
-                'md-h'  : { raw : '(min-height: 768px)' } ,
-                'lg-h'  : { raw : '(min-height: 1024px)' },
-                'xl-h'  : { raw : '(min-height: 1280px)' },
-                '2xl-h' : { raw : '(min-height: 1536px)' },
+                'xs-h': { raw: '(min-height: 480px)' },
+                'sm-h': { raw: '(min-height: 640px)' },
+                'md-h': { raw: '(min-height: 768px)' },
+                'lg-h': { raw: '(min-height: 1024px)' },
+                'xl-h': { raw: '(min-height: 1280px)' },
+                '2xl-h': { raw: '(min-height: 1536px)' },
             }
         },
     },
     daisyui: {
         themes: [
             {
-                souperlopers: {
+                dark: {
                     "primary": "#007ACC",
                     "primary-content": "#FFFFFF",
 
@@ -49,7 +48,7 @@ export default {
                     "neutral": "#1E1E1E",
                     "neutral-content": "#FFFFFF",
 
-                    "base-100": "#070B14", 
+                    "base-100": "#070B14",
                     "base-200": "#0E1420",
                     "base-300": "#151C2B",
                     "base-content": "#CCCCCC",
@@ -58,6 +57,31 @@ export default {
                     "success": "#4EC9B0",
                     "warning": "#CCA700",
                     "error": "#F14C4C",
+                },
+            },
+            {
+                light: {
+                    "primary": "#007ACC",
+                    "primary-content": "#FFFFFF",
+
+                    "secondary": "#EAF3FF",
+                    "secondary-content": "#35506B",
+
+                    "accent": "#3794FF",
+                    "accent-content": "#FFFFFF",
+
+                    "neutral": "#1F2937",
+                    "neutral-content": "#FFFFFF",
+
+                    "base-100": "#FFFFFF",
+                    "base-200": "#F8FAFC",
+                    "base-300": "#EEF2F7",
+                    "base-content": "#334155",
+
+                    "info": "#3B82F6",
+                    "success": "#10B981",
+                    "warning": "#F59E0B",
+                    "error": "#EF4444",
                 },
             },
         ],
