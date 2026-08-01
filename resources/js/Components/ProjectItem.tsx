@@ -3,6 +3,7 @@ import { Link } from "@inertiajs/react"
 import { ProjectItemProps } from "@/types/project"
 import TagsComponent from "./TagsComponent"
 import clsx from "clsx"
+import { CiImageOn } from "react-icons/ci"
 
 export default function ProjectItem({ projectData, index }: ProjectItemProps) {
 	const [imgLoaded, setImgLoaded] = useState(false)
@@ -73,18 +74,41 @@ export default function ProjectItem({ projectData, index }: ProjectItemProps) {
 							)}
 						/>
 					)}
-					<img
-						src={projectData.thumbnail}
-						alt={`${title} cover`}
-						className={clsx(
-							"h-full w-full", // dimension
-							"rounded-xl", // container
-							"object-cover opacity-80", // basic
-							imgLoaded ? "block" : "hidden", // display after loaded
-							"transition-all duration-300 ease-in-out will-change-transform", // animation
-						)}
-						onLoad={() => setImgLoaded(true)}
-					/>
+					{projectData.thumbnail ? (
+						imgLoaded ? (
+							<img
+								src={projectData.thumbnail}
+								alt={`${title} cover`}
+								className={clsx(
+									"h-full w-full", // dimension
+									"rounded-xl", // container
+									"object-cover opacity-80", // basic
+									imgLoaded ? "block" : "hidden", // display after loaded
+									"transition-all duration-300 ease-in-out will-change-transform", // animation
+								)}
+								onLoad={() => setImgLoaded(true)}
+							/>
+						) : (
+							<div
+								className={clsx(
+									"absolute inset-0", // position
+									"bg-base-200/30", // background color
+									"skeleton", // animation
+								)}
+							/>
+						)
+					) : (
+						<div
+							className={clsx(
+								"h-full w-full", // dimension
+								"rounded-xl", // container
+								"flex items-center justify-center", // flex
+								"bg-base-200/30", // background color
+							)}
+						>
+							<CiImageOn size={28} />
+						</div>
+					)}
 				</div>
 			</div>
 			<Link
