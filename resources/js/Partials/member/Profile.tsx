@@ -18,17 +18,17 @@ export default function Profile({ info }: { info: Member }) {
 	const [thumbnailLoaded, setThumbnailLoaded] = useState(false)
 	const [bannerLoaded, setBannerLoaded] = useState(false)
 	const showFallback = !thumbnail || imgError
-	console.log(info)
 
 	return (
 		<div className="min-h-[500px] w-full overflow-hidden rounded-xl border border-primary/10 bg-base-200 shadow-[0_10px_30px_rgba(0,0,0,.25)]">
 			{/* banner */}
 			<div className="aspect-[4/1] w-full">
-				{!banner || !bannerLoaded ? (
+				{!banner ? (
 					<div
 						className={clsx(
 							"h-full w-full", // dimension
 							"bg-gradient-to-br from-sky-500/20 via-white/5 to-blue-600/10", // background
+							banner && !bannerLoaded && "skeleton", // display skeleton only before banner loaded
 						)}
 					/>
 				) : (
