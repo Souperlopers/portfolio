@@ -22,14 +22,14 @@ export default function Profile({ info }: { info: Member }) {
 	console.log(banner)
 
 	return (
-		<div className="min-h-[500px] w-full overflow-hidden rounded-xl border border-primary/10 bg-base-200 shadow-[0_10px_30px_rgba(0,0,0,.25)]">
+		<div className="min-h-[350px] w-full overflow-hidden rounded-xl border border-primary/10 bg-base-200 shadow-[0_10px_30px_rgba(0,0,0,.25)]">
 			{/* banner */}
 			<div className="w-full">
 				{banner && !bannerLoaded ? (
 					<div
 						className={clsx(
 							"aspect-[4/1] w-full", // dimension
-							"bg-base-300/40", // background
+							"bg-base-300", // background
 							banner && !bannerLoaded && "skeleton", // display skeleton only before banner loaded
 						)}
 					/>

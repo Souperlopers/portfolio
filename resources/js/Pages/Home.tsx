@@ -1,7 +1,7 @@
 import { ReactNode } from "react"
 import MainLayout from "@/Layouts/MainLayout"
 import { Head } from "@inertiajs/react"
-import { Projects, Members, About } from "@/index"
+import { Projects, Members, ContactUs } from "@/index"
 import { HomePageProps } from "@/types"
 import { CgWebsite } from "react-icons/cg"
 import { ImUsers } from "react-icons/im"
@@ -13,7 +13,7 @@ export default function Home({ projects, members }: HomePageProps) {
 			<Head title={"خانه"} />
 			<Projects projects={projects.data} />
 			<Members members={members.data} />
-			<About />
+			<ContactUs />
 		</>
 	)
 }
