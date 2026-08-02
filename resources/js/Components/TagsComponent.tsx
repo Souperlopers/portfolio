@@ -19,7 +19,7 @@ export default function TagsComponent({ tags }: { tags: Tag[] }) {
 						"flex items-center justify-center gap-1.5", // flex
 						"rounded-xl", // container
 						"px-3 py-1.5", // padding
-						"bg-base-300/90", // background color
+						"bg-base-100/70", // background color
 						"text-sm", // text dimmension
 					)}
 				>
@@ -35,7 +35,7 @@ export default function TagsComponent({ tags }: { tags: Tag[] }) {
 					)}
 					<span
 						className={clsx(
-							"text-xs sm:text-sm", // text dimension
+							"text-xs sm:text-sm text-base-content", // text dimension
 							"pt-0.5", // padding
 							"max-w-20 truncate", // text overflow
 						)}
