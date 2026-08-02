@@ -10,9 +10,9 @@ import {
 ----------------------------------------
 */
 
-export const PIXEL_PER_DAY = 1
-export const RANGE_WIDTH = 7
-export const POINT_RADIUS = 4
+export const PIXEL_PER_DAY  = 1
+export const RANGE_WIDTH    = 7
+export const POINT_DIAMETER = 14
 
 export const colorPalate = {
 	planning: "#3B82F6",

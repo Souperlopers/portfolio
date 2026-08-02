@@ -1,5 +1,5 @@
 import clsx from "clsx/lite"
-import { colorPalate, POINT_RADIUS, RANGE_WIDTH } from "./Graph"
+import { colorPalate, POINT_DIAMETER, RANGE_WIDTH } from "./Graph"
 import {
 	calc_cycle_length,
 	calc_parent_timestamp_range,
@@ -40,7 +40,7 @@ function generateCycleColumn(
 				"h-full", // dimension
 			)}
 			style={{
-				width: `${POINT_RADIUS * 2}px`,
+				width: `${POINT_DIAMETER}px`,
 			}}
 		>
 			{column.map((cycle, index) => generateCycle(cycle, min_max, index))}
@@ -100,8 +100,8 @@ function generatePoint(cycle: Cycle, pos: "top" | "bottom") {
 			)}
 			style={{
 				background: colorPalate[cycle.name],
-				width: POINT_RADIUS * 2,
-				height: POINT_RADIUS * 2,
+				width: POINT_DIAMETER,
+				height: POINT_DIAMETER,
 			}}
 		/>
 	)
