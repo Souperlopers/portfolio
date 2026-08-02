@@ -1,7 +1,8 @@
-import { useEffect, useRef, useState } from "react"
+import { RefObject, useEffect, useRef, useState } from "react"
 import { FiMoon, FiSun, FiMonitor } from "react-icons/fi"
 import { useAppSelector, useAppDispatch } from "@/lib/store"
 import { setTheme } from "@/lib/store/themeSlice"
+import clsx from "clsx/lite"
 
 const options = [
 	{ value: "light", icon: <FiSun className="h-4 w-4" />, label: "حالت روشن" },
@@ -17,7 +18,7 @@ const options = [
 	},
 ]
 
-export default function ThemeSwitch() {
+export default function ThemeSwitch({ref}: {ref?: RefObject<HTMLDivElement>}) {
 	const theme = useAppSelector((s) => s.theme.theme)
 	const dispatch = useAppDispatch()
 	const [open, setOpen] = useState(false)
@@ -79,11 +80,16 @@ export default function ThemeSwitch() {
 	}, [])
 
 	return (
-		<div>
+		<div ref={ref}>
 			{/* this is dispayed on desktop */}
 			<div
 				role="radiogroup"
-				className="relative hidden h-11 items-center gap-0.5 rounded-full border border-base-300 bg-base-100 p-1 md:inline-flex"
+				className={clsx(
+					"relative hidden md:inline-flex items-center gap-0.5 p-1",
+					"h-11 ", // dimension
+					"rounded-full border border-base-300", // border
+					"bg-base-100", // background
+				)}
 			>
 				{/* gold background that is transformed in desktop mode */}
 				<span
