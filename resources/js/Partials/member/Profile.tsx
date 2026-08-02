@@ -78,14 +78,14 @@ export default function Profile({ info }: { info: Member }) {
 				</div>
 
 				<div className="mt-7 flex flex-col gap-2">
-					<span className="truncate text-xl font-semibold text-white md:text-3xl">
+					<span className="truncate text-xl font-semibold text-base-content md:text-3xl">
 						{name}
 					</span>
-					<span className="truncate text-sm text-white/40 md:text-base">
+					<span className="truncate text-sm text-base-content/80 md:text-base">
 						{position}
 					</span>
 					{description && (
-						<p className="mt-1 text-sm leading-relaxed text-white/60 md:text-base">
+						<p className="mt-1 text-sm leading-relaxed text-base-content/70 md:text-base">
 							{description}
 						</p>
 					)}

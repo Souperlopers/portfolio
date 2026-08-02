@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { Link } from "@inertiajs/react"
 import { MemberBrief } from "@/types/member"
-import TagsComponent from "./TagsComponent"
+import TagsComponent from "@/Components/TagsComponent"
 import clsx from "clsx"
 
 const MemberCard = ({ memberData }: { memberData: MemberBrief }) => {
@@ -52,7 +52,7 @@ const MemberCard = ({ memberData }: { memberData: MemberBrief }) => {
             </div>
 
             <div className="flex w-full flex-col items-center gap-1">
-                <h3 className="max-w-[220px] truncate text-base font-semibold text-white md:max-w-[260px] md:text-lg lg:text-xl">
+                <h3 className="max-w-[220px] truncate text-base font-semibold text-base-content md:max-w-[260px] md:text-lg lg:text-xl">
                     {name}
                 </h3>
                 <p className="text-xs text-base-content/70 md:text-sm">
