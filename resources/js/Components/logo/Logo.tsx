@@ -105,6 +105,7 @@ export default function Logo({ isCompact = true }: { isCompact: boolean }) {
 									isOnTop // position
 										? "bottom-1/2 right-0 w-[11.24%] translate-y-1/2"
 										: "bottom-[15%] right-[5%] w-[8%] rotate-[80deg]",
+									"invert dark:invert-0", // color switch
 								)}
 							/>
 						</Link>
