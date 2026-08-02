@@ -1,14 +1,19 @@
 goal: create a portfolio webapp in -99 week and -99 days
 
-TODO_Z check theme switch to display responsive
-TODO_Z fix ProjectItem thumbnail object display => convert to object-cover 
-TODO_Z add inner shadow to blue section in hero
-TODO_Z set light mode color to blue section in hero
-TODO_Z change curve (white section) in hero light mode color
+TODO_Z TODO_S fix first render is always dark mode and hamburger enabled (only happens in home page)
+TODO_Z fix ProjectItem thumbnail changing size 
+TODO_Z add blue section inner shadow
+TODO_Z set blue section light mode
+TODO_Z set white section light mode
+TODO_Z no image section when project has no screenshots
 
 TODO_S fill database
 TODO_S add unique method to asset parameters in migrations
 TODO_S add cycle support to backend
+
+TODO_Z enhance cycle graph if needed
+TODO_Z add graph to project
+TODO_Z add graph to member
 
 # new features
 
