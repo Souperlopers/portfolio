@@ -9,7 +9,7 @@ const AboutUs = () => {
     return (
         <section
             id="about"
-            className="mx-auto flex w-full h-[80vh] max-w-[1350px] scroll-mt-20 flex-col gap-10"
+            className="mx-auto flex w-full h-[500px] max-w-[1350px] scroll-mt-20 flex-col gap-10"
         >
             <h2
                 className={clsx(
