@@ -27,7 +27,7 @@ export default function ThemeSwitch() {
 	const activeIndex = options.findIndex((o) => o.value === theme)
 	const activeOption = options[activeIndex]
 
-	// theme swapping logic
+	// theme switching logic
 	useEffect(() => {
 		const osIsDark = window.matchMedia(
 			"(prefers-color-scheme: dark)",
