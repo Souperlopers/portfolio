@@ -21,7 +21,7 @@ export default function ProjectItem({ projectData }: ProjectItemProps) {
 				"px-3 py-5", // padding
 				"bg-base-300", // background color
 				"border border-primary/10", // border
-				"shadow-[0_10px_30px_rgba(0,0,0,25)]", // shadow
+				"shadow-[0_10px_30px_rgba(0,0,0,.25)]", // shadow
 				"transition-all duration-300 ease-in-out will-change-transform", // animation
 				"hover:-translate-y-1 hover:border-primary/25 hover:shadow-[0_16px_40px_rgba(47,91,255,.15)]", // hover
 			)}
