@@ -35,11 +35,14 @@
 	},
 	"dependencies": {
 		"@inertiajs/vite": "^3.6.1",
+		"@reduxjs/toolkit": "^2.12.0",
 		"clsx": "^2.1.1",
 		"framer-motion": "^12.23.26",
 		"lucide-react": "^1.14.0",
 		"react-icons": "^5.5.0",
-		"react-image-gallery": "^2.1.2"
+		"react-image-gallery": "^2.1.2",
+		"react-redux": "^9.3.0",
+		"redux-persist": "^6.0.0"
 	},
 	"prettier": {
 		"semi": false,
