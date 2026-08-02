@@ -29,7 +29,7 @@ export default function Profile({ info }: { info: Member }) {
 					<div
 						className={clsx(
 							"aspect-[4/1] w-full", // dimension
-							"bg-base-300/40", // background
+							"bg-base-300", // background
 							banner && !bannerLoaded && "skeleton", // display skeleton only before banner loaded
 						)}
 					/>
