@@ -83,7 +83,7 @@ export default function ProjectImages({ images }: { images: ProjectImage[] }) {
                     "p-2 md:p-4", // margin and padding
                     "transition-all duration-300", // animation
                     "hover:border-primary/20 hover:shadow-[0_18px_45px_rgba(47,91,255,.12)]", // hover
-                    "bg-gradient-to-b from-base-200 to-[#0B1120] shadow-[0_10px_30px_rgba(0,0,0,.25)]", // background
+                    "bg-base-200 shadow-[0_10px_30px_rgba(0,0,0,.25)]", // background
                 )}
                 renderThumbInner={(item: GalleryItem) =>
                     renderImage(item, true)
