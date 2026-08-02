@@ -79,7 +79,7 @@ export default function Hero() {
                         onLoad={onLoad}
                         className={clsx(
                             "absolute z-40 opacity-50", // basic
-                            "w-[6%]", //dimensions
+                            "w-[6%]", // dimensions
                             allLoaded ? "block" : "hidden", // loading
                             "left-[29%] top-[65%]", // position
                         )}

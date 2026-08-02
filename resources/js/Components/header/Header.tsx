@@ -30,7 +30,7 @@ export default function Header({
 		}
 	}
 
-	//observer for activate section
+	// observer for activate section
 	useEffect(() => {
 		const visibleSections = new Map<string, number>()
 
@@ -180,14 +180,14 @@ export default function Header({
 						</button>
 					))}
 				</nav>
-				<ThemeSwitch />
+				{!isBelowHero && <ThemeSwitch />}
 				<Hamburger
 					navList={navigationList}
 					clickHandler={scrollToSection}
 					classNames={
 						isBelowHero
 							? "hidden"
-							: "visible sm:invisible min-w-[66px]"
+							: "visible sm:hidden min-w-[66px]"
 					}
 				/>
 			</header>
