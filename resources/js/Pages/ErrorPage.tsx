@@ -27,7 +27,7 @@ export default function Project({ status }: ErrorPageProps) {
 					className={clsx(
 						"text-center",
 						"text-8xl font-bold md:text-9xl lg:text-[200px]", // responsive size
-						"text-primary/20", // faded color
+						"text-primary/30", // faded color
 						"select-none", // prevent selection
 					)}
 				>
@@ -39,7 +39,7 @@ export default function Project({ status }: ErrorPageProps) {
 					className={clsx(
 						"border-r-4 border-primary", // border like Members section
 						"text-xl font-medium md:text-2xl lg:text-3xl", // text size
-						"text-white", // text color
+						"text-base-content", // text color
 						"pr-5 md:pr-10", // padding
 						"-mr-2 md:-mr-5", // margin
 					)}
@@ -51,7 +51,7 @@ export default function Project({ status }: ErrorPageProps) {
 				<p
 					className={clsx(
 						"max-w-2xl text-center", // width
-						"text-base text-white/70 md:text-lg", // text size and color
+						"text-base text-base-content/70 md:text-lg", // text size and color
 						"leading-relaxed", // line height
 					)}
 				>
@@ -64,7 +64,7 @@ export default function Project({ status }: ErrorPageProps) {
 					className={clsx(
 						"group flex items-center gap-3", // flex
 						"rounded-lg px-6 py-3", // padding
-						"bg-primary text-white", // colors
+						"bg-primary text-primary-content", // colors
 						"transition-all duration-300", // animation
 						"hover:scale-105 hover:bg-primary/80", // hover
 						"active:scale-95", // active
