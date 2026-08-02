@@ -6,6 +6,7 @@ import { HomePageProps } from "@/types"
 import { CgWebsite } from "react-icons/cg"
 import { ImUsers } from "react-icons/im"
 import { IoCall } from "react-icons/io5"
+import { AiFillHome } from "react-icons/ai"
 
 export default function Home({ projects, members }: HomePageProps) {
 	return (
@@ -17,6 +18,13 @@ export default function Home({ projects, members }: HomePageProps) {
 		</>
 	)
 }
+
+export const homeContent = (
+	<>
+		<span>خانه</span>
+		<AiFillHome className="pb-1" size={21}/>
+	</>
+)
 
 const projectsContent = (
 	<>

@@ -3,10 +3,10 @@ import MainLayout from "@/Layouts/MainLayout"
 import { MemberPageProps } from "@/types"
 import { Head } from "@inertiajs/react"
 import { Profile, MemberProjects, Contact } from "@/index"
-import { AiFillHome } from "react-icons/ai"
 import { IoCodeSlashOutline } from "react-icons/io5"
 import { CgWebsite } from "react-icons/cg"
 import { IoCall } from "react-icons/io5"
+import { homeContent } from "@/Pages/Home"
 
 export default function Member({ member }: MemberPageProps) {
 	const info = member.data || {}
@@ -39,13 +39,6 @@ Member.layout = (page: ReactNode) => (
 			{ content: contactContent, id: "contact" },
 		]}
 	/>
-)
-
-const homeContent = (
-	<>
-		<span>خانه</span>
-		<AiFillHome />
-	</>
 )
 
 const profileContent = (
