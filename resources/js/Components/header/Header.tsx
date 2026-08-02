@@ -115,12 +115,13 @@ export default function Header({
 								"min-h-[200px]", // avoid conflicting with main content when height is too low
 							)
 						: clsx(
-								"justify-between gap-5 lg:gap-16", // flex
-								"top-0", // position
-								"h-[80px]", // dimension
-								"px-5 py-2", // padding
-								"bg-gradient-to-b from-[#010103] via-[#050912]/90 to-[#121927]/80 backdrop-blur-lg", // background
-								"shadow-[0_10px_30px_rgba(255,255,255,.05)]", // shadow
+							"justify-between gap-5 lg:gap-16", // flex
+							"top-0", // position
+							"h-[80px]", // dimension
+							"px-5 py-2", // padding
+							"bg-gradient-to-b from-base-100 to-base-100/30 backdrop-blur-lg", // background
+							"border-b border-base-200", // border
+							"shadow-[0_10px_30px_rgba(255,255,255,.05)]", // shadow
 							),
 				)}
 			>
