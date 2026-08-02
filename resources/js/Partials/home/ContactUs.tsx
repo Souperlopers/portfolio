@@ -23,7 +23,7 @@ export default function ContactUs() {
 				تماس با ما
 			</h2>
 
-			<div className="flex h-full flex-col items-start justify-start rounded-xl border border-primary/10 bg-base-200 px-6 py-8 shadow-[0_10px_30px_rgba(0,0,0,25)] transition-all duration-200 md:px-10 md:py-10">
+			<div className="flex h-full flex-col items-start justify-start rounded-xl border border-primary/10 bg-base-200 px-6 py-8 shadow-[0_10px_30px_rgba(0,0,0,.25)] transition-all duration-200 md:px-10 md:py-10">
 				<div className="mb-6 flex items-center gap-2 md:mb-8">
 					<span className="h-3 w-3 rounded-full bg-[#ff5f56]" />
 					<span className="h-3 w-3 rounded-full bg-[#ffbd2e]" />
