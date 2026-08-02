@@ -1,5 +1,3 @@
-"use client"
-
 import { useEffect, useRef, useState } from "react"
 import { FiMoon, FiSun, FiMonitor } from "react-icons/fi"
 import { useAppSelector, useAppDispatch } from "@/lib/store"
