@@ -2,48 +2,48 @@ import { useState } from "react"
 import { Tag } from "@/types/tag"
 import clsx from "clsx"
 
-export default function ({ tags }: { tags: Tag[] }) {
-    const [hasIcon, setHasIcon] = useState(true)
-    return (
-        <div
-            className={clsx(
-                "flex flex-wrap gap-2", // flex
-                "min-h-8", // dimension
-            )}
-        >
-            {tags.map((tag) => (
-                <div
-                    key={tag.id}
-                    dir="ltr"
-                    className={clsx(
-                        "flex items-center justify-center gap-1.5", // flex
-                        "rounded-xl", // container
-                        "px-3 py-1.5", // padding
-                        "bg-white/5", // background color
-                        "text-sm", // text dimmension
-                    )}
-                >
-                    {hasIcon && (
-                        <img
-                            className={clsx(
-                                "h-4 w-4", // dimension
-                            )}
-                            src={`/assets/tags/${tag.title}.svg`}
-                            alt={tag.title}
-                            onError={() => setHasIcon(false)}
-                        />
-                    )}
-                    <span
-                        className={clsx(
-                            "text-xs sm:text-sm", // text dimension
-                            "pt-0.5", // padding
-                            "max-w-20 truncate", // text overflow
-                        )}
-                    >
-                        {tag.title}
-                    </span>
-                </div>
-            ))}
-        </div>
-    )
+export default function TagsComponent({ tags }: { tags: Tag[] }) {
+	const [hasIcon, setHasIcon] = useState(true)
+	return (
+		<div
+			className={clsx(
+				"flex flex-wrap gap-2", // flex
+				"min-h-8", // dimension
+			)}
+		>
+			{tags.map((tag) => (
+				<div
+					key={tag.id}
+					dir="ltr"
+					className={clsx(
+						"flex items-center justify-center gap-1.5", // flex
+						"rounded-xl", // container
+						"px-3 py-1.5", // padding
+						"bg-base-300/90", // background color
+						"text-sm", // text dimmension
+					)}
+				>
+					{hasIcon && (
+						<img
+							className={clsx(
+								"h-4 w-4", // dimension
+							)}
+							src={`/assets/tags/${tag.title}.svg`}
+							alt={tag.title}
+							onError={() => setHasIcon(false)}
+						/>
+					)}
+					<span
+						className={clsx(
+							"text-xs sm:text-sm", // text dimension
+							"pt-0.5", // padding
+							"max-w-20 truncate", // text overflow
+						)}
+					>
+						{tag.title}
+					</span>
+				</div>
+			))}
+		</div>
+	)
 }
