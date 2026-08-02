@@ -31,15 +31,17 @@ export default function ThemeSwitch() {
 
 	// theme swapping logic
 	useEffect(() => {
-		// remove previous theme
-		document.documentElement.removeAttribute("data-theme")
-
 		const osIsDark = window.matchMedia(
 			"(prefers-color-scheme: dark)",
 		).matches
-		const themeClass =
+
+		const currentTheme =
 			theme === "system" ? (osIsDark ? "dark" : "light") : theme
-		document.documentElement.setAttribute("data-theme", themeClass)
+
+		const html = document.documentElement
+
+		html.setAttribute("data-theme", currentTheme)
+		html.classList.toggle("dark", currentTheme === "dark")
 	}, [theme])
 
 	// listen to system theme changes and update the theme accordingly
@@ -47,13 +49,14 @@ export default function ThemeSwitch() {
 		const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)")
 
 		function handleThemeChange(e: MediaQueryListEvent) {
-			if (theme === "system") {
-				document.documentElement.removeAttribute("data-theme")
-				document.documentElement.setAttribute(
-					"data-theme",
-					e.matches ? "dark" : "light",
-				)
-			}
+			if (theme !== "system") return
+
+			const currentTheme = e.matches ? "dark" : "light"
+
+			const html = document.documentElement
+
+			html.setAttribute("data-theme", currentTheme)
+			html.classList.toggle("dark", currentTheme === "dark")
 		}
 
 		mediaQuery.addEventListener("change", handleThemeChange)
