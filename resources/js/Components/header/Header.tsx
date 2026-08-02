@@ -181,7 +181,6 @@ export default function Header({
 					className={clsx(
 						isBelowHero && "fixed right-5", // hide when under hero
 						"aspect-[200/150] h-[50px]", // dimension
-						"transition-all duration-300 ease-in-out will-change-transform", // animation
 					)}
 				/>
 
@@ -209,7 +208,6 @@ export default function Header({
 							className={clsx(
 								"flex items-center justify-between", // flex
 								"text-nowrap font-medium text-base-content", // text common
-								"transition-all duration-300 ease-in-out will-change-transform", // animation
 								isBelowHero
 									? clsx(
 											"gap-4", // content gap
@@ -247,11 +245,7 @@ export default function Header({
 									)
 						}
 					/>
-					{!isBelowHero && (
-						<ThemeSwitch
-							isCompact={showHamburger}
-						/>
-					)}
+					{!isBelowHero && <ThemeSwitch isCompact={showHamburger} />}
 				</div>
 			</header>
 		</>

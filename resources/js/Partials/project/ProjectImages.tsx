@@ -81,7 +81,6 @@ export default function ProjectImages({ images }: { images: ProjectImage[] }) {
                 additionalClass={clsx(
                     "rounded-2xl border border-primary/10", // border
                     "p-2 md:p-4", // margin and padding
-                    "transition-all duration-300", // animation
                     "hover:border-primary/20 hover:shadow-[0_18px_45px_rgba(47,91,255,.12)]", // hover
                     "bg-base-200 shadow-[0_10px_30px_rgba(0,0,0,.25)]", // background
                 )}

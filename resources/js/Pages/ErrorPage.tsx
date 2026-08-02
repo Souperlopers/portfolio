@@ -4,6 +4,7 @@ import { Head, Link } from "@inertiajs/react"
 import { AiFillHome } from "react-icons/ai"
 import { ErrorPageProps } from "@/types/error"
 import clsx from "clsx"
+import { homeContent } from "./Home"
 
 export default function Project({ status }: ErrorPageProps) {
 	const is404 = status === 404
@@ -84,12 +85,7 @@ Project.layout = (page: ReactNode) => (
 		children={page}
 		navigationList={[
 			{
-				content: (
-					<>
-						<AiFillHome />
-						<span>خانه</span>
-					</>
-				),
+				content: homeContent,
 				href: "/",
 			},
 		]}

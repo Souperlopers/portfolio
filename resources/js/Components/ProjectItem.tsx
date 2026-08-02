@@ -82,7 +82,6 @@ export default function ProjectItem({ projectData }: ProjectItemProps) {
 									"rounded-xl", // container
 									"object-cover opacity-80", // basic
 									imgLoaded ? "block" : "hidden", // display after loaded
-									"transition-all duration-300 ease-in-out will-change-transform", // animation
 								)}
 								onLoad={() => setImgLoaded(true)}
 							/>
@@ -114,7 +113,6 @@ export default function ProjectItem({ projectData }: ProjectItemProps) {
 					"border border-primary", // border
 					"text-center font-medium text-primary", // text
 					"hover:border-primary/30 hover:bg-primary/10", // hover
-					"transition-all duration-300 ease-in-out will-change-transform", // animation
 				)}
 			>
 				<button

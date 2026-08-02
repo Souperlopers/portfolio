@@ -81,13 +81,13 @@ export default function ContactMember({
 								<div
 									className={clsx(
 										"h-10 w-10 md:h-11 md:w-11", // dimension
-										"shrink-0",
+										"shrink-0", // only God knows about this
 										"flex items-center justify-center", // flex
 										"rounded-xl", // container
 										"bg-primary/10", // background color
 										"text-primary", // text color
 										"group-hover:bg-primary/20", // hover
-										"transition-all duration-300 group-hover:scale-105", // animation
+										"transition-colors duration-300 group-hover:scale-105", // animation
 									)}
 								>
 									<Icon size={20} className="md:h-[22px] md:w-[22px]" />
@@ -133,7 +133,7 @@ export default function ContactMember({
 									"translate-x-1", // position
 									"group-hover:translate-x-0", // hover
 									"group-hover:text-primary", // hover
-									"transition-all duration-300", // animation
+									"transition-transform duration-300", // animation
 								)}
 							/>
 						</a>
