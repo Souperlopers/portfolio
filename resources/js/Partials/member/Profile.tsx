@@ -22,7 +22,7 @@ export default function Profile({ info }: { info: Member }) {
 	console.log(banner)
 
 	return (
-		<div className="min-h-[500px] w-full overflow-hidden rounded-xl border border-primary/10 bg-base-200 shadow-[0_10px_30px_rgba(0,0,0,.25)]">
+		<div className="min-h-[400px] w-full overflow-hidden rounded-xl border border-primary/10 bg-base-200 shadow-[0_10px_30px_rgba(0,0,0,.25)]">
 			{/* banner */}
 			<div className="w-full">
 				{banner && !bannerLoaded ? (
