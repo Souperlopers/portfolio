@@ -83,7 +83,6 @@ export default function ThemeSwitch() {
 			{/* this is dispayed on desktop */}
 			<div
 				role="radiogroup"
-				aria-label="تغییر تم"
 				className="relative hidden h-11 items-center gap-0.5 rounded-full border border-base-300 bg-base-100 p-1 md:inline-flex"
 			>
 				{/* gold background that is transformed in desktop mode */}
@@ -97,8 +96,6 @@ export default function ThemeSwitch() {
 						key={option.value}
 						type="button"
 						role="radio"
-						aria-checked={theme === option.value}
-						aria-label={option.label}
 						onClick={() => dispatch(setTheme(option.value))}
 						className={`relative z-10 flex h-9 w-9 items-center justify-center rounded-full transition-colors hover:cursor-pointer hover:bg-accent ${
 							theme === option.value
@@ -116,9 +113,6 @@ export default function ThemeSwitch() {
 				<div className="relative flex h-11 w-11 items-center justify-center rounded-full border border-base-300 bg-base-100 p-1 align-middle">
 					<button
 						type="button"
-						aria-haspopup="listbox"
-						aria-expanded={open}
-						aria-label="تغییر تم"
 						onClick={() => setOpen((prev) => !prev)}
 						className="flex h-9 w-9 items-center justify-center rounded-full border border-base-300 bg-accent text-base-content transition-colors hover:cursor-pointer"
 					>
@@ -135,8 +129,6 @@ export default function ThemeSwitch() {
 							key={option.value}
 							type="button"
 							role="option"
-							aria-selected={theme === option.value}
-							aria-label={option.label}
 							onClick={() => {
 								dispatch(setTheme(option.value))
 								setOpen(false)

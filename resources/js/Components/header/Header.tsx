@@ -119,7 +119,7 @@ export default function Header({
 							"top-0", // position
 							"h-[80px]", // dimension
 							"px-5 py-2", // padding
-							"bg-gradient-to-b from-base-100 to-base-100/30 backdrop-blur-lg", // background
+							"bg-gradient-to-b from-base-100 to-base-100/50 backdrop-blur-lg", // background
 							"border-b border-base-200", // border
 							"shadow-[0_10px_30px_rgba(255,255,255,.05)]", // shadow
 							),
