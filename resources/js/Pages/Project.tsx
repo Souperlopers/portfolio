@@ -79,21 +79,21 @@ Project.layout = (page: ReactNode) => (
 
 const homeContent = (
     <>
-        <AiFillHome />
         <span>خانه</span>
+        <AiFillHome />
     </>
 )
 
 const infoContent = (
     <>
-        <LuClipboardList />
         <span>معرفی</span>
+        <LuClipboardList />
     </>
 )
 
 const membersContent = (
     <>
-        <ImUsers />
         <span>توسعه‌دهندگان پروژه</span>
+        <ImUsers />
     </>
 )

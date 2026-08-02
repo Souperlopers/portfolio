@@ -43,28 +43,28 @@ Member.layout = (page: ReactNode) => (
 
 const homeContent = (
 	<>
-		<AiFillHome />
 		<span>خانه</span>
+		<AiFillHome />
 	</>
 )
 
 const profileContent = (
 	<>
-		<IoCodeSlashOutline />
 		<span>مهارت‌ها</span>
+		<IoCodeSlashOutline />
 	</>
 )
 
 const projectsContent = (
 	<>
-		<CgWebsite />
 		<span>پروژه‌های مربوطه</span>
+		<CgWebsite />
 	</>
 )
 
 const contactContent = (
 	<>
-		<IoCall />
 		<span>تماس با توسعه‌دهنده</span>
+		<IoCall />
 	</>
 )
