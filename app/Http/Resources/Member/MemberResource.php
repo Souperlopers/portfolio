@@ -37,7 +37,6 @@ class MemberResource extends JsonResource
         foreach (
             [
                 'description',
-                'banner',
                 'preview' => 'url',
             ] as $key => $value
         ) {
@@ -45,6 +44,11 @@ class MemberResource extends JsonResource
                 $base[is_string($key) ? $key : $value] = $data;
             }
         };
+
+        // append banner if there is any
+        if ($this->banner) {
+            $base['banner'] = request()->schemeAndHttpHost() . $this->banner;
+        }
 
         // append thumbnail if there is any
         if ($this->thumbnail) {

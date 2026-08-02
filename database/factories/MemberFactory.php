@@ -26,7 +26,7 @@ class MemberFactory extends Factory
 			'slug'      => Str::slug($name),
 			'thumbnail' => '/assets/images/members/' . fake()->randomElement(range(1, 3)) . '.jpg',
 			'banner'    => fake()->randomElement([
-				'/assets/images/members/banner/' . fake()->randomElement(range(1, 7)) . '.png',
+				'/assets/images/members/banner/' . fake()->randomElement(range(1, 2)) . '.png',
 				null,
 			]),
 
