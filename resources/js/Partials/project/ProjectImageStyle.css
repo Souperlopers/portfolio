@@ -149,7 +149,10 @@
     /*  move to right */
     right: 0;
     left: auto;
+	
+	bottom: 50px;
 
     /* decrease background opacity  */
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.6);
 }
+
