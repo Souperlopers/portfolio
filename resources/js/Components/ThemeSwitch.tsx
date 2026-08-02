@@ -18,7 +18,7 @@ const options = [
 	},
 ]
 
-export default function ThemeSwitch({ref}: {ref?: RefObject<HTMLDivElement>}) {
+export default function ThemeSwitch({ isCompact }: { isCompact: boolean }) {
 	const theme = useAppSelector((s) => s.theme.theme)
 	const dispatch = useAppDispatch()
 	const [open, setOpen] = useState(false)
@@ -80,13 +80,14 @@ export default function ThemeSwitch({ref}: {ref?: RefObject<HTMLDivElement>}) {
 	}, [])
 
 	return (
-		<div ref={ref}>
+		<div>
 			{/* this is dispayed on desktop */}
 			<div
 				role="radiogroup"
 				className={clsx(
-					"relative hidden md:inline-flex items-center gap-0.5 p-1",
-					"h-11 ", // dimension
+					"relative p-1", // base
+					isCompact ? "hidden" : "inline-flex items-center gap-0.5", // display
+					"h-11", // dimension
 					"rounded-full border border-base-300", // border
 					"bg-base-100", // background
 				)}
@@ -115,7 +116,13 @@ export default function ThemeSwitch({ref}: {ref?: RefObject<HTMLDivElement>}) {
 			</div>
 
 			{/* this is dispayed on mobile */}
-			<div ref={containerRef} className="relative inline-block md:hidden">
+			<div
+				ref={containerRef}
+				className={clsx(
+					"relative", // base
+					isCompact ? "inline-block" : "hidden", // display
+				)}
+			>
 				<div className="relative flex h-11 w-11 items-center justify-center rounded-full border border-base-300 bg-base-100 p-1 align-middle">
 					<button
 						type="button"
