@@ -64,7 +64,7 @@ export default function ContactMember({
 								"flex items-center justify-between gap-4", // flex
 								"overflow-hidden rounded-xl", // container
 								"p-4 md:p-5", // padding
-								"bg-gradient-to-b from-base-300 to-[#0B1120]", // background color
+								"bg-base-300", // background color
 								"border border-primary/10", // border
 								"shadow-[0_10px_30px_rgba(0,0,0,.25)]", // shadow
 								"transition-all duration-300 ease-in-out will-change-transform", // animation
