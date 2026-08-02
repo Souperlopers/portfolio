@@ -19,15 +19,17 @@ export default function Profile({ info }: { info: Member }) {
 	const [bannerLoaded, setBannerLoaded] = useState(false)
 	const showFallback = !thumbnail || imgError
 
+	console.log(banner)
+
 	return (
 		<div className="min-h-[500px] w-full overflow-hidden rounded-xl border border-primary/10 bg-base-200 shadow-[0_10px_30px_rgba(0,0,0,.25)]">
 			{/* banner */}
-			<div className="aspect-[4/1] w-full">
-				{!banner ? (
+			<div className="w-full">
+				{banner && !bannerLoaded ? (
 					<div
 						className={clsx(
-							"h-full w-full", // dimension
-							"bg-gradient-to-br from-sky-500/20 via-white/5 to-blue-600/10", // background
+							"aspect-[4/1] w-full", // dimension
+							"bg-base-300/40", // background
 							banner && !bannerLoaded && "skeleton", // display skeleton only before banner loaded
 						)}
 					/>
@@ -49,7 +51,13 @@ export default function Profile({ info }: { info: Member }) {
 
 			{/* avatar + info */}
 			<div className="px-4 pb-6 md:px-6">
-				<div className="relative -mt-12 mb-4 md:-mt-16">
+				<div
+					className={clsx(
+						"relative", // position
+						"mb-4", // margin
+						banner ? "md:-mt-16" : "mt-8", // margin decrease if member doesn't have banner
+					)}
+				>
 					<div className="relative h-24 w-24 shrink-0 overflow-hidden rounded-full ring-4 ring-primary md:h-32 md:w-32">
 						{!thumbnailLoaded && (
 							<div className="skeleton absolute h-full w-full" />
