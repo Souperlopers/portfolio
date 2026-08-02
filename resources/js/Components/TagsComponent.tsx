@@ -19,7 +19,7 @@ export default function TagsComponent({ tags }: { tags: Tag[] }) {
 						"flex items-center justify-center gap-1.5", // flex
 						"rounded-xl", // container
 						"px-3 py-1.5", // padding
-						"bg-base-100/70", // background color
+						"bg-primary/10", // background color
 						"text-sm", // text dimmension
 					)}
 				>
