@@ -4,6 +4,7 @@ import { Hero, Logo } from "@/index"
 import Hamburger from "./Hamburger"
 import ThemeSwitch from "../ThemeSwitch"
 import { clsx } from "clsx/lite"
+import { router } from "@inertiajs/react"
 
 export default function Header({
 	navigationList,
@@ -18,12 +19,11 @@ export default function Header({
 	const logoRef = useRef<HTMLDivElement>(null)
 	const navRef = useRef<HTMLElement>(null)
 	const lastElemsRef = useRef<HTMLDivElement>(null)
-
+	
 	// scroll to navbar item on click
 	const scrollToSection = (item: NavigationItem) => {
 		if (item.href) {
-			window.location.href = item.href
-			return
+			router.get(item.href)
 		}
 		if (!item.id) return
 		const element = document.getElementById(item.id)
