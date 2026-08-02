@@ -135,6 +135,7 @@ export default function Header({
 
 				<nav
 					className={clsx(
+						"overflow-y-hidden",
 						isBelowHero
 							? clsx(
 									"flex flex-col items-stretch justify-evenly lg:flex-row", // flex
