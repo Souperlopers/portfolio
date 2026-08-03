@@ -71,7 +71,7 @@ export default function Hero() {
 							"absolute z-10", // basic
 							"h-full w-full", // dimension
 							allLoaded ? "block" : "hidden", // loading
-                            
+							"brightness-[3.7] contrast-[1.34] hue-rotate-[190deg] invert-[.54] saturate-[9.6] sepia-[.2] dark:filter-none", // color switch
 						)}
 					/>
 
