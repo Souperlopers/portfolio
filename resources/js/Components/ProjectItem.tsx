@@ -80,7 +80,7 @@ export default function ProjectItem({ projectData }: ProjectItemProps) {
 								className={clsx(
 									"h-full w-full", // dimension
 									"rounded-xl", // container
-									"object-cover opacity-80", // basic
+									"object-center opacity-80", // basic
 									imgLoaded ? "block" : "hidden", // display after loaded
 								)}
 								onLoad={() => setImgLoaded(true)}
