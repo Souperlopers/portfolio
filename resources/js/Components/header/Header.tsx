@@ -19,7 +19,7 @@ export default function Header({
 	const logoRef = useRef<HTMLDivElement>(null)
 	const navRef = useRef<HTMLElement>(null)
 	const lastElemsRef = useRef<HTMLDivElement>(null)
-	
+
 	// scroll to navbar item on click
 	const scrollToSection = (item: NavigationItem) => {
 		if (item.href) {
@@ -147,11 +147,13 @@ export default function Header({
 		<>
 			<Logo isCompact={hasHero ? isScrolled : true} />
 			{hasHero && <Hero />}
-			<div
-				className={
+
+			<div // this element is to fill header above when it transits from below hero to on top of screen 
+				className={clsx(
 					hasHero && isScrolled ? "h-[calc(100vh-450px-80px)]" : "h-0"
-				}
+				)}
 			/>
+
 			<header
 				ref={headerRef}
 				className={clsx(
@@ -236,14 +238,14 @@ export default function Header({
 					<Hamburger
 						navList={navigationList}
 						clickHandler={scrollToSection}
-						classNames={
+						classNames={clsx(
 							isBelowHero
 								? "hidden"
 								: clsx(
 										showHamburger ? "visible" : "hidden",
 										"min-w-[66px]", // equal to logo width to center navbar
-									)
-						}
+									),
+						)}
 					/>
 					<ThemeSwitch isCompact={showHamburger} className={isBelowHero && "hidden"} />
 				</div>
