@@ -220,7 +220,8 @@ export default function Header({
 											"hover:border-primary/50 hover:bg-base-200 hover:text-primary", // hover
 											"px-3 py-2 md:px-4 md:py-2.5", // padding
 										)
-									: clsx(
+										: clsx(
+											"text-xl", // text dimmension
 											"py-1.5", // padding
 											"gap-2", // content gap
 											"w-fit", // dimension
