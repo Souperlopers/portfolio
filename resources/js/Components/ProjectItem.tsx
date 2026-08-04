@@ -71,7 +71,7 @@ export default function ProjectItem({ projectData }: ProjectItemProps) {
 								className={clsx(
 									"absolute inset-0", // position
 									"bg-base-200/30", // background color
-									"skeleton", // animation
+									"skeleton", // loading skeleton
 								)}
 							/>
 							<img

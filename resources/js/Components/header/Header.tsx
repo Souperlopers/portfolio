@@ -158,11 +158,12 @@ export default function Header({
 				ref={headerRef}
 				className={clsx(
 					"sticky z-50", // basic
+					"transition-all duration-300 ease-in-out will-change-transform", // animation
 					"flex items-center", // flex
 					"max-w-[100vw]", // avoid layout shifting when transiting from hero to on-top
 					isBelowHero
 						? clsx(
-								"flex-col justify-around", // flex
+								"flex-col justify-center", // flex
 								"h-[calc(100vh-450px)]", // dimension (fill height left from hero)
 								"min-h-[200px]", // avoid conflicting with main content when height is too low
 							)
@@ -189,7 +190,7 @@ export default function Header({
 				<nav
 					ref={navRef}
 					className={clsx(
-						"overflow-y-hidden",
+						"overflow-y-hidden", // hide vertical overflow
 						isBelowHero
 							? clsx(
 									"flex flex-col items-stretch justify-evenly lg:flex-row", // flex
