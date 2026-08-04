@@ -86,7 +86,7 @@ export default function ThemeSwitch({
 	}, [])
 
 	return (
-		<div className={`${className}`}>
+		<div className={clsx(className)}>
 			{/* this is dispayed on desktop */}
 			<div
 				role="radiogroup"

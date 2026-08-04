@@ -96,6 +96,9 @@ export default function Header({
 		return () => window.removeEventListener("scroll", handleScroll)
 	}, [])
 
+	// determine header position
+	const isBelowHero = hasHero && !isScrolled // other pages || scrolled hero page
+
 	// Check if there's enough space for the navbar
 	useEffect(() => {
 		const checkSpace = () => {
@@ -138,10 +141,7 @@ export default function Header({
 		return () => {
 			window.removeEventListener("resize", checkSpace)
 		}
-	}, [navigationList, showHamburger])
-
-	// determine header position
-	const isBelowHero = hasHero && !isScrolled // other pages || scrolled hero page
+	}, [navigationList, showHamburger, isBelowHero])
 
 	return (
 		<>
