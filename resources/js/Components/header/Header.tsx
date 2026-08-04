@@ -158,7 +158,6 @@ export default function Header({
 				ref={headerRef}
 				className={clsx(
 					"sticky z-50", // basic
-					"transition-all duration-300 ease-in-out will-change-transform", // animation
 					"flex items-center", // flex
 					"max-w-[100vw]", // avoid layout shifting when transiting from hero to on-top
 					isBelowHero
