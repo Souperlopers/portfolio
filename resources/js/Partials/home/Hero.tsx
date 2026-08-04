@@ -22,9 +22,10 @@ export default function Hero() {
 				className={clsx(
 					allLoaded ? "block" : "hidden", // loading
 					"absolute -translate-x-1/2", // basic
-					"aspect-[3042/510] h-full max-w-none", // dimension
+					"aspect-[3042/510] h-[calc(100%-10px)] max-w-none", // dimension
 					"left-[calc(50%-500px)] lg:left-[calc(50%-150px)] 2xl:left-1/2", // position
-					"invert dark:invert-0", // color switch
+					"dark:brightness-[0.4] dark:contrast-[2] dark:saturate-0", // switch colors
+					"drop-shadow-[5px_0px_6px] dark:drop-shadow-[5px_0px_6px_rgba(0,0,0,0.3)]", // shadow
 				)}
 			/>
 
@@ -57,7 +58,7 @@ export default function Hero() {
 			<div
 				className={clsx(
 					"absolute", // basic
-					"bottom-0 right-[calc(50%-90px)]", // position
+					"bottom-4 right-[calc(50%-90px)]", // position
 					"aspect-[1086/684] h-[480px] xl:h-[500px]", // dimension
 					"hidden lg:block", // visibility
 				)}
@@ -70,8 +71,9 @@ export default function Hero() {
 						className={clsx(
 							"absolute z-10", // basic
 							"h-full w-full", // dimension
+							"dark:brightness-[0.45] dark:saturate-[1.2]", // color switch
 							allLoaded ? "block" : "hidden", // loading
-                            
+							"drop-shadow-[5px_0px_6px] dark:drop-shadow-[5px_0px_6px_rgba(0,0,0,0.3)]", // outer shadow
 						)}
 					/>
 
@@ -84,6 +86,7 @@ export default function Hero() {
 							"w-[6%]", //dimensions
 							allLoaded ? "block" : "hidden", // loading
 							"left-[29%] top-[65%]", // position
+							"invert dark:invert-0", // color switch
 						)}
 					/>
 					<img // girl

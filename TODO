@@ -1,11 +1,8 @@
 goal: create a portfolio webapp in -99 week and -99 days
 
 TODO_Z fix ProjectItem thumbnail changing size 
-TODO_Z add blue section inner shadow
-TODO_Z set blue section light mode
-TODO_Z set white section light mode
 TODO_Z add no image icon when project has no screenshots
-TODO_Z move layout paddings to each page
+TODO_Z TODO_S move layout paddings to each page
 
 TODO_S fill database
 TODO_S add unique method to asset parameters in migrations
