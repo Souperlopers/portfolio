@@ -1,11 +1,12 @@
 goal: create a portfolio webapp in -99 week and -99 days
 
-TODO_Z TODO_S fix first render is always dark mode and hamburger enabled (only happens in home page)
+TODO_S fix on first render, hamburger is always enabled (only happens in home page)
 TODO_Z fix ProjectItem thumbnail changing size 
 TODO_Z add blue section inner shadow
 TODO_Z set blue section light mode
 TODO_Z set white section light mode
-TODO_Z no image section when project has no screenshots
+TODO_Z add no image icon when project has no screenshots
+TODO_Z move layout paddings to each page
 
 TODO_S fill database
 TODO_S add unique method to asset parameters in migrations

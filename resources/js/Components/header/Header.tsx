@@ -245,7 +245,7 @@ export default function Header({
 									)
 						}
 					/>
-					{!isBelowHero && <ThemeSwitch isCompact={showHamburger} />}
+					<ThemeSwitch isCompact={showHamburger} className={isBelowHero && "hidden"} />
 				</div>
 			</header>
 		</>

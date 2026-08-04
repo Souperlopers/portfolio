@@ -18,7 +18,13 @@ const options = [
 	},
 ]
 
-export default function ThemeSwitch({ isCompact }: { isCompact: boolean }) {
+export default function ThemeSwitch({
+	isCompact,
+	className,
+}: {
+	isCompact: boolean
+	className?: string | boolean
+}) {
 	const theme = useAppSelector((s) => s.theme.theme)
 	const dispatch = useAppDispatch()
 	const [open, setOpen] = useState(false)
@@ -80,7 +86,7 @@ export default function ThemeSwitch({ isCompact }: { isCompact: boolean }) {
 	}, [])
 
 	return (
-		<div>
+		<div className={`${className}`}>
 			{/* this is dispayed on desktop */}
 			<div
 				role="radiogroup"
