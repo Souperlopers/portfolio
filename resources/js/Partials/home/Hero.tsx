@@ -9,7 +9,7 @@ export default function Hero() {
 	return (
 		<div //
 			className={clsx(
-				!allLoaded && "skeleton", // loading
+				!allLoaded && "skeleton", // skeleton
 				"relative overflow-x-hidden", // basic
 				"h-[450px]", // dimensions
 			)}

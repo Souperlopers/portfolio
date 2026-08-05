@@ -52,7 +52,7 @@ export default function ProjectImages({ images }: { images: ProjectImage[] }) {
                 <img
                     onLoad={(e) => markAsLoaded(index)}
                     className={clsx(
-                        !isLoaded && "skeleton", // loading
+                        !isLoaded && "skeleton", // skeleton
                         "aspect-[16/9]", // dimesnion
                         isThumbnail // default library classes
                             ? "image-gallery-thumbnail-image"
