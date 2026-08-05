@@ -23,6 +23,7 @@ class ProjectFactory extends Factory
             'slug' => Str::slug($name),
             'thumbnail' => '/assets/images/projects/thumbnails/' . fake()->randomElement(range(1, 6)) . '.png',
             'url' => fake()->unique()->url(),
+            'short_description' => fake()->paragraph(1),
             'description' => fake()->paragraph(),
         ];
     }

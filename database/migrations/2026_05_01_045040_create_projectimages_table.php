@@ -13,12 +13,11 @@ return new class extends Migration
     {
         Schema::create('projectimages', function (Blueprint $table) {
             $table->ulid('id')->primary();
-            $table->bigInteger('project_id')->unsigned();
+            $table->foreignId('project_id')->on('projects')->cascadeOnDelete();
             $table->tinyInteger('priority')->default(0)->index();
             $table->string('path')/*->unique()*/;
             $table->text('description')->nullable();
             
-            $table->foreign('project_id')->references('id')->on('projects')->cascadeOnDelete();
             $table->timestamp('created_at');
         });
     }

@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string("url")->unique()->nullable();
             $table->string("figma")->unique()->nullable();
             $table->string("github")->unique()->nullable();
+            $table->text('short_description')->nullable();
             $table->text('description')->nullable();
         });
     }

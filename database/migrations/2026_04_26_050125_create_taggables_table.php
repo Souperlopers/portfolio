@@ -14,11 +14,10 @@ return new class extends Migration
         Schema::create('taggables', function (Blueprint $table) {
             $table->id();
             $table->tinyInteger('priority_for_taggable')->required()->index();
-            $table->ulid("tag_id");
+            $table->foreignUlid("tag_id")->references("id")->on("tags")->cascadeOnDelete();
             $table->morphs("taggable");
             $table->smallInteger('count')->unsigned()->default(1);
 
-            $table->foreign("tag_id")->references("id")->on("tags")->cascadeOnDelete();
         });
     }
 

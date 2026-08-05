@@ -15,8 +15,7 @@ return new class extends Migration
 		Schema::create('development_cycles', function (Blueprint $table) {
 			$table->ulid('id')->primary();
 
-			$table->bigInteger('project_id')->required()->index();
-			$table->foreign('project_id')->references('id')->on('projects')->cascadeOnDelete();
+			$table->foreignId('project_id')->index()->on('projects')->cascadeOnDelete();
 
 			$table->enum('name', array_keys(DevelopmentCycle::NAMES));
 			$table->text('description')->nullable();
