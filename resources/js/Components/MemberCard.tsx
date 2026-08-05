@@ -22,10 +22,10 @@ const MemberCard = ({ memberData }: { memberData: MemberBrief }) => {
 		<div
 			className={clsx(
 				"w-full max-w-[350px]", // dimension
-				"rounded-2xl", // cotainer
+				"rounded-2xl", // container
 				"bg-base-200", // background color
 				"border border-primary/10", // border
-				"px-4 py-5 md:px-6 md:py-7", // padding
+				"px-4 py-5 md:px-4 md:py-7", // padding
 				"flex flex-col items-center gap-3 md:gap-4", // flex
 				"shadow-[0_10px_30px_rgba(0,0,0,.25)]", // shadow
 				"group hover:-translate-y-1 hover:border-primary/25 hover:shadow-[0_18px_45px_rgba(47,91,255,.14)]", // hover
@@ -96,7 +96,7 @@ const MemberCard = ({ memberData }: { memberData: MemberBrief }) => {
 			{/* info */}
 			<div
 				className={clsx(
-					"w-full", // dimension
+					"w-full h-12", // dimension
 					"flex flex-col items-center gap-1", // flex
 				)}
 			>
@@ -120,7 +120,9 @@ const MemberCard = ({ memberData }: { memberData: MemberBrief }) => {
 				</p>
 			</div>
 			{/* tags */}
-			<TagsComponent tags={skills} />
+			<div className="w-full h-10">
+				<TagsComponent tags={skills} />
+			</div>
 			{/* button */}
 			<Link
 				href={url}
