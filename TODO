@@ -1,7 +1,9 @@
 goal: create a portfolio webapp in -99 week and -99 days
 
+TODO_Z different font size problem
 TODO_Z you fixed project images being cropped, now they are shrinking
 TODO_Z no image section when project has no screenshots
+
 
 TODO_S fill database
 TODO_S add unique method to asset parameters in migrations

@@ -15,7 +15,7 @@ const MemberCard = ({ memberData }: { memberData: MemberBrief }) => {
 		skills = [],
 	} = memberData
 
-	const initialCharacter = name.trim()[0] ?? "؟"
+	const firstCharacter = name.trim()[0] ?? "؟"
 	const showFallback = !thumbnail || imgError
 
 	return (
@@ -71,7 +71,7 @@ const MemberCard = ({ memberData }: { memberData: MemberBrief }) => {
 									"text-2xl md:text-3xl lg:text-4xl", // text responsive
 								)}
 							>
-								{initialCharacter}
+								{firstCharacter}
 							</span>
 						</div>
 					) : (
@@ -84,8 +84,8 @@ const MemberCard = ({ memberData }: { memberData: MemberBrief }) => {
 								"rounded-full", // container
 								"object-cover", // image behavior
 								"border-2 border-primary/30", // border
-								"group-hover:border-primary/60 duration-300 transition-colors", // hover
-                                "will-change-transform", // animation
+								"transition-colors duration-300 group-hover:border-primary/60", // hover
+								"will-change-transform", // fix layout shift problem
 								thumbnailLoaded ? "block" : "skeleton hidden", // skeleton
 							)}
 							onLoad={() => setThumbnailLoaded(true)}
