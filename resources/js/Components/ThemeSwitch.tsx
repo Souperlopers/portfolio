@@ -95,12 +95,16 @@ export default function ThemeSwitch({
 					isCompact ? "hidden" : "inline-flex items-center gap-0.5", // display
 					"h-11", // dimension
 					"rounded-full border border-base-300", // border
-					"bg-base-100", // background
+					"bg-base-300", // background
 				)}
 			>
-				{/* gold background that is transformed in desktop mode */}
 				<span
-					className="absolute h-9 w-9 rounded-full bg-accent transition-transform duration-300"
+					className={clsx(
+						"h-9 w-9", // dimension
+						"absolute rounded-full", // base
+						"bg-accent", // background
+						"transition-transform duration-300", // animation
+					)}
 					style={{ transform: `translateX(${activeIndex * -38}px)` }}
 				/>
 
@@ -108,13 +112,17 @@ export default function ThemeSwitch({
 					<button
 						key={option.value}
 						type="button"
-						role="radio"
 						onClick={() => dispatch(setTheme(option.value))}
-						className={`relative z-10 flex h-9 w-9 items-center justify-center rounded-full transition-colors hover:cursor-pointer hover:bg-accent ${
+						className={clsx(
+							"h-9 w-9", // dimension
+							"relative z-10 rounded-full", // base
+							"flex items-center justify-center", // flex
+							"hover:cursor-pointer", // hover
+							"transition-colors duration-300", // animation
 							theme === option.value
-								? "text-base-content"
-								: "text-primary"
-						}`}
+								? "text-base-content hover:bg-accent" // active theme
+								: "text-primary hover:bg-base-200", // not active theme
+						)}
 					>
 						{option.icon}
 					</button>
@@ -129,11 +137,26 @@ export default function ThemeSwitch({
 					isCompact ? "inline-block" : "hidden", // display
 				)}
 			>
-				<div className="relative flex h-11 w-11 items-center justify-center rounded-full border border-base-300 bg-base-100 p-1 align-middle">
+				<div
+					className={clsx(
+						"h-11 w-11", // dimension
+						"relative rounded-full p-1", // base
+						"bg-base-100", // background
+						"flex items-center justify-center align-middle", // flex
+						"border border-base-300", // border
+					)}
+				>
 					<button
 						type="button"
 						onClick={() => setOpen((prev) => !prev)}
-						className="flex h-9 w-9 items-center justify-center rounded-full border border-base-300 bg-accent text-base-content transition-colors hover:cursor-pointer"
+						className={clsx(
+							"h-9 w-9", // dimension
+							"flex items-center justify-center", // flex
+							"border border-base-300", // border
+							"cursor-pointer rounded-full text-base-content", // base
+							"bg-accent", // background
+							"transition-colors duration-300", // animation
+						)}
 					>
 						{activeOption.icon}
 					</button>
@@ -141,7 +164,15 @@ export default function ThemeSwitch({
 
 				<div
 					role="listbox"
-					className={`${open ? "border bg-base-100 p-1 shadow-lg" : "pointer-events-none border-0 px-1"} top-13 absolute z-50 flex flex-col gap-0.5 rounded-full border-base-300 transition-transform duration-300`}
+					className={clsx(
+						"top-13 absolute z-50", // position
+						"rounded-full border-base-300", // base
+						"flex flex-col gap-0.5", // flex
+						"transition-transform duration-300", // animation
+						open
+							? "border bg-base-100 p-1 shadow-lg"
+							: "pointer-events-none border-0 px-1",
+					)}
 				>
 					{options.map((option, index) => (
 						<button
@@ -157,7 +188,17 @@ export default function ThemeSwitch({
 									? `translateY(${-(index + 1) * 20}px)`
 									: "",
 							}}
-							className={`${!open && "opacity-0"} flex h-9 w-9 items-center justify-center rounded-full transition-all ${theme === option.value ? "bg-accent text-base-content" : "text-primary"} hover:cursor-pointer hover:bg-accent`}
+							className={clsx(
+								"h-9 w-9", // dimension
+								"rounded-full cursor-pointer", // base
+								"flex items-center justify-center", // flex
+								"hover:bg-accent", // hover
+								"transition-colors duration-300", // animation
+								!open && "opacity-0",
+								theme === option.value
+									? "bg-accent text-base-content hover:bg-accent"
+									: "text-primary hover:bg-base-300",
+							)}
 						>
 							{option.icon}
 						</button>
