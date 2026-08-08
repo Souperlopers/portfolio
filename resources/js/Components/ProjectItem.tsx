@@ -34,14 +34,13 @@ export default function ProjectItem({ projectData }: ProjectItemProps) {
 				{/* info */}
 				<div
 					className={clsx(
-						"flex flex-col sm:gap-5", // flex
+						"flex shrink flex-col sm:gap-5", // flex
 						"w-full sm:max-w-[45%]", // dimension
 					)}
 				>
 					<h3
 						className={clsx(
 							"text-xl font-semibold md:text-3xl", // text dimension
-							"truncate", // text overflow
 							"text-base-content", // text color
 						)}
 					>
@@ -49,7 +48,7 @@ export default function ProjectItem({ projectData }: ProjectItemProps) {
 					</h3>
 					<p
 						className={clsx(
-							"line-clamp-3 md:line-clamp-2", // text overflow
+							"line-clamp-3 min-h-16", // text overflow
 							"text-sm md:text-base", // text dimension
 							"text-base-content/70", // text color
 						)}
@@ -61,8 +60,8 @@ export default function ProjectItem({ projectData }: ProjectItemProps) {
 				{/* image */}
 				<div
 					className={clsx(
-						"h-44 w-full sm:max-w-[50%] md:min-h-[200px]", // dimension
-						"relative shrink-0 overflow-hidden", // basic
+						"aspect-[16/9] h-40", // dimension
+						"relative", // basic
 					)}
 				>
 					{projectData.thumbnail ? (
@@ -71,7 +70,7 @@ export default function ProjectItem({ projectData }: ProjectItemProps) {
 								className={clsx(
 									"absolute inset-0", // position
 									"bg-base-200/30", // background color
-									"skeleton", // loading skeleton
+									"skeleton", // skeleton
 								)}
 							/>
 							<img
