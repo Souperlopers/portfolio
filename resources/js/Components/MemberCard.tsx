@@ -5,71 +5,141 @@ import TagsComponent from "@/Components/TagsComponent"
 import clsx from "clsx"
 
 const MemberCard = ({ memberData }: { memberData: MemberBrief }) => {
-    const [imgError, setImgError] = useState(false)
-    const [thumbnailLoaded, setThumbnailLoaded] = useState(false)
-    const {
-        name = "بدون نام",
-        position = "بدون سمت",
-        thumbnail,
-        url,
-        skills = [],
-    } = memberData
+	const [imgError, setImgError] = useState(false)
+	const [thumbnailLoaded, setThumbnailLoaded] = useState(false)
+	const {
+		name = "بدون نام",
+		position = "بدون سمت",
+		thumbnail,
+		url,
+		skills = [],
+	} = memberData
 
-    const initial = name.trim()[0] ?? "؟"
-    const showFallback = !thumbnail || imgError
+	const firstCharacter = name.trim()[0] ?? "؟"
+	const showFallback = !thumbnail || imgError
 
-    return (
-        <div className="group flex w-full max-w-[350px] flex-col items-center gap-3 overflow-hidden rounded-2xl border border-primary/10 bg-base-200 px-4 py-5 shadow-[0_10px_30px_rgba(0,0,0,.25)] transition-all duration-300 hover:-translate-y-1 hover:border-primary/25 hover:shadow-[0_18px_45px_rgba(47,91,255,.14)] md:gap-4 md:px-6 md:py-7">
-            <div className="relative flex shrink-0 items-center justify-center">
-                {/* Glow */}
-                <div className="absolute inset-0 scale-110 rounded-full bg-primary/15 blur-xl group-hover:scale-125 group-hover:bg-primary/25" />
+	return (
+		<div
+			className={clsx(
+				"w-full sm:max-w-[350px] max-w-[260px]", // dimension
+				"rounded-2xl", // container
+				"bg-base-200", // background color
+				"border border-primary/10", // border
+				"px-4 py-5 md:px-4 md:py-7", // padding
+				"flex flex-col items-center gap-3 md:gap-4", // flex
+				"shadow-[0_10px_30px_rgba(0,0,0,.25)]", // shadow
+				"group hover:-translate-y-1 hover:border-primary/25 hover:shadow-[0_18px_45px_rgba(47,91,255,.14)]", // hover
+				"transition-all duration-300", // animation
+			)}
+		>
+			{/* image */}
+			<div
+				className={clsx(
+					"flex shrink-0 items-center justify-center", // flex
+					"relative", // position
+				)}
+			>
+				{/* Glow */}
+				<div
+					className={clsx(
+						"absolute inset-0", // position
+						"rounded-full", // container
+						"bg-primary/15 blur-xl", // background color
+						"group-hover:scale-125 group-hover:bg-primary/25", // hover
+					)}
+				/>
 
-                {/* thumbnail */}
-                <div className="relative h-20 w-20 overflow-hidden rounded-full border-2 border-primary/30 group-hover:border-primary/60 md:h-24 md:w-24 lg:h-28 lg:w-28">
-                    {!thumbnailLoaded && (
-                        <div className="skeleton absolute h-full w-full" />
-                    )}
-                    {showFallback ? (
-                        <div className="flex h-full w-full items-center justify-center rounded-full bg-primary/10">
-                            <span className="text-2xl font-medium text-primary md:text-3xl lg:text-4xl">
-                                {initial}
-                            </span>
-                        </div>
-                    ) : (
-                        <img
-                            src={thumbnail}
-                            alt={`${name} thumbnail`}
-                            onError={() => setImgError(true)}
-                            className={clsx(
-                                "h-full w-full", // dimension
-                                "object-cover", // image behavior
-                                thumbnailLoaded ? "block" : "hidden",
-                            )}
-                            onLoad={() => setThumbnailLoaded(true)}
-                        />
-                    )}
-                </div>
-            </div>
-
-            <div className="flex w-full flex-col items-center gap-1">
-                <h3 className="max-w-[220px] truncate text-base font-semibold text-base-content md:max-w-[260px] md:text-lg lg:text-xl">
-                    {name}
-                </h3>
-                <p className="text-xs text-base-content/70 md:text-sm">
-                    {position}
-                </p>
-            </div>
-
-            <TagsComponent tags={skills} />
-
-            <Link
-                href={url}
-                className="mt-auto w-full rounded-lg border border-primary py-1.5 text-center text-sm font-medium text-primary hover:border-primary/30 hover:bg-primary/10 md:py-2 md:text-base"
-            >
-                مشاهده پروفایل
-            </Link>
-        </div>
-    )
+				{/* thumbnail */}
+				<div
+					className={clsx(
+						"h-20 w-20 md:h-24 md:w-24 lg:h-28 lg:w-28", // dimension
+						"z-10", // position
+					)}
+				>
+					{showFallback ? (
+						<div
+							className={clsx(
+								"h-full w-full", // dimension
+								"rounded-full", // container
+								"bg-primary/10", // background color
+								"flex items-center justify-center", // flex
+							)}
+						>
+							<span
+								className={clsx(
+									"font-medium text-primary", // text
+									"text-2xl md:text-3xl lg:text-4xl", // text responsive
+								)}
+							>
+								{firstCharacter}
+							</span>
+						</div>
+					) : (
+						<img
+							src={thumbnail}
+							alt={`${name} thumbnail`}
+							onError={() => setImgError(true)}
+							className={clsx(
+								"h-full w-full", // dimension
+								"rounded-full", // container
+								"object-cover", // image behavior
+								"border-2 border-primary/30", // border
+								"transition-colors duration-300 group-hover:border-primary/60", // hover
+								"will-change-transform", // fix layout shift problem
+								thumbnailLoaded ? "block" : "skeleton hidden", // skeleton
+							)}
+							onLoad={() => setThumbnailLoaded(true)}
+						/>
+					)}
+				</div>
+			</div>
+			{/* info */}
+			<div
+				className={clsx(
+					"w-full h-12", // dimension
+					"flex flex-col items-center gap-1", // flex
+				)}
+			>
+				<h3
+					className={clsx(
+						"font-semibold text-base-content", // text
+						"text-base md:text-lg lg:text-xl", // text responsive
+						"max-w-[220px] truncate md:max-w-[260px]", // truncate
+					)}
+				>
+					{name}
+				</h3>
+				<p
+					className={clsx(
+						"text-base-content/70", // text
+						"text-xs md:text-sm", // text responsive
+						"max-w-[220px] truncate md:max-w-[260px]", // truncate
+					)}
+				>
+					{position}
+				</p>
+			</div>
+			{/* tags */}
+			<div className="w-full h-10">
+				<TagsComponent tags={skills} />
+			</div>
+			{/* button */}
+			<Link
+				href={url}
+				className={clsx(
+					"w-full", // dimension
+					"rounded-lg", // container
+					"py-1.5 md:py-2", // padding
+					"border border-primary", // border
+					"text-center font-medium text-primary", // text
+					"text-sm md:text-base", // text responsive
+					"hover:border-primary/30 hover:bg-primary/10", // hover
+				)}
+			>
+				مشاهده پروفایل
+			</Link>
+		</div>
+	)
 }
 
 export default MemberCard

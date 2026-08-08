@@ -22,7 +22,7 @@ export default function Home({ projects, members }: HomePageProps) {
 export const homeContent = (
 	<>
 		<span>خانه</span>
-		<AiFillHome className="pb-1" size={21}/>
+		<AiFillHome className="pb-1" size={23}/>
 	</>
 )
 

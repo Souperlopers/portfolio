@@ -21,6 +21,7 @@ export default {
                 'btn-primary': '#0078d4',
                 'btn-secondary': '#e6eefa',
                 'btn-hover': '#015ea5',
+
             },
             screens: {
                 'xs-h': { raw: '(min-height: 480px)' },
@@ -45,7 +46,7 @@ export default {
                     "accent": "#3794FF",
                     "accent-content": "#FFFFFF",
 
-                    "neutral": "#1E1E1E",
+                    "neutral": "#9e9e9e",
                     "neutral-content": "#FFFFFF",
 
                     "base-100": "#070B14",
@@ -70,13 +71,13 @@ export default {
                     "accent": "#3794FF",
                     "accent-content": "#FFFFFF",
 
-                    "neutral": "#1F2937",
+                    "neutral": "#8c8c8c",
                     "neutral-content": "#FFFFFF",
 
                     "base-100": "#FFFFFF",
                     "base-200": "#F8FAFC",
                     "base-300": "#EEF2F7",
-                    "base-content": "#334155",
+                    "base-content": "#030017",
 
                     "info": "#3B82F6",
                     "success": "#10B981",

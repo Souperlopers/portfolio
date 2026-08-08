@@ -8,7 +8,7 @@ export default function TagsComponent({ tags }: { tags: Tag[] }) {
 		<div
 			className={clsx(
 				"flex flex-wrap gap-2", // flex
-				"min-h-8", // dimension
+				"h-10 overflow-hidden", // dimension
 			)}
 		>
 			{tags.map((tag) => (
