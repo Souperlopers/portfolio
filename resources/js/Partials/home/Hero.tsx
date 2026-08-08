@@ -24,7 +24,7 @@ export default function Hero() {
 					"absolute -translate-x-1/2", // basic
 					"aspect-[3042/510] h-[calc(100%-10px)] max-w-none", // dimension
 					"left-[calc(50%-500px)] lg:left-[calc(50%-150px)] 2xl:left-1/2", // position
-					"dark:brightness-[0.4] dark:contrast-[2] dark:saturate-0", // switch colors
+					"dark:brightness-[0.4] brightness-150 dark:contrast-[2] dark:saturate-0", // switch colors
 					"drop-shadow-[5px_0px_6px] dark:drop-shadow-[5px_0px_6px_rgba(0,0,0,0.3)]", // shadow
 				)}
 			/>
@@ -45,7 +45,7 @@ export default function Hero() {
 			<p
 				className={clsx(
 					"absolute z-50 w-3/4 -translate-x-1/2", // base
-					"text-balance text-center text-2xl sm:text-3xl", // text
+					"text-balance text-center text-2xl sm:text-3xl text-base-content", // text
 					"lg:w-[300px] xl:w-full", // dimension
 					"bottom-36 lg:bottom-40", // vertical position
 					"left-1/2 lg:left-[calc(50%+280px)] xl:left-[calc(50%+350px)] 2xl:left-[calc(50%+490px)]", // horizontal position
@@ -71,7 +71,7 @@ export default function Hero() {
 						className={clsx(
 							"absolute z-10", // basic
 							"h-full w-full", // dimension
-							"dark:brightness-[0.45] dark:saturate-[1.2]", // color switch
+							"dark:brightness-[0.4] brightness-150 saturate-[.7] dark:saturate-[1.2]", // color switch
 							allLoaded ? "block" : "hidden", // loading
 							"drop-shadow-[5px_0px_6px] dark:drop-shadow-[5px_0px_6px_rgba(0,0,0,0.3)]", // outer shadow
 						)}

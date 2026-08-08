@@ -9,11 +9,6 @@ TODO_Z you fixed project images being cropped, now they are shrinking
 <!-- project page -->
 TODO_Z no image section when project has no screenshots
 
-<!-- hero -->
-TODO_Z change bg color curve section in Hero in light mode: make lighter
-TODO_Z change description text color in Hero in light mode
-TODO_Z don't use black color in color switch in Hero: use dark stone
-
 <!-- member card -->
 TODO_Z at least 3 tags can fit on the member card
 
