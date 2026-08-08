@@ -21,7 +21,7 @@ const MemberCard = ({ memberData }: { memberData: MemberBrief }) => {
 	return (
 		<div
 			className={clsx(
-				"w-full max-w-[350px]", // dimension
+				"w-full sm:max-w-[350px] max-w-[260px]", // dimension
 				"rounded-2xl", // container
 				"bg-base-200", // background color
 				"border border-primary/10", // border
