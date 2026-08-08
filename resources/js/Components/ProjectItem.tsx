@@ -35,7 +35,7 @@ export default function ProjectItem({ projectData }: ProjectItemProps) {
 				<div
 					className={clsx(
 						"flex shrink flex-col sm:gap-5", // flex
-						"w-full sm:max-w-[45%]", // dimension
+						"w-full", // dimension
 					)}
 				>
 					<h3
@@ -48,7 +48,7 @@ export default function ProjectItem({ projectData }: ProjectItemProps) {
 					</h3>
 					<p
 						className={clsx(
-							"line-clamp-3 min-h-16", // text overflow
+							"min-h-16", // text overflow
 							"text-sm md:text-base", // text dimension
 							"text-base-content/70", // text color
 						)}
