@@ -2,12 +2,18 @@ import { useState } from "react"
 import { Tag } from "@/types/tag"
 import clsx from "clsx"
 
-export default function TagsComponent({ tags }: { tags: Tag[] }) {
+export default function TagsComponent({
+	tags,
+	center,
+}: {
+	tags: Tag[]
+	center?: boolean
+}) {
 	const [hasIcon, setHasIcon] = useState(true)
 	return (
 		<div
 			className={clsx(
-				"flex flex-wrap gap-2", // flex
+				`flex ${center && "justify-center"} flex-wrap gap-2`, // flex
 				"h-10 overflow-hidden", // dimension
 			)}
 		>
@@ -35,7 +41,7 @@ export default function TagsComponent({ tags }: { tags: Tag[] }) {
 					)}
 					<span
 						className={clsx(
-							"text-xs sm:text-sm text-base-content", // text dimension
+							"text-base-content text-xs sm:text-sm", // text dimension
 							"pt-0.5", // padding
 							"max-w-20 truncate", // text overflow
 						)}

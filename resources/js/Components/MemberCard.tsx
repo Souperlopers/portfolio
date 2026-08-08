@@ -121,7 +121,7 @@ const MemberCard = ({ memberData }: { memberData: MemberBrief }) => {
 			</div>
 			{/* tags */}
 			<div className="w-full h-10">
-				<TagsComponent tags={skills} />
+				<TagsComponent tags={skills} center />
 			</div>
 			{/* button */}
 			<Link
