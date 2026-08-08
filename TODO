@@ -12,7 +12,6 @@ TODO_Z fix project screanshots images border rounded: sometimes display rounded 
 <!-- member card -->
 TODO_Z at least 3 tags can fit on the member card
 
-TODO_S add custom color to daisy ui theme: add border color
 TODO_S fill database
 TODO_S add unique method to asset parameters in migrations
 TODO_S add cycle support to backend
