@@ -15,11 +15,11 @@ export const RANGE_WIDTH = 7
 export const POINT_DIAMETER = 14
 
 export const colorPalate = {
-	planning: "#3B82F6",
-	develop: "#8B5CF6",
-	complete: "#10B981",
-	maintenance: "#F59E0B",
-	upgrade: "#F97316",
+	planning: "#3B82F6", // blue
+	develop: "#8B5CF6", // purple
+	complete: "#10B981", // green
+	maintenance: "#F59E0B", // orange
+	upgrade: "#F97316", // dark orange
 }
 
 const fake_data: Column = [
