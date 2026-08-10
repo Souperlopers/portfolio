@@ -103,7 +103,7 @@ export default function ThemeSwitch({
 						"h-9 w-9", // dimension
 						"absolute rounded-full", // base
 						"bg-accent", // background
-						"transition-transform duration-300", // animation
+						"transition-all duration-300", // animation
 					)}
 					style={{ transform: `translateX(${activeIndex * -38}px)` }}
 				/>
@@ -118,7 +118,7 @@ export default function ThemeSwitch({
 							"relative z-10 rounded-full", // base
 							"flex items-center justify-center", // flex
 							"hover:cursor-pointer", // hover
-							"transition-colors duration-300", // animation
+							"transition-all duration-300", // animation
 							theme === option.value
 								? "text-base-content hover:bg-accent" // active theme
 								: "text-primary hover:bg-base-200", // not active theme
@@ -155,7 +155,7 @@ export default function ThemeSwitch({
 							"border-base-300 border", // border
 							"text-base-content cursor-pointer rounded-full", // base
 							"bg-accent", // background
-							"transition-colors duration-300", // animation
+							"transition-all duration-300", // animation
 						)}
 					>
 						{activeOption.icon}
@@ -166,10 +166,10 @@ export default function ThemeSwitch({
 					role="listbox"
 					className={clsx(
 						"absolute top-13 z-50", // position
-						"border-base-300 rounded-full", // base
 						"flex flex-col gap-0.5", // flex
-						"transition-transform duration-300", // animation
-						open
+						"transition-all duration-300", // animation
+						"border-neutral/0 rounded-full", // border
+						open // border
 							? "bg-base-100 border p-1 shadow-lg"
 							: "pointer-events-none border-0 px-1",
 					)}
@@ -193,7 +193,7 @@ export default function ThemeSwitch({
 								"cursor-pointer rounded-full", // base
 								"flex items-center justify-center", // flex
 								"hover:bg-accent", // hover
-								"transition-colors duration-300", // animation
+								"transition-all duration-300", // animation
 								!open && "opacity-0",
 								theme === option.value
 									? "bg-accent text-base-content hover:bg-accent"
