@@ -211,6 +211,7 @@ export default function Header({
 							onClick={() => scrollToSection(item)}
 							className={clsx(
 								"flex items-center justify-between", // flex
+								"cursor-pointer", // cursor
 								"text-base-content font-medium text-nowrap", // text common
 								isBelowHero
 									? clsx(
@@ -242,12 +243,9 @@ export default function Header({
 						navList={navigationList}
 						clickHandler={scrollToSection}
 						classNames={clsx(
-							isBelowHero
-								? "hidden"
-								: clsx(
-										showHamburger ? "visible" : "hidden",
-										"min-w-[66px]", // equal to logo width to center navbar
-									),
+							!isBelowHero && showHamburger
+								? "visible"
+								: "hidden",
 						)}
 					/>
 					<ThemeSwitch
