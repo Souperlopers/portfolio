@@ -2,11 +2,14 @@ goal: create a portfolio webapp in -99 week and -99 days
 
 TODO_Z delete DrawerMenu if it's not used
 
+<!-- home -->
+TODO_Z make abotut us flat (like member info section)
+
 <!-- project -->
-TODO_Z different font size problem
+TODO_Z TODO_S different font size problem
 
 <!-- member card -->
-TODO_Z at least 3 tags can fit on the member card
+TODO_Z TODO_S at least 3 tags can fit on the member card
 
 TODO_S fill database
 TODO_S migrate to nextjs (because inertia SSR is broken)
