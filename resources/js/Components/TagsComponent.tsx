@@ -17,7 +17,6 @@ export default function TagsComponent({
 		<div
 			className={clsx(
 				`flex ${center && "justify-center"} flex-wrap gap-2`, // flex
-				"h-10 overflow-hidden", // dimension
 			)}
 		>
 			{tags.map((tag) => (
