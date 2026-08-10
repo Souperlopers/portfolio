@@ -15,13 +15,16 @@ export default function ProjectItem({ projectData }: ProjectItemProps) {
 	return (
 		<div
 			className={clsx(
-				"card", // daisyui
-				"flex flex-col gap-3 sm:gap-5", // flex
-				"overflow-hidden rounded-xl", // container
-				"px-3 py-5", // padding
-				"bg-base-300", // background color
-				"border-primary/10 border", // border
-				"shadow-[0_10px_30px_rgba(0,0,0,.25)]", // shadow
+				// structure
+				"overflow-hidden", // basic
+				"flex flex-col justify-start gap-3 sm:gap-5", // flex
+				"h-full w-full px-3 py-5", // dimension and padding
+
+				// color and style
+				"bg-base-300 shadow-[0_10px_30px_rgba(0,0,0,.25)]", // background and shadow
+				"border-primary/10 rounded-xl border", // border
+
+				// movement
 				"transition-all duration-300 ease-in-out will-change-transform", // animation
 				"hover:border-primary/25 hover:-translate-y-1 hover:shadow-[0_16px_40px_rgba(47,91,255,.15)]", // hover
 			)}
