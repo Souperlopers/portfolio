@@ -18,7 +18,7 @@ export default function Projects({ projects }: { projects: ProjectBrief[] }) {
 			className={clsx(
 				"mx-auto mt-10", // margin
 				"flex flex-col gap-10", // flex
-				"w-full max-w-[1350px]", // dimension
+				"w-full max-w-337.5", // dimension
 				"scroll-mt-24", // prevent a section hidden behind header
 			)}
 		>

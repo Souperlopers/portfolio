@@ -15,4 +15,3 @@ export { default as Contributors } from "@/Partials/project/ProjectMembers"
 
 export { default as Loading } from "@/Components/Loading"
 export { default as Header } from "@/Components/header/Header"
-export { default as DrawerMenu } from "@/Components/DrawerMenu"

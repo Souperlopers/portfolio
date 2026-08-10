@@ -1,8 +1,5 @@
 goal: create a portfolio webapp in -99 week and -99 days
 
-<!-- general -->
-TODO_Z delete DrawerMenu if it's not used
-
 <!-- home -->
 TODO_Z make home about us flat (like member info section)
 
