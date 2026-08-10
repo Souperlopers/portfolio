@@ -10,18 +10,18 @@ export default function ContactUs() {
 		<section
 			id="about"
 			className={clsx(
-				"h-100 w-full max-w-337.5", // dimension
+				"h-96 w-full max-w-337.5", // dimension
 				"flex flex-col gap-10", // flex
 				"mx-auto scroll-mt-20", // base
 				"bg-base-100/40", // background color
-				"p-5", // padding
+				"px-5 py-8", // padding
 			)}
 		>
 			<h2
 				className={clsx(
 					"text-xl font-medium md:text-2xl lg:text-3xl", // text division
 					"text-base-content", // text
-					"mx-auto", // margin
+					"mx-auto", // base
 				)}
 			>
 				تماس با ما
@@ -29,15 +29,17 @@ export default function ContactUs() {
 
 			<div
 				className={clsx(
-					"flex flex-col items-start", // flex
+					"flex flex-col md:items-start items-center", // flex
 					"h-full", // dimension
+					"md:px-5 px-0", // padding
 				)}
 			>
 				<p
 					className={clsx(
 						"h-full", // dimension
-						"text-base-content/90", // text base
+						"text-base-content/90 text-center md:text-right", // text base
 						"text-lg leading-relaxed md:text-xl", // text dimension
+						"flex items-center", // flex
 					)}
 				>
 					ما باور داریم هر محصول موفق، از توجه به جزئیات آغاز می‌شود.
@@ -51,6 +53,7 @@ export default function ContactUs() {
 						"flex flex-wrap items-center justify-center gap-5 md:justify-start md:gap-10", // flex
 						"border-neutral/90 border-t", // border
 						"pt-6", // padding
+						"mt-10",
 					)}
 				>
 					<a

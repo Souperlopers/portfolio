@@ -33,7 +33,7 @@ export default function Profile({ info }: { info: Member }) {
 				/>
 			)}
 
-			<div className="px-4 pb-6 md:px-6">
+			<div className="pb-6">
 				{/* avatar */}
 				<MemberAvatar
 					name={name}

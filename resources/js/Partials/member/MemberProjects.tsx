@@ -14,7 +14,6 @@ export default function MemberProjects({
 		<div
 			className={clsx(
 				"flex flex-col gap-10", // flex
-				"px-5 py-10 md:px-20 md:py-16", // padding
 			)}
 		>
 			<h2

@@ -39,7 +39,6 @@ export default function ContactMember({
 			className={clsx(
 				"w-full", // dimension
 				"flex flex-col gap-8 md:gap-10", // flex
-				"px-5 py-10 md:px-20 md:py-16", // padding
 			)}
 		>
 			<h2
@@ -116,7 +115,7 @@ export default function ContactMember({
 									<span
 										dir="ltr"
 										className={clsx(
-											"truncate xl:max-w-96 lg:max-w-64 md:max-w-44 sm:max-w-40 max-w-36", // text overflow
+											"max-w-36 truncate sm:max-w-40 md:max-w-44 lg:max-w-64 xl:max-w-96", // text overflow
 											"text-xs sm:text-sm md:text-base", // text dimension
 											"font-medium", // text style
 											"text-base-content/80", // text color

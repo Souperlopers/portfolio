@@ -7,6 +7,7 @@ import { IoCodeSlashOutline } from "react-icons/io5"
 import { CgWebsite } from "react-icons/cg"
 import { IoCall } from "react-icons/io5"
 import { homeContent } from "@/Pages/Home"
+import clsx from "clsx"
 
 export default function Member({ member }: MemberPageProps) {
 	const info = member.data || {}
@@ -14,7 +15,12 @@ export default function Member({ member }: MemberPageProps) {
 	const contact = member.data.contact || {}
 
 	return (
-		<div className="flex flex-col gap-10 md:gap-16">
+		<div
+			className={clsx(
+				"flex flex-col gap-10 md:gap-16", // flex
+				"px-5 pb-10 md:px-20 md:pb-16", // padding
+			)}
+		>
 			<Head title={info.name} />
 			<div id="profile" className={`scroll-mt-20`}>
 				<Profile info={info} />
@@ -43,7 +49,7 @@ Member.layout = (page: ReactNode) => (
 
 const profileContent = (
 	<>
-		<span>مهارت‌ها</span>
+		<span>معرفی</span>
 		<IoCodeSlashOutline />
 	</>
 )
