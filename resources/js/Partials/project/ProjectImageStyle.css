@@ -7,38 +7,23 @@
 ###################################################################
 */
 
-.image-gallery-content {
-	/* overflow: visible; */
-}
-
 /* ---------------- Slide ---------------- */
 
 .image-gallery-slide {
 	min-height: 300px;
-	padding: 10px;
-	margin-bottom: 0px;
-	background: transparent;
-	cursor: auto;
-}
-
-.image-gallery-slide .image-gallery-image {
-	/* width: 100%; */
 }
 
 .image-gallery-slide:hover .image-gallery-image {
 	transform: scale(1.01);
+	border-radius: 25px;
 }
 
 /* ---------------- Thumbnails ---------------- */
 
-.image-gallery-thumbnails {
-	/* padding-top: 6px; */
-}
-
 .image-gallery-thumbnail {
 	width: 140px;
 	overflow: hidden;
-	/* border-radius: 12px; */
+	border-radius: 4px;
 	border: 1px solid transparent;
 	background: transparent;
 }
@@ -54,10 +39,6 @@
 	box-shadow:
 		0 0 0 1px rgba(77, 170, 252, 0.25),
 		0 8px 22px rgba(77, 170, 252, 0.18);
-}
-
-.image-gallery-thumbnail img {
-	/* border-radius: 12px; */
 }
 
 /* ---------------- Navigation ---------------- */
@@ -108,7 +89,6 @@
 
 @media (max-width: 800px) {
 	.image-gallery-slide {
-		min-height: 300px;
 		padding: 12px;
 	}
 
