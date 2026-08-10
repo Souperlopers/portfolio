@@ -31,7 +31,9 @@ export default function ProjectItem({ projectData }: ProjectItemProps) {
 		>
 			<div
 				className={clsx(
-					"flex flex-col-reverse justify-center gap-3 sm:flex-row sm:justify-between sm:gap-5", // flex
+					"flex flex-col gap-3 sm:flex-row", // flex
+					"items-center justify-start sm:items-start sm:justify-center", // flex justify & align
+					"", // dimension
 				)}
 			>
 				{/* info */}
@@ -65,31 +67,24 @@ export default function ProjectItem({ projectData }: ProjectItemProps) {
 				{/* image */}
 				<div
 					className={clsx(
-						"aspect-16/9 h-40", // dimension
-						"relative", // basic
+						"flex flex-col items-center", // flex
+						"h-full w-full", // dimension
+						!imgLoaded && "aspect-video", // show 16/9 skeleton
+						imgLoaded ? "block" : "skeleton", // display after loaded
 					)}
 				>
 					{projectData.thumbnail ? (
-						<>
-							<div
-								className={clsx(
-									"absolute inset-0", // position
-									"bg-base-200/30", // background color
-									"skeleton", // skeleton
-								)}
-							/>
-							<img
-								src={projectData.thumbnail}
-								alt={`${title} cover`}
-								className={clsx(
-									"h-full w-full", // dimension
-									"rounded-xl", // container
-									"object-center opacity-80", // basic
-									imgLoaded ? "block" : "hidden", // display after loaded
-								)}
-								onLoad={() => setImgLoaded(true)}
-							/>
-						</>
+						<img
+							src={projectData.thumbnail}
+							alt={`${title} cover`}
+							onLoad={() => setImgLoaded(true)}
+							className={clsx(
+								"max-h-60", // dimension
+								"rounded-xl", // container
+								"opacity-80", // basic
+								"object-contain", // object
+							)}
+						/>
 					) : (
 						<div
 							className={clsx(

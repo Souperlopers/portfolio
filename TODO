@@ -5,9 +5,6 @@ TODO_Z delete DrawerMenu if it's not used
 <!-- project -->
 TODO_Z different font size problem
 
-<!-- project item -->
-TODO_Z you fixed project images being cropped, now they are shrinking
-
 <!-- project page -->
 TODO_Z fix project screanshots images border rounded: sometimes display rounded and sometimes not
 
