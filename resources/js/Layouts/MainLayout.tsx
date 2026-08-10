@@ -35,7 +35,6 @@ export default function MainLayout({
 				<main
 					className={clsx(
 						"flex flex-col items-center justify-start gap-10 md:gap-16", // flex
-						"px-5 py-10 md:px-20 md:py-16", // paddings
 					)}
 				>
 					{children}
