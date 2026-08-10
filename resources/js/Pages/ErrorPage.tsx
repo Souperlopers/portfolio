@@ -19,8 +19,9 @@ export default function Project({ status }: ErrorPageProps) {
 
 			<div
 				className={clsx(
-					"mx-auto flex w-full max-w-[1350px] flex-col items-center justify-center",
+					"mx-auto flex w-full max-w-337.5 flex-col items-center justify-center",
 					"min-h-[60vh] gap-6 overflow-hidden", // height and spacing
+					"px-5 py-10 md:px-20 md:pt-16", // padding
 				)}
 			>
 				{/* Status code */}

@@ -11,7 +11,12 @@ export default function MemberProjects({
 	const projectsCount = projects.length
 
 	return (
-		<div className="flex flex-col gap-10 rounded py-3">
+		<div
+			className={clsx(
+				"flex flex-col gap-10", // flex
+				"px-5 py-10 md:px-20 md:py-16", // padding
+			)}
+		>
 			<h2
 				className={clsx(
 					"border-primary border-r-4", // border

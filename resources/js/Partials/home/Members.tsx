@@ -7,7 +7,12 @@ export default function Members({ members }: { members: MemberBrief[] }) {
 	return (
 		<section
 			id="members"
-			className="mx-auto flex w-full max-w-[1350px] scroll-mt-24 flex-col gap-10"
+			className={clsx(
+				"scroll-mt-24", // base
+				"w-full max-w-337.5", // dimension
+				"flex flex-col justify-center gap-10", // flex
+				"px-5 md:px-20", // padding
+			)}
 		>
 			<h2
 				className={clsx(

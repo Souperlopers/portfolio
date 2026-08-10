@@ -18,7 +18,11 @@ export default function Project({ project }: ProjectPageProps) {
 		<>
 			<Head title={projectData.title} />
 			<div
-				className={`flex w-full max-w-[1360px] flex-col gap-10 md:gap-16`}
+				className={clsx(
+					"w-full max-w-340", // dimension
+					"flex flex-col gap-10 md:gap-16", // flex
+					"px-5 py-10 md:px-20 md:py-16", // padding
+				)}
 			>
 				<div
 					className={clsx(

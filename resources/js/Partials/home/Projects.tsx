@@ -20,6 +20,7 @@ export default function Projects({ projects }: { projects: ProjectBrief[] }) {
 				"flex flex-col gap-10", // flex
 				"w-full max-w-337.5", // dimension
 				"scroll-mt-24", // prevent a section hidden behind header
+				"px-5 md:px-20 md:pt-16", // padding
 			)}
 		>
 			<h2
