@@ -1,6 +1,6 @@
 import { NavigationItem } from "@/types/navigation"
 import clsx from "clsx/lite"
-import { useEffect, useRef, useState } from "react"
+import { MouseEventHandler, useEffect, useRef, useState } from "react"
 
 export default function Hamburger({
 	navList,
@@ -15,7 +15,11 @@ export default function Hamburger({
 	const menuRef = useRef<HTMLDivElement>(null)
 	const buttonRef = useRef<HTMLButtonElement>(null)
 
-	const toggleMenu = () => setIsOpen((prev) => !prev)
+	const handleClick: MouseEventHandler<HTMLButtonElement> = (e) => {
+		e.preventDefault()
+		console.log("handleClick, prev_state: ", isOpen)
+		setIsOpen((prev) => !prev)
+	}
 
 	const handleClickOutside = (e: MouseEvent) => {
 		if (
@@ -24,6 +28,7 @@ export default function Hamburger({
 			buttonRef.current &&
 			!buttonRef.current.contains(e.target as Node)
 		) {
+			console.log("handleClickOutside, prev_state: ", isOpen)
 			setIsOpen(false)
 		}
 	}
@@ -35,13 +40,19 @@ export default function Hamburger({
 	}, [])
 
 	return (
-		<div ref={menuRef} className={`dropdown text-left ${classNames}`}>
+		<div
+			ref={menuRef}
+			className={clsx(
+				"dropdown text-left pointer-events-none", // daisyui
+				classNames, // passed from parent
+			)}
+		>
 			<button
 				ref={buttonRef}
-				onClick={toggleMenu}
+				onClick={handleClick}
 				tabIndex={0}
 				role="button"
-				className="btn btn-circle btn-ghost"
+				className="btn btn-circle btn-ghost pointer-events-auto"
 			>
 				<svg
 					xmlns="http://www.w3.org/2000/svg"

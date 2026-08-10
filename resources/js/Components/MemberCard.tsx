@@ -57,6 +57,7 @@ export default function MemberCard({
 					)}
 				/>
 			</div>
+
 			{/* info */}
 			<div
 				className={clsx(
@@ -83,10 +84,12 @@ export default function MemberCard({
 					{position}
 				</p>
 			</div>
+
 			{/* tags */}
 			<div className="h-10 w-full">
 				<TagsComponent tags={skills} center />
 			</div>
+
 			{/* button */}
 			<Link
 				href={url}
