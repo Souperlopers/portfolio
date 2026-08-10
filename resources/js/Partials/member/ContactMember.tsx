@@ -75,7 +75,6 @@ export default function ContactMember({
 							<div
 								className={clsx(
 									"flex flex-1 items-center gap-3 md:gap-4", // flex
-									"min-w-0", // dimension,
 								)}
 							>
 								<div
@@ -96,7 +95,7 @@ export default function ContactMember({
 									/>
 								</div>
 
-								<div className={clsx("flex min-w-0 flex-col")}>
+								<div className={clsx("flex flex-col")}>
 									<span
 										className={clsx(
 											"text-sm md:text-base", // text dimension
