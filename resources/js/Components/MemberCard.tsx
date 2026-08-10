@@ -20,7 +20,7 @@ export default function MemberCard({
 	return (
 		<div
 			className={clsx(
-				"w-full max-w-[260px] sm:max-w-[350px]", // dimension
+				"w-full max-w-65 sm:max-w-87.5", // dimension
 				"rounded-2xl", // container
 				"bg-base-200", // background color
 				"border-primary/10 border", // border
@@ -69,7 +69,7 @@ export default function MemberCard({
 					className={clsx(
 						"text-base-content font-semibold", // text
 						"text-base md:text-lg lg:text-xl", // text responsive
-						"max-w-[220px] truncate md:max-w-[260px]", // truncate
+						"max-w-55 truncate md:max-w-65", // truncate
 					)}
 				>
 					{name}
@@ -78,7 +78,7 @@ export default function MemberCard({
 					className={clsx(
 						"text-base-content/70", // text
 						"text-xs md:text-sm", // text responsive
-						"max-w-[220px] truncate md:max-w-[260px]", // truncate
+						"max-w-55 truncate md:max-w-65", // truncate
 					)}
 				>
 					{position}
@@ -86,7 +86,7 @@ export default function MemberCard({
 			</div>
 
 			{/* tags */}
-			<div className="h-10 w-full">
+			<div className="min-h-10 w-full">
 				<TagsComponent tags={skills} center />
 			</div>
 
