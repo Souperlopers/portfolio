@@ -89,7 +89,7 @@ export default function ProjectImages({ images }: { images: ProjectImage[] }) {
 	}
 
 	return (
-		<div dir="ltr" className="w-full lg:max-w-[650px]">
+		<div dir="ltr" className="w-full lg:max-w-162.5">
 			{hasImages ? (
 				<ImageGallery
 					ref={galleryRef}
@@ -121,7 +121,7 @@ export default function ProjectImages({ images }: { images: ProjectImage[] }) {
 				>
 					<CiImageOn
 						className={clsx(
-							"-rotate-[20deg] opacity-25", // display
+							"rotate-[-20deg] opacity-25", // display
 						)}
 						size={90}
 					/>

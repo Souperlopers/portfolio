@@ -3,7 +3,7 @@ import MainLayout from "@/Layouts/MainLayout"
 import { MemberPageProps } from "@/types"
 import { Head } from "@inertiajs/react"
 import { Profile, MemberProjects, Contact } from "@/index"
-import { IoCodeSlashOutline } from "react-icons/io5"
+import { LuClipboardList } from "react-icons/lu"
 import { CgWebsite } from "react-icons/cg"
 import { IoCall } from "react-icons/io5"
 import { homeContent } from "@/Pages/Home"
@@ -50,7 +50,7 @@ Member.layout = (page: ReactNode) => (
 const profileContent = (
 	<>
 		<span>معرفی</span>
-		<IoCodeSlashOutline />
+		<LuClipboardList />
 	</>
 )
 
