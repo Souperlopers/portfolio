@@ -13,6 +13,7 @@ TODO_Z fix project screanshots images border rounded: sometimes display rounded 
 TODO_Z at least 3 tags can fit on the member card
 
 TODO_S fill database
+TODO_S migrate to nextjs (because inertia SSR is broken)
 TODO_S add unique method to asset parameters in migrations
 TODO_S add cycle support to backend
 
