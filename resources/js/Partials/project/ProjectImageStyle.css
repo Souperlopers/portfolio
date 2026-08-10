@@ -1,5 +1,14 @@
+/* 
+###################################################################
+
+			I commented some of the styles but nothing changed
+			remove them if they're not needed
+
+###################################################################
+*/
+
 .image-gallery-content {
-	overflow: visible;
+	/* overflow: visible; */
 }
 
 /* ---------------- Slide ---------------- */
@@ -9,14 +18,11 @@
 	padding: 10px;
 	margin-bottom: 0px;
 	background: transparent;
-	border-radius: 18px;
 	cursor: auto;
 }
 
 .image-gallery-slide .image-gallery-image {
-	width: 100%;
-	max-height: none !important;
-	border-radius: 16px !important;
+	/* width: 100%; */
 }
 
 .image-gallery-slide:hover .image-gallery-image {
@@ -26,13 +32,13 @@
 /* ---------------- Thumbnails ---------------- */
 
 .image-gallery-thumbnails {
-	padding-top: 6px;
+	/* padding-top: 6px; */
 }
 
 .image-gallery-thumbnail {
 	width: 140px;
 	overflow: hidden;
-	border-radius: 12px;
+	/* border-radius: 12px; */
 	border: 1px solid transparent;
 	background: transparent;
 }
@@ -51,7 +57,7 @@
 }
 
 .image-gallery-thumbnail img {
-	border-radius: 12px;
+	/* border-radius: 12px; */
 }
 
 /* ---------------- Navigation ---------------- */
@@ -65,7 +71,7 @@
 	align-items: center;
 	justify-content: center;
 
-	border-radius: 9999px;
+	border-radius: 50%;
 
 	background: #0e1420;
 
@@ -150,5 +156,5 @@
 	bottom: 50px;
 
 	/* decrease background opacity  */
-	background: rgba(0, 0, 0, 0.6);
+	background: rgba(0, 0, 0, 0.8);
 }

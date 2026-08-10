@@ -5,9 +5,6 @@ TODO_Z delete DrawerMenu if it's not used
 <!-- project -->
 TODO_Z different font size problem
 
-<!-- project page -->
-TODO_Z fix project screanshots images border rounded: sometimes display rounded and sometimes not
-
 <!-- member card -->
 TODO_Z at least 3 tags can fit on the member card
 
@@ -17,6 +14,7 @@ TODO_S make Header.tsx file smaller
 TODO_S add unique method to asset parameters in migrations
 TODO_S add cycle support to backend
 
+TODO_Z replace css files with tailwind classes (be careful with gallery styles)
 TODO_Z enhance cycle graph if needed
 TODO_Z add graph to project
 TODO_Z add graph to member

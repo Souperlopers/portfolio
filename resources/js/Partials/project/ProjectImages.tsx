@@ -41,7 +41,9 @@ export default function ProjectImages({ images }: { images: ProjectImage[] }) {
 	const isImageLoaded = (index: number) => loadedStates[index]
 
 	// image renderer funciton
-	const renderImage = (item: GalleryItem, isThumbnail: boolean) => {
+	const renderImage = (item: GalleryItem, type: "thumbnail" | "main") => {
+		const isThumbnail = type === "thumbnail"
+
 		// separate index from description
 		const separated = item.description?.split(indexSeparator) || []
 		const index = Number(separated[0])
@@ -52,18 +54,31 @@ export default function ProjectImages({ images }: { images: ProjectImage[] }) {
 
 		return (
 			<>
-				<img
-					onLoad={(e) => markAsLoaded(index)}
+				<div
 					className={clsx(
-						!isLoaded && "skeleton", // skeleton
-						"aspect-[16/9]", // dimesnion
-						isThumbnail // default library classes
-							? "image-gallery-thumbnail-image"
-							: "image-gallery-image",
+						!isLoaded && "aspect-video skeleton", // skeleton
+						"flex flex-col items-stretch justify-center", // flex
+						"h-full w-full", // dimension
 					)}
-					alt={isThumbnail ? item.thumbnailAlt : item.originalAlt}
-					src={isThumbnail ? item.thumbnail : item.original}
-				/>
+				>
+					<img
+						onLoad={(e) => markAsLoaded(index)}
+						alt={isThumbnail ? item.thumbnailAlt : item.originalAlt}
+						src={isThumbnail ? item.thumbnail : item.original}
+						className={clsx(
+							"max-h-full object-contain", // dimesnion
+							isThumbnail
+								? clsx(
+										"image-gallery-thumbnail-image", // default library for thumbnail
+										"rounded-md", // border
+									)
+									: clsx(
+										"image-gallery-image", // default library
+										"rounded-2xl", // border
+									),
+						)}
+					/>
+				</div>
 				{!isThumbnail && description && (
 					<span dir="rtl" className="image-gallery-description">
 						{description}
@@ -89,9 +104,11 @@ export default function ProjectImages({ images }: { images: ProjectImage[] }) {
 						"bg-base-200 shadow-[0_10px_30px_rgba(0,0,0,.25)]", // background
 					)}
 					renderThumbInner={(item: GalleryItem) =>
-						renderImage(item, true)
+						renderImage(item, "thumbnail")
 					}
-					renderItem={(item: GalleryItem) => renderImage(item, false)}
+					renderItem={(item: GalleryItem) =>
+						renderImage(item, "main")
+					}
 				/>
 			) : (
 				<div
