@@ -7,11 +7,13 @@ import { CiImageOn } from "react-icons/ci"
 
 export default function ProjectItem({ projectData }: ProjectItemProps) {
 	const [imgLoaded, setImgLoaded] = useState(false)
+
 	const {
 		title = "بدون نام",
 		technologies = [],
 		description = "",
 	} = projectData
+
 	return (
 		<div
 			className={clsx(
@@ -31,7 +33,7 @@ export default function ProjectItem({ projectData }: ProjectItemProps) {
 		>
 			<div
 				className={clsx(
-					"flex flex-col gap-3 sm:flex-row", // flex
+					"flex grow flex-col gap-3 sm:flex-row", // flex
 					"items-center justify-start sm:items-start sm:justify-center", // flex justify & align
 					"", // dimension
 				)}
@@ -103,6 +105,7 @@ export default function ProjectItem({ projectData }: ProjectItemProps) {
 					)}
 				</div>
 			</div>
+
 			<Link
 				href={projectData.url}
 				className={clsx(
