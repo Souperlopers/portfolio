@@ -41,7 +41,7 @@ export default function ProjectItem({ projectData }: ProjectItemProps) {
 				{/* info */}
 				<div
 					className={clsx(
-						"flex shrink flex-col gap-5", // flex
+						"flex flex-col gap-5", // flex
 						"h-full w-full", // dimension
 					)}
 				>
@@ -81,7 +81,7 @@ export default function ProjectItem({ projectData }: ProjectItemProps) {
 							alt={`${title} cover`}
 							onLoad={() => setImgLoaded(true)}
 							className={clsx(
-								"max-h-60 sm:max-h-none", // dimension
+								"max-h-60 sm:max-h-80", // dimension
 								"opacity-80", // basic
 								"object-contain", // object
 							)}
