@@ -10,6 +10,9 @@ export default function TagsComponent({
 	center?: boolean
 }) {
 	const [hasIcon, setHasIcon] = useState(true)
+
+	if (!tags.length) return null
+
 	return (
 		<div
 			className={clsx(
