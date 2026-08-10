@@ -3,6 +3,7 @@ import { ProjectBrief } from "@/types/project"
 import { useState } from "react"
 import { HiArrowLongLeft } from "react-icons/hi2"
 import clsx from "clsx"
+import EmptyProjects from "@/Components/EmptyProjects"
 
 export default function Projects({ projects }: { projects: ProjectBrief[] }) {
 	const [showMoreCount, setShowMoreCount] = useState(1)
@@ -33,7 +34,7 @@ export default function Projects({ projects }: { projects: ProjectBrief[] }) {
 				نمونه کار
 			</h2>
 
-			{projectsCount === 0 && <div>فعلا پروژه ای وجود ندارد.</div>}
+			{projectsCount === 0 && <EmptyProjects />}
 
 			<div className="grid grid-cols-1 gap-8 xl:grid-cols-2">
 				{visibleProjects.map((project, index) => (
