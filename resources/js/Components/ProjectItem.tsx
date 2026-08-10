@@ -109,7 +109,7 @@ export default function ProjectItem({ projectData }: ProjectItemProps) {
 			<Link
 				href={projectData.url}
 				className={clsx(
-					"px-[15px] py-3", // padding
+					"px-3.75 py-3", // padding
 					"rounded-lg", // container
 					"border-primary border", // border
 					"text-primary text-center font-medium", // text
