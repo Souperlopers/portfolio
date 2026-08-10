@@ -228,9 +228,10 @@ export default function Header({
 											"py-1.5", // padding
 											"gap-2", // content gap
 											"w-fit", // dimension
-											"border-primary border-b", // bottom border
-											activeSection !== item.id && // not active
-												"border-opacity-0 opacity-60 hover:opacity-90",
+											"", // bottom border
+											activeSection === item.id // not active
+												? "border-primary border-b"
+												: "border-opacity-0 opacity-60 hover:opacity-90",
 										),
 							)}
 						>
