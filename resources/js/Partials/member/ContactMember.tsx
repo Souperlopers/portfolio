@@ -35,7 +35,13 @@ export default function ContactMember({
 		}))
 
 	return (
-		<div className="flex w-full flex-col gap-8 md:gap-10">
+		<div
+			className={clsx(
+				"w-full", // dimension
+				"flex flex-col gap-8 md:gap-10", // flex
+				"px-5 py-10 md:px-20 md:py-16", // padding
+			)}
+		>
 			<h2
 				className={clsx(
 					"border-primary border-r-4", // border
@@ -91,7 +97,7 @@ export default function ContactMember({
 								>
 									<Icon
 										size={20}
-										className="md:h-[22px] md:w-[22px]"
+										className="md:h-5.5 md:w-5.5"
 									/>
 								</div>
 
@@ -110,10 +116,10 @@ export default function ContactMember({
 									<span
 										dir="ltr"
 										className={clsx(
-											"truncate", // text overflow
+											"truncate xl:max-w-96 lg:max-w-64 md:max-w-44 sm:max-w-40 max-w-36", // text overflow
 											"text-xs sm:text-sm md:text-base", // text dimension
 											"font-medium", // text style
-											"text-base-content", // text color
+											"text-base-content/80", // text color
 											"group-hover:text-primary/80", // hover
 											"transition-colors duration-300", // animation
 										)}
