@@ -17,7 +17,6 @@ export default function Hamburger({
 
 	const handleClick: MouseEventHandler<HTMLButtonElement> = (e) => {
 		e.preventDefault()
-		console.log("handleClick, prev_state: ", isOpen)
 		setIsOpen((prev) => !prev)
 	}
 
@@ -28,7 +27,6 @@ export default function Hamburger({
 			buttonRef.current &&
 			!buttonRef.current.contains(e.target as Node)
 		) {
-			console.log("handleClickOutside, prev_state: ", isOpen)
 			setIsOpen(false)
 		}
 	}
@@ -43,7 +41,7 @@ export default function Hamburger({
 		<div
 			ref={menuRef}
 			className={clsx(
-				"dropdown text-left pointer-events-none", // daisyui
+				"dropdown pointer-events-none text-left", // daisyui
 				classNames, // passed from parent
 			)}
 		>
@@ -88,12 +86,12 @@ export default function Hamburger({
 					<li key={navEl.id} role="none">
 						<button
 							role="menuitem"
+							className="pointer-events-auto w-full"
 							onClick={(e) => {
 								e.preventDefault()
 								clickHandler(navEl)
 								setIsOpen(false)
 							}}
-							className={clsx("w-full")}
 						>
 							{navEl.content}
 						</button>
