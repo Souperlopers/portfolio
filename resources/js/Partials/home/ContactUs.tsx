@@ -29,17 +29,18 @@ export default function ContactUs() {
 
 			<div
 				className={clsx(
-					"flex flex-col md:items-start items-center", // flex
+					"flex flex-col items-center md:items-start", // flex
 					"h-full", // dimension
-					"md:px-5 px-0", // padding
+					"px-0 md:px-5", // padding
 				)}
 			>
 				<p
 					className={clsx(
 						"h-full", // dimension
-						"text-base-content/90 text-center md:text-right", // text base
+						"text-base-content/90", // text base
 						"text-lg leading-relaxed md:text-xl", // text dimension
 						"flex items-center", // flex
+						"px-0 md:px-5", // padding
 					)}
 				>
 					ما باور داریم هر محصول موفق، از توجه به جزئیات آغاز می‌شود.
