@@ -37,29 +37,31 @@ export default function ProjectItem({ projectData }: ProjectItemProps) {
 				{/* info */}
 				<div
 					className={clsx(
-						"flex shrink flex-col sm:gap-5", // flex
-						"w-full", // dimension
+						"flex shrink flex-col gap-5", // flex
+						"h-full w-full", // dimension
 					)}
 				>
 					<h3
 						className={clsx(
-							"text-xl font-semibold md:text-3xl", // text dimension
+							"text-3xl font-semibold", // text dimension
 							"text-base-content", // text color
 						)}
 					>
 						{title}
 					</h3>
+
 					<p
 						className={clsx(
-							"min-h-16", // text overflow
-							"text-sm md:text-base", // text dimension
+							"text-base", // text dimension
 							"text-base-content/70", // text color
 						)}
 					>
 						{description}
 					</p>
+
 					<TagsComponent tags={technologies} />
 				</div>
+
 				{/* image */}
 				<div
 					className={clsx(
@@ -110,7 +112,7 @@ export default function ProjectItem({ projectData }: ProjectItemProps) {
 			<Link
 				href={projectData.url}
 				className={clsx(
-					"px-[15px] py-3 md:px-5 md:py-2", // padding
+					"px-[15px] py-3", // padding
 					"rounded-lg", // container
 					"border-primary border", // border
 					"text-primary text-center font-medium", // text
@@ -121,7 +123,7 @@ export default function ProjectItem({ projectData }: ProjectItemProps) {
 					className={clsx(
 						"flex items-center justify-center gap-1", // flex
 						"w-full", // dimension
-						"text-xs sm:text-sm md:text-base", // text dimension
+						"text-base sm:text-sm", // text dimension
 						"truncate", // text overflow
 					)}
 				>
