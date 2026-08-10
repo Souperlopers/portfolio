@@ -9,55 +9,77 @@ export default function ContactUs() {
 	return (
 		<section
 			id="about"
-			className="mx-auto flex h-[500px] w-full max-w-[1350px] scroll-mt-20 flex-col gap-10"
+			className={clsx(
+				"h-100 w-full max-w-337.5", // dimension
+				"flex flex-col gap-10", // flex
+				"mx-auto scroll-mt-20", // base
+				"bg-base-100/40", // background color
+				"p-5", // padding
+			)}
 		>
 			<h2
 				className={clsx(
-					"border-primary border-r-4", // border
 					"text-xl font-medium md:text-2xl lg:text-3xl", // text division
-					"text-base-content", // text color
-					"pr-5 md:pr-10", // padding
-					"-mr-2 md:-mr-5", // margin
+					"text-base-content", // text
+					"mx-auto", // margin
 				)}
 			>
 				تماس با ما
 			</h2>
 
-			<div className="border-primary/10 bg-base-200 flex h-full flex-col items-start justify-start rounded-xl border px-6 py-8 shadow-[0_10px_30px_rgba(0,0,0,.25)] md:px-10 md:py-10">
-				<div className="mb-6 flex items-center gap-2 md:mb-8">
-					<span className="h-3 w-3 rounded-full bg-[#ff5f56]" />
-					<span className="h-3 w-3 rounded-full bg-[#ffbd2e]" />
-					<span className="h-3 w-3 rounded-full bg-[#27c93f]" />
-					<span className="text-base-content/45 mr-2 font-mono text-xs">
-						SouperLopers.md
-					</span>
-				</div>
-
-				<p className="text-base-content/90 h-full max-w-[1100px] shrink text-base leading-relaxed md:text-xl">
+			<div
+				className={clsx(
+					"flex flex-col items-start", // flex
+					"h-full", // dimension
+				)}
+			>
+				<p
+					className={clsx(
+						"h-full", // dimension
+						"text-base-content/90", // text base
+						"text-lg leading-relaxed md:text-xl", // text dimension
+					)}
+				>
 					ما باور داریم هر محصول موفق، از توجه به جزئیات آغاز می‌شود.
 					با تمرکز بر کیفیت، عملکرد و تجربه کاربری، نرم‌افزارهایی
 					می‌سازیم که استفاده از آن‌ها ساده، لذت‌بخش و قابل اعتماد
 					باشد.
 				</p>
 
-				<div className="mt-8 flex flex-wrap items-center justify-center gap-4 border-t border-white/10 pt-6 md:justify-start md:gap-6">
+				<div
+					className={clsx(
+						"flex flex-wrap items-center justify-center gap-5 md:justify-start md:gap-10", // flex
+						"border-neutral/90 border-t", // border
+						"pt-6", // padding
+					)}
+				>
 					<a
 						href={`mailto:${EMAILURL}`}
 						dir="ltr"
-						className="text-base-content/90 hover:text-primary inline-flex items-center gap-2 transition-all duration-300 hover:translate-x-1"
+						className={clsx(
+							"inline-flex items-center gap-2", // flex
+							"text-base-content/90 text-lg md:text-xl", // text
+							"hover:text-primary hover:-translate-y-1", // hover
+							"transition-all duration-300", // animation
+						)}
 					>
 						ایمیل
-						<HiOutlineEnvelope size={20} />
+						<HiOutlineEnvelope size={25} />
 					</a>
 					<a
 						href={GITHUBURL}
 						target="_blank"
 						rel="noopener noreferrer"
 						dir="ltr"
-						className="text-base-content/90 hover:text-primary inline-flex items-center gap-2 transition-all duration-300 hover:translate-x-1"
+						className={clsx(
+							"inline-flex items-center gap-2", // flex
+							"text-base-content/90 text-lg md:text-xl", // text
+							"hover:text-primary hover:-translate-y-1", // hover
+							"transition-all duration-300", // animation
+						)}
 					>
 						گیت‌هاب
-						<SiGithub size={20} />
+						<SiGithub size={25} />
 					</a>
 				</div>
 			</div>
