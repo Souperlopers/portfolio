@@ -22,8 +22,8 @@ export default function Members({ members }: { members: MemberBrief[] }) {
 			</h2>
 			<div className={styles.container}>
 				{members.map((member) => (
-                    <MemberCard key={member.id} memberData={member} />
-                ))}
+					<MemberCard key={member.id} memberData={member} />
+				))}
 			</div>
 		</section>
 	)

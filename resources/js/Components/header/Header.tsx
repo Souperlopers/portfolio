@@ -148,9 +148,11 @@ export default function Header({
 			<Logo isCompact={hasHero ? isScrolled : true} />
 			{hasHero && <Hero />}
 
-			<div // this element is to fill header above when it transits from below hero to on top of screen 
+			<div // this element is to fill header above when it transits from below hero to on top of screen
 				className={clsx(
-					hasHero && isScrolled ? "h-[calc(100vh-450px-80px)]" : "h-0"
+					hasHero && isScrolled
+						? "h-[calc(100vh-450px-80px)]"
+						: "h-0",
 				)}
 			/>
 
@@ -171,8 +173,8 @@ export default function Header({
 								"top-0", // position
 								"h-[80px]", // dimension
 								"px-5 py-2", // padding
-								"bg-gradient-to-b from-base-100 to-base-100/50 backdrop-blur-lg", // background
-								"border-b border-base-200", // border
+								"from-base-100 to-base-100/50 bg-gradient-to-b backdrop-blur-lg", // background
+								"border-base-200 border-b", // border
 								"shadow-[0_10px_30px_rgba(255,255,255,.05)]", // shadow
 							),
 				)}
@@ -182,7 +184,7 @@ export default function Header({
 					id="header-logo"
 					className={clsx(
 						isBelowHero && "fixed right-5", // hide when under hero
-						"aspect-[200/150] h-[50px]", // dimension
+						"aspect-4/3 h-[50px]", // dimension
 					)}
 				/>
 
@@ -209,23 +211,23 @@ export default function Header({
 							onClick={() => scrollToSection(item)}
 							className={clsx(
 								"flex items-center justify-between", // flex
-								"text-nowrap font-medium text-base-content", // text common
+								"text-base-content font-medium text-nowrap", // text common
 								isBelowHero
 									? clsx(
 											"gap-4", // content gap
 											"rounded-xl", // container
 											"text-3xl sm:text-4xl", // text dimmension
-											"border border-primary/20", // border
+											"border-primary/20 border", // border
 											"bg-base-200/60", // background color
 											"hover:border-primary/50 hover:bg-base-200 hover:text-primary", // hover
 											"px-3 py-2 md:px-4 md:py-2.5", // padding
 										)
-										: clsx(
+									: clsx(
 											"text-xl", // text dimmension
 											"py-1.5", // padding
 											"gap-2", // content gap
 											"w-fit", // dimension
-											"border-b border-primary", // bottom border
+											"border-primary border-b", // bottom border
 											activeSection !== item.id && // not active
 												"border-opacity-0 opacity-60 hover:opacity-90",
 										),
@@ -248,7 +250,10 @@ export default function Header({
 									),
 						)}
 					/>
-					<ThemeSwitch isCompact={showHamburger} className={isBelowHero && "hidden"} />
+					<ThemeSwitch
+						isCompact={showHamburger}
+						className={isBelowHero && "hidden"}
+					/>
 				</div>
 			</header>
 		</>

@@ -94,7 +94,7 @@ export default function ThemeSwitch({
 					"relative p-1", // base
 					isCompact ? "hidden" : "inline-flex items-center gap-0.5", // display
 					"h-11", // dimension
-					"rounded-full border border-base-300", // border
+					"border-base-300 rounded-full border", // border
 					"bg-base-300", // background
 				)}
 			>
@@ -143,7 +143,7 @@ export default function ThemeSwitch({
 						"relative rounded-full p-1", // base
 						"bg-base-100", // background
 						"flex items-center justify-center align-middle", // flex
-						"border border-base-300", // border
+						"border-base-300 border", // border
 					)}
 				>
 					<button
@@ -152,8 +152,8 @@ export default function ThemeSwitch({
 						className={clsx(
 							"h-9 w-9", // dimension
 							"flex items-center justify-center", // flex
-							"border border-base-300", // border
-							"cursor-pointer rounded-full text-base-content", // base
+							"border-base-300 border", // border
+							"text-base-content cursor-pointer rounded-full", // base
 							"bg-accent", // background
 							"transition-colors duration-300", // animation
 						)}
@@ -165,12 +165,12 @@ export default function ThemeSwitch({
 				<div
 					role="listbox"
 					className={clsx(
-						"top-13 absolute z-50", // position
-						"rounded-full border-base-300", // base
+						"absolute top-13 z-50", // position
+						"border-base-300 rounded-full", // base
 						"flex flex-col gap-0.5", // flex
 						"transition-transform duration-300", // animation
 						open
-							? "border bg-base-100 p-1 shadow-lg"
+							? "bg-base-100 border p-1 shadow-lg"
 							: "pointer-events-none border-0 px-1",
 					)}
 				>
@@ -190,7 +190,7 @@ export default function ThemeSwitch({
 							}}
 							className={clsx(
 								"h-9 w-9", // dimension
-								"rounded-full cursor-pointer", // base
+								"cursor-pointer rounded-full", // base
 								"flex items-center justify-center", // flex
 								"hover:bg-accent", // hover
 								"transition-colors duration-300", // animation

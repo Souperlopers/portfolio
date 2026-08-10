@@ -1,4 +1,3 @@
-
 type CycleName = "planning" | "develop" | "complete" | "maintenance" | "upgrade"
 
 type BaseCycle = {

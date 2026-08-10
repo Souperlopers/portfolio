@@ -9,19 +9,19 @@ import { title } from "@/app"
 import Loading from "./Components/Loading"
 
 createServer((page) =>
-    createInertiaApp({
-        title,
-        page,
-        render: ReactDOMServer.renderToString,
-        resolve: (name) =>
-            resolvePageComponent(
-                `./Pages/${name}.tsx`,
-                import.meta.glob("./Pages/**/*.tsx"),
-            ) as Promise<ComponentType>,
-        setup: ({ App, props }) => (
-            <Suspense fallback={<Loading />}>
-                <App {...props} />
-            </Suspense>
-        ),
-    }),
+	createInertiaApp({
+		title,
+		page,
+		render: ReactDOMServer.renderToString,
+		resolve: (name) =>
+			resolvePageComponent(
+				`./Pages/${name}.tsx`,
+				import.meta.glob("./Pages/**/*.tsx"),
+			) as Promise<ComponentType>,
+		setup: ({ App, props }) => (
+			<Suspense fallback={<Loading />}>
+				<App {...props} />
+			</Suspense>
+		),
+	}),
 )

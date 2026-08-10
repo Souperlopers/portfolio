@@ -10,8 +10,8 @@ import {
 ----------------------------------------
 */
 
-export const PIXEL_PER_DAY  = 1
-export const RANGE_WIDTH    = 7
+export const PIXEL_PER_DAY = 1
+export const RANGE_WIDTH = 7
 export const POINT_DIAMETER = 14
 
 export const colorPalate = {

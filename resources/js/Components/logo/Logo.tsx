@@ -75,7 +75,7 @@ export default function Logo({ isCompact = true }: { isCompact: boolean }) {
 									"transition-all duration-700 ease-out will-change-transform", // animation
 									allLoaded ? "block" : "hidden", // loading
 									isOnTop // position
-										? "left-0 top-0 w-[45%]"
+										? "top-0 left-0 w-[45%]"
 										: "left-[20% top-0 w-[80%]",
 									"invert dark:invert-0", // color switch
 								)}
@@ -103,8 +103,8 @@ export default function Logo({ isCompact = true }: { isCompact: boolean }) {
 									allLoaded ? "block" : "hidden", // loading
 									"transition-all duration-700 ease-out will-change-transform", // animation
 									isOnTop // position
-										? "bottom-1/2 right-0 w-[11.24%] translate-y-1/2"
-										: "bottom-[25%] right-[5%] w-[8%] rotate-[80deg]",
+										? "right-0 bottom-1/2 w-[11.24%] translate-y-1/2"
+										: "right-[5%] bottom-[25%] w-[8%] rotate-80",
 									"invert dark:invert-0", // color switch
 								)}
 							/>

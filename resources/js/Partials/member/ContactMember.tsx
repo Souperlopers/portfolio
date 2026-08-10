@@ -38,7 +38,7 @@ export default function ContactMember({
 		<div className="flex w-full flex-col gap-8 md:gap-10">
 			<h2
 				className={clsx(
-					"border-r-4 border-primary", // border
+					"border-primary border-r-4", // border
 					"text-xl font-medium md:text-2xl lg:text-3xl", // text division
 					"text-base-content", // text color
 					"pr-4 md:pr-10", // padding
@@ -65,17 +65,17 @@ export default function ContactMember({
 								"overflow-hidden rounded-xl", // container
 								"p-4 md:p-5", // padding
 								"bg-base-300", // background color
-								"border border-primary/10", // border
+								"border-primary/10 border", // border
 								"shadow-[0_10px_30px_rgba(0,0,0,.25)]", // shadow
 								"transition-all duration-300 ease-in-out will-change-transform", // animation
 								"cursor-pointer",
-								"hover:-translate-y-1 hover:border-primary/25 hover:shadow-[0_16px_40px_rgba(47,91,255,.15)]", // hover
+								"hover:border-primary/25 hover:-translate-y-1 hover:shadow-[0_16px_40px_rgba(47,91,255,.15)]", // hover
 							)}
 						>
 							<div
 								className={clsx(
 									"flex flex-1 items-center gap-3 md:gap-4", // flex
-									"min-w-0" // dimension,
+									"min-w-0", // dimension,
 								)}
 							>
 								<div
@@ -90,14 +90,13 @@ export default function ContactMember({
 										"transition-colors duration-300 group-hover:scale-105", // animation
 									)}
 								>
-									<Icon size={20} className="md:h-[22px] md:w-[22px]" />
+									<Icon
+										size={20}
+										className="md:h-[22px] md:w-[22px]"
+									/>
 								</div>
 
-								<div
-									className={clsx(
-										"flex min-w-0 flex-col",
-									)}
-								>
+								<div className={clsx("flex min-w-0 flex-col")}>
 									<span
 										className={clsx(
 											"text-sm md:text-base", // text dimension

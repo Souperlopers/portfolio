@@ -1,139 +1,139 @@
 .image-gallery-content {
-    overflow: visible;
+	overflow: visible;
 }
 
 /* ---------------- Slide ---------------- */
 
 .image-gallery-slide {
-    min-height: 300px;
-    padding: 10px;
-    margin-bottom: 0px;
-    background: transparent;
-    border-radius: 18px;
-    cursor: auto;
+	min-height: 300px;
+	padding: 10px;
+	margin-bottom: 0px;
+	background: transparent;
+	border-radius: 18px;
+	cursor: auto;
 }
 
 .image-gallery-slide .image-gallery-image {
-    width: 100%;
-    max-height: none !important;
-    border-radius: 16px !important;
+	width: 100%;
+	max-height: none !important;
+	border-radius: 16px !important;
 }
 
 .image-gallery-slide:hover .image-gallery-image {
-    transform: scale(1.01);
+	transform: scale(1.01);
 }
 
 /* ---------------- Thumbnails ---------------- */
 
 .image-gallery-thumbnails {
-    padding-top: 6px;
+	padding-top: 6px;
 }
 
 .image-gallery-thumbnail {
-    width: 140px;
-    overflow: hidden;
-    border-radius: 12px;
-    border: 1px solid transparent;
-    background: transparent;
+	width: 140px;
+	overflow: hidden;
+	border-radius: 12px;
+	border: 1px solid transparent;
+	background: transparent;
 }
 
 .image-gallery-thumbnail:hover {
-    border-color: rgba(77, 170, 252, 0.35);
-    transform: translateY(-2px);
+	border-color: rgba(77, 170, 252, 0.35);
+	transform: translateY(-2px);
 }
 
 .image-gallery-thumbnail.active,
 .image-gallery-thumbnail:focus {
-    border-color: rgba(77, 170, 252, 0.55);
-    box-shadow:
-        0 0 0 1px rgba(77, 170, 252, 0.25),
-        0 8px 22px rgba(77, 170, 252, 0.18);
+	border-color: rgba(77, 170, 252, 0.55);
+	box-shadow:
+		0 0 0 1px rgba(77, 170, 252, 0.25),
+		0 8px 22px rgba(77, 170, 252, 0.18);
 }
 
 .image-gallery-thumbnail img {
-    border-radius: 12px;
+	border-radius: 12px;
 }
 
 /* ---------------- Navigation ---------------- */
 
 .image-gallery-left-nav,
 .image-gallery-right-nav {
-    width: 48px;
-    height: 48px;
+	width: 48px;
+	height: 48px;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 
-    border-radius: 9999px;
+	border-radius: 9999px;
 
-    background: #0e1420;
+	background: #0e1420;
 
-    border: 1px solid rgba(77, 170, 252, 0.12);
+	border: 1px solid rgba(77, 170, 252, 0.12);
 
-    padding: 0;
+	padding: 0;
 }
 
 .image-gallery-left-nav:hover,
 .image-gallery-right-nav:hover {
-    background: #151c2b;
-    border-color: rgba(77, 170, 252, 0.35);
-    box-shadow: 0 0 20px rgba(77, 170, 252, 0.18);
+	background: #151c2b;
+	border-color: rgba(77, 170, 252, 0.35);
+	box-shadow: 0 0 20px rgba(77, 170, 252, 0.18);
 }
 
 .image-gallery-left-nav .image-gallery-svg,
 .image-gallery-right-nav .image-gallery-svg {
-    width: 24px;
-    height: 24px;
+	width: 24px;
+	height: 24px;
 }
 
 .image-gallery-icon {
-    color: #e6edf3;
+	color: #e6edf3;
 }
 
 .image-gallery-left-nav::after,
 .image-gallery-right-nav::after {
-    content: "";
-    position: absolute;
-    inset: -60px 0;
+	content: "";
+	position: absolute;
+	inset: -60px 0;
 }
 
 /* ---------------- Responsive ---------------- */
 
 @media (max-width: 800px) {
-    .image-gallery-slide {
-        min-height: 300px;
-        padding: 12px;
-    }
+	.image-gallery-slide {
+		min-height: 300px;
+		padding: 12px;
+	}
 
-    .image-gallery-thumbnail {
-        width: 90px;
-    }
+	.image-gallery-thumbnail {
+		width: 90px;
+	}
 
-    .image-gallery-left-nav,
-    .image-gallery-right-nav {
-        width: 40px;
-        height: 40px;
-    }
+	.image-gallery-left-nav,
+	.image-gallery-right-nav {
+		width: 40px;
+		height: 40px;
+	}
 
-    .image-gallery-left-nav .image-gallery-svg,
-    .image-gallery-right-nav .image-gallery-svg {
-        width: 20px;
-        height: 20px;
-    }
+	.image-gallery-left-nav .image-gallery-svg,
+	.image-gallery-right-nav .image-gallery-svg {
+		width: 20px;
+		height: 20px;
+	}
 }
 
 @media (max-width: 550px) {
-    .image-gallery-slide {
-        min-height: 190px;
-        padding: 3px;
-    }
+	.image-gallery-slide {
+		min-height: 190px;
+		padding: 3px;
+	}
 }
 
 @media (max-width: 400px) {
-    .image-gallery-slide {
-        min-height: 120px;
-    }
+	.image-gallery-slide {
+		min-height: 120px;
+	}
 }
 
 /* 
@@ -143,13 +143,12 @@
 */
 
 .image-gallery-slide .image-gallery-description {
-    /*  move to right */
-    right: 0;
-    left: auto;
-	
+	/*  move to right */
+	right: 0;
+	left: auto;
+
 	bottom: 50px;
 
-    /* decrease background opacity  */
-    background: rgba(0, 0, 0, 0.6);
+	/* decrease background opacity  */
+	background: rgba(0, 0, 0, 0.6);
 }
-

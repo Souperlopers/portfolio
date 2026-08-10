@@ -5,15 +5,15 @@ import TagsComponent from "@/Components/TagsComponent"
 export default function ProjectInfo({ info }: { info: Project }) {
 	const technologies = info.technologies || []
 	return (
-		<div className="flex min-h-[400px] w-full flex-col justify-between gap-7 pt-5 text-primary-content lg:max-w-[40%]">
-			<div className="max-w-80 truncate text-3xl font-semibold text-base-content md:max-w-96">
+		<div className="text-primary-content flex min-h-[400px] w-full flex-col justify-between gap-7 pt-5 lg:max-w-[40%]">
+			<div className="text-base-content max-w-80 truncate text-3xl font-semibold md:max-w-96">
 				{info.title}
 			</div>
-			<div className="text-base text-secondary-content md:text-lg">
+			<div className="text-secondary-content text-base md:text-lg">
 				{info.description}
 			</div>
 			<div className="flex flex-wrap gap-5">
-				<h2 className="text-lg text-base-content md:text-xl">
+				<h2 className="text-base-content text-lg md:text-xl">
 					تکنولوژی‌ها
 				</h2>
 				<TagsComponent tags={technologies} />

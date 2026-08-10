@@ -13,7 +13,7 @@ export default function ContactUs() {
 		>
 			<h2
 				className={clsx(
-					"border-r-4 border-primary", // border
+					"border-primary border-r-4", // border
 					"text-xl font-medium md:text-2xl lg:text-3xl", // text division
 					"text-base-content", // text color
 					"pr-5 md:pr-10", // padding
@@ -23,17 +23,17 @@ export default function ContactUs() {
 				تماس با ما
 			</h2>
 
-			<div className="flex h-full flex-col items-start justify-start rounded-xl border border-primary/10 bg-base-200 px-6 py-8 shadow-[0_10px_30px_rgba(0,0,0,.25)] md:px-10 md:py-10">
+			<div className="border-primary/10 bg-base-200 flex h-full flex-col items-start justify-start rounded-xl border px-6 py-8 shadow-[0_10px_30px_rgba(0,0,0,.25)] md:px-10 md:py-10">
 				<div className="mb-6 flex items-center gap-2 md:mb-8">
 					<span className="h-3 w-3 rounded-full bg-[#ff5f56]" />
 					<span className="h-3 w-3 rounded-full bg-[#ffbd2e]" />
 					<span className="h-3 w-3 rounded-full bg-[#27c93f]" />
-					<span className="mr-2 font-mono text-xs text-base-content/45">
+					<span className="text-base-content/45 mr-2 font-mono text-xs">
 						SouperLopers.md
 					</span>
 				</div>
 
-				<p className="h-full max-w-[1100px] shrink text-base leading-relaxed text-base-content/90 md:text-xl">
+				<p className="text-base-content/90 h-full max-w-[1100px] shrink text-base leading-relaxed md:text-xl">
 					ما باور داریم هر محصول موفق، از توجه به جزئیات آغاز می‌شود.
 					با تمرکز بر کیفیت، عملکرد و تجربه کاربری، نرم‌افزارهایی
 					می‌سازیم که استفاده از آن‌ها ساده، لذت‌بخش و قابل اعتماد
@@ -44,7 +44,7 @@ export default function ContactUs() {
 					<a
 						href={`mailto:${EMAILURL}`}
 						dir="ltr"
-						className="inline-flex items-center gap-2 text-base-content/90 transition-all duration-300 hover:translate-x-1 hover:text-primary"
+						className="text-base-content/90 hover:text-primary inline-flex items-center gap-2 transition-all duration-300 hover:translate-x-1"
 					>
 						ایمیل
 						<HiOutlineEnvelope size={20} />
@@ -54,7 +54,7 @@ export default function ContactUs() {
 						target="_blank"
 						rel="noopener noreferrer"
 						dir="ltr"
-						className="inline-flex items-center gap-2 text-base-content/90 transition-all duration-300 hover:translate-x-1 hover:text-primary"
+						className="text-base-content/90 hover:text-primary inline-flex items-center gap-2 transition-all duration-300 hover:translate-x-1"
 					>
 						گیت‌هاب
 						<SiGithub size={20} />

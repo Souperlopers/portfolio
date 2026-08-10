@@ -20,10 +20,10 @@ export default function ProjectItem({ projectData }: ProjectItemProps) {
 				"overflow-hidden rounded-xl", // container
 				"px-3 py-5", // padding
 				"bg-base-300", // background color
-				"border border-primary/10", // border
+				"border-primary/10 border", // border
 				"shadow-[0_10px_30px_rgba(0,0,0,.25)]", // shadow
 				"transition-all duration-300 ease-in-out will-change-transform", // animation
-				"hover:-translate-y-1 hover:border-primary/25 hover:shadow-[0_16px_40px_rgba(47,91,255,.15)]", // hover
+				"hover:border-primary/25 hover:-translate-y-1 hover:shadow-[0_16px_40px_rgba(47,91,255,.15)]", // hover
 			)}
 		>
 			<div
@@ -60,7 +60,7 @@ export default function ProjectItem({ projectData }: ProjectItemProps) {
 				{/* image */}
 				<div
 					className={clsx(
-						"aspect-[16/9] h-40", // dimension
+						"aspect-16/9 h-40", // dimension
 						"relative", // basic
 					)}
 				>
@@ -96,7 +96,7 @@ export default function ProjectItem({ projectData }: ProjectItemProps) {
 						>
 							<CiImageOn
 								className={clsx(
-									"-rotate-[20deg] opacity-25", // display
+									"-rotate-20 opacity-25", // display
 								)}
 								size={90}
 							/>
@@ -109,8 +109,8 @@ export default function ProjectItem({ projectData }: ProjectItemProps) {
 				className={clsx(
 					"px-[15px] py-3 md:px-5 md:py-2", // padding
 					"rounded-lg", // container
-					"border border-primary", // border
-					"text-center font-medium text-primary", // text
+					"border-primary border", // border
+					"text-primary text-center font-medium", // text
 					"hover:border-primary/30 hover:bg-primary/10", // hover
 				)}
 			>

@@ -1,11 +1,10 @@
 import ProjectItem from "@/Components/ProjectItem"
-import EmptyProjects from "@/Components/EmptyProjects"
 import { ProjectBrief } from "@/types/project"
 import { useState } from "react"
 import { HiArrowLongLeft } from "react-icons/hi2"
 import clsx from "clsx"
 
-const Projects = ({ projects }: { projects: ProjectBrief[] }) => {
+export default function Projects({ projects }: { projects: ProjectBrief[] }) {
 	const [showMoreCount, setShowMoreCount] = useState(1)
 	const projectsCount = projects.length
 
@@ -24,7 +23,7 @@ const Projects = ({ projects }: { projects: ProjectBrief[] }) => {
 		>
 			<h2
 				className={clsx(
-					"border-r-4 border-primary", // border
+					"border-primary border-r-4", // border
 					"text-xl font-medium md:text-2xl lg:text-3xl", // text division
 					"text-base-content", // text color
 					"pr-5 md:pr-10", // padding
@@ -34,7 +33,7 @@ const Projects = ({ projects }: { projects: ProjectBrief[] }) => {
 				نمونه کار
 			</h2>
 
-			{projectsCount === 0 && <EmptyProjects />}
+			{projectsCount === 0 && <div>فعلا پروژه ای وجود ندارد.</div>}
 
 			<div className="grid grid-cols-1 gap-8 xl:grid-cols-2">
 				{visibleProjects.map((project, index) => (
@@ -49,7 +48,7 @@ const Projects = ({ projects }: { projects: ProjectBrief[] }) => {
 			{isShowMore && (
 				<div className="ml-1 flex justify-center md:justify-end">
 					<button
-						className="inline-flex items-center gap-1 text-[15px] text-primary duration-300 hover:text-btn-primary"
+						className="text-primary hover:text-btn-primary inline-flex items-center gap-1 text-[15px] duration-300"
 						type="button"
 						onClick={() => setShowMoreCount((prev) => prev + 1)}
 					>
@@ -61,5 +60,3 @@ const Projects = ({ projects }: { projects: ProjectBrief[] }) => {
 		</section>
 	)
 }
-
-export default Projects

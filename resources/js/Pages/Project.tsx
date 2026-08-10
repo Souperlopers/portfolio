@@ -29,7 +29,7 @@ export default function Project({ project }: ProjectPageProps) {
 				>
 					<h2
 						className={clsx(
-							"border-r-4 border-primary", // border
+							"border-primary border-r-4", // border
 							"text-xl font-medium md:text-2xl lg:text-3xl", // text division
 							"text-base-content", // text color
 							"pr-5 md:pr-10", // padding
@@ -51,7 +51,7 @@ export default function Project({ project }: ProjectPageProps) {
 				>
 					<h2
 						className={clsx(
-							"border-r-4 border-primary", // border
+							"border-primary border-r-4", // border
 							"text-xl font-medium md:text-2xl lg:text-3xl", // text division
 							"text-base-content", // text color
 							"pr-5 md:pr-10", // padding

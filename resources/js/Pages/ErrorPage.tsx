@@ -38,7 +38,7 @@ export default function Project({ status }: ErrorPageProps) {
 				{/* Title */}
 				<h2
 					className={clsx(
-						"border-r-4 border-primary", // border like Members section
+						"border-primary border-r-4", // border like Members section
 						"text-xl font-medium md:text-2xl lg:text-3xl", // text size
 						"text-base-content", // text color
 						"pr-5 md:pr-10", // padding
@@ -52,7 +52,7 @@ export default function Project({ status }: ErrorPageProps) {
 				<p
 					className={clsx(
 						"max-w-2xl text-center", // width
-						"text-base text-base-content/70 md:text-lg", // text size and color
+						"text-base-content/70 text-base md:text-lg", // text size and color
 						"leading-relaxed", // line height
 					)}
 				>
@@ -67,9 +67,9 @@ export default function Project({ status }: ErrorPageProps) {
 						"rounded-lg px-6 py-3", // padding
 						"bg-primary text-primary-content", // colors
 						"transition-all duration-300", // animation
-						"hover:scale-105 hover:bg-primary/80", // hover
+						"hover:bg-primary/80 hover:scale-105", // hover
 						"active:scale-95", // active
-						"shadow-lg shadow-primary/20", // shadow
+						"shadow-primary/20 shadow-lg", // shadow
 					)}
 				>
 					<AiFillHome className="text-xl transition-transform group-hover:-translate-x-1" />

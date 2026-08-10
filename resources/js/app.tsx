@@ -10,23 +10,23 @@ const appName = import.meta.env.VITE_APP_NAME || "Laravel"
 export const title = (title: string) => `${title} - ${appName}`
 
 createInertiaApp({
-    title,
+	title,
 
-    setup({ el, App, props }) {
-        const app = (
-            <Suspense fallback={<Loading />}>
-                <App {...props} />
-            </Suspense>
-        )
-		
+	setup({ el, App, props }) {
+		const app = (
+			<Suspense fallback={<Loading />}>
+				<App {...props} />
+			</Suspense>
+		)
+
 		if (!el) return <p>Root element not found!</p>
 
-        import.meta.env.SSR //
-            ? hydrateRoot(el, app)
-            : createRoot(el).render(app)
-    },
+		import.meta.env.SSR //
+			? hydrateRoot(el, app)
+			: createRoot(el).render(app)
+	},
 
-    progress: {
-        color: "#4B5563",
-    },
+	progress: {
+		color: "#4B5563",
+	},
 })

@@ -99,7 +99,7 @@ export default function ProjectImages({ images }: { images: ProjectImage[] }) {
 						"min-h-80 w-full", // dimension
 						"rounded-xl", // container
 						"flex flex-col items-center justify-center gap-10", // flex
-						"border-2 border-neutral/20", // border
+						"border-neutral/20 border-2", // border
 					)}
 				>
 					<CiImageOn
@@ -111,7 +111,7 @@ export default function ProjectImages({ images }: { images: ProjectImage[] }) {
 					<span
 						dir="rtl"
 						className={clsx(
-							"text-base text-neutral dark:text-neutral/60", // text
+							"text-neutral dark:text-neutral/60 text-base", // text
 						)}
 					>
 						تصویری برای پروژه موجود نیست.
