@@ -81,7 +81,7 @@ export default function ProjectItem({ projectData }: ProjectItemProps) {
 							alt={`${title} cover`}
 							onLoad={() => setImgLoaded(true)}
 							className={clsx(
-								"max-h-60", // dimension
+								"max-h-60 sm:max-h-none", // dimension
 								"opacity-80", // basic
 								"object-contain", // object
 							)}
