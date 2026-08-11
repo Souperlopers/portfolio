@@ -133,8 +133,15 @@
 	right: 0;
 	left: auto;
 
-	bottom: 50px;
+	/*  move to bottom */
+	bottom: 20%;
 
 	/* decrease background opacity  */
 	background: rgba(0, 0, 0, 0.8);
+}
+
+@media (max-width: 480px) {
+	.image-gallery-slide .image-gallery-description {
+		font-size: 2cqw;
+	}
 }
