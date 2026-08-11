@@ -2,8 +2,8 @@ import { HiOutlineEnvelope } from "react-icons/hi2"
 import { SiGithub } from "react-icons/si"
 import clsx from "clsx"
 
-const GITHUBURL = "https://github.com/SouperLopers"
-const EMAILURL = "contact@sprlpr.ir"
+const GITHUB_URL = "https://github.com/SouperLopers"
+const EMAIL_URL = "info@sprlpr.ir"
 
 export default function ContactUs() {
 	return (
@@ -61,7 +61,7 @@ export default function ContactUs() {
 						)}
 					>
 						<a
-							href={`mailto:${EMAILURL}`}
+							href={`mailto:${EMAIL_URL}`}
 							dir="ltr"
 							className={clsx(
 								"inline-flex items-center gap-2", // flex
@@ -74,7 +74,7 @@ export default function ContactUs() {
 							<HiOutlineEnvelope size={25} />
 						</a>
 						<a
-							href={GITHUBURL}
+							href={GITHUB_URL}
 							target="_blank"
 							rel="noopener noreferrer"
 							dir="ltr"
