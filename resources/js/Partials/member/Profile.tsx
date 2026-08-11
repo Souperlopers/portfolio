@@ -42,6 +42,7 @@ export default function Profile({ info }: { info: Member }) {
 						"ring-primary ring-4", // border
 						"h-24 w-24 md:h-32 md:w-32", // dimension
 						"mb-4", // margin
+						"relative z-10", // add z-index to lift above banner
 						banner ? "md:-mt-16" : "mt-8", // decrease margin if member doesn't have banner
 					)}
 				/>
