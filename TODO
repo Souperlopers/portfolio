@@ -3,9 +3,14 @@ goal: create a portfolio webapp in -99 week and -99 days
 <!-- project -->
 TODO_Z TODO_S different font size problem
 
+<!-- home -->
+TODO_Z change about us section color to make its difference noticable from main background 
+TODO_Z zoom out about us section and check if everythink is alright
+
 <!-- member card -->
 TODO_Z TODO_S at least 3 tags can fit on the member card
 
+TODO_S fix gallery description size in small screens
 TODO_S profile image border in member page placed under banner
 TODO_S fill database
 TODO_S migrate to nextjs (because inertia SSR is broken)
