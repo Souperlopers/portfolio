@@ -61,7 +61,7 @@ export default function MemberCard({
 			{/* info */}
 			<div
 				className={clsx(
-					"h-12 w-full", // dimension
+					"w-full", // dimension
 					"flex flex-col items-center gap-1", // flex
 				)}
 			>
@@ -86,7 +86,7 @@ export default function MemberCard({
 			</div>
 
 			{/* tags */}
-			<div className="min-h-10 w-full">
+			<div className="min-h-10 w-full grow-0 md:grow">
 				<TagsComponent tags={skills} center />
 			</div>
 
