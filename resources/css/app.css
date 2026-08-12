@@ -9,7 +9,7 @@
 	--font-sans:
 		"Figtree", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
 		"Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-	--font-vazir: "vazir", sans-serif;
+	--font-vazir: "vazir", "vazir-fallback", sans-serif;
 
 	/* Custom colors */
 	--color-btn-primary: #0078d4;
@@ -94,4 +94,13 @@
 	font-weight: 700;
 	font-style: normal;
 	font-display: swap;
+}
+
+@font-face {
+	font-family: "vazir-fallback";
+	src: local("Arial");
+	size-adjust: 114.3%;
+	ascent-override: 94.5%;
+	descent-override: 33.5%;
+	line-gap-override: 0%;
 }
