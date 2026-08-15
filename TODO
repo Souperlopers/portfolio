@@ -3,19 +3,23 @@ goal: create a portfolio webapp in -99 week and -99 days
 <!-- project -->
 TODO_Z TODO_S different font size problem
 
-TODO_S fill database
-TODO_S migrate to nextjs (because inertia SSR is broken)
-TODO_S make Header.tsx file smaller
-TODO_S add unique method to asset parameters in migrations
-TODO_S add cycle support to backend
+TODO_S deploy and fill database
 
 <!-- time cycle -->
 TODO_Z enhance cycle graph if needed
 TODO_Z add graph to project
 TODO_Z add graph to member
+TODO_S cycle factory
+TODO_S cycle endpoints
+TODO_S cycle resource
+TODO_S cycle controllers
+
+TODO_S migrate to nextjs (because inertia SSR is broken)
+TODO_S make Header.tsx file smaller
+TODO_S add unique method to asset parameters in migrations
+TODO_S add cycle support to backend
 
 # new features
-
 TODO_S redis
 TODO_S pagination function on frontend
 TODO_Z members panel design
