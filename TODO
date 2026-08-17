@@ -3,7 +3,35 @@ goal: create a portfolio webapp in -99 week and -99 days
 <!-- project -->
 TODO_Z TODO_S different font size problem
 
-TODO_S deploy and fill database
+TODO_Z fix cursor behavior on پروژه‌های بیشتر on home
+TODO_Z fix infinite loading of project item image when there are no images
+TODO_Z i cant see gallery filler in deployed version on souperloper.ir
+TODO_Z create thumbnail for other projects
+TODO_Z cleanup your github
+TODO_Z fix project links: use <a> for external links and <Link> for internal (پیش نمایش)  
+TODO_Z fix project links: make sure when link button are clicked, new page will be opened in a new tab  
+TODO_Z project links: make github and figma english and add icon to them 
+TODO_Z send me description for zahra
+TODO_Z send me avatar for zahra (if you want)
+TODO_Z add tag image of every technology you listed in google sheet
+
+TODO_Z TODO_S add short and long description for weather and gold-trading-app
+TODO_Z TODO_S add figma link to every project (if available)
+
+TODO_S Decrease hero navbar height
+TODO_S Change tamas ba ma to darbareh ma
+TODO_S add project and member tags
+TODO_S only show main part of user contact links
+TODO_S add TTL to fonts (1y)
+TODO_S add TTL to js files (1d)
+TODO_S add سوپرلوپرز to hero description
+TODO_S change about us description
+TODO_S change about us title
+TODO_S make project thumbnail nullable
+TODO_S fix project image decription resource (dont send when null)
+TODO_S deploy projects of portfolio to host
+TODO_S add description for sadra
+TODO_S add avatar for sadra
 
 <!-- time cycle -->
 TODO_Z enhance cycle graph if needed
