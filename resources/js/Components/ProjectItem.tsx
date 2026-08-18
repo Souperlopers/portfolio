@@ -71,8 +71,9 @@ export default function ProjectItem({ projectData }: ProjectItemProps) {
 					className={clsx(
 						"flex flex-col items-stretch", // flex
 						"h-full w-full", // dimension
-						!imgLoaded && "aspect-video", // show 16/9 skeleton
-						imgLoaded ? "block" : "skeleton", // display after loaded
+						projectData.thumbnail &&
+							!imgLoaded &&
+							"skeleton aspect-video", // show 16/9 skeleton
 					)}
 				>
 					{projectData.thumbnail ? (
@@ -82,7 +83,6 @@ export default function ProjectItem({ projectData }: ProjectItemProps) {
 							onLoad={() => setImgLoaded(true)}
 							className={clsx(
 								"max-h-60 sm:max-h-80", // dimension
-								"opacity-80", // basic
 								"object-contain", // object
 							)}
 						/>
