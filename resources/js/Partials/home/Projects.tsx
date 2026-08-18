@@ -53,9 +53,18 @@ export default function Projects({ projects }: { projects: ProjectBrief[] }) {
 			</div>
 
 			{isShowMore && (
-				<div className="ml-1 flex justify-center md:justify-end">
+				<div
+					className={clsx(
+						"flex justify-center md:justify-end", // flex
+					)}
+				>
 					<button
-						className="text-primary hover:text-btn-primary inline-flex items-center gap-1 text-[15px] duration-300"
+						className={clsx(
+							"inline-flex items-center gap-1", // flex
+							"text-primary text-[15px]", // text
+							"hover:text-btn-primary hover:cursor-pointer", // hover
+							"transition-colors duration-300", // animation
+						)}
 						type="button"
 						onClick={() => setShowMoreCount((prev) => prev + 1)}
 					>
