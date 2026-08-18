@@ -40,7 +40,7 @@ export default function Projects({ projects }: { projects: ProjectBrief[] }) {
 			<div
 				className={clsx(
 					"flex flex-col items-center", // flex (small screen)
-					"sm:grid sm:grid-cols-1 sm:gap-8 xl:grid-cols-2", // grid
+					"sm:grid sm:grid-cols-1 sm:gap-8 xl:grid-cols-2 gap-5", // grid
 				)}
 			>
 				{visibleProjects.map((project, index) => (
