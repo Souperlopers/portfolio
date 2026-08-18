@@ -1,20 +1,23 @@
 goal: create a portfolio webapp in -99 week and -99 days
 
 <!-- project -->
+
 TODO_Z TODO_S different font size problem
 
-TODO_Z i cant see gallery filler in deployed version on souperloper.ir
-TODO_Z create thumbnail for other projects
 TODO_Z cleanup your github
-TODO_Z project links: make github and figma english and add icon to them 
+
+TODO_Z add tag image of every technology you listed in google sheet
+
+TODO_Z create thumbnail for other projects
+
 TODO_Z send me description for zahra
 TODO_Z send me avatar for zahra (if you want)
-TODO_Z add tag image of every technology you listed in google sheet
 TODO_Z send project build to sadra
 
 TODO_Z TODO_S add short and long description for weather and gold-trading-app
 TODO_Z TODO_S add figma link to every project (if available)
 
+TODO_S project links: make github and figma english and add icon to them
 TODO_S remove نمایش پروژه های بیشتر in home page
 TODO_S Decrease hero navbar height
 TODO_S Change tamas ba ma to darbareh ma
@@ -32,6 +35,7 @@ TODO_S add description for sadra
 TODO_S add avatar for sadra
 
 <!-- time cycle -->
+
 TODO_Z enhance cycle graph if needed
 TODO_Z add graph to project
 TODO_Z add graph to member
@@ -46,6 +50,7 @@ TODO_S add unique method to asset parameters in migrations
 TODO_S add cycle support to backend
 
 # new features
+
 TODO_S redis
 TODO_S pagination function on frontend
 TODO_Z members panel design

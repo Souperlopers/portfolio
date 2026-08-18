@@ -13,9 +13,6 @@ export default function ProjectImages({ images }: { images: ProjectImage[] }) {
 	const image = []
 	const hasImages = images.length ? true : false
 
-	// // dont show gallery if there are no images
-	if (!images.length) return null
-
 	// make project images compatible to gallery library
 	const items: GalleryItem[] = images.map((image, index) => ({
 		original: image.url,
@@ -56,7 +53,7 @@ export default function ProjectImages({ images }: { images: ProjectImage[] }) {
 			<>
 				<div
 					className={clsx(
-						!isLoaded && "aspect-video skeleton", // skeleton
+						!isLoaded && "skeleton aspect-video", // skeleton
 						"flex flex-col items-stretch justify-center", // flex
 						"h-full w-full", // dimension
 					)}
@@ -72,7 +69,7 @@ export default function ProjectImages({ images }: { images: ProjectImage[] }) {
 										"image-gallery-thumbnail-image", // default library for thumbnail
 										"rounded-md", // border
 									)
-									: clsx(
+								: clsx(
 										"image-gallery-image", // default library
 										"rounded-2xl", // border
 									),
