@@ -35,7 +35,6 @@ export default function ProjectItem({ projectData }: ProjectItemProps) {
 				className={clsx(
 					"flex grow flex-col gap-3 sm:flex-row", // flex
 					"items-center justify-start sm:items-start sm:justify-center", // flex justify & align
-					"", // dimension
 				)}
 			>
 				{/* info */}
@@ -47,7 +46,7 @@ export default function ProjectItem({ projectData }: ProjectItemProps) {
 				>
 					<h3
 						className={clsx(
-							"text-3xl font-semibold", // text dimension
+							"md:text-3xl text-xl font-semibold", // text dimension
 							"text-base-content", // text color
 						)}
 					>
