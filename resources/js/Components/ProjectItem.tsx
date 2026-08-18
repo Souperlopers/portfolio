@@ -46,7 +46,7 @@ export default function ProjectItem({ projectData }: ProjectItemProps) {
 				>
 					<h3
 						className={clsx(
-							"md:text-3xl text-xl font-semibold", // text dimension
+							"text-xl font-semibold md:text-3xl", // text dimension
 							"text-base-content", // text color
 						)}
 					>
@@ -93,6 +93,7 @@ export default function ProjectItem({ projectData }: ProjectItemProps) {
 								"rounded-xl", // container
 								"flex items-center justify-center", // flex
 								"bg-base-100/70", // background color
+								"aspect-video lg:aspect-auto",
 							)}
 						>
 							<CiImageOn
