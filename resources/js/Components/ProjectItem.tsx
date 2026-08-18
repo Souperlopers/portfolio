@@ -108,6 +108,7 @@ export default function ProjectItem({ projectData }: ProjectItemProps) {
 
 			<Link
 				href={projectData.url}
+				target="_blank"
 				className={clsx(
 					"px-3.75 py-3", // padding
 					"rounded-lg", // container

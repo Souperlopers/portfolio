@@ -9,7 +9,7 @@ export default function DetailButtons({ links }: { links: ProjectLinks }) {
 	return (
 		<>
 			{linkLoop.map((link) => (
-				<a key={link[0]} href={link[1]}>
+				<a key={link[0]} href={link[1]} target="_blank">
 					<button
 						className={clsx(
 							"w-24 md:w-32", // dimension

@@ -62,6 +62,7 @@ export default function ContactUs() {
 					>
 						<a
 							href={`mailto:${EMAIL_URL}`}
+							target="_blank"
 							dir="ltr"
 							className={clsx(
 								"inline-flex items-center gap-2", // flex
