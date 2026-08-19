@@ -54,7 +54,7 @@ export default function Projects({ projects }: { projects: ProjectBrief[] }) {
 				))}
 			</div>
 
-			{SHOW_ALL && isShowMore && (
+			{!SHOW_ALL && isShowMore && (
 				<div
 					className={clsx(
 						"flex justify-center md:justify-end", // flex
