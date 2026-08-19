@@ -18,7 +18,7 @@ class ProjectimageFactory extends Factory
     {
         return [
             'priority' => fake()->randomElement([fake()->numberBetween(-128, 127), 0]),
-            'path' => '/assets/images/projects/' . fake()->randomElement(range(1, 7)) . '.png',
+            'path' => fake()->randomElement(range(1, 7)) . '.png',
             'description' => fake()->paragraph(),
             'created_at' => fake()->time(),
         ];
