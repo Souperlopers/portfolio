@@ -65,13 +65,13 @@ export default function ContactUs() {
 							target="_blank"
 							dir="ltr"
 							className={clsx(
-								"inline-flex items-center gap-2", // flex
+								"inline-flex items-stretch gap-2", // flex
 								"text-base-content/90 text-lg md:text-xl", // text
 								"hover:text-primary hover:-translate-y-1", // hover
 								"transition-all duration-300", // animation
 							)}
 						>
-							ایمیل
+							<p>Email</p>
 							<HiOutlineEnvelope size={25} />
 						</a>
 						<a
@@ -80,13 +80,13 @@ export default function ContactUs() {
 							rel="noopener noreferrer"
 							dir="ltr"
 							className={clsx(
-								"inline-flex items-center gap-2", // flex
+								"inline-flex items-stretch gap-2", // flex
 								"text-base-content/90 text-lg md:text-xl", // text
 								"hover:text-primary hover:-translate-y-1", // hover
 								"transition-all duration-300", // animation
 							)}
 						>
-							گیت‌هاب
+							<p>Github</p>
 							<SiGithub size={25} />
 						</a>
 					</div>
