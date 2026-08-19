@@ -53,7 +53,7 @@ class MemberResource extends JsonResource
 
         // append thumbnail if there is any
         if ($this->thumbnail) {
-            $base['thumbnail'] = request()->schemeAndHttpHost() . $this->thumbnail;
+            $base['thumbnail'] = request()->schemeAndHttpHost() .'/assets/images/members/'. $this->thumbnail;
         }
 
         // append contributions if there are any

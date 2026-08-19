@@ -16,7 +16,7 @@ class ProjectImageResource extends JsonResource
 	{
 		$base = [
 			'id' => $this->id,
-			'url' => request()->schemeAndHttpHost() . $this->path,
+			'url' => request()->schemeAndHttpHost() .'/assets/images/projects/'. $this->path,
 			'description' => $this->description,
 		];
 

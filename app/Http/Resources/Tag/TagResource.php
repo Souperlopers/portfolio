@@ -20,7 +20,7 @@ class TagResource extends JsonResource
 		$base = [
 			'id' => $this->id,
 			'title' => $matches['title'],
-			'path' => '/assets/tags/' . ($this->alt_file ?? $this->name),
+			'path' => '/assets/images/tags/' . ($this->alt_file ?? $this->name),
 		];
 
         foreach (
