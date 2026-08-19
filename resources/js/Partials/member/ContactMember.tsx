@@ -1,6 +1,6 @@
 import { Mail } from "lucide-react"
 import { FaGithub, FaLinkedin } from "react-icons/fa"
-import { HiArrowLongLeft } from "react-icons/hi2"
+import { HiArrowLongRight } from "react-icons/hi2"
 import { IoCall } from "react-icons/io5"
 import { SiFigma } from "react-icons/si"
 import { MemberContactLink } from "@/types/member"
@@ -45,25 +45,25 @@ export default function ContactMember({
 }
 
 function ContactIcon({
-	key,
+	name,
 	size,
 	className,
 }: {
-	key: keyof MemberContactLink
+	name: keyof MemberContactLink
 	size: number
 	className: string
 }) {
 	return {
-		phone: <IoCall size={size} className={className} />,
-		email: <Mail size={size} className={className} />,
-		linkedin: <FaLinkedin size={size} className={className} />,
-		github: <FaGithub size={size} className={className} />,
-		figma: <SiFigma size={size} className={className} />,
-	}[key]
+		Phone: <IoCall size={size} className={className} />,
+		Email: <Mail size={size} className={className} />,
+		Linkedin: <FaLinkedin size={size} className={className} />,
+		Github: <FaGithub size={size} className={className} />,
+		Figma: <SiFigma size={size} className={className} />,
+	}[name]
 }
 
 function ContactLink({ name, url }: { name: string; url: string }) {
-	const title = name === "Phone" || name === "Email" ? url : new URL(url).host
+	const value = name === "Phone" || name === "Email" ? url : new URL(url).host
 
 	const href =
 		name === "Phone"
@@ -109,7 +109,7 @@ function ContactLink({ name, url }: { name: string; url: string }) {
 						)}
 					>
 						<ContactIcon
-							key={name as keyof MemberContactLink}
+							name={name as keyof MemberContactLink}
 							size={20}
 							className="md:h-5.5 md:w-5.5"
 						/>
@@ -138,12 +138,12 @@ function ContactLink({ name, url }: { name: string; url: string }) {
 								"transition-colors duration-300", // animation
 							)}
 						>
-							{title}
+							{value}
 						</span>
 					</div>
 				</div>
 
-				<HiArrowLongLeft
+				<HiArrowLongRight
 					size={22}
 					className={clsx(
 						"shrink-0",

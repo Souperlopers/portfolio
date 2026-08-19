@@ -11,11 +11,11 @@ export type MemberBrief = {
 }
 
 type MemberContactLink = {
-	phone?: string
-	email?: string
-	linkedin?: string
-	github?: string
-	figma?: string
+	Phone?: string
+	Email?: string
+	Linkedin?: string
+	Github?: string
+	Figma?: string
 }
 
 export type Member = {
