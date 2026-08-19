@@ -12,14 +12,14 @@ TODO_Z send project build to sadra (weather, todo, ...)
 TODO_S deploy projects of portfolio to host
 
 # sadra tasks
-TODO_S hamburger menu items fix
-TODO_S Decrease hero navbar height
-TODO_S change about us description
 TODO_S add project and member tags
-TODO_S add description for sadra
-TODO_S add avatar for sadra
 TODO_S add TTL to fonts (1y)
 TODO_S add TTL to js files (1d)
+TODO_S Decrease hero navbar height
+
+TODO_S change about us description
+TODO_S add description for sadra
+TODO_S add avatar for sadra
 
 <!-- time cycle -->
 
