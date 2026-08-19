@@ -24,11 +24,11 @@ class MemberResource extends JsonResource
 		
 		foreach (
             [
-				'phone'    => 'phone' ,
-				'email'    => 'email' ,
-				'linkedin' => 'linkedin_url',
-				'github'   => 'github_url' ,
-				'figma'    => 'figma' ,
+				'Phone'    => 'phone' ,
+				'Email'    => 'email' ,
+				'Linkedin' => 'linkedin_url',
+				'Github'   => 'github_url' ,
+				'Figma'    => 'figma' ,
             ] as $res_key => $db_key
         ) {
 			if ($value = $this->{$db_key})

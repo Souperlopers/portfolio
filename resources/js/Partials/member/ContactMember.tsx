@@ -31,6 +31,7 @@ export default function ContactMember({
 			</h2>
 
 			<ul
+				dir="ltr"
 				className={clsx(
 					"grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-5", // flex
 				)}
@@ -62,12 +63,12 @@ function ContactIcon({
 }
 
 function ContactLink({ name, url }: { name: string; url: string }) {
-	const title = name === "phone" || name === "email" ? url : new URL(url).host
+	const title = name === "Phone" || name === "Email" ? url : new URL(url).host
 
 	const href =
-		name === "phone"
+		name === "Phone"
 			? `tel:${url}`
-			: name === "email"
+			: name === "Email"
 				? `mailto:${url}`
 				: url
 
@@ -86,7 +87,7 @@ function ContactLink({ name, url }: { name: string; url: string }) {
 					"border-primary/10 border", // border
 					"shadow-[0_10px_30px_rgba(0,0,0,.25)]", // shadow
 					"transition-all duration-300 ease-in-out will-change-transform", // animation
-					"cursor-pointer",
+					"cursor-pointer", // cursor
 					"hover:border-primary/25 hover:-translate-y-1 hover:shadow-[0_16px_40px_rgba(47,91,255,.15)]", // hover
 				)}
 			>
