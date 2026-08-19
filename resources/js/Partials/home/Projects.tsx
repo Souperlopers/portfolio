@@ -6,11 +6,13 @@ import clsx from "clsx"
 import EmptyProjects from "@/Components/EmptyProjects"
 
 export default function Projects({ projects }: { projects: ProjectBrief[] }) {
+	const SHOW_ALL = true // if set to false, a 'show more' button will appear
+	
 	const [showMoreCount, setShowMoreCount] = useState(1)
 	const projectsCount = projects.length
 
 	const isShowMore = projectsCount > 2 && projectsCount > 2 * showMoreCount
-	const visibleProjects = projects.slice(0, 2 * showMoreCount)
+	const visibleProjects = SHOW_ALL ? projects : projects.slice(0, 2 * showMoreCount)
 
 	return (
 		<section
@@ -40,7 +42,7 @@ export default function Projects({ projects }: { projects: ProjectBrief[] }) {
 			<div
 				className={clsx(
 					"flex flex-col items-center", // flex (small screen)
-					"sm:grid sm:grid-cols-1 sm:gap-8 xl:grid-cols-2", // grid
+					"sm:grid sm:grid-cols-1 sm:gap-8 xl:grid-cols-2 gap-5", // grid
 				)}
 			>
 				{visibleProjects.map((project, index) => (
@@ -52,10 +54,19 @@ export default function Projects({ projects }: { projects: ProjectBrief[] }) {
 				))}
 			</div>
 
-			{isShowMore && (
-				<div className="ml-1 flex justify-center md:justify-end">
+			{SHOW_ALL && isShowMore && (
+				<div
+					className={clsx(
+						"flex justify-center md:justify-end", // flex
+					)}
+				>
 					<button
-						className="text-primary hover:text-btn-primary inline-flex items-center gap-1 text-[15px] duration-300"
+						className={clsx(
+							"inline-flex items-center gap-1", // flex
+							"text-primary text-[15px]", // text
+							"hover:text-btn-primary hover:cursor-pointer", // hover
+							"transition-colors duration-300", // animation
+						)}
 						type="button"
 						onClick={() => setShowMoreCount((prev) => prev + 1)}
 					>

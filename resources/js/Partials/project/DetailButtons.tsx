@@ -1,22 +1,54 @@
 import { ProjectLinks } from "@/types/project"
-import { Link } from "@inertiajs/react"
+import { FaGithub } from "react-icons/fa"
+import { SiFigma } from "react-icons/si"
+import clsx from "clsx"
 
-export default function DetailButtons({ links }: { links: ProjectLinks }) {
-	const linkLoop = Object.entries(links).filter(
-		(link: string[]) => link[1] !== null,
-	)
-
+export default function DetailButtons({
+	links = {},
+}: {
+	links?: ProjectLinks
+}) {
 	return (
 		<>
-			{linkLoop.map((link) => (
-				<Link key={link[0]} href={link[1]}>
+			{Object.entries(links).map(([key, value]) => (
+				<a key={key} href={value} target="_blank">
 					<button
-						className={`bg-btn-primary hover:bg-btn-hover w-24 rounded-lg px-3 py-2 text-[15px] duration-300 md:w-32`}
+						className={clsx(
+							"h-full w-fit", // dimension
+							"px-3 py-2", // padding
+							"bg-btn-primary rounded-lg text-[15px]", // base
+							"hover:bg-btn-hover hover:cursor-pointer", // hover
+						)}
 					>
-						<span>{link[0]}</span>
+						<span
+							className={clsx(
+								"flex flex-row-reverse items-center gap-2", // flex
+								"text-2xl", // text
+							)}
+						>
+							{keyMap[key as keyof ProjectLinks]}
+						</span>
 					</button>
-				</Link>
+				</a>
 			))}
 		</>
 	)
+}
+
+const keyMap: Record<keyof ProjectLinks, JSX.Element> = {
+	preview: (
+		<>
+			<p>پیش‌نمایش</p>
+		</>
+	),
+	github: (
+		<>
+			<p className="pt-1">Github</p> <FaGithub size={25} />
+		</>
+	),
+	figma: (
+		<>
+			<p className="pt-1">Figma</p> <SiFigma size={25} />
+		</>
+	),
 }

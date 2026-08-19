@@ -7,17 +7,24 @@ use Illuminate\Http\Resources\Json\JsonResource;
 
 class ProjectImageResource extends JsonResource
 {
-    /**
-     * Transform the resource into an array.
-     *
-     * @return array<string, mixed>
-     */
-    public function toArray(Request $request): array
-    {
-        return [
-            'id' => $this->id,
-            'url' => request()->schemeAndHttpHost() . $this->path,
+	/**
+	 * Transform the resource into an array.
+	 *
+	 * @return array<string, mixed>
+	 */
+	public function toArray(Request $request): array
+	{
+		$base = [
+			'id' => $this->id,
+			'url' => request()->schemeAndHttpHost() .'/assets/images/projects/'. $this->path,
 			'description' => $this->description,
-        ];
-    }
+		];
+
+		// append description if there is any
+		if ($this->description) {
+			$base['description'] = $this->description;
+		}
+
+		return $base;
+	}
 }

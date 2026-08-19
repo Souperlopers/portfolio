@@ -10,18 +10,21 @@ export type MemberBrief = {
 	skills?: Tag[]
 }
 
+type MemberContactLink = {
+	phone?: string
+	email?: string
+	linkedin?: string
+	github?: string
+	figma?: string
+}
+
 export type Member = {
 	name: string
 	position: string
 	api: string
 	banner?: string
 	description?: string
-	contact?: {
-		"شماره تماس"?: string
-		ایمیل?: string
-		لینکدین?: string
-		گیت‌هاب?: string
-	}
+	contact?: MemberContactLink
 	preview?: string
 	thumbnail?: string
 	contributions?: ProjectBrief[]

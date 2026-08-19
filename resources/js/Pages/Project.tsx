@@ -42,7 +42,10 @@ export default function Project({ project }: ProjectPageProps) {
 						معرفی
 					</h2>
 					<div
-						className={`flex flex-col items-start justify-between gap-5 rounded lg:flex-row`}
+						className={clsx(
+							"flex flex-col items-start justify-between gap-5 lg:flex-row", // flex
+							"rounded", // border
+						)}
 					>
 						<Info info={projectData} />
 						<Images images={images} />

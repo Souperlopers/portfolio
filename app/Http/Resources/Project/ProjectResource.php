@@ -24,12 +24,13 @@ class ProjectResource extends JsonResource
 
 		foreach (
 			[
-				'پیش‌نمایش' => 'url',
-				'گیت‌هاب' => 'github',
-				'فیگما' => 'figma',
-			] as $key => $value
+				'preview' => 'url',
+				'github' => 'github',
+				'figma' => 'figma',
+			] as $res_key => $res_value
 		) {
-			$base['links'][$key] = $this->{$value};
+			if ($value = $this->{$res_value})
+				$base['links'][$res_key] = $value;
 		};
 
 		// append description if there is any
@@ -39,7 +40,7 @@ class ProjectResource extends JsonResource
 
 		// append thumbnail if there is any
 		if ($this->thumbnail) {
-			$base['thumbnail'] = request()->schemeAndHttpHost() . $this->thumbnail;
+			$base['thumbnail'] = request()->schemeAndHttpHost() . '/assets/images/projects/thumbnails/' . $this->thumbnail;
 		}
 
 		// append techs if there are any

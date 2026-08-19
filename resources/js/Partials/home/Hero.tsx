@@ -1,6 +1,8 @@
 import { useState } from "react"
 import { clsx } from "clsx/lite"
 
+const HERO_DESCRIPTION = "سوپرلوپرز؛ تولیدکننده انواع نرم‌افزارهای اداری و تجاری"
+
 export default function Hero() {
 	const [imagesLoadedCount, setImagesLoadedCount] = useState(0)
 	const allLoaded = imagesLoadedCount >= 6
@@ -44,14 +46,14 @@ export default function Hero() {
 			{/* describtion */}
 			<p
 				className={clsx(
-					"absolute z-50 w-3/4 -translate-x-1/2", // base
+					"absolute z-50 -translate-x-1/2", // base
 					"text-base-content text-center text-2xl text-balance sm:text-3xl", // text
-					"lg:w-[300px] xl:w-full", // dimension
+					"w-3/4 lg:w-[400px] xl:w-[500px]", // dimension
 					"bottom-36 lg:bottom-40", // vertical position
 					"left-1/2 lg:left-[calc(50%+280px)] xl:left-[calc(50%+350px)] 2xl:left-[calc(50%+490px)]", // horizontal position
 				)}
 			>
-				تولیدکننده انواع نرم‌افزارهای اداری و تجاری
+				{HERO_DESCRIPTION}
 			</p>
 
 			{/* blue section */}

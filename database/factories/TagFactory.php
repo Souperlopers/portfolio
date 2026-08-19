@@ -19,6 +19,7 @@ class TagFactory extends Factory
 	{
 		return [
 			'name' => fake()->unique()->randomElement(Tag::NAMES),
+			'alt_file' => fake()->randomElement([null, fake()->randomElement(Tag::NAMES)]),
 			'type' => fake()->randomElement(Tag::TYPES),
 			'priority' => fake()->randomElement([fake()->numberBetween(-128, 127), 0]),
 			'version' => fake()->optional()->semver(true, true),

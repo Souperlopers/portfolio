@@ -35,7 +35,6 @@ export default function ProjectItem({ projectData }: ProjectItemProps) {
 				className={clsx(
 					"flex grow flex-col gap-3 sm:flex-row", // flex
 					"items-center justify-start sm:items-start sm:justify-center", // flex justify & align
-					"", // dimension
 				)}
 			>
 				{/* info */}
@@ -47,7 +46,7 @@ export default function ProjectItem({ projectData }: ProjectItemProps) {
 				>
 					<h3
 						className={clsx(
-							"text-3xl font-semibold", // text dimension
+							"text-xl font-semibold md:text-3xl", // text dimension
 							"text-base-content", // text color
 						)}
 					>
@@ -71,8 +70,10 @@ export default function ProjectItem({ projectData }: ProjectItemProps) {
 					className={clsx(
 						"flex flex-col items-stretch", // flex
 						"h-full w-full", // dimension
-						!imgLoaded && "aspect-video", // show 16/9 skeleton
-						imgLoaded ? "block" : "skeleton", // display after loaded
+						projectData.thumbnail &&
+							!imgLoaded &&
+							"skeleton aspect-video", // show 16/9 skeleton
+						projectData.thumbnail && imgLoaded && "block",
 					)}
 				>
 					{projectData.thumbnail ? (
@@ -82,7 +83,6 @@ export default function ProjectItem({ projectData }: ProjectItemProps) {
 							onLoad={() => setImgLoaded(true)}
 							className={clsx(
 								"max-h-60 sm:max-h-80", // dimension
-								"opacity-80", // basic
 								"object-contain", // object
 							)}
 						/>
@@ -93,6 +93,7 @@ export default function ProjectItem({ projectData }: ProjectItemProps) {
 								"rounded-xl", // container
 								"flex items-center justify-center", // flex
 								"bg-base-100/70", // background color
+								"aspect-video lg:aspect-auto",
 							)}
 						>
 							<CiImageOn
@@ -108,6 +109,7 @@ export default function ProjectItem({ projectData }: ProjectItemProps) {
 
 			<Link
 				href={projectData.url}
+				target="_blank"
 				className={clsx(
 					"px-3.75 py-3", // padding
 					"rounded-lg", // container

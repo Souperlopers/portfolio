@@ -74,9 +74,9 @@ export default function Hamburger({
 				tabIndex={-1}
 				className={clsx(
 					isOpen ? "block" : "hidden", // toggling logic
-					"text-lg", // text
+					"text-lg text-nowrap", // text
 					"menu-xl menu dropdown-content", // daisyui menu
-					"min-w-56", // demension
+					"w-fit", // demension
 					"mt-3 p-1.5", // padding and margin
 					"left-0", // position
 					"rounded-box bg-base-100 shadow", // style
@@ -86,7 +86,10 @@ export default function Hamburger({
 					<li key={navEl.id} role="none">
 						<button
 							role="menuitem"
-							className="pointer-events-auto w-full"
+							className={clsx(
+								"pointer-events-auto w-full", //
+								"justify-between gap-4", // flex
+							)}
 							onClick={(e) => {
 								e.preventDefault()
 								clickHandler(navEl)

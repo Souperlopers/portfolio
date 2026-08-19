@@ -16,7 +16,8 @@ return new class extends Migration
             $table->ulid('id')->primary();
             $table->tinyInteger('priority')->default(0)->index();
             $table->enum("type", Tag::TYPES)->index();
-            $table->string("name")->index()->unique()->index();
+            $table->string("name")->unique()->index();
+            $table->string("alt_file")->index()->nullable();
             $table->string("version")->nullable();
         });
     }

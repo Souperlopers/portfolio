@@ -93,6 +93,7 @@ export default function MemberCard({
 			{/* button */}
 			<Link
 				href={url}
+				target="_blank"
 				className={clsx(
 					"w-full", // dimension
 					"rounded-lg", // container
