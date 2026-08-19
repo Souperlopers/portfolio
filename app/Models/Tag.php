@@ -14,6 +14,12 @@ class Tag extends Model
 
 	public const TYPES = ['os', 'lang', 'framework', 'lib', 'webserver', 'db', 'tool']; // change frontend types if modified
 	public const NAMES = [
+		'Axios.svg',
+		'CSS.svg',
+		'Daisy UI.svg',
+		'InertiaJS.svg',
+		'ViteJS.svg',
+		'React Router.svg',
 		'Framer.svg',
 		'Javascript.svg',
 		'Laravel.svg',

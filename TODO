@@ -4,7 +4,6 @@ goal: create a portfolio webapp in -99 week and -99 days
 		 		zahra
 #######################################-->
 
-TODO_Z add weather and goldapp tags to sheet
 TODO_Z send sadra description for zahra
 TODO_Z send sadra avatar for zahra (if you want)
 TODO_Z TODO_S add figma link to every project (if available)
@@ -13,14 +12,17 @@ TODO_Z TODO_S add figma link to every project (if available)
 		 dependent on each other
 #######################################-->
 
-TODO_Z send project build to sadra (weather, todo, ...)
+TODO_Z send project build to sadra: weather, clock, store
 TODO_S deploy projects of portfolio to host
+
+TODO_Z add weather and goldapp tags to sheet
+TODO_S add project tags
 
 <!--######################################
 		 		sadra
 #######################################-->
 
-TODO_S add project and member tags
+TODO_S add member tags
 TODO_S change about us description
 TODO_S add description for sadra
 TODO_S add avatar for sadra

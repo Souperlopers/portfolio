@@ -11,7 +11,13 @@ export type TagNames =
 	| "Typescript"
 	| "Redux"
 	| "REST API"
-	| "React Toastify"// change backend types if modified
+	| "React Toastify" 
+	| "Axios"
+	| "CSS"
+	| "Daisy UI"
+	| "InertiaJS"
+	| "ViteJS"
+	| "React Router" // change backend types if modified
 
 export type TagTypes =
 	"os" | "lang" | "framework" | "lib" | "webserver" | "db" | "tool" // change backend types if modified
