@@ -48,7 +48,7 @@ class MemberResource extends JsonResource
 
         // append banner if there is any
         if ($this->banner) {
-            $base['banner'] = request()->schemeAndHttpHost() . $this->banner;
+            $base['banner'] = request()->schemeAndHttpHost() .'/assets/images/members/banner/'. $this->banner;
         }
 
         // append thumbnail if there is any
