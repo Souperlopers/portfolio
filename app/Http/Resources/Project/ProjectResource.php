@@ -25,11 +25,12 @@ class ProjectResource extends JsonResource
 		foreach (
 			[
 				'پیش‌نمایش' => 'url',
-				'گیت‌هاب' => 'github',
-				'فیگما' => 'figma',
-			] as $key => $value
+				'Github' => 'github',
+				'Figma' => 'figma',
+			] as $res_key => $res_value
 		) {
-			$base['links'][$key] = $this->{$value};
+			if($value = $this->{$res_value})
+				$base['links'][$res_key] = $value;
 		};
 
 		// append description if there is any

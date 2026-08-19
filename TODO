@@ -1,8 +1,6 @@
 goal: create a portfolio webapp in -99 week and -99 days
 
-TODO_Z TODO_S different font size problem
 TODO_Z add tag image of every technology you listed in google sheet
-TODO_Z TODO_S add short and long description for weather and gold-trading-app
 
 TODO_Z send sadra description for zahra
 TODO_Z send sadra avatar for zahra (if you want)
@@ -10,11 +8,11 @@ TODO_Z send project build to sadra (weather, todo, ...)
 
 TODO_Z TODO_S add figma link to every project (if available)
 
-TODO_S change about us description
 TODO_S fix project image decription resource (dont send when null)
 TODO_S deploy projects of portfolio to host
 TODO_S project links: make github and figma english and add icon to them
 TODO_S Decrease hero navbar height
+TODO_S change about us description
 TODO_S add project and member tags
 TODO_S add description for sadra
 TODO_S add avatar for sadra
