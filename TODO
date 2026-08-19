@@ -11,8 +11,6 @@ TODO_Z send project build to sadra (weather, todo, ...)
 TODO_Z TODO_S add figma link to every project (if available)
 
 TODO_S change about us description
-TODO_S change about us title
-TODO_S make project thumbnail nullable
 TODO_S fix project image decription resource (dont send when null)
 TODO_S deploy projects of portfolio to host
 TODO_S project links: make github and figma english and add icon to them
