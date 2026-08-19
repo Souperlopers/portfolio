@@ -1,16 +1,18 @@
 goal: create a portfolio webapp in -99 week and -99 days
 
+# zahra tasks
 TODO_Z add tag image of every technology you listed in google sheet
-
 TODO_Z send sadra description for zahra
 TODO_Z send sadra avatar for zahra (if you want)
-TODO_Z send project build to sadra (weather, todo, ...)
 
+# dependent on each other 
 TODO_Z TODO_S add figma link to every project (if available)
 
 TODO_Z send project build to sadra (weather, todo, ...)
 TODO_S deploy projects of portfolio to host
-TODO_S project links: make github and figma english and add icon to them
+
+# sadra tasks
+TODO_S hamburger menu items fix
 TODO_S Decrease hero navbar height
 TODO_S change about us description
 TODO_S add project and member tags

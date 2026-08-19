@@ -24,9 +24,9 @@ class ProjectResource extends JsonResource
 
 		foreach (
 			[
-				'پیش‌نمایش' => 'url',
-				'Github' => 'github',
-				'Figma' => 'figma',
+				'preview' => 'url',
+				'github' => 'github',
+				'figma' => 'figma',
 			] as $res_key => $res_value
 		) {
 			if($value = $this->{$res_value})
