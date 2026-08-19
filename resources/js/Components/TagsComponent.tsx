@@ -36,7 +36,7 @@ export default function TagsComponent({
 							className={clsx(
 								"h-4 w-4", // dimension
 							)}
-							src={`/assets/tags/${tag.title}.svg`}
+							src={tag.path}
 							alt={tag.title}
 							onError={() => setHasIcon(false)}
 						/>

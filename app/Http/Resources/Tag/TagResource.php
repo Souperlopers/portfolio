@@ -14,23 +14,23 @@ class TagResource extends JsonResource
      */
     public function toArray(Request $request): array
     {
-        $base = [
-            'id' => $this->id,
-            'title' => $this->name,
+		$pattern = '/(?<title>.*)\.(?:[^\.]+)/';
+		preg_match($pattern, $this->name, $matches);
 
-            // for debug
-            // 'priority' => (int) isset($this->pivot->priority_for_taggable)
-            //     ? $this->pivot->priority_for_taggable
-            //     : $this->priority,
-        ];
+		$base = [
+			'id' => $this->id,
+			'title' => $matches['title'],
+			'path' => '/assets/tags/' . ($this->alt_file ?? $this->name),
+		];
 
         foreach (
             [
                 'type',
                 'version',
-            ] as $key => $value
+            ] as $res_key => $db_key
         ) {
-            $base[is_string($key) ? $key : $value] = $this->{$value};
+			if($value = $this->{$db_key})
+				$base[is_string($res_key) ? $res_key : $db_key] = $value;
         };
 
         return $base;

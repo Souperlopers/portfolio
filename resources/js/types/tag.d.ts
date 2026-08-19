@@ -19,6 +19,7 @@ export type TagTypes =
 export type Tag = {
 	id: string
 	title: TagNames
+	path: string
 	type: TagTypes
 	version?: string
 }
