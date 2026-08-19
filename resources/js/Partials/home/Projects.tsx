@@ -6,11 +6,13 @@ import clsx from "clsx"
 import EmptyProjects from "@/Components/EmptyProjects"
 
 export default function Projects({ projects }: { projects: ProjectBrief[] }) {
+	const SHOW_ALL = true // if set to false, a 'show more' button will appear
+	
 	const [showMoreCount, setShowMoreCount] = useState(1)
 	const projectsCount = projects.length
 
 	const isShowMore = projectsCount > 2 && projectsCount > 2 * showMoreCount
-	const visibleProjects = projects.slice(0, 2 * showMoreCount)
+	const visibleProjects = SHOW_ALL ? projects : projects.slice(0, 2 * showMoreCount)
 
 	return (
 		<section
@@ -52,7 +54,7 @@ export default function Projects({ projects }: { projects: ProjectBrief[] }) {
 				))}
 			</div>
 
-			{isShowMore && (
+			{SHOW_ALL && isShowMore && (
 				<div
 					className={clsx(
 						"flex justify-center md:justify-end", // flex
