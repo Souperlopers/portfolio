@@ -19,11 +19,6 @@ class ProjectBriefResource extends JsonResource
             'id' => $this->slug,
             'title' => $this->name,
             'url' => request()->schemeAndHttpHost() . '/projects/' . $this->slug,
-
-            // for debug
-            // 'priority' => (int) isset($this->pivot->project_priority_for_member)
-            //     ? $this->pivot->project_priority_for_member
-            //     : $this->priority,
         ];
 
 		// append description if there is any
@@ -33,7 +28,7 @@ class ProjectBriefResource extends JsonResource
 
         // append thumbnail if there is any
         if ($this->thumbnail) {
-            $base['thumbnail'] = request()->schemeAndHttpHost() . $this->thumbnail;
+            $base['thumbnail'] = request()->schemeAndHttpHost() .'/assets/images/projects/thumbnails/'. $this->thumbnail;
         }
 
         // append techs if there are any

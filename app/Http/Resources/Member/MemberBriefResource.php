@@ -20,16 +20,11 @@ class MemberBriefResource extends JsonResource
             'name' => $this->name,
             'position' => $this->position,
             'url' => request()->schemeAndHttpHost() . '/' . $this->slug,
-
-            // // for debug
-            // 'priority' => (int) isset($this->pivot->member_priority_in_project)
-            //     ? $this->pivot->member_priority_in_project
-            //     : $this->priority,
         ];
 
         // append thumbnail if there is any
         if ($t = $this->thumbnail) {
-            $base['thumbnail'] = request()->schemeAndHttpHost() . $t;
+            $base['thumbnail'] = request()->schemeAndHttpHost() .'/assets/images/members/'.  $t;
         }
 
         // append skills if there are any
