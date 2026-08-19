@@ -165,8 +165,8 @@ export default function Header({
 					isBelowHero
 						? clsx(
 								"flex-col justify-center", // flex
-								"h-[calc(100vh-450px)]", // dimension (fill height left from hero)
-								"min-h-[200px]", // avoid conflicting with main content when height is too low
+								"h-[calc(100dvh-450px)]", // dimension (fill height left from hero)
+								"min-h-fit", // avoid conflicting with main content when height is too low
 							)
 						: clsx(
 								"justify-between gap-5 lg:gap-16", // flex
