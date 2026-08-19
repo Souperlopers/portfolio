@@ -57,6 +57,7 @@ export default function ProjectItem({ projectData }: ProjectItemProps) {
 						className={clsx(
 							"text-base", // text dimension
 							"text-base-content/70", // text color
+							"text-justify", // justify
 						)}
 					>
 						{description}
