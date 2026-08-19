@@ -1,14 +1,17 @@
 export type TagNames =
-	| "framer"
-	| "javascript"
-	| "laravel"
-	| "next"
-	| "php"
-	| "react"
-	| "reactquery"
-	| "tailwind"
-	| "tanstack"
-	| "typescript" // change backend types if modified
+	| "Framer"
+	| "Javascript"
+	| "Laravel"
+	| "NextJS"
+	| "PHP"
+	| "ReactJS"
+	| "React Query"
+	| "TailwindCSS"
+	| "Tanstack"
+	| "Typescript"
+	| "Redux"
+	| "REST API"
+	| "React Toastify"// change backend types if modified
 
 export type TagTypes =
 	"os" | "lang" | "framework" | "lib" | "webserver" | "db" | "tool" // change backend types if modified

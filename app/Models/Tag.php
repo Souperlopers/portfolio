@@ -13,7 +13,21 @@ class Tag extends Model
 	public $timestamps = false;
 
 	public const TYPES = ['os', 'lang', 'framework', 'lib', 'webserver', 'db', 'tool']; // change frontend types if modified
-	public const NAMES = ['framer', 'javascript', 'laravel', 'next', 'php', 'react', 'reactquery', 'tailwind', 'tanstack', 'typescript']; // change frontend types if modified
+	public const NAMES = [
+		'Framer.svg',
+		'Javascript.svg',
+		'Laravel.svg',
+		'NextJS.svg',
+		'PHP.svg',
+		'ReactJS.svg',
+		'React Query.svg',
+		'TailwindCSS.svg',
+		'Tanstack.svg',
+		'Typescript.svg',
+		"Redux.svg",
+		"REST API.svg",
+		"React Toastify.webp"
+	]; // change frontend types if modified
 
 	public function sort()
 	{
