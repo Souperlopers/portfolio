@@ -32,8 +32,8 @@ class MemberResource extends JsonResource
             ] as $res_key => $db_key
         ) {
 			if ($value = $this->{$db_key})
-				$base['contact'][] = ['key'=>$res_key, 'value'=>$value];
-        };
+				$base['contact'][$res_key] = $value;
+		};
 
         foreach (
             [

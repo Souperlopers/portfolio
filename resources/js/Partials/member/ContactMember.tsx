@@ -3,34 +3,14 @@ import { FaGithub, FaLinkedin } from "react-icons/fa"
 import { HiArrowLongLeft } from "react-icons/hi2"
 import { IoCall } from "react-icons/io5"
 import { SiFigma } from "react-icons/si"
-import { Member } from "@/types/member"
+import { MemberContactLink } from "@/types/member"
 import clsx from "clsx"
 
 export default function ContactMember({
-	contact = [],
+	contact = {},
 }: {
-	contact: Member["contact"]
+	contact?: MemberContactLink
 }) {
-	const icons = {
-		phone: IoCall,
-		email: Mail,
-		linkedin: FaLinkedin,
-		github: FaGithub,
-		figma: SiFigma,
-	} as const
-
-	const configContact = contact.map(({ key, value }) => ({
-		key,
-		icon: icons[key as keyof typeof icons],
-		value: key === "phone" || key === "email" ? value : new URL(value).host,
-		href:
-			key === "phone"
-				? `tel:${value}`
-				: key === "email"
-					? `mailto:${value}`
-					: value,
-	}))
-
 	return (
 		<div
 			className={clsx(
@@ -55,22 +35,44 @@ export default function ContactMember({
 					"grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-5", // flex
 				)}
 			>
-				{configContact.map(({ key, value, icon, href }) => (
-					<ContactLink
-						key={key}
-						value={value}
-						Icon={icon}
-						href={href}
-					/>
+				{Object.entries(contact).map(([name, url]) => (
+					<ContactLink name={name} url={url} />
 				))}
 			</ul>
 		</div>
 	)
 }
 
-function ContactLink({ key, value, Icon, href }) {
+function ContactIcon({
+	key,
+	size,
+	className,
+}: {
+	key: keyof MemberContactLink
+	size: number
+	className: string
+}) {
+	return {
+		phone: <IoCall size={size} className={className} />,
+		email: <Mail size={size} className={className} />,
+		linkedin: <FaLinkedin size={size} className={className} />,
+		github: <FaGithub size={size} className={className} />,
+		figma: <SiFigma size={size} className={className} />,
+	}[key]
+}
+
+function ContactLink({ name, url }: { name: string; url: string }) {
+	const title = name === "phone" || name === "email" ? url : new URL(url).host
+
+	const href =
+		name === "phone"
+			? `tel:${url}`
+			: name === "email"
+				? `mailto:${url}`
+				: url
+
 	return (
-		<li key={key}>
+		<li key={name}>
 			<a
 				href={href}
 				target="_blank"
@@ -105,7 +107,11 @@ function ContactLink({ key, value, Icon, href }) {
 							"transition-colors duration-300 group-hover:scale-105", // animation
 						)}
 					>
-						<Icon size={20} className="md:h-5.5 md:w-5.5" />
+						<ContactIcon
+							key={name as keyof MemberContactLink}
+							size={20}
+							className="md:h-5.5 md:w-5.5"
+						/>
 					</div>
 
 					<div className={clsx("flex flex-col")}>
@@ -117,7 +123,7 @@ function ContactLink({ key, value, Icon, href }) {
 								"transition-colors duration-300", // animation
 							)}
 						>
-							{key}
+							{name}
 						</span>
 
 						<span
@@ -131,7 +137,7 @@ function ContactLink({ key, value, Icon, href }) {
 								"transition-colors duration-300", // animation
 							)}
 						>
-							{value}
+							{title}
 						</span>
 					</div>
 				</div>
