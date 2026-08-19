@@ -24,14 +24,15 @@ class MemberResource extends JsonResource
 		
 		foreach (
             [
-				'شماره تماس' => 'phone' ,
-				'ایمیل'      => 'email' ,
-				'لینکدین'    => 'linkedin_url',
-				'گیت‌هاب'     => 'github_url' ,
-				'فیگما'      => 'figma' ,
-            ] as $key => $value
+				'phone'    => 'phone' ,
+				'email'    => 'email' ,
+				'linkedin' => 'linkedin_url',
+				'github'   => 'github_url' ,
+				'figma'    => 'figma' ,
+            ] as $res_key => $db_key
         ) {
-            $base['contact'][$key] = $this->{$value};
+			if ($value = $this->{$db_key})
+				$base['contact'][] = ['key'=>$res_key, 'value'=>$value];
         };
 
         foreach (
