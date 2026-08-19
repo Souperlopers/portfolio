@@ -55,7 +55,15 @@ export default function Profile({ info }: { info: Member }) {
 					<span className="text-base-content/80 truncate text-sm md:text-base">
 						{position}
 					</span>
-					<p className="text-base-content/70 mt-1 text-sm leading-relaxed md:text-base">
+					<p
+						className={clsx(
+							"text-base-content/70", // color
+							"text-sm md:text-base", // size
+							"leading-relaxed", // line height
+							"mt-1", // margin
+							"text-justify", // justify
+						)}
+					>
 						{description}
 					</p>
 

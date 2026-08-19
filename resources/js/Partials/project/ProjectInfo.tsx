@@ -1,6 +1,7 @@
 import { Project } from "@/types/project"
 import { DetailButtons } from "@/index"
 import TagsComponent from "@/Components/TagsComponent"
+import clsx from "clsx/lite"
 
 export default function ProjectInfo({ info }: { info: Project }) {
 	const technologies = info.technologies || []
@@ -9,7 +10,13 @@ export default function ProjectInfo({ info }: { info: Project }) {
 			<div className="text-base-content max-w-80 truncate text-3xl font-semibold md:max-w-96">
 				{info.title}
 			</div>
-			<div className="text-secondary-content text-base md:text-lg">
+			<div
+				className={clsx(
+					"text-secondary-content", // color
+					"text-base md:text-lg", // size
+					"text-justify", // justify
+					)}
+			>
 				{info.description}
 			</div>
 			<div className="flex flex-wrap gap-5">
