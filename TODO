@@ -10,8 +10,6 @@ TODO_Z send project build to sadra
 
 TODO_Z TODO_S add figma link to every project (if available)
 
-TODO_S Change tamas ba ma to darbareh ma
-TODO_S add project and member tags
 TODO_S only show main part of user contact links
 TODO_S add سوپرلوپرز to hero description
 TODO_S change about us description
@@ -21,6 +19,7 @@ TODO_S fix project image decription resource (dont send when null)
 TODO_S deploy projects of portfolio to host
 TODO_S project links: make github and figma english and add icon to them
 TODO_S Decrease hero navbar height
+TODO_S add project and member tags
 TODO_S add description for sadra
 TODO_S add avatar for sadra
 TODO_S add TTL to fonts (1y)
