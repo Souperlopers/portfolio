@@ -11,6 +11,7 @@ export default function ContactUs() {
 	return (
 		<section
 			className={clsx(
+				"flex flex-col items-center", // felx
 				"h-fit w-full", // dimension
 				"bg-base-100/80", // background color
 			)}
