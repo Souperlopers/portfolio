@@ -14,6 +14,8 @@ goal: create a portfolio webapp in -99 week and -99 days
 #########################################
 -->
 
+TODO_Z add date field to project page and project item
+
 TODO_Z send sadra avatar for zahra (if you want) (else remove this)
 TODO_Z TODO_S add figma link to every project (if available)
 
@@ -26,11 +28,13 @@ TODO_Z remove تکنولوژی ها if there are no tags
 #########################################
 -->
 
-TODO_S add member tags
-TODO_S add member-project tags
+TODO_S remove test page from production
+TODO_S DB: add member tags (2 records)
+TODO_S DB: add member-project tags (8 records)
 TODO_S change about us description
-TODO_S add description for sadra
 TODO_S add avatar for sadra
+	TODO_Z what if I add my wedding picture?
+TODO_S add description for sadra
 
 <!--
 #######################################
