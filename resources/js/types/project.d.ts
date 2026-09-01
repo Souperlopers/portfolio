@@ -11,6 +11,7 @@ export type ProjectBrief = {
 	id: number | string
 	title: string
 	url: string
+	date: string
 	description?: string
 	thumbnail?: string
 	technologies?: Tag[]
@@ -19,6 +20,7 @@ export type ProjectBrief = {
 export type Project = {
 	title: string
 	api: string
+	date: string
 	description?: string
 	thumbnail?: string
 	technologies?: Tag[]
