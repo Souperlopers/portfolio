@@ -28,6 +28,9 @@ TODO_Z remove تکنولوژی ها if there are no tags
 #########################################
 -->
 
+TODO_S home doesnt look good on Nexus 5, Nokia Lumia 520, JioPhone 2
+TODO_S home doesnt look good on Iphone12Pro, IphoneSE (before scrolling there is horizontal overflow)
+
 TODO_S remove test page from production
 TODO_S DB: add member tags (2 records)
 TODO_S DB: add member-project tags (8 records)
