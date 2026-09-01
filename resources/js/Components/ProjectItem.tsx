@@ -1,11 +1,11 @@
 import { useState } from "react"
 import { Link } from "@inertiajs/react"
-import { ProjectItemProps } from "@/types/project"
+import { ProjectBrief } from "@/types/project"
 import TagsComponent from "./TagsComponent"
 import clsx from "clsx"
 import { CiImageOn } from "react-icons/ci"
 
-export default function ProjectItem({ projectData }: ProjectItemProps) {
+export default function ProjectItem({ projectData }: {projectData: ProjectBrief}) {
 	const [imgLoaded, setImgLoaded] = useState(false)
 
 	const {
