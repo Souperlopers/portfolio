@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class DevelopmentCycle extends Model
 {
 	use HasUlids;
-	
+
 	public $timestamps = false;
 
 	public const NAMES = [

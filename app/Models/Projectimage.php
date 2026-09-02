@@ -8,12 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class Projectimage extends Model
 {
-    use HasFactory, HasUlids;
+	use HasFactory, HasUlids;
 
-    public $timestamps = false;
+	public $timestamps = false;
 
-    public function project()
-    {
-        return $this->belongsTo(Project::class);
-    }
+	public function project()
+	{
+		return $this->belongsTo(Project::class);
+	}
 }

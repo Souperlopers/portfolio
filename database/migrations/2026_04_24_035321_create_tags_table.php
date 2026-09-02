@@ -7,26 +7,26 @@ use App\Models\Tag;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
-    public function up(): void
-    {
-        Schema::create('tags', function (Blueprint $table) {
-            $table->ulid('id')->primary();
-            $table->tinyInteger('priority')->default(0)->index();
-            $table->enum("type", Tag::TYPES)->index();
-            $table->string("name")->unique()->index();
-            $table->string("alt_file")->index()->nullable();
-            $table->string("version")->nullable();
-        });
-    }
+	/**
+	 * Run the migrations.
+	 */
+	public function up(): void
+	{
+		Schema::create('tags', function (Blueprint $table) {
+			$table->ulid('id')->primary();
+			$table->tinyInteger('priority')->default(0)->index();
+			$table->enum("type", Tag::TYPES)->index();
+			$table->string("name")->unique()->index();
+			$table->string("alt_file")->index()->nullable();
+			$table->string("version")->nullable();
+		});
+	}
 
-    /**
-     * Reverse the migrations.
-     */
-    public function down(): void
-    {
-        Schema::dropIfExists('tags');
-    }
+	/**
+	 * Reverse the migrations.
+	 */
+	public function down(): void
+	{
+		Schema::dropIfExists('tags');
+	}
 };

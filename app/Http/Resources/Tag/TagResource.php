@@ -7,13 +7,13 @@ use Illuminate\Http\Resources\Json\JsonResource;
 
 class TagResource extends JsonResource
 {
-    /**
-     * Transform the resource into an array.
-     *
-     * @return array<string, mixed>
-     */
-    public function toArray(Request $request): array
-    {
+	/**
+	 * Transform the resource into an array.
+	 *
+	 * @return array<string, mixed>
+	 */
+	public function toArray(Request $request): array
+	{
 		$pattern = '/(?<title>.*)\.(?:[^\.]+)/';
 		preg_match($pattern, $this->name, $matches);
 
@@ -23,16 +23,16 @@ class TagResource extends JsonResource
 			'path' => '/assets/images/tags/' . ($this->alt_file ?? $this->name),
 		];
 
-        foreach (
-            [
-                'type',
-                'version',
-            ] as $res_key => $db_key
-        ) {
-			if($value = $this->{$db_key})
+		foreach (
+			[
+				'type',
+				'version',
+			] as $res_key => $db_key
+		) {
+			if ($value = $this->{$db_key})
 				$base[is_string($res_key) ? $res_key : $db_key] = $value;
-        };
+		};
 
-        return $base;
-    }
+		return $base;
+	}
 }

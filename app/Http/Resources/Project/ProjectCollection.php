@@ -7,20 +7,20 @@ use Illuminate\Http\Resources\Json\ResourceCollection;
 
 class ProjectCollection extends ResourceCollection
 {
-    /**
-     * The resource that this resource collects.
-     *
-     * @var string
-     */
-    public $collects = ProjectBriefResource::class;
+	/**
+	 * The resource that this resource collects.
+	 *
+	 * @var string
+	 */
+	public $collects = ProjectBriefResource::class;
 
-    /**
-     * Transform the resource collection into an array.
-     *
-     * @return array<int|string, mixed>
-     */
-    public function toArray(Request $request): array
-    {
-        return parent::toArray($request);
-    }
+	/**
+	 * Transform the resource collection into an array.
+	 *
+	 * @return array<int|string, mixed>
+	 */
+	public function toArray(Request $request): array
+	{
+		return parent::toArray($request);
+	}
 }

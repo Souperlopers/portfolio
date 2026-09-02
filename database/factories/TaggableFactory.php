@@ -11,24 +11,24 @@ use App\Models\Project;
  */
 class TaggableFactory extends Factory
 {
-    /**
-     * Define the model's default state.
-     *
-     * @return array<string, mixed>
-     */
-    public function definition(): array
-    {
-        $taggable = fake()->randomElement([
-            Member::class,
-            Project::class,
-        ]);
+	/**
+	 * Define the model's default state.
+	 *
+	 * @return array<string, mixed>
+	 */
+	public function definition(): array
+	{
+		$taggable = fake()->randomElement([
+			Member::class,
+			Project::class,
+		]);
 
-        $related = $taggable::inRandomOrder()->first();
+		$related = $taggable::inRandomOrder()->first();
 
-        return [
-            'tag_id' => fake()->unique()->numberBetween(),
-            'taggable_id' => $related->id,
-            'taggable_type' => $taggable,
-        ];
-    }
+		return [
+			'tag_id' => fake()->unique()->numberBetween(),
+			'taggable_id' => $related->id,
+			'taggable_type' => $taggable,
+		];
+	}
 }

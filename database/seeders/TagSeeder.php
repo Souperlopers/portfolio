@@ -8,12 +8,12 @@ use Illuminate\Database\Seeder;
 
 class TagSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     */
-    public function run(int $tagsQuantity)
-    {
-        // create tags
-        return Tag::factory($tagsQuantity)->create();
-    }
+	/**
+	 * Run the database seeds.
+	 */
+	public function run(int $tagsQuantity)
+	{
+		// create tags
+		return Tag::factory($tagsQuantity)->create();
+	}
 }
