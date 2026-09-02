@@ -8,9 +8,24 @@ export default function ProjectInfo({ info }: { info: Project }) {
 
 	return (
 		<div className="text-primary-content flex min-h-100 w-full flex-col justify-between gap-7 pt-5 lg:max-w-[40%]">
-			<div className="text-base-content max-w-80 truncate text-3xl font-semibold md:max-w-96">
-				{info.title}
+			<div
+				className={clsx(
+					"flex flex-col gap-1.5", // flex
+				)}
+			>
+				<h1 className="text-base-content max-w-80 truncate text-3xl font-semibold md:max-w-96">
+					{info.title}
+				</h1>
+				<span
+					className={clsx(
+						"text-xs sm:text-base", // text dimension
+						"text-base-content/80", // text color
+					)}
+				>
+					فروردین 1405 تا مرداد 1405
+				</span>
 			</div>
+
 			<div
 				className={clsx(
 					"text-secondary-content", // color
