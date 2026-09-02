@@ -14,6 +14,7 @@ goal: create a portfolio webapp in -99 week and -99 days
 #########################################
 -->
 
+TODO_Z make links open in current page instead of new page
 
 <!--
 #########################################
@@ -26,7 +27,7 @@ TODO_S home doesnt look good on Iphone12Pro, IphoneSE (before scrolling there is
 
 TODO_S remove test page from production
 TODO_S i dont serve model-specific tags in controller (like tags between this member and project)
-TODO_S DB: add member-project tags (8 records)
+TODO_S DB: add member-project tags (8 records) (maybe I should add cycles or at least panel instead of doing this)
 TODO_S change about us description
 TODO_S add avatar for sadra
 TODO_S add description for sadra
