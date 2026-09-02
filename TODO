@@ -32,11 +32,10 @@ TODO_S home doesnt look good on Nexus 5, Nokia Lumia 520, JioPhone 2
 TODO_S home doesnt look good on Iphone12Pro, IphoneSE (before scrolling there is horizontal overflow)
 
 TODO_S remove test page from production
-TODO_S DB: add member tags (2 records)
+TODO_S i dont serve model-specific tags in controller (like tags between this member and project)
 TODO_S DB: add member-project tags (8 records)
 TODO_S change about us description
 TODO_S add avatar for sadra
-	TODO_Z what if I add my wedding picture?
 TODO_S add description for sadra
 
 <!--
