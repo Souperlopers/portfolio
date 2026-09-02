@@ -29,6 +29,8 @@ const fake_data: Column = [
 		description:
 			"Core feature development, API implementation, and database design",
 		started_at: "2024-02-01 08:00:00",
+		developer: "Sara Ahmadi",
+		technologies: ["React", "Node.js", "PostgreSQL"],
 		// No completed_at - still in progress
 	},
 	{
@@ -36,6 +38,8 @@ const fake_data: Column = [
 		name: "maintenance",
 		description:
 			"Post-launch monitoring, hotfixes, and performance optimization",
+		developer: "Yasin Karimi",
+		technologies: ["Docker", "Grafana", "Prometheus"],
 		// No started_at - not yet started
 		completed_at: "2024-05-15 18:00:00",
 	},
@@ -45,18 +49,24 @@ const fake_data: Column = [
 		description: "Mobile app development with React Native",
 		started_at: "2024-07-21 08:00:00",
 		completed_at: "2024-08-30 18:00:00",
+		developer: "Kian Moradi",
+		technologies: ["React Native", "TypeScript"],
 	},
 	{
 		id: "g",
 		name: "planning",
 		started_at: "2024-01-10 09:00:00",
 		completed_at: "2024-02-20 17:00:00",
+		developer: "Golnaz Hosseini",
+		technologies: ["Figma", "Notion"],
 	},
 	{
 		id: "a",
 		name: "complete",
 		description:
 			"Final testing, bug fixes, QA validation, and deployment preparation",
+		developer: "Amir Tehrani",
+		technologies: ["Jest", "Cypress"],
 		// No started_at - not yet started
 		completed_at: "2024-04-05 17:00:00",
 	},
@@ -65,6 +75,8 @@ const fake_data: Column = [
 		name: "upgrade",
 		description: "Database migration to PostgreSQL 16",
 		started_at: "2024-09-01 10:00:00",
+		developer: "Zahra Naderi",
+		technologies: ["PostgreSQL", "Bash"],
 		// No completed_at - still in progress
 	},
 	{
@@ -73,6 +85,8 @@ const fake_data: Column = [
 		description: "Final QA, performance testing, and production deployment",
 		started_at: "2024-09-20 09:00:00",
 		completed_at: "2024-10-15 17:00:00",
+		developer: "Qasem Rostami",
+		technologies: ["k6", "GitHub Actions"],
 	},
 	{
 		id: "c",
@@ -80,12 +94,16 @@ const fake_data: Column = [
 		description: "Q3 roadmap planning and feature prioritization",
 		started_at: "2024-06-15 10:00:00",
 		completed_at: "2024-07-20 16:00:00",
+		developer: "Chista Farahani",
+		technologies: ["Linear", "Notion"],
 	},
 	{
 		id: "b",
 		name: "upgrade",
 		description:
 			"Major version upgrade with new features and security patches",
+		developer: "Babak Salehi",
+		technologies: ["Next.js", "Node.js"],
 		// No started_at - not yet started
 		completed_at: "2024-06-10 17:00:00",
 	},
@@ -95,6 +113,8 @@ const fake_data: Column = [
 		description: "Security updates and dependency upgrades",
 		started_at: "2024-08-15 09:00:00",
 		completed_at: "2024-09-10 17:00:00",
+		developer: "Parisa Jafari",
+		technologies: ["npm audit", "Dependabot"],
 	},
 ]
 

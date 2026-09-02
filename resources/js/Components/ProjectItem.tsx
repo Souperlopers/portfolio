@@ -63,14 +63,14 @@ export default function ProjectItem({
 						>
 							{title}
 						</h3>
-						{/* <span
+						<span
 							className={clsx(
 								"text-xs sm:text-sm", // text dimension
 								"text-base-content/80", // text color
 							)}
 						>
 							فروردین 1404
-						</span> */}
+						</span>
 					</div>
 
 					<p
