@@ -7,12 +7,14 @@ import EmptyProjects from "@/Components/EmptyProjects"
 
 export default function Projects({ projects }: { projects: ProjectBrief[] }) {
 	const SHOW_ALL = true // if set to false, a 'show more' button will appear
-	
+
 	const [showMoreCount, setShowMoreCount] = useState(1)
 	const projectsCount = projects.length
 
 	const isShowMore = projectsCount > 2 && projectsCount > 2 * showMoreCount
-	const visibleProjects = SHOW_ALL ? projects : projects.slice(0, 2 * showMoreCount)
+	const visibleProjects = SHOW_ALL
+		? projects
+		: projects.slice(0, 2 * showMoreCount)
 
 	return (
 		<section
@@ -42,15 +44,11 @@ export default function Projects({ projects }: { projects: ProjectBrief[] }) {
 			<div
 				className={clsx(
 					"flex flex-col items-center", // flex (small screen)
-					"sm:grid sm:grid-cols-1 sm:gap-8 xl:grid-cols-2 gap-5", // grid
+					"gap-5 sm:grid sm:grid-cols-1 sm:gap-8 xl:grid-cols-2", // grid
 				)}
 			>
 				{visibleProjects.map((project, index) => (
-					<ProjectItem
-						key={project.id}
-						index={index}
-						projectData={project}
-					/>
+					<ProjectItem key={project.id} projectData={project} />
 				))}
 			</div>
 
