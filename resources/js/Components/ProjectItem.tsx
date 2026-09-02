@@ -5,8 +5,13 @@ import TagsComponent from "./TagsComponent"
 import clsx from "clsx"
 import { CiImageOn } from "react-icons/ci"
 
-export default function ProjectItem({ projectData }: {projectData: ProjectBrief}) {
+export default function ProjectItem({
+	projectData,
+}: {
+	projectData: ProjectBrief
+}) {
 	const [imgLoaded, setImgLoaded] = useState(false)
+	console.log(projectData)
 
 	const {
 		title = "بدون نام",
@@ -44,14 +49,29 @@ export default function ProjectItem({ projectData }: {projectData: ProjectBrief}
 						"h-full w-full", // dimension
 					)}
 				>
-					<h3
+					{/* title & date */}
+					<div
 						className={clsx(
-							"text-xl font-semibold md:text-3xl", // text dimension
-							"text-base-content", // text color
+							"flex flex-col gap-1.5", // flex
 						)}
 					>
-						{title}
-					</h3>
+						<h3
+							className={clsx(
+								"text-xl font-semibold md:text-3xl", // text dimension
+								"text-base-content", // text color
+							)}
+						>
+							{title}
+						</h3>
+						{/* <span
+							className={clsx(
+								"text-xs sm:text-sm", // text dimension
+								"text-base-content/80", // text color
+							)}
+						>
+							فروردین 1404
+						</span> */}
+					</div>
 
 					<p
 						className={clsx(
