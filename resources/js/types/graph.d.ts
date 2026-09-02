@@ -4,6 +4,8 @@ type BaseCycle = {
 	id: string
 	name: CycleName
 	description?: string
+	developer?: string
+	technologies?: string[]
 }
 
 // Three specific types of a cycle
