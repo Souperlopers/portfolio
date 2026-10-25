@@ -46,7 +46,7 @@ export default function ProjectInfo({ info }: { info: Project }) {
 				</h2>
 				<TagsComponent tags={technologies} />
 			</div>
-			<div className="flex gap-5">
+			<div className="flex gap-5 flex-wrap">
 				<DetailButtons links={info.links} />
 			</div>
 		</div>
